@@ -1,0 +1,47 @@
+My homelab consists of multiple containers hosting services all connected to a tailscale network. Hence i never feared anything happening to it. But now that we are here. I have been procrastinating building my metaspliotable vm on my homelab. So i can build and test the log parser there. And then once i am sure i can put it on my main homelab. What do you say ??
+
+
+A parser without logs is basically a fancy text-processing script.
+The portfolio value comes from answering:
+"Where did these logs come from?"
+If a recruiter asks:
+"How did you test detection of brute force attacks?"
+And your answer is:
+"I downloaded sample logs from GitHub."
+That's okay.
+If your answer is:
+"I built an isolated attack lab, generated SSH brute force traffic against Metasploitable, captured the logs, parsed them, wrote detection logic, validated the detections, and documented the findings."
+That's a completely different level.
+
+Final Decided structure:
+Build parser alongside sample logs keep improoving 
+set up metasploit2 on the homelab
+when satisfied set up the log parser onto the metasploit2
+then test it with attack logs, brute force, etc etc. (like i know more of those) 
+
+discovered mermaid in .md
+
+Structure explanation:
+parser has submodules to help the main.py program like syslog parser, network parser, ssh parser, etc
+tests are there to check with a fixed set of logs and check if the parser is working correctly
+sample_logs are to see how the program behaves when you change it
+outputs are a place to store important results for future watch ( will mostly be in gitignore)
+
+Development Stage:
+convert logs to cleaned json formats with only necessary data.
+obtain real time sample logs from wherever available
+build parser modules
+build test modules
+keep storing important results in outputs
+impliment a detection system by flagging suspicious activity, based on (idk fill in the blanks)
+maybe pass it on onto an ai agent to analyze log pattern, attack behaviour, source, etc. 
+
+two versions of the project
+v1: just for the homelab. Monitors ssh, network, syslog, docker logs. Detects using algorithm and flags alert. 
+v2: industry grade. Monitors ssh, network, syslog, apache, etc. Parser logs, detects suspiciour activity and forwards to an AI model to analyze and report the activity. 
+
+Now before beginning with the code the first essential part is the planning and futureproofing of the project structure. 
+Got inroduced to normalising and the importance of it in my project if i want to scale it, integrate it with ai, wazuh etc. 
+Thats what answered a question i had in mind, how are corporate workflows so well defined. They do the same, futureproofing and planning. 
+They complicate some things now to simplify bigger things later on.
+
