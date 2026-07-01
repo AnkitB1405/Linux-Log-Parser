@@ -22,8 +22,15 @@ def parse_failed_login(line):
 
     parts = line.split()
 
-    user_index = parts.index("user")
-    username = parts[user_index + 1]
+    if "user" in parts:
+
+        user_index = parts.index("user")
+        username = parts[user_index + 1]
+
+    else:
+
+        for_index = parts.index("for")
+        username = parts[for_index + 1]
 
     from_index = parts.index("from")
     source_ip = parts[from_index + 1]
@@ -43,8 +50,15 @@ def parse_successful_login(line):
 
     parts = line.split()
 
-    for_index = parts.index("for")
-    username = parts[for_index + 1]
+    if "user" in parts:
+
+        user_index = parts.index("user")
+        username = parts[user_index + 1]
+
+    else:
+
+        for_index = parts.index("for")
+        username = parts[for_index + 1]
 
     from_index = parts.index("from")
     source_ip = parts[from_index + 1]

@@ -2,15 +2,29 @@ from parser.ssh_parser import identify_event
 from detectors.bruteforce import detect_bruteforce
 
 events = []
+errors = []
 
 with open("sample_logs/ssh_sample.txt") as file:
 
     for line in file:
 
-        event = identify_event(line)
+        try:
 
-        if event:
-            events.append(event)
+            event = identify_event(line)
+
+            if event:
+
+                events.append(event)
+
+        except Exception as e:
+
+            errors.append({
+
+                "line": line.strip(),
+
+                "error": str(e)
+
+            })
 
 alerts = detect_bruteforce(events)
 
@@ -26,3 +40,13 @@ print("\nAlerts:\n")
 for alert in alerts:
     print(alert)
 '''
+
+for event in events:
+
+    print(event)
+
+print("\nErrors\n")
+
+for error in errors:
+
+    print(error)
