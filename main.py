@@ -1,7 +1,11 @@
 from parser.ssh_parser import identify_event
 
-line = "Failed password for invalid user fakeuser from ::1 port 60198 ssh2"
 
-result = identify_event(line)
+with open("sample_logs/ssh_sample.txt") as file:
 
-print(result)
+    for line in file:
+
+        event = identify_event(line)
+
+        if event:
+            print(event)
