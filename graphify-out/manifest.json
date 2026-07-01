@@ -1,0 +1,27 @@
+{
+  "detectors/bruteforce.py": {
+    "mtime": 1782895990.8015654,
+    "ast_hash": "7ac37d042b06877dbe1678aea41f4478",
+    "semantic_hash": ""
+  },
+  "main.py": {
+    "mtime": 1782894973.5417259,
+    "ast_hash": "ed424076ddeab9e09178431a8e1ec717",
+    "semantic_hash": ""
+  },
+  "parser/event_schema.py": {
+    "mtime": 1781190149.98331,
+    "ast_hash": "995a9463a9dc3f82a38dc03c706e2bca",
+    "semantic_hash": ""
+  },
+  "parser/ssh_parser.py": {
+    "mtime": 1782889408.1073363,
+    "ast_hash": "cf2801b869cab961eac827177b932997",
+    "semantic_hash": ""
+  },
+  "Convos_and_notes.txt": {
+    "mtime": 1781190134.8860471,
+    "ast_hash": "2f9fb85a49c80cd12b15e11f46dbcaa8",
+    "semantic_hash": ""
+  }
+}
