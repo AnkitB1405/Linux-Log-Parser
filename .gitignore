@@ -1,2 +1,3 @@
 parser/__pycache__/**
 sample_logs/ssh_sample.txt
+detectors/__pycache__/**
