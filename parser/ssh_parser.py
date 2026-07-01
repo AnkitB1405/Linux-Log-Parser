@@ -1,3 +1,19 @@
+from datetime import datetime
+
+def parse_timestamp(line):
+
+    parts = line.split()
+
+    date = f"{parts[0]} {parts[1]}"
+    time = parts[2]
+
+    timestamp = datetime.strptime(
+        f"{date} {time}",
+        "%b %d %H:%M:%S"
+    )
+
+    return timestamp
+
 def parse_failed_login(line):
     """
     Extract username and source IP
@@ -16,8 +32,7 @@ def parse_failed_login(line):
         "event_type": "failed_login",
         "username": username,
         "source_ip": source_ip,
-        "date": parts[0] + " " + parts[1],
-        "time": parts[2]
+        "timestamp": parse_timestamp(line)
     }
 
 def parse_successful_login(line):
@@ -38,8 +53,7 @@ def parse_successful_login(line):
         "event_type": "successful_login",
         "username": username,
         "source_ip": source_ip,
-        "date": parts[0] + " " + parts[1],
-        "time": parts[2]
+        "timestamp": parse_timestamp(line)
     }
     
 
@@ -57,8 +71,7 @@ def parse_session_opened(line):
         "event_type": "session_opened",
         "username": username,
         "initiated_by": initiated_by,
-        "date": parts[0] + " " + parts[1],
-        "time": parts[2]
+        "timestamp": parse_timestamp(line)
     }
 
 def parse_invalid_user(line):
@@ -75,8 +88,7 @@ def parse_invalid_user(line):
         "event_type": "invalid_user",
         "username": username,
         "source_ip": source_ip,
-        "date": parts[0] + " " + parts[1],
-        "time": parts[2]
+        "timestamp": parse_timestamp(line)
     }
 
 def parse_connection_closed(line):
@@ -92,8 +104,7 @@ def parse_connection_closed(line):
         "event_type": "connection_closed",
         "username": username,
         "source_ip": ip,
-        "date": parts[0] + " " + parts[1],
-        "time": parts[2]
+        "timestamp": parse_timestamp(line)
     }
 
 def parse_auth_failure(line):
@@ -132,8 +143,7 @@ def parse_auth_failure(line):
         "tty": tty,
         "ruser": ruser,
         "source_ip": source_ip,
-        "date": parts[0] + " " + parts[1],
-        "time": parts[2]
+        "timestamp": parse_timestamp(line)
     }
 
 def parse_multiple_failures(line):
@@ -167,8 +177,7 @@ def parse_multiple_failures(line):
         "euid": euid,
         "tty": tty,
         "source_ip": source_ip,
-        "date": parts[0] + " " + parts[1],
-        "time": parts[2]
+        "timestamp": parse_timestamp(line)
     }
 
 def parse_service_started(line):
@@ -176,8 +185,7 @@ def parse_service_started(line):
     return {
         "event_type": "service_started",
         "service": "ssh",
-        "date": line.split()[0] + " " + line.split()[1],
-        "time": line.split()[2]
+        "timestamp": parse_timestamp(line)
     }
 
 
@@ -186,8 +194,7 @@ def parse_service_stopped(line):
     return {
         "event_type": "service_stopped",
         "service": "ssh",
-        "date": line.split()[0] + " " + line.split()[1],
-        "time": line.split()[2]
+        "timestamp": parse_timestamp(line)
     }
 
 def identify_event(line):
