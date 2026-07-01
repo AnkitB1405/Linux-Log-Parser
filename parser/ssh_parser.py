@@ -98,21 +98,75 @@ def parse_connection_closed(line):
 
 def parse_auth_failure(line):
 
+    parts = line.split()
+
+    uid = None
+    euid = None
+    tty = None
+    ruser = None
+    source_ip = None
+
+    for item in parts:
+
+        if item.startswith("uid="):
+            uid = item.split("=")[1]
+
+        elif item.startswith("euid="):
+            euid = item.split("=")[1]
+
+        elif item.startswith("tty="):
+            tty = item.split("=")[1]
+
+        elif item.startswith("ruser="):
+            ruser = item.split("=")[1]
+
+        elif item.startswith("rhost="):
+            source_ip = item.split("=")[1]
+
     return {
         "event_type": "authentication_failure",
-        "date": line.split()[0] + " " + line.split()[1],
-        "time": line.split()[2]
+        "auth_module": "pam_unix",
+        "service": "ssh",
+        "uid": uid,
+        "euid": euid,
+        "tty": tty,
+        "ruser": ruser,
+        "source_ip": source_ip,
+        "date": parts[0] + " " + parts[1],
+        "time": parts[2]
     }
 
 def parse_multiple_failures(line):
 
     parts = line.split()
+    count = int(parts[parts.index("PAM") + 1])
 
-    count = int(parts[1])
+    uid = None
+    euid = None
+    tty = None
+    source_ip = None
+
+    for item in parts:
+
+        if item.startswith("uid="):
+            uid = item.split("=")[1]
+
+        elif item.startswith("euid="):
+            euid = item.split("=")[1]
+
+        elif item.startswith("tty="):
+            tty = item.split("=")[1]
+
+        elif item.startswith("rhost="):
+            source_ip = item.split("=")[1]
 
     return {
         "event_type": "multiple_auth_failures",
         "count": count,
+        "uid": uid,
+        "euid": euid,
+        "tty": tty,
+        "source_ip": source_ip,
         "date": parts[0] + " " + parts[1],
         "time": parts[2]
     }
@@ -156,11 +210,11 @@ def identify_event(line):
     elif "Connection closed" in line:
         return parse_connection_closed(line)
     
+    elif "more authentication failures" in line:
+        return parse_multiple_failures(line) 
+       
     elif "authentication failure" in line:
         return parse_auth_failure(line)
-    
-    elif "more authentication failures" in line:
-        return parse_multiple_failures(line)
     
     elif "Started ssh.service" in line:
         return parse_service_started(line)
