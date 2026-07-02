@@ -19,6 +19,22 @@ This project is intended to evolve into a small-scale SIEM-like platform capable
 
 ---
 
+## Documentation
+
+The following documents and artifacts are maintained as part of the project engineering process.
+
+| Resource | Purpose | Status |
+|----------|---------|--------|
+| [ROADMAP.md](ROADMAP.md) | Development roadmap and future phases | ✅ |
+| [Architecture Diagram](diagrams/architecture.png) | System design and data flow | 🚧 |
+| [Screenshots](screenshots/) | Dashboard and Graphify screenshots | 🚧 |
+| [Journal](journal/) | Development notes and design decisions | 🚧 |
+| [Security Considerations](SECURITY.md) | Detection assumptions, threat model and limitations | 🚧 |
+| [Sample Logs](sample_logs/) | Test datasets used for parser validation | ✅ |
+| [Outputs](outputs/) | Generated events, detections and alerts | 🚧 |
+
+---
+
 ## Current Features
 
 ### SSH Parser
