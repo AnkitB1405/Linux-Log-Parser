@@ -37,6 +37,7 @@ def parse_failed_login(line):
 
     return {
         "event_type": "failed_login",
+        "service": "ssh",
         "username": username,
         "source_ip": source_ip,
         "timestamp": parse_timestamp(line)
@@ -65,6 +66,7 @@ def parse_successful_login(line):
 
     return {
         "event_type": "successful_login",
+        "service": "ssh",
         "username": username,
         "source_ip": source_ip,
         "timestamp": parse_timestamp(line)
@@ -83,6 +85,7 @@ def parse_session_opened(line):
 
     return {
         "event_type": "session_opened",
+        "service": "ssh",
         "username": username,
         "initiated_by": initiated_by,
         "timestamp": parse_timestamp(line)
@@ -100,6 +103,7 @@ def parse_invalid_user(line):
 
     return {
         "event_type": "invalid_user",
+        "service": "ssh",
         "username": username,
         "source_ip": source_ip,
         "timestamp": parse_timestamp(line)
@@ -116,6 +120,7 @@ def parse_connection_closed(line):
 
     return {
         "event_type": "connection_closed",
+        "service": "ssh",
         "username": username,
         "source_ip": ip,
         "timestamp": parse_timestamp(line)
@@ -186,6 +191,7 @@ def parse_multiple_failures(line):
 
     return {
         "event_type": "multiple_auth_failures",
+        "service": "ssh",
         "count": count,
         "uid": uid,
         "euid": euid,

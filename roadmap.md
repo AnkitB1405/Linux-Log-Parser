@@ -344,6 +344,10 @@ Planned capabilities:
 - [ ] Live Monitoring
 - [ ] Streaming Events
 - [ ] Continuous Detection
+- [ ] Sliding window state management
+- [ ] Event expiry
+- [ ] Detector memory cleanup
+- [ ] Stateful detection optimization
 
 ---
 
