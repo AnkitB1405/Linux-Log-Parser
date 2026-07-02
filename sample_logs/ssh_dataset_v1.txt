@@ -1,0 +1,82 @@
+Jun 11 15:00:00 Sentinel systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+
+Jun 11 15:01:00 Sentinel sshd-session[200001]: Invalid user guest from 198.51.100.10 port 45001
+Jun 11 15:01:02 Sentinel sshd-session[200001]: Failed password for invalid user guest from 198.51.100.10 port 45001 ssh2
+Jun 11 15:01:05 Sentinel sshd-session[200001]: Failed password for invalid user guest from 198.51.100.10 port 45001 ssh2
+Jun 11 15:01:08 Sentinel sshd-session[200001]: Failed password for invalid user guest from 198.51.100.10 port 45001 ssh2
+Jun 11 15:01:11 Sentinel sshd-session[200001]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=198.51.100.10
+
+Jun 11 15:02:00 Sentinel sshd-session[200010]: Invalid user admin from 198.51.100.11 port 45011
+Jun 11 15:02:04 Sentinel sshd-session[200010]: Failed password for invalid user admin from 198.51.100.11 port 45011 ssh2
+Jun 11 15:02:06 Sentinel sshd-session[200010]: Failed password for invalid user admin from 198.51.100.11 port 45011 ssh2
+Jun 11 15:02:08 Sentinel sshd-session[200010]: Failed password for invalid user admin from 198.51.100.11 port 45011 ssh2
+Jun 11 15:02:12 Sentinel sshd-session[200010]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=198.51.100.11
+
+Jun 11 15:03:00 Sentinel sshd-session[200020]: Failed password for root from 203.0.113.40 port 55110 ssh2
+Jun 11 15:03:04 Sentinel sshd-session[200020]: Failed password for root from 203.0.113.40 port 55110 ssh2
+Jun 11 15:03:09 Sentinel sshd-session[200020]: Failed password for root from 203.0.113.40 port 55110 ssh2
+Jun 11 15:03:14 Sentinel sshd-session[200020]: Failed password for root from 203.0.113.40 port 55110 ssh2
+Jun 11 15:03:18 Sentinel sshd-session[200020]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.40
+
+Jun 11 15:05:00 Sentinel sshd-session[200100]: Failed password for analyst from 192.0.2.20 port 51020 ssh2
+Jun 11 15:05:40 Sentinel sshd-session[200100]: Failed password for analyst from 192.0.2.20 port 51020 ssh2
+Jun 11 15:06:20 Sentinel sshd-session[200100]: Failed password for analyst from 192.0.2.20 port 51020 ssh2
+Jun 11 15:07:00 Sentinel sshd-session[200100]: Failed password for analyst from 192.0.2.20 port 51020 ssh2
+Jun 11 15:07:40 Sentinel sshd-session[200100]: Failed password for analyst from 192.0.2.20 port 51020 ssh2
+Jun 11 15:08:20 Sentinel sshd-session[200100]: Accepted password for analyst from 192.0.2.20 port 51020 ssh2
+Jun 11 15:08:20 Sentinel sshd-session[200100]: pam_unix(sshd:session): session opened for user analyst(uid=1000) by analyst(uid=0)
+
+Jun 11 15:09:00 Sentinel sshd-session[200150]: Accepted publickey for developer from 192.0.2.25 port 60010 ssh2
+Jun 11 15:09:00 Sentinel sshd-session[200150]: pam_unix(sshd:session): session opened for user developer(uid=1000) by developer(uid=0)
+
+Jun 11 15:10:00 Sentinel sshd-session[200200]: Accepted password for user01 from 192.0.2.30 port 33333 ssh2
+Jun 11 15:10:00 Sentinel sshd-session[200200]: pam_unix(sshd:session): session opened for user user01(uid=1000) by user01(uid=0)
+
+Jun 11 15:10:12 Sentinel sshd-session[200200]: Connection closed by user01 192.0.2.30 port 33333
+
+Jun 11 15:11:00 Sentinel sshd-session[200210]: Accepted password for user02 from 192.0.2.31 port 33334 ssh2
+Jun 11 15:11:00 Sentinel sshd-session[200210]: pam_unix(sshd:session): session opened for user user02(uid=1000) by user02(uid=0)
+
+Jun 11 15:11:10 Sentinel sshd-session[200210]: Connection closed by user02 192.0.2.31 port 33334
+
+Jun 11 15:12:00 Sentinel sshd-session[200220]: Accepted password for user03 from 192.0.2.32 port 33335 ssh2
+Jun 11 15:12:00 Sentinel sshd-session[200220]: pam_unix(sshd:session): session opened for user user03(uid=1000) by user03(uid=0)
+
+Jun 11 15:12:08 Sentinel sshd-session[200220]: Connection closed by user03 192.0.2.32 port 33335
+
+Jun 11 15:13:00 Sentinel systemd[1]: Stopped ssh.service - OpenBSD Secure Shell server.
+Jun 11 15:13:03 Sentinel systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+Jun 11 15:13:20 Sentinel systemd[1]: Stopped ssh.service - OpenBSD Secure Shell server.
+Jun 11 15:13:24 Sentinel systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+Jun 11 15:13:40 Sentinel systemd[1]: Stopped ssh.service - OpenBSD Secure Shell server.
+Jun 11 15:13:45 Sentinel systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+
+Jun 11 15:15:00 Sentinel sshd-session[200300]: Failed password for monitor from 198.51.100.55 port 44000 ssh2
+Jun 11 15:18:00 Sentinel sshd-session[200300]: Failed password for monitor from 198.51.100.55 port 44000 ssh2
+Jun 11 15:21:00 Sentinel sshd-session[200300]: Failed password for monitor from 198.51.100.55 port 44000 ssh2
+Jun 11 15:24:00 Sentinel sshd-session[200300]: Failed password for monitor from 198.51.100.55 port 44000 ssh2
+Jun 11 15:27:00 Sentinel sshd-session[200300]: Failed password for monitor from 198.51.100.55 port 44000 ssh2
+Jun 11 15:30:00 Sentinel sshd-session[200300]: Failed password for monitor from 198.51.100.55 port 44000 ssh2
+Jun 11 15:33:00 Sentinel sshd-session[200300]: Failed password for monitor from 198.51.100.55 port 44000 ssh2
+Jun 11 15:36:00 Sentinel sshd-session[200300]: Failed password for monitor from 198.51.100.55 port 44000 ssh2
+
+Jun 11 15:40:00 Sentinel sshd-session[200400]: Accepted password for engineer from 192.0.2.90 port 51110 ssh2
+Jun 11 15:40:00 Sentinel sshd-session[200400]: pam_unix(sshd:session): session opened for user engineer(uid=1000) by engineer(uid=0)
+
+Jun 11 15:40:06 Sentinel sshd-session[200400]: Connection closed by engineer 192.0.2.90 port 51110
+
+Jun 11 15:42:00 Sentinel sshd-session[200500]: Accepted publickey for operator from 192.0.2.91 port 51111 ssh2
+Jun 11 15:42:00 Sentinel sshd-session[200500]: pam_unix(sshd:session): session opened for user operator(uid=1000) by operator(uid=0)
+
+Jun 11 15:50:00 Sentinel systemd[1]: Stopped ssh.service - OpenBSD Secure Shell server.
+Jun 11 15:50:05 Sentinel systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+Jun 11 15:50:10 Sentinel systemd[1]: Stopped ssh.service - OpenBSD Secure Shell server.
+Jun 11 15:50:15 Sentinel systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+Jun 11 15:50:20 Sentinel systemd[1]: Stopped ssh.service - OpenBSD Secure Shell server.
+Jun 11 15:50:25 Sentinel systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+
+Jun 11 15:55:00 Sentinel sshd-session[200700]: Invalid user backup from 203.0.113.90 port 62000
+Jun 11 15:55:02 Sentinel sshd-session[200700]: Failed password for invalid user backup from 203.0.113.90 port 62000 ssh2
+Jun 11 15:55:05 Sentinel sshd-session[200700]: Failed password for invalid user backup from 203.0.113.90 port 62000 ssh2
+Jun 11 15:55:09 Sentinel sshd-session[200700]: Failed password for invalid user backup from 203.0.113.90 port 62000 ssh2
+Jun 11 15:55:12 Sentinel sshd-session[200700]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.90

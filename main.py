@@ -8,7 +8,7 @@ from detectors.session_anomaly import detect_session_anomaly
 events = []
 errors = []
 
-with open("sample_logs/ssh_sample.txt") as file:
+with open("sample_logs/ssh_dataset_v1.txt") as file:
 
     for line in file:
 
@@ -55,5 +55,4 @@ for event in events:
 print("\nErrors\n")
 
 for error in errors:
-
     print(error)
