@@ -25,13 +25,13 @@ The following documents and artifacts are maintained as part of the project engi
 
 | Resource | Purpose | Status |
 |----------|---------|--------|
-| [ROADMAP.md](ROADMAP.md) | Development roadmap and future phases | ✅ |
-| [Architecture Diagram](diagrams/architecture.png) | System design and data flow | 🚧 |
-| [Screenshots](screenshots/) | Dashboard and Graphify screenshots | 🚧 |
-| [Journal](journal/) | Development notes and design decisions | 🚧 |
-| [Security Considerations](SECURITY.md) | Detection assumptions, threat model and limitations | 🚧 |
-| [Sample Logs](sample_logs/) | Test datasets used for parser validation | ✅ |
-| [Outputs](outputs/) | Generated events, detections and alerts | 🚧 |
+| [DOCUMENTATION.md](DOCUMENTATION.md) | Development Journal | ✅ |
+| [ROADMAP.md](ROADMAP.md) | Project Roadmap | ✅ |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | System Design | 🚧 |
+| [SECURITY.md](SECURITY.md) | Threat Model | 🚧 |
+| [screenshots/](screenshots/) | Visual Assets | 🚧 |
+| [journal/](journal/) | Notes | 🚧 |
+| [outputs/](outputs/) | Events and Alerts | 🚧 |
 
 ---
 
@@ -66,7 +66,17 @@ Example normalized event:
 
 ## Detection Engine
 
-Current detections include:
+The SSH detection engine now runs five independent detectors over the normalized event stream.
+
+### Current Detections
+
+| Detector | Detects |
+|----------|---------|
+| **Brute Force** | Fast/slow brute force, root targeting, PAM correlation, unknown root logins |
+| **Service Anomaly** | Repeated SSH service restarts / instability |
+| **Credential Compromise** | Failed-login bursts followed by a success on the same user + IP |
+| **Behaviour Analysis** | Distributed / patterned attacker behaviour across sliding windows |
+| **Session Anomaly** | Abnormally short SSH sessions |
 
 ### SSH Brute Force
 
@@ -76,6 +86,23 @@ Detection of:
 - Slow brute force attacks
 - Root targeting attempts
 - Repeated PAM authentication failures
+- Unknown root login detection
+
+### Service Anomaly
+
+Detects repeated SSH service start/stop cycles within a short window (service instability).
+
+### Credential Compromise
+
+Correlates a burst of failed logins followed by a successful login on the same user and source IP.
+
+### Behaviour Analysis
+
+Tracks per-IP failed-login activity across sliding time windows to surface distributed or patterned attacker behaviour.
+
+### Session Anomaly
+
+Flags sessions that open and close within seconds.
 
 Severity levels:
 
@@ -97,6 +124,12 @@ Root login attempts
 
 Repeated failed logins over 10 minutes
 → Slow brute force detection
+
+Failed-login burst then success (same user + IP)
+→ Credential compromise
+
+Repeated SSH service restarts
+→ Service instability
 ```
 
 ---
@@ -112,15 +145,24 @@ Log_Parser/
 │   └── event_schema.py
 │
 ├── detectors/
-│   └── bruteforce.py
+│   ├── bruteforce.py
+│   ├── service_anomaly.py
+│   ├── credential_compromise.py
+│   ├── behavior.py
+│   └── session_anomaly.py
 │
 ├── sample_logs/
-│   └── ssh_sample.txt
+│   ├── sample_ssh_log.txt
+│   └── ssh_dataset_v1.txt
+│
+├── graphify-out/
 │
 ├── outputs/
 │
-├── tests/
-│
+├── DOCUMENTATION.md
+├── ARCHITECTURE.md
+├── SECURITY.md
+├── ROADMAP.md
 ├── Convos_and_notes.txt
 │
 └── README.md
@@ -195,10 +237,12 @@ Focus on foundational log parsing and detections.
 ### Detectors
 
 - [x] Brute force
-- [ ] Service anomalies
-- [ ] Root activity monitoring
+- [x] Service anomaly
+- [x] Credential compromise
+- [x] Behaviour analysis
+- [x] Session anomaly
+- [x] Root activity monitoring
 - [ ] Persistence indicators
-- [ ] Behaviour analysis
 
 ### Alerting
 
@@ -250,7 +294,7 @@ Actively being developed and expanded.
 
 Current focus:
 
-> Improving parser robustness, expanding detections, and preparing the event pipeline for additional log sources.
+> Refining detector thresholds, adding event and alert persistence to `outputs/`, and preparing the normalized event schema for additional (non-SSH) log sources.
 
 ---
 

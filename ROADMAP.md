@@ -23,7 +23,7 @@ Completed foundational planning and design.
 
 # Phase 1 — SSH Monitoring Engine 🔄
 
-Current Progress: ~80%
+Current Progress: ~92%
 
 ## SSH Parser
 
@@ -48,13 +48,13 @@ Implemented:
 - [x] Root Login Monitoring
 - [x] PAM Correlation
 - [x] Unknown Root Login Detection
+- [x] Service Restart Detection
+- [x] Credential Compromise Detection
+- [x] Session Anomaly Detection
+- [x] Behaviour Correlation
 
 Planned:
 
-- [ ] Service Restart Detection
-- [ ] Credential Compromise Detection
-- [ ] Session Anomaly Detection
-- [ ] Behaviour Correlation
 - [ ] Login Pattern Analysis
 
 ## Engineering
@@ -122,14 +122,17 @@ Planned events:
 
 # Phase 3 — Detection Expansion
 
-Current Progress: ~15%
+Current Progress: ~35%
+
+Implemented detectors:
+
+- [x] Service Anomaly Detector
+- [x] Credential Compromise Detector
+- [x] Behaviour Detector
 
 Planned detectors:
 
-- [ ] Service Anomaly Detector
-- [ ] Credential Compromise Detector
 - [ ] Persistence Detector
-- [ ] Behaviour Detector
 - [ ] Container Anomaly Detector
 - [ ] Lateral Movement Detector
 - [ ] Network Abuse Detector
@@ -168,7 +171,7 @@ Slow brute force detection
 
 # Phase 4 — Event Normalization
 
-Current Progress: ~20%
+Current Progress: ~25%
 
 Current schema:
 
@@ -425,13 +428,13 @@ Focus Areas:
 ```text
 Phase 0   ██████████ 100%
 
-Phase 1   ████████░░ 80%
+Phase 1   █████████░ 92%
 
 Phase 2   ░░░░░░░░░░ 0%
 
-Phase 3   ██░░░░░░░░ 15%
+Phase 3   ████░░░░░░ 35%
 
-Phase 4   ███░░░░░░░ 20%
+Phase 4   ███░░░░░░░ 25%
 
 Phase 5   ░░░░░░░░░░ 0%
 
