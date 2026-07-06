@@ -4,6 +4,26 @@
   "graph": {},
   "nodes": [
     {
+      "label": "behavior.py",
+      "file_type": "code",
+      "source_file": "detectors/behavior.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "detectors_behavior",
+      "community": 1,
+      "norm_label": "behavior.py"
+    },
+    {
+      "label": "detect_behavior()",
+      "file_type": "code",
+      "source_file": "detectors/behavior.py",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "detectors_behavior_detect_behavior",
+      "community": 1,
+      "norm_label": "detect_behavior()"
+    },
+    {
       "label": "bruteforce.py",
       "file_type": "code",
       "source_file": "detectors/bruteforce.py",
@@ -22,6 +42,46 @@
       "id": "detectors_bruteforce_detect_bruteforce",
       "community": 1,
       "norm_label": "detect_bruteforce()"
+    },
+    {
+      "label": "service_anomaly.py",
+      "file_type": "code",
+      "source_file": "detectors/service_anomaly.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "detectors_service_anomaly",
+      "community": 1,
+      "norm_label": "service_anomaly.py"
+    },
+    {
+      "label": "detect_service_anomaly()",
+      "file_type": "code",
+      "source_file": "detectors/service_anomaly.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "detectors_service_anomaly_detect_service_anomaly",
+      "community": 1,
+      "norm_label": "detect_service_anomaly()"
+    },
+    {
+      "label": "session_anomaly.py",
+      "file_type": "code",
+      "source_file": "detectors/session_anomaly.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "detectors_session_anomaly",
+      "community": 1,
+      "norm_label": "session_anomaly.py"
+    },
+    {
+      "label": "detect_session_anomaly()",
+      "file_type": "code",
+      "source_file": "detectors/session_anomaly.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "detectors_session_anomaly_detect_session_anomaly",
+      "community": 1,
+      "norm_label": "detect_session_anomaly()"
     },
     {
       "label": "main.py",
@@ -80,24 +140,24 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "parser_ssh_parser_parse_failed_login",
-      "community": 3,
+      "community": 0,
       "norm_label": "parse_failed_login()"
     },
     {
       "label": "parse_successful_login()",
       "file_type": "code",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L45",
+      "source_location": "L46",
       "_origin": "ast",
       "id": "parser_ssh_parser_parse_successful_login",
-      "community": 4,
+      "community": 0,
       "norm_label": "parse_successful_login()"
     },
     {
       "label": "parse_session_opened()",
       "file_type": "code",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L74",
+      "source_location": "L76",
       "_origin": "ast",
       "id": "parser_ssh_parser_parse_session_opened",
       "community": 0,
@@ -107,7 +167,7 @@
       "label": "parse_invalid_user()",
       "file_type": "code",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L91",
+      "source_location": "L94",
       "_origin": "ast",
       "id": "parser_ssh_parser_parse_invalid_user",
       "community": 0,
@@ -117,7 +177,7 @@
       "label": "parse_connection_closed()",
       "file_type": "code",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L108",
+      "source_location": "L112",
       "_origin": "ast",
       "id": "parser_ssh_parser_parse_connection_closed",
       "community": 0,
@@ -127,7 +187,7 @@
       "label": "parse_auth_failure()",
       "file_type": "code",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L124",
+      "source_location": "L132",
       "_origin": "ast",
       "id": "parser_ssh_parser_parse_auth_failure",
       "community": 0,
@@ -137,7 +197,7 @@
       "label": "parse_multiple_failures()",
       "file_type": "code",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L163",
+      "source_location": "L171",
       "_origin": "ast",
       "id": "parser_ssh_parser_parse_multiple_failures",
       "community": 0,
@@ -147,7 +207,7 @@
       "label": "parse_service_started()",
       "file_type": "code",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L197",
+      "source_location": "L206",
       "_origin": "ast",
       "id": "parser_ssh_parser_parse_service_started",
       "community": 0,
@@ -157,7 +217,7 @@
       "label": "parse_service_stopped()",
       "file_type": "code",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L206",
+      "source_location": "L215",
       "_origin": "ast",
       "id": "parser_ssh_parser_parse_service_stopped",
       "community": 0,
@@ -167,7 +227,7 @@
       "label": "identify_event()",
       "file_type": "code",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L214",
+      "source_location": "L223",
       "_origin": "ast",
       "id": "parser_ssh_parser_identify_event",
       "community": 0,
@@ -180,26 +240,26 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "parser_ssh_parser_rationale_18",
-      "community": 3,
+      "community": 0,
       "norm_label": "extract username and source ip     from a failed ssh login event."
     },
     {
       "label": "Extract username and source IP     from a successful SSH login event.",
       "file_type": "rationale",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L46",
+      "source_location": "L47",
       "_origin": "ast",
-      "id": "parser_ssh_parser_rationale_46",
-      "community": 4,
+      "id": "parser_ssh_parser_rationale_47",
+      "community": 0,
       "norm_label": "extract username and source ip     from a successful ssh login event."
     },
     {
       "label": "Identify the SSH event type from a log line.",
       "file_type": "rationale",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L215",
+      "source_location": "L224",
       "_origin": "ast",
-      "id": "parser_ssh_parser_rationale_215",
+      "id": "parser_ssh_parser_rationale_224",
       "community": 0,
       "norm_label": "identify the ssh event type from a log line."
     },
@@ -210,7 +270,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "readme",
-      "community": 5,
+      "community": 6,
       "norm_label": "readme.md"
     },
     {
@@ -234,10 +294,20 @@
       "norm_label": "objectives"
     },
     {
-      "label": "Current Features",
+      "label": "Documentation",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L22",
+      "_origin": "ast",
+      "id": "readme_documentation",
+      "community": 5,
+      "norm_label": "documentation"
+    },
+    {
+      "label": "Current Features",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "readme_current_features",
       "community": 5,
@@ -247,7 +317,7 @@
       "label": "SSH Parser",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L24",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "readme_ssh_parser",
       "community": 5,
@@ -257,7 +327,7 @@
       "label": "Detection Engine",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L51",
+      "source_location": "L67",
       "_origin": "ast",
       "id": "readme_detection_engine",
       "community": 5,
@@ -267,7 +337,7 @@
       "label": "SSH Brute Force",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L55",
+      "source_location": "L71",
       "_origin": "ast",
       "id": "readme_ssh_brute_force",
       "community": 5,
@@ -277,7 +347,7 @@
       "label": "Project Structure",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L88",
+      "source_location": "L104",
       "_origin": "ast",
       "id": "readme_project_structure",
       "community": 5,
@@ -287,7 +357,7 @@
       "label": "Workflow",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L115",
+      "source_location": "L131",
       "_origin": "ast",
       "id": "readme_workflow",
       "community": 5,
@@ -297,17 +367,17 @@
       "label": "Graphify Support",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L147",
+      "source_location": "L163",
       "_origin": "ast",
       "id": "readme_graphify_support",
-      "community": 5,
+      "community": 6,
       "norm_label": "graphify support"
     },
     {
       "label": "Roadmap",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L165",
+      "source_location": "L181",
       "_origin": "ast",
       "id": "readme_roadmap",
       "community": 6,
@@ -317,7 +387,7 @@
       "label": "V1",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L167",
+      "source_location": "L183",
       "_origin": "ast",
       "id": "readme_v1",
       "community": 6,
@@ -327,7 +397,7 @@
       "label": "Parsers",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L171",
+      "source_location": "L187",
       "_origin": "ast",
       "id": "readme_parsers",
       "community": 6,
@@ -337,7 +407,7 @@
       "label": "Detectors",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L179",
+      "source_location": "L195",
       "_origin": "ast",
       "id": "readme_detectors",
       "community": 6,
@@ -347,7 +417,7 @@
       "label": "Alerting",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L187",
+      "source_location": "L203",
       "_origin": "ast",
       "id": "readme_alerting",
       "community": 6,
@@ -357,7 +427,7 @@
       "label": "V2",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L195",
+      "source_location": "L211",
       "_origin": "ast",
       "id": "readme_v2",
       "community": 6,
@@ -367,7 +437,7 @@
       "label": "Design Philosophy",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L214",
+      "source_location": "L230",
       "_origin": "ast",
       "id": "readme_design_philosophy",
       "community": 6,
@@ -377,7 +447,7 @@
       "label": "Status",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L229",
+      "source_location": "L245",
       "_origin": "ast",
       "id": "readme_status",
       "community": 6,
@@ -387,14 +457,316 @@
       "label": "Author",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L241",
+      "source_location": "L257",
       "_origin": "ast",
       "id": "readme_author",
       "community": 6,
       "norm_label": "author"
+    },
+    {
+      "label": "roadmap.md",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "roadmap",
+      "community": 3,
+      "norm_label": "roadmap.md"
+    },
+    {
+      "label": "Linux Log Parser - Development Roadmap",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "roadmap_linux_log_parser_development_roadmap",
+      "community": 3,
+      "norm_label": "linux log parser - development roadmap"
+    },
+    {
+      "label": "Phase 0 \u2014 Architecture & Planning \u2705",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "roadmap_phase_0_architecture_planning",
+      "community": 3,
+      "norm_label": "phase 0 \u2014 architecture & planning \u2705"
+    },
+    {
+      "label": "Completed",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "roadmap_completed",
+      "community": 3,
+      "norm_label": "completed"
+    },
+    {
+      "label": "Phase 1 \u2014 SSH Monitoring Engine \ud83d\udd04",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "roadmap_phase_1_ssh_monitoring_engine",
+      "community": 8,
+      "norm_label": "phase 1 \u2014 ssh monitoring engine \ud83d\udd04"
+    },
+    {
+      "label": "SSH Parser",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "roadmap_ssh_parser",
+      "community": 8,
+      "norm_label": "ssh parser"
+    },
+    {
+      "label": "SSH Detection Engine",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "roadmap_ssh_detection_engine",
+      "community": 8,
+      "norm_label": "ssh detection engine"
+    },
+    {
+      "label": "Engineering",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L60",
+      "_origin": "ast",
+      "id": "roadmap_engineering",
+      "community": 8,
+      "norm_label": "engineering"
+    },
+    {
+      "label": "Phase 2 \u2014 Additional Parsers",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L70",
+      "_origin": "ast",
+      "id": "roadmap_phase_2_additional_parsers",
+      "community": 4,
+      "norm_label": "phase 2 \u2014 additional parsers"
+    },
+    {
+      "label": "Docker Parser",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "roadmap_docker_parser",
+      "community": 4,
+      "norm_label": "docker parser"
+    },
+    {
+      "label": "Syslog Parser",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L87",
+      "_origin": "ast",
+      "id": "roadmap_syslog_parser",
+      "community": 4,
+      "norm_label": "syslog parser"
+    },
+    {
+      "label": "Authentication Parser",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L99",
+      "_origin": "ast",
+      "id": "roadmap_authentication_parser",
+      "community": 4,
+      "norm_label": "authentication parser"
+    },
+    {
+      "label": "Apache / Nginx Parser",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L112",
+      "_origin": "ast",
+      "id": "roadmap_apache_nginx_parser",
+      "community": 4,
+      "norm_label": "apache / nginx parser"
+    },
+    {
+      "label": "Phase 3 \u2014 Detection Expansion",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L123",
+      "_origin": "ast",
+      "id": "roadmap_phase_3_detection_expansion",
+      "community": 7,
+      "norm_label": "phase 3 \u2014 detection expansion"
+    },
+    {
+      "label": "Service Instability",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L139",
+      "_origin": "ast",
+      "id": "roadmap_service_instability",
+      "community": 7,
+      "norm_label": "service instability"
+    },
+    {
+      "label": "Persistence Detection",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L143",
+      "_origin": "ast",
+      "id": "roadmap_persistence_detection",
+      "community": 7,
+      "norm_label": "persistence detection"
+    },
+    {
+      "label": "Behaviour Analysis",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L159",
+      "_origin": "ast",
+      "id": "roadmap_behaviour_analysis",
+      "community": 7,
+      "norm_label": "behaviour analysis"
+    },
+    {
+      "label": "Phase 4 \u2014 Event Normalization",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L169",
+      "_origin": "ast",
+      "id": "roadmap_phase_4_event_normalization",
+      "community": 3,
+      "norm_label": "phase 4 \u2014 event normalization"
+    },
+    {
+      "label": "Phase 5 \u2014 Outputs",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L214",
+      "_origin": "ast",
+      "id": "roadmap_phase_5_outputs",
+      "community": 3,
+      "norm_label": "phase 5 \u2014 outputs"
+    },
+    {
+      "label": "Phase 6 \u2014 Graphify Integration",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L247",
+      "_origin": "ast",
+      "id": "roadmap_phase_6_graphify_integration",
+      "community": 3,
+      "norm_label": "phase 6 \u2014 graphify integration"
+    },
+    {
+      "label": "Phase 7 \u2014 Dashboard",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L266",
+      "_origin": "ast",
+      "id": "roadmap_phase_7_dashboard",
+      "community": 3,
+      "norm_label": "phase 7 \u2014 dashboard"
+    },
+    {
+      "label": "Phase 8 \u2014 Alerting",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L288",
+      "_origin": "ast",
+      "id": "roadmap_phase_8_alerting",
+      "community": 3,
+      "norm_label": "phase 8 \u2014 alerting"
+    },
+    {
+      "label": "Phase 9 \u2014 Real-Time Monitoring",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L302",
+      "_origin": "ast",
+      "id": "roadmap_phase_9_real_time_monitoring",
+      "community": 3,
+      "norm_label": "phase 9 \u2014 real-time monitoring"
+    },
+    {
+      "label": "Phase 10 \u2014 AI Layer (V2)",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L354",
+      "_origin": "ast",
+      "id": "roadmap_phase_10_ai_layer_v2",
+      "community": 3,
+      "norm_label": "phase 10 \u2014 ai layer (v2)"
+    },
+    {
+      "label": "V1 Goals",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L392",
+      "_origin": "ast",
+      "id": "roadmap_v1_goals",
+      "community": 3,
+      "norm_label": "v1 goals"
+    },
+    {
+      "label": "V2 Goals",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L407",
+      "_origin": "ast",
+      "id": "roadmap_v2_goals",
+      "community": 3,
+      "norm_label": "v2 goals"
+    },
+    {
+      "label": "Progress Overview",
+      "file_type": "document",
+      "source_file": "roadmap.md",
+      "source_location": "L423",
+      "_origin": "ast",
+      "id": "roadmap_progress_overview",
+      "community": 3,
+      "norm_label": "progress overview"
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/behavior.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "detectors_behavior",
+      "target": "detectors_behavior_detect_behavior",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "main",
+      "target": "detectors_behavior",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "main",
+      "target": "detectors_behavior_detect_behavior",
+      "confidence_score": 1.0
+    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
@@ -426,6 +798,70 @@
       "confidence_score": 1.0,
       "source": "main",
       "target": "detectors_bruteforce_detect_bruteforce"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/service_anomaly.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "detectors_service_anomaly",
+      "target": "detectors_service_anomaly_detect_service_anomaly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "main",
+      "target": "detectors_service_anomaly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "main",
+      "target": "detectors_service_anomaly_detect_service_anomaly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/session_anomaly.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "detectors_session_anomaly",
+      "target": "detectors_session_anomaly_detect_session_anomaly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "main",
+      "target": "detectors_session_anomaly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "main",
+      "target": "detectors_session_anomaly_detect_session_anomaly",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -704,11 +1140,11 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L46",
+      "source_location": "L47",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_rationale_46",
-      "target": "parser_ssh_parser_parse_successful_login"
+      "source": "parser_ssh_parser_rationale_47",
+      "target": "parser_ssh_parser_parse_successful_login",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -791,11 +1227,11 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L215",
+      "source_location": "L224",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_rationale_215",
-      "target": "parser_ssh_parser_identify_event"
+      "source": "parser_ssh_parser_rationale_224",
+      "target": "parser_ssh_parser_identify_event",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -803,9 +1239,9 @@
       "source_file": "README.md",
       "source_location": "L147",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "readme_graphify_support",
-      "confidence_score": 1.0
+      "target": "readme_graphify_support"
     },
     {
       "relation": "contains",
@@ -813,9 +1249,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "readme_homelab_log_parser_linux",
-      "confidence_score": 1.0
+      "target": "readme_homelab_log_parser_linux"
     },
     {
       "relation": "contains",
@@ -823,8 +1259,18 @@
       "source_file": "README.md",
       "source_location": "L165",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "readme_roadmap",
+      "target": "readme_roadmap"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "readme",
+      "target": "roadmap",
       "confidence_score": 1.0
     },
     {
@@ -833,9 +1279,9 @@
       "source_file": "README.md",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_homelab_log_parser_linux",
-      "target": "readme_current_features",
-      "confidence_score": 1.0
+      "target": "readme_current_features"
     },
     {
       "relation": "contains",
@@ -843,8 +1289,18 @@
       "source_file": "README.md",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_homelab_log_parser_linux",
-      "target": "readme_detection_engine",
+      "target": "readme_detection_engine"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "readme_homelab_log_parser_linux",
+      "target": "readme_documentation",
       "confidence_score": 1.0
     },
     {
@@ -853,9 +1309,9 @@
       "source_file": "README.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_homelab_log_parser_linux",
-      "target": "readme_objectives",
-      "confidence_score": 1.0
+      "target": "readme_objectives"
     },
     {
       "relation": "contains",
@@ -863,9 +1319,9 @@
       "source_file": "README.md",
       "source_location": "L88",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_homelab_log_parser_linux",
-      "target": "readme_project_structure",
-      "confidence_score": 1.0
+      "target": "readme_project_structure"
     },
     {
       "relation": "contains",
@@ -873,9 +1329,9 @@
       "source_file": "README.md",
       "source_location": "L115",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_homelab_log_parser_linux",
-      "target": "readme_workflow",
-      "confidence_score": 1.0
+      "target": "readme_workflow"
     },
     {
       "relation": "contains",
@@ -883,9 +1339,9 @@
       "source_file": "README.md",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_current_features",
-      "target": "readme_ssh_parser",
-      "confidence_score": 1.0
+      "target": "readme_ssh_parser"
     },
     {
       "relation": "contains",
@@ -893,9 +1349,9 @@
       "source_file": "README.md",
       "source_location": "L55",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_detection_engine",
-      "target": "readme_ssh_brute_force",
-      "confidence_score": 1.0
+      "target": "readme_ssh_brute_force"
     },
     {
       "relation": "contains",
@@ -903,9 +1359,9 @@
       "source_file": "README.md",
       "source_location": "L241",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_roadmap",
-      "target": "readme_author",
-      "confidence_score": 1.0
+      "target": "readme_author"
     },
     {
       "relation": "contains",
@@ -913,9 +1369,9 @@
       "source_file": "README.md",
       "source_location": "L214",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_roadmap",
-      "target": "readme_design_philosophy",
-      "confidence_score": 1.0
+      "target": "readme_design_philosophy"
     },
     {
       "relation": "contains",
@@ -923,9 +1379,9 @@
       "source_file": "README.md",
       "source_location": "L229",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_roadmap",
-      "target": "readme_status",
-      "confidence_score": 1.0
+      "target": "readme_status"
     },
     {
       "relation": "contains",
@@ -933,9 +1389,9 @@
       "source_file": "README.md",
       "source_location": "L167",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_roadmap",
-      "target": "readme_v1",
-      "confidence_score": 1.0
+      "target": "readme_v1"
     },
     {
       "relation": "contains",
@@ -943,9 +1399,9 @@
       "source_file": "README.md",
       "source_location": "L195",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_roadmap",
-      "target": "readme_v2",
-      "confidence_score": 1.0
+      "target": "readme_v2"
     },
     {
       "relation": "contains",
@@ -953,9 +1409,9 @@
       "source_file": "README.md",
       "source_location": "L187",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_v1",
-      "target": "readme_alerting",
-      "confidence_score": 1.0
+      "target": "readme_alerting"
     },
     {
       "relation": "contains",
@@ -963,9 +1419,9 @@
       "source_file": "README.md",
       "source_location": "L179",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_v1",
-      "target": "readme_detectors",
-      "confidence_score": 1.0
+      "target": "readme_detectors"
     },
     {
       "relation": "contains",
@@ -973,11 +1429,271 @@
       "source_file": "README.md",
       "source_location": "L171",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_v1",
-      "target": "readme_parsers",
+      "target": "readme_parsers"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "roadmap",
+      "target": "roadmap_linux_log_parser_development_roadmap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "roadmap",
+      "target": "roadmap_phase_0_architecture_planning",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L354",
+      "weight": 1.0,
+      "source": "roadmap",
+      "target": "roadmap_phase_10_ai_layer_v2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "roadmap",
+      "target": "roadmap_phase_1_ssh_monitoring_engine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "roadmap",
+      "target": "roadmap_phase_2_additional_parsers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L123",
+      "weight": 1.0,
+      "source": "roadmap",
+      "target": "roadmap_phase_3_detection_expansion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L169",
+      "weight": 1.0,
+      "source": "roadmap",
+      "target": "roadmap_phase_4_event_normalization",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L214",
+      "weight": 1.0,
+      "source": "roadmap",
+      "target": "roadmap_phase_5_outputs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L247",
+      "weight": 1.0,
+      "source": "roadmap",
+      "target": "roadmap_phase_6_graphify_integration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L266",
+      "weight": 1.0,
+      "source": "roadmap",
+      "target": "roadmap_phase_7_dashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L288",
+      "weight": 1.0,
+      "source": "roadmap",
+      "target": "roadmap_phase_8_alerting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L302",
+      "weight": 1.0,
+      "source": "roadmap",
+      "target": "roadmap_phase_9_real_time_monitoring",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L423",
+      "weight": 1.0,
+      "source": "roadmap",
+      "target": "roadmap_progress_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L392",
+      "weight": 1.0,
+      "source": "roadmap",
+      "target": "roadmap_v1_goals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L407",
+      "weight": 1.0,
+      "source": "roadmap",
+      "target": "roadmap_v2_goals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "roadmap_phase_0_architecture_planning",
+      "target": "roadmap_completed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "roadmap_phase_1_ssh_monitoring_engine",
+      "target": "roadmap_engineering",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "roadmap_phase_1_ssh_monitoring_engine",
+      "target": "roadmap_ssh_detection_engine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "roadmap_phase_1_ssh_monitoring_engine",
+      "target": "roadmap_ssh_parser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L112",
+      "weight": 1.0,
+      "source": "roadmap_phase_2_additional_parsers",
+      "target": "roadmap_apache_nginx_parser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "roadmap_phase_2_additional_parsers",
+      "target": "roadmap_authentication_parser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "roadmap_phase_2_additional_parsers",
+      "target": "roadmap_docker_parser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "roadmap_phase_2_additional_parsers",
+      "target": "roadmap_syslog_parser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L159",
+      "weight": 1.0,
+      "source": "roadmap_phase_3_detection_expansion",
+      "target": "roadmap_behaviour_analysis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L143",
+      "weight": 1.0,
+      "source": "roadmap_phase_3_detection_expansion",
+      "target": "roadmap_persistence_detection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "roadmap.md",
+      "source_location": "L139",
+      "weight": 1.0,
+      "source": "roadmap_phase_3_detection_expansion",
+      "target": "roadmap_service_instability",
       "confidence_score": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "9c8ed086ddae73198e9506b9d5ec4f065758993d"
+  "built_at_commit": "ae4b7a87073c327b044d3633900153381de3ca13"
 }
