@@ -110,19 +110,22 @@ def parse_invalid_user(line):
     }
 
 def parse_connection_closed(line):
-
     parts = line.split()
+    by_index = parts.index("by")
 
-    user_index = parts.index("user")
-    username = parts[user_index + 1]
+    if "invalid" in parts:
+        username = parts[by_index + 2]
+        source_ip = parts[by_index + 3]
 
-    ip = parts[user_index + 2]
+    else:
+        username = parts[by_index + 1]
+        source_ip = parts[by_index + 2]
 
     return {
         "event_type": "connection_closed",
         "service": "ssh",
         "username": username,
-        "source_ip": ip,
+        "source_ip": source_ip,
         "timestamp": parse_timestamp(line)
     }
 
