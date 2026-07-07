@@ -2,3 +2,5 @@ parser/__pycache__/**
 sample_logs/ssh_sample.txt
 detectors/__pycache__/**
 Convos_and_notes.txt
+outputs/__pycache__/**
+graphify-out/cache/**
