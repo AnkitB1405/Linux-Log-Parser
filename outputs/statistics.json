@@ -1,0 +1,19 @@
+{
+    "total_events": 62,
+    "total_alerts": 17,
+    "high_alerts": 3,
+    "medium_alerts": 14,
+    "services": {
+        "ssh": 62
+    },
+    "event_types": {
+        "service_started": 7,
+        "invalid_user": 3,
+        "failed_login": 26,
+        "multiple_auth_failures": 4,
+        "successful_login": 5,
+        "session_opened": 7,
+        "connection_closed": 4,
+        "service_stopped": 6
+    }
+}

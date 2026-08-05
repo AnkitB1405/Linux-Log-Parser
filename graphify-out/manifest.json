@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   "main.py": {
-    "mtime": 1782991351.0722585,
-    "ast_hash": "752357850f1ae0ed25b9517a4e7255c1",
+    "mtime": 1783431629.040569,
+    "ast_hash": "122fb98103e088b8279664caddcef04d",
     "semantic_hash": ""
   },
   "parser/event_schema.py": {
@@ -25,8 +25,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1782975492.5021749,
-    "ast_hash": "f06d5bf129af49550530058d7989ec73",
+    "mtime": 1783319765.8670473,
+    "ast_hash": "ff8b4e3d02363a91c6a014884b28e985",
     "semantic_hash": ""
   },
   "detectors/behavior.py": {
@@ -44,11 +44,6 @@
     "ast_hash": "1b4c6fc527f9f044de9e64e3ecea7bee",
     "semantic_hash": ""
   },
-  "roadmap.md": {
-    "mtime": 1782986837.149945,
-    "ast_hash": "a7b9d377242b58cab1380430cd28443a",
-    "semantic_hash": ""
-  },
   "sample_logs/sample_ssh_log.txt": {
     "mtime": 1782973984.214897,
     "ast_hash": "da5c59dc017450dccb7d6c9d05aa1161",
@@ -57,6 +52,51 @@
   "sample_logs/ssh_dataset_v1.txt": {
     "mtime": 1782988149.381217,
     "ast_hash": "cc6f142d8597637d122b44e726555796",
+    "semantic_hash": ""
+  },
+  "outputs/alerts.json": {
+    "mtime": 1783432453.5496783,
+    "ast_hash": "f2b9ca25b54f1bfc1e572995d861f360",
+    "semantic_hash": ""
+  },
+  "outputs/events.json": {
+    "mtime": 1783432453.5494947,
+    "ast_hash": "4b3e05806c05b83343a3c65dc453e72e",
+    "semantic_hash": ""
+  },
+  "outputs/persistence.py": {
+    "mtime": 1783431072.6970565,
+    "ast_hash": "dc266e9debb4f80eff1427f8e00d26eb",
+    "semantic_hash": ""
+  },
+  "outputs/statistics.json": {
+    "mtime": 1783432453.5497558,
+    "ast_hash": "0007f93307cbea897635085d8938f5f5",
+    "semantic_hash": ""
+  },
+  "outputs/stats.py": {
+    "mtime": 1783431191.4333522,
+    "ast_hash": "0e7d14edd50ac14e227b960c3f12a1bc",
+    "semantic_hash": ""
+  },
+  "ARCHITECTURE.md": {
+    "mtime": 1783319781.2591994,
+    "ast_hash": "17ce007d59384b014eb0cf8f5d900637",
+    "semantic_hash": ""
+  },
+  "DOCUMENTATION.md": {
+    "mtime": 1783319782.3213155,
+    "ast_hash": "54e36fe18eb659e87548cfcf7fd15e3f",
+    "semantic_hash": ""
+  },
+  "ROADMAP.md": {
+    "mtime": 1783319049.564476,
+    "ast_hash": "9b3fec09187aa9f60c658eaabb2abf57",
+    "semantic_hash": ""
+  },
+  "SECURITY.md": {
+    "mtime": 1783318946.6125035,
+    "ast_hash": "aeaef8c5f56bda0612537ef6602595b5",
     "semantic_hash": ""
   }
 }
