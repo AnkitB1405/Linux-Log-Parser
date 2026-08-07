@@ -1,7 +1,7 @@
 {
   "detectors/bruteforce.py": {
-    "mtime": 1782903934.208777,
-    "ast_hash": "6092ea60797d85374966b0a0211c8839",
+    "mtime": 1786017310.6311975,
+    "ast_hash": "8701c6f9537b6c0f49d631b82230e3c5",
     "semantic_hash": ""
   },
   "main.py": {
@@ -10,13 +10,13 @@
     "semantic_hash": ""
   },
   "parser/event_schema.py": {
-    "mtime": 1781190149.98331,
-    "ast_hash": "995a9463a9dc3f82a38dc03c706e2bca",
+    "mtime": 1786017264.1942892,
+    "ast_hash": "cace835a9ca14a04e2387f9b77350bfb",
     "semantic_hash": ""
   },
   "parser/ssh_parser.py": {
-    "mtime": 1782999403.2832496,
-    "ast_hash": "ba9d151ed474e74834202203eff192c4",
+    "mtime": 1786017285.3227036,
+    "ast_hash": "881f3ec7b9e01144da9c2969ce2aa529",
     "semantic_hash": ""
   },
   "Convos_and_notes.txt": {
@@ -30,18 +30,18 @@
     "semantic_hash": ""
   },
   "detectors/behavior.py": {
-    "mtime": 1782987817.5860376,
-    "ast_hash": "44bf0681bd516d071c6fef703e52cb54",
+    "mtime": 1786017344.26785,
+    "ast_hash": "a1ee5cad50a8174d03c257139eaaf66c",
     "semantic_hash": ""
   },
   "detectors/service_anomaly.py": {
-    "mtime": 1782975668.7034566,
-    "ast_hash": "84cb843f75671ae9b248493285a17f02",
+    "mtime": 1786017316.5073118,
+    "ast_hash": "31ad5fb8f88a463272b42dd44b866f6c",
     "semantic_hash": ""
   },
   "detectors/session_anomaly.py": {
-    "mtime": 1782987825.1446764,
-    "ast_hash": "1b4c6fc527f9f044de9e64e3ecea7bee",
+    "mtime": 1786017351.1599832,
+    "ast_hash": "3ac52efc37202ddb69d2d2663951c179",
     "semantic_hash": ""
   },
   "sample_logs/sample_ssh_log.txt": {
@@ -55,13 +55,13 @@
     "semantic_hash": ""
   },
   "outputs/alerts.json": {
-    "mtime": 1783432453.5496783,
-    "ast_hash": "f2b9ca25b54f1bfc1e572995d861f360",
+    "mtime": 1786017394.5207374,
+    "ast_hash": "fdb2014c1036dbb8fb36cf327e8a1b58",
     "semantic_hash": ""
   },
   "outputs/events.json": {
-    "mtime": 1783432453.5494947,
-    "ast_hash": "4b3e05806c05b83343a3c65dc453e72e",
+    "mtime": 1786017394.519975,
+    "ast_hash": "e919142da326d7301fad40483b79f542",
     "semantic_hash": ""
   },
   "outputs/persistence.py": {
@@ -70,13 +70,13 @@
     "semantic_hash": ""
   },
   "outputs/statistics.json": {
-    "mtime": 1783432453.5497558,
+    "mtime": 1786017394.5208423,
     "ast_hash": "0007f93307cbea897635085d8938f5f5",
     "semantic_hash": ""
   },
   "outputs/stats.py": {
-    "mtime": 1783431191.4333522,
-    "ast_hash": "0e7d14edd50ac14e227b960c3f12a1bc",
+    "mtime": 1786017355.3920648,
+    "ast_hash": "5a2c2988af5bffc0d730a4c98934c1e5",
     "semantic_hash": ""
   },
   "ARCHITECTURE.md": {
@@ -85,8 +85,8 @@
     "semantic_hash": ""
   },
   "DOCUMENTATION.md": {
-    "mtime": 1783319782.3213155,
-    "ast_hash": "54e36fe18eb659e87548cfcf7fd15e3f",
+    "mtime": 1786010358.9264936,
+    "ast_hash": "0cd917f777bba6045e64bb9eabf00c18",
     "semantic_hash": ""
   },
   "ROADMAP.md": {
@@ -97,6 +97,11 @@
   "SECURITY.md": {
     "mtime": 1783318946.6125035,
     "ast_hash": "aeaef8c5f56bda0612537ef6602595b5",
+    "semantic_hash": ""
+  },
+  "test_detectors.py": {
+    "mtime": 1786017388.2006958,
+    "ast_hash": "2a685a8b411ba94b7ac822441528d3f0",
     "semantic_hash": ""
   }
 }

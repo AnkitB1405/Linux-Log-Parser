@@ -3,24 +3,40 @@
         "severity": "medium",
         "alert_type": "bruteforce",
         "source_ip": "198.51.100.10",
+        "timestamp": "1900-06-11T15:01:11",
+        "event_ids": [
+            "a7d0fe108ff8"
+        ],
         "recommended_action": "monitor"
     },
     {
         "severity": "medium",
         "alert_type": "bruteforce",
         "source_ip": "198.51.100.11",
+        "timestamp": "1900-06-11T15:02:12",
+        "event_ids": [
+            "c7120a7e5ca6"
+        ],
         "recommended_action": "monitor"
     },
     {
         "severity": "medium",
         "alert_type": "bruteforce",
         "source_ip": "203.0.113.40",
+        "timestamp": "1900-06-11T15:03:18",
+        "event_ids": [
+            "88fdcd5eae76"
+        ],
         "recommended_action": "monitor"
     },
     {
         "severity": "medium",
         "alert_type": "bruteforce",
         "source_ip": "203.0.113.90",
+        "timestamp": "1900-06-11T15:55:12",
+        "event_ids": [
+            "119b3552c4eb"
+        ],
         "recommended_action": "monitor"
     },
     {
@@ -28,12 +44,27 @@
         "alert_type": "root_attack",
         "source_ip": "203.0.113.40",
         "attempts": 4,
+        "timestamp": "1900-06-11T15:03:14",
+        "event_ids": [
+            "0daf5df03a98",
+            "235d37902015",
+            "af86bf5a9e30",
+            "7e08944bd4e6"
+        ],
         "recommended_action": "monitor"
     },
     {
         "severity": "high",
         "alert_type": "root_bruteforce",
         "source_ip": "203.0.113.40",
+        "timestamp": "1900-06-11T15:03:18",
+        "event_ids": [
+            "0daf5df03a98",
+            "235d37902015",
+            "af86bf5a9e30",
+            "7e08944bd4e6",
+            "88fdcd5eae76"
+        ],
         "recommended_action": "block_ip and report"
     },
     {
@@ -41,6 +72,14 @@
         "alert_type": "slow_bruteforce",
         "source_ip": "192.0.2.20",
         "attempts": 5,
+        "timestamp": "1900-06-11T15:07:40",
+        "event_ids": [
+            "56d9411dd620",
+            "27bcb5f481be",
+            "dba9089c65d0",
+            "49b7cf9226bc",
+            "0c6b4efb14c0"
+        ],
         "recommended_action": "monitor"
     },
     {
@@ -48,6 +87,15 @@
         "alert_type": "service_instability",
         "service": "ssh",
         "events": 6,
+        "timestamp": "1900-06-11T15:50:25",
+        "event_ids": [
+            "e463b2fe2806",
+            "ac9f1617d855",
+            "91d87cd3fe0b",
+            "c670ab0f5c42",
+            "4ce5e501ce99",
+            "70ef22b50d5f"
+        ],
         "recommended_action": "investigate service immediately"
     },
     {
@@ -57,6 +105,15 @@
         "username": "analyst",
         "source_ip": "192.0.2.20",
         "failed_attempts": 5,
+        "timestamp": "1900-06-11T15:08:20",
+        "event_ids": [
+            "56d9411dd620",
+            "27bcb5f481be",
+            "dba9089c65d0",
+            "49b7cf9226bc",
+            "0c6b4efb14c0",
+            "cd91936dc730"
+        ],
         "recommended_action": "verify login"
     },
     {
@@ -65,6 +122,13 @@
         "service": "ssh",
         "source_ip": "203.0.113.40",
         "windows": 2,
+        "timestamp": "1900-06-11T15:03:14",
+        "event_ids": [
+            "0daf5df03a98",
+            "235d37902015",
+            "af86bf5a9e30",
+            "7e08944bd4e6"
+        ],
         "recommended_action": "monitor activity"
     },
     {
@@ -73,6 +137,14 @@
         "service": "ssh",
         "source_ip": "192.0.2.20",
         "windows": 3,
+        "timestamp": "1900-06-11T15:07:40",
+        "event_ids": [
+            "56d9411dd620",
+            "27bcb5f481be",
+            "dba9089c65d0",
+            "49b7cf9226bc",
+            "0c6b4efb14c0"
+        ],
         "recommended_action": "monitor activity"
     },
     {
@@ -81,6 +153,17 @@
         "service": "ssh",
         "source_ip": "198.51.100.55",
         "windows": 6,
+        "timestamp": "1900-06-11T15:36:00",
+        "event_ids": [
+            "6b84ec6f7b10",
+            "953d7936aaea",
+            "d6629330db75",
+            "766152ad3de7",
+            "c8be075edf35",
+            "e725ad667947",
+            "890d28f7d45c",
+            "641cff65fb6e"
+        ],
         "recommended_action": "monitor activity"
     },
     {
@@ -89,6 +172,17 @@
         "service": "ssh",
         "source_ip": "198.51.100.55",
         "windows": 6,
+        "timestamp": "1900-06-11T15:36:00",
+        "event_ids": [
+            "6b84ec6f7b10",
+            "953d7936aaea",
+            "d6629330db75",
+            "766152ad3de7",
+            "c8be075edf35",
+            "e725ad667947",
+            "890d28f7d45c",
+            "641cff65fb6e"
+        ],
         "recommended_action": "investigate immediately"
     },
     {
@@ -97,6 +191,11 @@
         "service": "ssh",
         "username": "user01",
         "duration": 12.0,
+        "timestamp": "1900-06-11T15:10:12",
+        "event_ids": [
+            "d5381139b35b",
+            "b7c191d4b52e"
+        ],
         "recommended_action": "monitor"
     },
     {
@@ -105,6 +204,11 @@
         "service": "ssh",
         "username": "user02",
         "duration": 10.0,
+        "timestamp": "1900-06-11T15:11:10",
+        "event_ids": [
+            "f58ee9d2f727",
+            "b615bf258fbc"
+        ],
         "recommended_action": "monitor"
     },
     {
@@ -113,6 +217,11 @@
         "service": "ssh",
         "username": "user03",
         "duration": 8.0,
+        "timestamp": "1900-06-11T15:12:08",
+        "event_ids": [
+            "adac245ae15f",
+            "752406c96080"
+        ],
         "recommended_action": "monitor"
     },
     {
@@ -121,6 +230,11 @@
         "service": "ssh",
         "username": "engineer",
         "duration": 6.0,
+        "timestamp": "1900-06-11T15:40:06",
+        "event_ids": [
+            "dfad2b255815",
+            "d819066ba207"
+        ],
         "recommended_action": "monitor"
     }
 ]
