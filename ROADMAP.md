@@ -23,7 +23,7 @@ Completed foundational planning and design.
 
 # Phase 1 — SSH Monitoring Engine 🔄
 
-Current Progress: ~92%
+Current Progress: ~95%
 
 ## SSH Parser
 
@@ -38,6 +38,9 @@ Current Progress: ~92%
 - [x] Service Stopped
 - [x] Timestamp support
 - [x] Parser robustness improvements
+- [x] All parsers routed through the normalized schema
+- [ ] Accepted publickey (key-based logins currently produce no event)
+- [ ] Year-aware timestamps (syslog carries no year — see `ssh_parser.py:15`)
 
 ## SSH Detection Engine
 
@@ -60,8 +63,11 @@ Planned:
 ## Engineering
 
 - [x] Error Handling
-- [ ] Persist Events
-- [ ] Persist Alerts
+- [x] Persist Events
+- [x] Persist Alerts
+- [x] Alert → event traceability (`event_ids`)
+- [x] Regression test for the detection engine (`test_detectors.py`)
+- [ ] Severity band fixes (`credential_compromise` high branch unreachable; duplicate `behavior_anomaly`)
 - [ ] Detection History
 - [ ] Event Archiving
 
@@ -169,54 +175,68 @@ Slow brute force detection
 
 ---
 
-# Phase 4 — Event Normalization
+# Phase 4 — Event Normalization ✅
 
-Current Progress: ~25%
+Current Progress: 100%
 
-Current schema:
+Every parser now returns `parser/event_schema.py:create_event()`. There is
+one event shape in the system, and the detectors, statistics and persistence
+layers all consume it.
 
-```python
-{
-    "event_type": "...",
-    "source_ip": "...",
-    "timestamp": ...
-}
-```
-
-Target schema:
+Implemented schema:
 
 ```python
 {
-    "id": "...",
+    "id": "b1c2a0054d24",          # short uuid4 — links alerts back to evidence
 
-    "source": "ssh",
+    "timestamp": datetime(...),    # from the log line, not wall clock
 
-    "event_type": "...",
+    "log_source": "ssh",
 
-    "timestamp": ...,
+    "host": "Sentinel",
 
-    "host": "...",
+    "event_type": "failed_login",
 
-    "severity": "...",
+    "severity": None,              # set by detectors, not by parsers
 
-    "user": "...",
+    "username": "guest",
 
-    "source_ip": "..."
+    "source_ip": "198.51.100.10",
+
+    "details": {}                  # per-source extras (PAM uid/tty, session initiated_by, ...)
 }
 ```
 
 Goals:
 
-- [ ] Unified Event Schema
-- [ ] UUID support
-- [ ] Event Source Tracking
-- [ ] Host Tracking
+- [x] Unified Event Schema
+- [x] UUID support
+- [x] Event Source Tracking
+- [x] Host Tracking
+- [x] Alerts carry a timestamp and the `event_ids` that justify them
+
+Naming note: the original plan called these fields `source` and `user`. The
+shipped names are `log_source` and `username`, matching what the detectors and
+alert dicts already used — renaming six files to match a planning document was
+not worth it. `details` was added so a new parser can carry source-specific
+fields without widening the common shape for everyone else.
 
 ---
 
-# Phase 5 — Outputs
+# Phase 5 — Outputs 🔄
 
-Current Progress: 0%
+Current Progress: ~50%
+
+Current structure:
+
+```text
+outputs/
+├── persistence.py     # save_events / save_alerts / save_statistics
+├── stats.py           # generate_statistics
+├── events.json        # regenerated every run
+├── alerts.json        # regenerated every run
+└── statistics.json    # regenerated every run
+```
 
 Planned structure:
 
@@ -240,10 +260,14 @@ weekly/
 
 Planned capabilities:
 
-- [ ] Save parsed events
-- [ ] Save alerts
-- [ ] Save detections
+- [x] Save parsed events
+- [x] Save alerts
+- [x] Run statistics
 - [ ] Historical retention
+- [ ] `monitor`-severity alerts get their own statistics bucket
+
+Outputs are overwritten on every run — there is no run history and no alert
+deduplication yet.
 
 ---
 
@@ -428,15 +452,15 @@ Focus Areas:
 ```text
 Phase 0   ██████████ 100%
 
-Phase 1   █████████░ 92%
+Phase 1   █████████░ 95%
 
 Phase 2   ░░░░░░░░░░ 0%
 
 Phase 3   ████░░░░░░ 35%
 
-Phase 4   ███░░░░░░░ 25%
+Phase 4   ██████████ 100%
 
-Phase 5   ░░░░░░░░░░ 0%
+Phase 5   █████░░░░░ 50%
 
 Phase 6   ░░░░░░░░░░ 0%
 
@@ -455,4 +479,6 @@ Phase 10  ░░░░░░░░░░ 0%
 
 Current Focus:
 
-> Completing SSH detections, improving event persistence, and preparing for additional log sources.
+> Phase 4 is closed — the schema is unified and alerts are traceable back to
+> the log lines that raised them. Next: the severity band fixes, then the
+> second (non-SSH) parser, which the normalized schema now makes cheap.

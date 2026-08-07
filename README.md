@@ -31,7 +31,8 @@ The following documents and artifacts are maintained as part of the project engi
 | [SECURITY.md](SECURITY.md) | Threat Model | 🚧 |
 | [screenshots/](screenshots/) | Visual Assets | 🚧 |
 | [journal/](journal/) | Notes | 🚧 |
-| [outputs/](outputs/) | Events and Alerts | 🚧 |
+| [outputs/](outputs/) | Events and Alerts | ✅ |
+| [test_detectors.py](test_detectors.py) | Detection Regression Test | ✅ |
 
 ---
 
@@ -51,14 +52,21 @@ Supported SSH events:
 - SSH service started
 - SSH service stopped
 
-Example normalized event:
+Every parser routes through a single normalized schema
+(`parser/event_schema.py`), so all log sources — current and future — emit the
+same shape:
 
 ```python
 {
+    "id": "b1c2a0054d24",          # short uuid4 — lets alerts reference evidence
+    "timestamp": datetime(...),    # taken from the log line, not wall clock
+    "log_source": "ssh",
+    "host": "Sentinel",
     "event_type": "failed_login",
-    "username": "root",
-    "source_ip": "185.12.41.55",
-    "timestamp": datetime(...)
+    "severity": None,              # set by detectors, not by parsers
+    "username": "guest",
+    "source_ip": "198.51.100.10",
+    "details": {}                  # source-specific extras (PAM uid/tty, ...)
 }
 ```
 
@@ -132,6 +140,44 @@ Repeated SSH service restarts
 → Service instability
 ```
 
+### Alert Format
+
+Every alert is anchored in time and in evidence — it records **when** the
+condition became true, and the ids of the exact events that raised it:
+
+```python
+{
+    "severity": "medium",
+    "alert_type": "credential_compromise",
+    "service": "ssh",
+    "username": "analyst",
+    "source_ip": "192.0.2.20",
+    "failed_attempts": 5,
+    "timestamp": datetime(...),                    # from the log, not the clock
+    "event_ids": ["7f3a...", "9c11...", ...],      # resolvable against events.json
+    "recommended_action": "verify login"
+}
+```
+
+This makes an alert auditable: `event_ids` resolve against
+`outputs/events.json` to reconstruct the raw lines behind any detection.
+
+---
+
+## Testing
+
+```bash
+python3 test_detectors.py
+```
+
+A dependency-free regression check (plain `assert`, no framework). It pins the
+alert set produced by `sample_logs/ssh_dataset_v1.txt` — verified by hand as
+11/11 attack scenarios detected with 0 false positives — along with the event
+mix, the normalized event shape, event id uniqueness, and the invariant that
+no alert may predate its own evidence. Any threshold, window or parser change
+that moves the result set fails this test, so behaviour changes have to be
+deliberate.
+
 ---
 
 ## Project Structure
@@ -158,6 +204,13 @@ Log_Parser/
 ├── graphify-out/
 │
 ├── outputs/
+│   ├── persistence.py
+│   ├── stats.py
+│   ├── events.json
+│   ├── alerts.json
+│   └── statistics.json
+│
+├── test_detectors.py
 │
 ├── DOCUMENTATION.md
 ├── ARCHITECTURE.md
@@ -294,7 +347,7 @@ Actively being developed and expanded.
 
 Current focus:
 
-> Refining detector thresholds, adding event and alert persistence to `outputs/`, and preparing the normalized event schema for additional (non-SSH) log sources.
+> Event schema unification is complete — all parsers emit one normalized shape and every alert links back to the log lines that raised it. Next: refining the detector severity bands, then adding the second (non-SSH) parser.
 
 ---
 
