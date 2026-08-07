@@ -1,16 +1,18 @@
+KNOWN_ROOT_IPS = {
+    "100.112.185.127",
+    "100.89.181.9",
+    "100.110.185.112"
+}
+
+
 def detect_bruteforce(events):
 
+    # each maps ip -> [(timestamp, event_id), ...]
     failed_attempts = {}
     pam_attempts = {}
     root_attempts = {}
 
     alerts = []
-
-    KNOWN_ROOT_IPS = {
-        "100.112.185.127",
-        "100.89.181.9",
-        "100.110.185.112"
-    }
 
     for event in events:
 
@@ -19,85 +21,65 @@ def detect_bruteforce(events):
         if not ip:
             continue
 
-        timestamp = event["timestamp"]
+        entry = (event["timestamp"], event["id"])
         event_type = event["event_type"]
-
 
         # Failed Login
 
         if event_type == "failed_login":
-            username = event["username"]
 
-            if ip not in failed_attempts:
-                failed_attempts[ip] = []
+            failed_attempts.setdefault(ip, []).append(entry)
 
-            failed_attempts[ip].append(timestamp)
-
-            if username == "root":
-
-                if ip not in root_attempts:
-                    root_attempts[ip] = []
-
-                root_attempts[ip].append(timestamp)
-
+            if event["username"] == "root":
+                root_attempts.setdefault(ip, []).append(entry)
 
         # Authentication Failure
 
         elif event_type == "authentication_failure":
 
-            if ip not in failed_attempts:
-                failed_attempts[ip] = []
-
-            failed_attempts[ip].append(timestamp)
-
+            failed_attempts.setdefault(ip, []).append(entry)
 
         # Multiple Auth Failures
 
         elif event_type == "multiple_auth_failures":
 
-            if ip not in pam_attempts:
-                pam_attempts[ip] = []
-
-            pam_attempts[ip].append(timestamp)
-
+            pam_attempts.setdefault(ip, []).append(entry)
 
         # Successful Login
 
         elif event_type == "successful_login":
-            username = event["username"]
 
-            if username == "root":
+            if event["username"] == "root" and ip not in KNOWN_ROOT_IPS:
 
-                if ip not in KNOWN_ROOT_IPS:
-
-                    alerts.append({
-                        "severity": "monitor",
-                        "alert_type": "unknown_root_login",
-                        "source_ip": ip,
-                        "recommended_action":
-                        "verify source"
-                    })
-
+                alerts.append({
+                    "severity": "monitor",
+                    "alert_type": "unknown_root_login",
+                    "source_ip": ip,
+                    "timestamp": event["timestamp"],
+                    "event_ids": [event["id"]],
+                    "recommended_action":
+                    "verify source"
+                })
 
     # PAM
 
-    for ip, times in pam_attempts.items():
-        times.sort()
+    for ip, entries in pam_attempts.items():
+        entries.sort()
 
-        if len(times) == 1:
+        if len(entries) == 1:
 
             alerts.append({
                 "severity": "medium",
                 "alert_type": "bruteforce",
                 "source_ip": ip,
+                "timestamp": entries[-1][0],
+                "event_ids": [e[1] for e in entries],
                 "recommended_action":
                 "monitor"
-
             })
 
-
-        elif len(times) >= 2:
-            delta = times[-1] - times[-2]
+        elif len(entries) >= 2:
+            delta = entries[-1][0] - entries[-2][0]
 
             if delta.total_seconds() <= 180:
 
@@ -105,79 +87,75 @@ def detect_bruteforce(events):
                     "severity": "high",
                     "alert_type": "bruteforce",
                     "source_ip": ip,
+                    "timestamp": entries[-1][0],
+                    "event_ids": [e[1] for e in entries],
                     "recommended_action":
                     "block_ip and report"
                 })
 
-
     # Root
 
-    for ip, times in root_attempts.items():
-        times.sort()
-        latest = max(times)
-        recent = 0
+    for ip, entries in root_attempts.items():
+        entries.sort()
+        latest = entries[-1][0]
+        recent = [e for e in entries if (latest - e[0]).total_seconds() <= 600]
 
-        for t in times:
-            delta = latest - t
-
-            if delta.total_seconds() <= 600:
-                recent += 1
-
-        if recent >= 1:
+        if len(recent) >= 1:
 
             alerts.append({
                 "severity": "medium",
                 "alert_type": "root_attack",
                 "source_ip": ip,
-                "attempts": recent,
+                "attempts": len(recent),
+                "timestamp": latest,
+                "event_ids": [e[1] for e in recent],
                 "recommended_action":
                 "monitor"
             })
 
         if ip in pam_attempts:
 
+            correlated = recent + pam_attempts[ip]
+
             alerts.append({
                 "severity": "high",
                 "alert_type": "root_bruteforce",
                 "source_ip": ip,
+                "timestamp": max(e[0] for e in correlated),
+                "event_ids": [e[1] for e in correlated],
                 "recommended_action":
                 "block_ip and report"
-
             })
-
 
     # Slow brute force
 
-    for ip, times in failed_attempts.items():
-        times.sort()
-        latest = max(times)
-        recent = 0
+    for ip, entries in failed_attempts.items():
+        entries.sort()
+        latest = entries[-1][0]
+        recent = [e for e in entries if (latest - e[0]).total_seconds() <= 600]
 
-        for t in times:
-            delta = latest - t
-
-            if delta.total_seconds() <= 600:
-                recent += 1
-
-        if 5 <= recent < 8:
+        if 5 <= len(recent) < 8:
 
             alerts.append({
                 "severity": "medium",
                 "alert_type": "slow_bruteforce",
                 "source_ip": ip,
-                "attempts": recent,
+                "attempts": len(recent),
+                "timestamp": latest,
+                "event_ids": [e[1] for e in recent],
                 "recommended_action":
                 "monitor"
-
             })
 
-        elif recent >= 8:
+        elif len(recent) >= 8:
 
             alerts.append({
                 "severity": "high",
                 "alert_type": "slow_bruteforce",
                 "source_ip": ip,
-                "attempts": recent,
+                "attempts": len(recent),
+                "timestamp": latest,
+                "event_ids": [e[1] for e in recent],
                 "recommended_action":
                 "block_ip and report"
             })

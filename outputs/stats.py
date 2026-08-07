@@ -18,7 +18,7 @@ def generate_statistics(events, alerts):
             statistics["medium_alerts"] += 1
 
     for event in events:
-        service = event.get("service")
+        service = event.get("log_source")
         event_type = event["event_type"]
         statistics["services"][service] = statistics["services"].get(service, 0) + 1
         statistics["event_types"][event_type] = statistics["event_types"].get(event_type, 0) + 1

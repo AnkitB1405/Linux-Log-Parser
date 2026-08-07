@@ -1,55 +1,57 @@
 def detect_credential_compromise(events):
+
+    # (username, ip) -> [(timestamp, event_id), ...]
     failed_attempts = {}
     alerts = []
 
     for event in events:
 
+        key = (event["username"], event["source_ip"])
+
         if event["event_type"] == "failed_login":
-            username = event["username"]
-            ip = event["source_ip"]
-            timestamp = event["timestamp"]
-            key = (username, ip)
 
-            if key not in failed_attempts:
-                failed_attempts[key] = []
-
-            failed_attempts[key].append(timestamp)
+            failed_attempts.setdefault(key, []).append(
+                (event["timestamp"], event["id"])
+            )
 
         elif event["event_type"] == "successful_login":
-            username = event["username"]
-            ip = event["source_ip"]
-            timestamp = event["timestamp"]
-            key = (username, ip)
 
             if key in failed_attempts:
-                recent = 0
+                timestamp = event["timestamp"]
 
-                for t in failed_attempts[key]:
-                    delta = timestamp - t
+                recent = [
+                    e for e in failed_attempts[key]
+                    if (timestamp - e[0]).total_seconds() <= 600
+                ]
 
-                    if delta.total_seconds() <= 600:
-                        recent += 1
+                # the success itself is the moment of compromise, so it
+                # anchors the alert and belongs in the evidence list
+                event_ids = [e[1] for e in recent] + [event["id"]]
 
-                if recent >= 5:
+                if len(recent) >= 5:
                     alerts.append({
                         "severity": "medium",
                         "alert_type": "credential_compromise",
-                        "service": event.get("service"),
-                        "username": username,
-                        "source_ip": ip,
-                        "failed_attempts": recent,
+                        "service": event["log_source"],
+                        "username": event["username"],
+                        "source_ip": event["source_ip"],
+                        "failed_attempts": len(recent),
+                        "timestamp": timestamp,
+                        "event_ids": event_ids,
                         "recommended_action": "verify login"
                     })
 
-                elif recent >= 8:
+                elif len(recent) >= 8:
 
                     alerts.append({
                         "severity": "high",
                         "alert_type": "credential_compromise",
-                        "service": event.get("service"),
-                        "username": username,
-                        "source_ip": ip,
-                        "failed_attempts": recent,
+                        "service": event["log_source"],
+                        "username": event["username"],
+                        "source_ip": event["source_ip"],
+                        "failed_attempts": len(recent),
+                        "timestamp": timestamp,
+                        "event_ids": event_ids,
                         "recommended_action": "investigate immediately"
                     })
 

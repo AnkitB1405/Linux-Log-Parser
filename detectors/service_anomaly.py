@@ -1,4 +1,6 @@
 def detect_service_anomaly(events):
+
+    # service -> [(timestamp, event_id), ...]
     service_events = {}
     alerts = []
 
@@ -10,42 +12,35 @@ def detect_service_anomaly(events):
         ]:
             continue
 
-        service = event["service"]
-        timestamp = event["timestamp"]
+        service_events.setdefault(event["log_source"], []).append(
+            (event["timestamp"], event["id"])
+        )
 
-        if service not in service_events:
-            service_events[service] = []
+    for service, entries in service_events.items():
+        entries.sort()
+        latest = entries[-1][0]
+        recent = [e for e in entries if (latest - e[0]).total_seconds() <= 300]
 
-        service_events[service].append(timestamp)
-
-    for service, times in service_events.items():
-        times.sort()
-        latest = max(times)
-        recent = 0
-
-        for t in times:
-            delta = latest - t
-
-            if delta.total_seconds() <= 300:
-                recent += 1
-
-        if recent >= 5:
+        if len(recent) >= 5:
             alerts.append({
                 "severity": "high",
                 "alert_type": "service_instability",
                 "service": service,
-                "events": recent,
+                "events": len(recent),
+                "timestamp": latest,
+                "event_ids": [e[1] for e in recent],
                 "recommended_action":
                 "investigate service immediately"
             })
 
-
-        elif recent >= 3:
+        elif len(recent) >= 3:
             alerts.append({
                 "severity": "medium",
                 "alert_type": "service_instability",
                 "service": service,
-                "events": recent,
+                "events": len(recent),
+                "timestamp": latest,
+                "event_ids": [e[1] for e in recent],
                 "recommended_action":
                 "monitor service"
             })
