@@ -1,6 +1,6 @@
 [
     {
-        "id": "04c3eec41541",
+        "id": "e99b6ffac4cb",
         "timestamp": "1900-06-11T15:00:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -11,7 +11,7 @@
         "details": {}
     },
     {
-        "id": "5e68163a0d1d",
+        "id": "74077d92df62",
         "timestamp": "1900-06-11T15:01:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -22,7 +22,7 @@
         "details": {}
     },
     {
-        "id": "685abe923269",
+        "id": "8dc24cf30a0c",
         "timestamp": "1900-06-11T15:01:02",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -33,7 +33,7 @@
         "details": {}
     },
     {
-        "id": "d5ec6f32f054",
+        "id": "a1d55fb5b590",
         "timestamp": "1900-06-11T15:01:05",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -44,7 +44,7 @@
         "details": {}
     },
     {
-        "id": "365fe38d264f",
+        "id": "1ee905fb8c08",
         "timestamp": "1900-06-11T15:01:08",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -55,7 +55,7 @@
         "details": {}
     },
     {
-        "id": "a7d0fe108ff8",
+        "id": "b19b08c1f4c1",
         "timestamp": "1900-06-11T15:01:11",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -65,13 +65,15 @@
         "source_ip": "198.51.100.10",
         "details": {
             "count": 2,
+            "logname": null,
             "uid": "0",
             "euid": "0",
-            "tty": "ssh"
+            "tty": "ssh",
+            "ruser": null
         }
     },
     {
-        "id": "d48489b093c1",
+        "id": "e1043b557820",
         "timestamp": "1900-06-11T15:02:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -82,7 +84,7 @@
         "details": {}
     },
     {
-        "id": "a1508d7ed615",
+        "id": "0c222e37cf2d",
         "timestamp": "1900-06-11T15:02:04",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -93,7 +95,7 @@
         "details": {}
     },
     {
-        "id": "10db59216601",
+        "id": "f9fc05cfd838",
         "timestamp": "1900-06-11T15:02:06",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -104,7 +106,7 @@
         "details": {}
     },
     {
-        "id": "d48b4da3cef4",
+        "id": "91a620d63c65",
         "timestamp": "1900-06-11T15:02:08",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -115,7 +117,7 @@
         "details": {}
     },
     {
-        "id": "c7120a7e5ca6",
+        "id": "d8a18d9e3628",
         "timestamp": "1900-06-11T15:02:12",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -125,13 +127,15 @@
         "source_ip": "198.51.100.11",
         "details": {
             "count": 2,
+            "logname": null,
             "uid": "0",
             "euid": "0",
-            "tty": "ssh"
+            "tty": "ssh",
+            "ruser": null
         }
     },
     {
-        "id": "0daf5df03a98",
+        "id": "27178f02066e",
         "timestamp": "1900-06-11T15:03:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -142,7 +146,7 @@
         "details": {}
     },
     {
-        "id": "235d37902015",
+        "id": "2a0d6dd93e41",
         "timestamp": "1900-06-11T15:03:04",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -153,7 +157,7 @@
         "details": {}
     },
     {
-        "id": "af86bf5a9e30",
+        "id": "fb9faae01c26",
         "timestamp": "1900-06-11T15:03:09",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -164,7 +168,7 @@
         "details": {}
     },
     {
-        "id": "7e08944bd4e6",
+        "id": "23c0a5bf4267",
         "timestamp": "1900-06-11T15:03:14",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -175,7 +179,7 @@
         "details": {}
     },
     {
-        "id": "88fdcd5eae76",
+        "id": "12db128acd32",
         "timestamp": "1900-06-11T15:03:18",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -185,13 +189,15 @@
         "source_ip": "203.0.113.40",
         "details": {
             "count": 2,
+            "logname": null,
             "uid": "0",
             "euid": "0",
-            "tty": "ssh"
+            "tty": "ssh",
+            "ruser": null
         }
     },
     {
-        "id": "56d9411dd620",
+        "id": "88145661d99b",
         "timestamp": "1900-06-11T15:05:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -202,7 +208,7 @@
         "details": {}
     },
     {
-        "id": "27bcb5f481be",
+        "id": "6e5080b11a1b",
         "timestamp": "1900-06-11T15:05:40",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -213,7 +219,7 @@
         "details": {}
     },
     {
-        "id": "dba9089c65d0",
+        "id": "37a6e15b7ff3",
         "timestamp": "1900-06-11T15:06:20",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -224,7 +230,7 @@
         "details": {}
     },
     {
-        "id": "49b7cf9226bc",
+        "id": "d6a7b09ad6c9",
         "timestamp": "1900-06-11T15:07:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -235,7 +241,7 @@
         "details": {}
     },
     {
-        "id": "0c6b4efb14c0",
+        "id": "1712ce564dd3",
         "timestamp": "1900-06-11T15:07:40",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -246,7 +252,7 @@
         "details": {}
     },
     {
-        "id": "cd91936dc730",
+        "id": "f8964ad1cae8",
         "timestamp": "1900-06-11T15:08:20",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -257,7 +263,7 @@
         "details": {}
     },
     {
-        "id": "5575c6e2cc6e",
+        "id": "174ffaeeabd3",
         "timestamp": "1900-06-11T15:08:20",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -270,7 +276,7 @@
         }
     },
     {
-        "id": "b9688625e4ac",
+        "id": "6f5f29795766",
         "timestamp": "1900-06-11T15:09:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -283,7 +289,7 @@
         }
     },
     {
-        "id": "9a7a509680b3",
+        "id": "5807f41c9df5",
         "timestamp": "1900-06-11T15:10:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -294,7 +300,7 @@
         "details": {}
     },
     {
-        "id": "d5381139b35b",
+        "id": "ba378dc50a7b",
         "timestamp": "1900-06-11T15:10:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -307,7 +313,7 @@
         }
     },
     {
-        "id": "b7c191d4b52e",
+        "id": "dfeb453e18bb",
         "timestamp": "1900-06-11T15:10:12",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -318,7 +324,7 @@
         "details": {}
     },
     {
-        "id": "d1fb11536168",
+        "id": "4693214ab24b",
         "timestamp": "1900-06-11T15:11:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -329,7 +335,7 @@
         "details": {}
     },
     {
-        "id": "f58ee9d2f727",
+        "id": "20c410d0c1fb",
         "timestamp": "1900-06-11T15:11:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -342,7 +348,7 @@
         }
     },
     {
-        "id": "b615bf258fbc",
+        "id": "bf6094175fd6",
         "timestamp": "1900-06-11T15:11:10",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -353,7 +359,7 @@
         "details": {}
     },
     {
-        "id": "c6a2b7e320aa",
+        "id": "919572e00b4e",
         "timestamp": "1900-06-11T15:12:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -364,7 +370,7 @@
         "details": {}
     },
     {
-        "id": "adac245ae15f",
+        "id": "85e0205a5f98",
         "timestamp": "1900-06-11T15:12:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -377,7 +383,7 @@
         }
     },
     {
-        "id": "752406c96080",
+        "id": "da5ff774c292",
         "timestamp": "1900-06-11T15:12:08",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -388,7 +394,7 @@
         "details": {}
     },
     {
-        "id": "253be3e6f751",
+        "id": "07b1930809a7",
         "timestamp": "1900-06-11T15:13:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -399,7 +405,7 @@
         "details": {}
     },
     {
-        "id": "1f9ab5361747",
+        "id": "72955f946956",
         "timestamp": "1900-06-11T15:13:03",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -410,7 +416,7 @@
         "details": {}
     },
     {
-        "id": "f95a24e5c288",
+        "id": "c893042c1692",
         "timestamp": "1900-06-11T15:13:20",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -421,7 +427,7 @@
         "details": {}
     },
     {
-        "id": "622d71e23bb3",
+        "id": "3e4484ad9d01",
         "timestamp": "1900-06-11T15:13:24",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -432,7 +438,7 @@
         "details": {}
     },
     {
-        "id": "2a15668f839a",
+        "id": "cda26a01f145",
         "timestamp": "1900-06-11T15:13:40",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -443,7 +449,7 @@
         "details": {}
     },
     {
-        "id": "2dc367650707",
+        "id": "11e328612a0d",
         "timestamp": "1900-06-11T15:13:45",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -454,7 +460,7 @@
         "details": {}
     },
     {
-        "id": "6b84ec6f7b10",
+        "id": "6446f2367fff",
         "timestamp": "1900-06-11T15:15:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -465,7 +471,7 @@
         "details": {}
     },
     {
-        "id": "953d7936aaea",
+        "id": "c106e6eb553b",
         "timestamp": "1900-06-11T15:18:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -476,7 +482,7 @@
         "details": {}
     },
     {
-        "id": "d6629330db75",
+        "id": "6b066271004e",
         "timestamp": "1900-06-11T15:21:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -487,7 +493,7 @@
         "details": {}
     },
     {
-        "id": "766152ad3de7",
+        "id": "25bfb2706a4e",
         "timestamp": "1900-06-11T15:24:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -498,7 +504,7 @@
         "details": {}
     },
     {
-        "id": "c8be075edf35",
+        "id": "fe613a471539",
         "timestamp": "1900-06-11T15:27:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -509,7 +515,7 @@
         "details": {}
     },
     {
-        "id": "e725ad667947",
+        "id": "5f21110b7dd3",
         "timestamp": "1900-06-11T15:30:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -520,7 +526,7 @@
         "details": {}
     },
     {
-        "id": "890d28f7d45c",
+        "id": "09f9bd16f51a",
         "timestamp": "1900-06-11T15:33:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -531,7 +537,7 @@
         "details": {}
     },
     {
-        "id": "641cff65fb6e",
+        "id": "a74509086961",
         "timestamp": "1900-06-11T15:36:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -542,7 +548,7 @@
         "details": {}
     },
     {
-        "id": "b21c5b0b1681",
+        "id": "9ca6f327a614",
         "timestamp": "1900-06-11T15:40:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -553,7 +559,7 @@
         "details": {}
     },
     {
-        "id": "dfad2b255815",
+        "id": "7f1162f5ea39",
         "timestamp": "1900-06-11T15:40:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -566,7 +572,7 @@
         }
     },
     {
-        "id": "d819066ba207",
+        "id": "9e8abe42296b",
         "timestamp": "1900-06-11T15:40:06",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -577,7 +583,7 @@
         "details": {}
     },
     {
-        "id": "41bfb17a3867",
+        "id": "dcb01c49d9b4",
         "timestamp": "1900-06-11T15:42:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -590,7 +596,7 @@
         }
     },
     {
-        "id": "e463b2fe2806",
+        "id": "22331bd6989e",
         "timestamp": "1900-06-11T15:50:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -601,7 +607,7 @@
         "details": {}
     },
     {
-        "id": "ac9f1617d855",
+        "id": "fd56eed5afb6",
         "timestamp": "1900-06-11T15:50:05",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -612,7 +618,7 @@
         "details": {}
     },
     {
-        "id": "91d87cd3fe0b",
+        "id": "ef2bc47026bf",
         "timestamp": "1900-06-11T15:50:10",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -623,7 +629,7 @@
         "details": {}
     },
     {
-        "id": "c670ab0f5c42",
+        "id": "400317dca439",
         "timestamp": "1900-06-11T15:50:15",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -634,7 +640,7 @@
         "details": {}
     },
     {
-        "id": "4ce5e501ce99",
+        "id": "4b93dcebc780",
         "timestamp": "1900-06-11T15:50:20",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -645,7 +651,7 @@
         "details": {}
     },
     {
-        "id": "70ef22b50d5f",
+        "id": "a16eeb75ef00",
         "timestamp": "1900-06-11T15:50:25",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -656,7 +662,7 @@
         "details": {}
     },
     {
-        "id": "8d63fb68a63f",
+        "id": "02551c698df9",
         "timestamp": "1900-06-11T15:55:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -667,7 +673,7 @@
         "details": {}
     },
     {
-        "id": "18ee1c5dd1f3",
+        "id": "ffb9c09da296",
         "timestamp": "1900-06-11T15:55:02",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -678,7 +684,7 @@
         "details": {}
     },
     {
-        "id": "bdcbc857486c",
+        "id": "414a27560adf",
         "timestamp": "1900-06-11T15:55:05",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -689,7 +695,7 @@
         "details": {}
     },
     {
-        "id": "aad649abdb3f",
+        "id": "bd5849a74cae",
         "timestamp": "1900-06-11T15:55:09",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -700,7 +706,7 @@
         "details": {}
     },
     {
-        "id": "119b3552c4eb",
+        "id": "7d745b3e6352",
         "timestamp": "1900-06-11T15:55:12",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -710,9 +716,11 @@
         "source_ip": "203.0.113.90",
         "details": {
             "count": 2,
+            "logname": null,
             "uid": "0",
             "euid": "0",
-            "tty": "ssh"
+            "tty": "ssh",
+            "ruser": null
         }
     }
 ]

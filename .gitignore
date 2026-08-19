@@ -6,3 +6,4 @@ outputs/__pycache__/**
 graphify-out/cache/**
 CLAUDE.md
 .claude/
+__pycache__/

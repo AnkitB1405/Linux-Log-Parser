@@ -351,6 +351,18 @@ Current focus:
 
 ---
 
+## AI Assistance
+
+Claude (Anthropic) is used on this project for **documentation, research,
+learning and debugging only**. All source code — parsers, detectors, the event
+schema and tests — is written by me.
+
+The git history reflects this: code commits are authored by `AnkitB1405`,
+while documentation and generated-artifact commits are authored by `Claude`.
+Both are committed by `AnkitB1405`.
+
+---
+
 ## Author
 
 Ankit Bembalgi
