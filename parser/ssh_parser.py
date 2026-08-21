@@ -6,24 +6,52 @@ from parser.event_schema import create_event
 LOG_SOURCE = "ssh"
 
 
-# --- Envelope --------------------------------------------------------------
+# --- Envelopes -------------------------------------------------------------
 #
-# Everything before the message body. This is the layer that changes when the
-# parser moves to another machine — journald, rsyslog and RFC5424 wrap lines
-# differently — so it is kept separate from the message patterns below, which
-# come from OpenSSH's own source and read the same on every distro.
+# The envelope is the syslog wrapper the operating system puts around a
+# message; the message itself is written by OpenSSH and reads the same
+# everywhere. Only the envelope varies by machine, so it is the only thing
+# that needs a per-machine variant.
 #
-#   Jun 11 15:00:00 Sentinel sshd-session[200001]: Failed password for root ...
-#   |--- timestamp ---| |-host-| |-process-||pid|  |-------- message -------|
+# Envelopes are tried in order and the first to match wins, which is how the
+# parser auto-detects the log format. No caller declares which distro produced
+# a line — a mixed input file is parsed correctly line by line.
+#
+#   Mint  2026-08-19T10:09:15.247212+05:30 shadow sshd[3344602]: Failed ...
+#   Kali  Aug 19 10:09:15 shadow sshd-session[3344602]: Failed ...
 
-SYSLOG = re.compile(
-    r"^(?P<timestamp>\w{3}\s+\d{1,2}\s+\d{2}:\d{2}:\d{2})\s+"
-    r"(?P<host>\S+)\s+"
-    # ponytail: `process` is the dispatch key once a second log source lands
-    # (sshd-session -> SSH_PATTERNS, dockerd -> DOCKER_PATTERNS, ...).
-    r"(?P<process>[\w./-]+)(?:\[\d+\])?:\s+"
+_TAIL = (
+    r"\s+(?P<host>\S+)"
+    r"\s+(?P<process>[\w./-]+)(?:\[\d+\])?:\s+"
     r"(?P<message>.*)$"
 )
+
+
+def _parse_rfc3339(stamp):
+    """Linux Mint / rsyslog. Carries a real year and offset, so this is exact."""
+
+    return datetime.fromisoformat(stamp)
+
+
+def _parse_bsd(stamp):
+    # ponytail: BSD syslog carries no year, so these land in 1900. Harmless
+    # while detectors only use deltas inside one file; breaks across a
+    # Dec->Jan boundary. The Mint path above has no such problem, and
+    # `journalctl -o short-iso` would remove it on the others.
+    return datetime.strptime(stamp, "%b %d %H:%M:%S")
+
+
+ENVELOPES = [
+    # Linux Mint (rsyslog -> /var/log/auth.log). The primary target.
+    ("rfc3339", _parse_rfc3339, re.compile(
+        r"^(?P<timestamp>\d{4}-\d{2}-\d{2}T[\d:.]+(?:[+-]\d{2}:\d{2}|Z))" + _TAIL)),
+
+    # journald short output (Kali) and classic BSD syslog (Metasploitable).
+    # The same pattern serves both: the optional [pid] group matches
+    # `sshd-session[123]` on OpenSSH >= 9.8 and `sshd[123]` on older builds.
+    ("bsd", _parse_bsd, re.compile(
+        r"^(?P<timestamp>\w{3}\s+\d{1,2}\s+\d{2}:\d{2}:\d{2})" + _TAIL)),
+]
 
 
 # --- Message patterns ------------------------------------------------------
@@ -32,20 +60,26 @@ SYSLOG = re.compile(
 # `source_ip` are promoted onto the event, every other group lands in
 # `details`. Adding an event type is adding a row, not editing control flow.
 #
-# Unlike the substring chain this replaces, the ordering is no longer
-# load-bearing: each pattern is specific enough that it cannot claim another
-# row's lines. "PAM 2 more authentication failures" no longer has to be tested
-# before "authentication failure" — the latter now requires a `pam_x(...):`
-# prefix that the count line does not have.
+# Ordering is not load-bearing — each pattern is specific enough that it
+# cannot claim another row's lines. Two rows may share an event_type when
+# sshd spells the same event more than one way.
 
+# Matches IPv4 and IPv6 alike, including the Tailscale ULAs
+# (fd7a:115c:a1e0::b201:1f2c) the homelab logs are full of.
 IP = r"[0-9a-fA-F.:]+"
 
+# `Connection closed by ...` names the account three different ways, or not
+# at all:  by root / by user root / by invalid user root / by authenticating
+# user root.
+_WHO = r"(?:(?:invalid |authenticating )?user )?"
+
 SSH_PATTERNS = [
-    # ponytail: password only, to hold the current event set. Widen to
-    # `(?P<auth_method>password|publickey)` to pick up the key-based logins
-    # already sitting unparsed in the fixture.
+    # publickey is included because key auth is the normal login path on the
+    # Mint homelab. Matching only `password` would make the parser blind to
+    # every legitimate login there.
     ("successful_login", re.compile(
-        r"Accepted password for (?P<username>\S+) from (?P<source_ip>\S+)")),
+        r"Accepted (?P<auth_method>password|publickey) for (?P<username>\S+) "
+        r"from (?P<source_ip>\S+)")),
 
     ("failed_login", re.compile(
         r"Failed password for (?:invalid user )?(?P<username>\S+) "
@@ -54,12 +88,25 @@ SSH_PATTERNS = [
     ("invalid_user", re.compile(
         r"Invalid user (?:(?P<username>\S+) )?from (?P<source_ip>\S+)")),
 
+    ("max_auth_attempts", re.compile(
+        r"maximum authentication attempts exceeded for (?:invalid user )?"
+        r"(?P<username>\S+) from (?P<source_ip>\S+)")),
+
     ("session_opened", re.compile(
         r"session opened for user (?P<username>[^(\s]+)\S* "
         r"by (?P<initiated_by>[^(\s]*)")),
 
+    ("session_closed", re.compile(
+        r"session closed for user (?P<username>\S+)")),
+
+    # sshd says "Connection closed by" when it hangs up and "Disconnected
+    # from" when the client does. Same event, two spellings.
     ("connection_closed", re.compile(
-        r"Connection closed by (?:(?:invalid|authenticating) user )?"
+        r"Connection closed by " + _WHO +
+        r"(?:(?P<username>\S+) )?(?P<source_ip>" + IP + r") port")),
+
+    ("connection_closed", re.compile(
+        r"Disconnected from " + _WHO +
         r"(?:(?P<username>\S+) )?(?P<source_ip>" + IP + r") port")),
 
     ("multiple_auth_failures", re.compile(
@@ -68,41 +115,71 @@ SSH_PATTERNS = [
     ("authentication_failure", re.compile(
         r"(?P<auth_module>\w+)\([^)]+\): authentication failure;")),
 
+    ("user_unknown", re.compile(
+        r"(?P<auth_module>\w+)\([^)]+\): check pass; user unknown")),
+
+    # Pre-auth aborts: clients that never got as far as offering a credential.
+    # Port scanners, non-SSH probes, and old clients whose key exchange is
+    # refused. Deliberately not called brute force — no credential was tried.
+    ("preauth_failure", re.compile(
+        r"Connection reset by " + _WHO +
+        r"(?:(?P<username>\S+) )?(?P<source_ip>" + IP + r") port")),
+
+    ("preauth_failure", re.compile(
+        r"Unable to negotiate with (?P<source_ip>" + IP + r") port")),
+
+    ("preauth_failure", re.compile(
+        r"banner exchange: Connection from (?P<source_ip>" + IP + r") port")),
+
     ("service_started", re.compile(r"Started ssh\.service")),
 
     ("service_stopped", re.compile(r"Stopped ssh\.service")),
 ]
 
 # PAM writes its context as `key=value` tokens rather than prose:
-#   logname= uid=0 euid=0 tty=ssh ruser= rhost=198.51.100.10
+#   logname= uid=0 euid=0 tty=ssh ruser= rhost=45.155.205.211  user=root
 # Order is not guaranteed, so scan for pairs instead of describing a layout.
 KEY_VALUE = re.compile(r"(\w+)=(\S*)")
 
-PAM_EVENTS = {"authentication_failure", "multiple_auth_failures"}
+PAM_EVENTS = {
+    "authentication_failure",
+    "multiple_auth_failures",
+    "user_unknown",
+}
 
 SCHEMA_FIELDS = ("username", "source_ip")
 
 
-def parse_timestamp(stamp):
-    # ponytail: syslog lines carry no year, so every timestamp lands in 1900.
-    # Harmless while detectors only use deltas inside one file; breaks across
-    # a Dec->Jan boundary. Fix by taking the year from the file mtime or by
-    # consuming `journalctl -o short-iso` output.
-    return datetime.strptime(stamp, "%b %d %H:%M:%S")
+def parse_line(line):
+    """Split a raw line into (timestamp, host, process, message), or None."""
+
+    for _name, parse_timestamp, pattern in ENVELOPES:
+
+        match = pattern.match(line)
+
+        if match:
+            return (
+                parse_timestamp(match["timestamp"]),
+                match["host"],
+                match["process"],
+                match["message"],
+            )
+
+    return None
 
 
 def identify_event(line):
     """
-    Parse one syslog line into a normalized event, or None if no pattern
-    claims it.
+    Parse one log line into a normalized event, or None if no pattern claims
+    it. The log format is detected from the line itself.
     """
 
-    envelope = SYSLOG.match(line)
+    envelope = parse_line(line)
 
-    if not envelope:
+    if envelope is None:
         return None
 
-    message = envelope["message"]
+    timestamp, host, _process, message = envelope
 
     for event_type, pattern in SSH_PATTERNS:
 
@@ -121,16 +198,19 @@ def identify_event(line):
         if event_type in PAM_EVENTS:
             values = {k: v or None for k, v in KEY_VALUE.findall(message)}
             fields["source_ip"] = values.pop("rhost", None)
+            # PAM names the targeted account `user=`. Promote it, or root
+            # targeting is invisible to every detector that keys on username.
+            fields.setdefault("username", values.pop("user", None))
             details.update(values)
 
         if "count" in details:
             details["count"] = int(details["count"])
 
         return create_event(
-            timestamp=parse_timestamp(envelope["timestamp"]),
+            timestamp=timestamp,
             log_source=LOG_SOURCE,
             event_type=event_type,
-            host=envelope["host"],
+            host=host,
             details=details,
             **fields
         )

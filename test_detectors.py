@@ -15,6 +15,7 @@ from detectors.service_anomaly import detect_service_anomaly
 from detectors.credential_compromise import detect_credential_compromise
 from detectors.behavior import detect_behavior
 from detectors.session_anomaly import detect_session_anomaly
+from detectors.auth_anomaly import detect_auth_anomaly
 
 DATASET = "sample_logs/ssh_dataset_v1.txt"
 
@@ -38,6 +39,8 @@ EXPECTED_ALERTS = [
     ("short_session", "user02", "medium"),
     ("short_session", "user03", "medium"),
     ("slow_bruteforce", "192.0.2.20", "medium"),
+    ("unauthorized_auth_method", "192.0.2.25", "high"),
+    ("unauthorized_auth_method", "192.0.2.91", "high"),
 ]
 
 EXPECTED_EVENT_TYPES = {
@@ -45,7 +48,7 @@ EXPECTED_EVENT_TYPES = {
     "invalid_user": 3,
     "failed_login": 26,
     "multiple_auth_failures": 4,
-    "successful_login": 5,
+    "successful_login": 7,
     "session_opened": 7,
     "connection_closed": 4,
     "service_stopped": 6,
@@ -74,6 +77,7 @@ def run_detectors(events):
         + detect_credential_compromise(events)
         + detect_behavior(events)
         + detect_session_anomaly(events)
+        + detect_auth_anomaly(events)
     )
 
 
