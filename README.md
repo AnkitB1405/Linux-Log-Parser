@@ -30,7 +30,7 @@ The following documents and artifacts are maintained as part of the project engi
 | [ARCHITECTURE.md](ARCHITECTURE.md) | System Design | 🚧 |
 | [SECURITY.md](SECURITY.md) | Threat Model | 🚧 |
 | [screenshots/](screenshots/) | Visual Assets | 🚧 |
-| [journal/](journal/) | Notes | 🚧 |
+| [journal/](journal/) | Notes and learning material | 🚧 |
 | [outputs/](outputs/) | Events and Alerts | ✅ |
 | [test_detectors.py](test_detectors.py) | Detection Regression Test | ✅ |
 
@@ -51,6 +51,22 @@ Supported SSH events:
 - Connection closed
 - SSH service started
 - SSH service stopped
+
+Lines are parsed with regular expressions, in two layers. An **envelope**
+pattern peels off the syslog wrapper; a **message table** — one compiled pattern
+per event type — reads the remaining message body:
+
+```text
+Jun 11 15:00:00 Sentinel sshd-session[200020]: Failed password for root from 203.0.113.40 port 55110 ssh2
+|---------------- envelope ----------------|  |------------------- message --------------------------|
+          written by the OS                                    written by OpenSSH
+```
+
+The split matters because the two halves vary independently. The message body
+comes from OpenSSH's own source, so it reads identically on every distribution;
+the envelope is the only OS-dependent part. Adding a log source is therefore a
+new pattern table, dispatched on the envelope's `process` field — not a new
+parser module.
 
 Every parser routes through a single normalized schema
 (`parser/event_schema.py`), so all log sources — current and future — emit the
@@ -201,6 +217,9 @@ Log_Parser/
 │   ├── sample_ssh_log.txt
 │   └── ssh_dataset_v1.txt
 │
+├── journal/
+│   └── regex_lab.py
+│
 ├── graphify-out/
 │
 ├── outputs/
@@ -347,7 +366,9 @@ Actively being developed and expanded.
 
 Current focus:
 
-> Event schema unification is complete — all parsers emit one normalized shape and every alert links back to the log lines that raised it. Next: refining the detector severity bands, then adding the second (non-SSH) parser.
+> The SSH parser is regex-based, split into envelope and message layers. Together with the
+> normalized schema this closes both blockers under Phase 2, so the next step is the second
+> (non-SSH) log source, alongside the outstanding detector severity-band fixes.
 
 ---
 

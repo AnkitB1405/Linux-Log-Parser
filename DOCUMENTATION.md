@@ -330,22 +330,114 @@ The project has automated tests for the first time. The pipeline is schema-clean
 
 ---
 
+## Day 5
+
+**Dates:** 2026-08-19
+**Commits:** 2 (`100a2ed`, `35dce82`), plus the documentation commit carrying this entry
+
+### Summary
+
+Day 5 replaced the parsing strategy itself. Since Day 1 the SSH parser had worked by splitting a line on whitespace and counting tokens — `parts[parts.index("from") + 1]`. That approach cannot express **optionality**, and real sshd output is full of it: the same event is written `for root` on one line and `for invalid user admin` on the next. Each such variant had been absorbed by a hand-written `if "user" in parts` branch, and every variant nobody had anticipated produced silently wrong data rather than an error.
+
+The parser now matches compiled regular expressions. It is split into two layers: an **envelope** pattern that peels off the syslog wrapper (timestamp, host, process), and a **message table** of one pattern per event type matched against the remaining message body. 248 lines became 138, `.split()` and index arithmetic disappeared from the codebase entirely, and the pipeline output is unchanged — 62 events, 17 alerts, byte-identical to Day 4.
+
+The split matters beyond tidiness. The message body is printed by OpenSSH's own source code, so it reads the same on every distribution; the envelope is the only part that varies by operating system. That is the property that makes the second, third and fourth log sources cheap rather than a rewrite each time.
+
+### Implemented features
+
+- **Envelope pattern** (`SYSLOG`) — one regex splits every line into `timestamp`, `host`, `process` and `message`. Replaces `parse_timestamp()`'s and `parse_host()`'s independent re-splitting of the same line. The optional `[pid]` group means the same pattern matches both journald short output (`sshd-session[200020]`) and classic BSD syslog (`sshd[3456]`), so pre-systemd machines need no second envelope.
+- **Message pattern table** (`SSH_PATTERNS`) — nine rows of `(event_type, compiled_pattern)`, matched against the message body only. Replaces the ordered `elif "..." in line` chain in `identify_event()`. Adding an event type is now adding a row of data, not inserting a branch at the correct position in control flow.
+- **Named-group → schema convention** — groups called `username` and `source_ip` are promoted onto the event; every other named group falls into `details` automatically. `session_opened`'s `initiated_by` and `multiple_auth_failures`' `count` arrive there with no per-parser code.
+- **Optional groups absorb line variants** — `(?:invalid user )?` and `(?:(?:invalid|authenticating) user )?` collapse the hand-written branches that used to compute different token offsets for each shape.
+- **Pattern ordering is no longer load-bearing.** The chain previously required `"more authentication failures"` to be tested before `"authentication failure"`, since the second substring is contained in the first. The `authentication_failure` pattern now requires a `pam_x(...):` prefix that the PAM count line does not have, so neither row can claim the other's lines regardless of order.
+- **PAM context scanned for pairs, not positions** — `KEY_VALUE.findall()` replaces the twelve-line `parse_key_values()` helper. PAM does not guarantee key order, so scanning for `key=value` pairs is correct where any positional read would be a guess.
+- **AI assistance statement** (`README.md`) — records that Claude is used for documentation, research, learning and debugging only, and that the split commit authorship in this repository reflects that.
+
+### Architecture decisions
+
+- **The envelope is separated from the message because they have different authors.** The operating system writes the wrapper; the application writes the body. They vary independently, so parsing them together means an OS change breaks application parsing and vice versa. Separated, a new machine costs one envelope row and a new application costs one message table — and `process` is the field that dispatches between tables once a second source lands.
+- **A table of patterns, not a chain of conditions.** The if-chain encoded event identification as control flow, where correctness depended on statement order and a new event type meant editing a function. As data, order stops mattering, the nine event types are visible in one glance, and Docker or Apache become a new list rather than a new function.
+- **Patterns describe shapes specific enough to reject wrong answers.** `\S+` matches anything non-blank, so it will happily capture the word `port` as an IP address — which is precisely how the old parser produced `source_ip="port"`. Constraining `source_ip` to `[0-9a-fA-F.:]+` in the `connection_closed` row lets the engine backtrack: the optional username group takes the IP first, fails to match `port` as an address, gives it back, and correctly reports no username. The pattern finds the right reading on its own.
+- **`Accepted publickey` remains unmatched, deliberately.** It was measured — enabling it adds 2 events and changes no alerts — but this system monitors a machine that runs password authentication by choice, as a deliberate second factor against physical access to the laptop. Parsing an authentication method the environment does not use would be scope without purpose. The row is one word away (`password` → `password|publickey`) and carries a comment saying so, for whenever a key-authenticated host does enter scope.
+- **A refactor commit proves it changes nothing.** The conversion was verified against the committed Day 4 artifacts before commit: identical alert set, identical event mix, zero parser errors. The only intentional difference is that PAM `details` now carry `logname` and `ruser`, because the pair scan is general where the old helper took a fixed key list.
+
+### Bugs fixed
+
+All four were latent — none could fire on the sample dataset, and all four would have fired on real `journalctl` output. Measured against the same six real-world line variants, the old parser was correct on 2; the new parser is correct on 6.
+
+- **`Connection closed by authenticating user root 192.0.2.1`** — reported `username="authenticating"`, `source_ip="user"`. The `authenticating user` prefix was never handled; only `invalid user` was.
+- **`Connection closed by invalid user admin 192.0.2.2`** — reported `username="user"`, `source_ip="admin"`. The `if "invalid" in parts` branch shifted the offsets by one too few.
+- **`Connection closed by 192.0.2.7 port 54327`** — reported `username="192.0.2.7"`, `source_ip="port"`. The no-username form was not anticipated at all.
+- **`Invalid user from 192.0.2.6 port 54326`** — reported `username="from"`. Same cause: `parts.index("user") + 1` lands on the next token whether or not a username is present.
+
+None of these raised an exception. Each produced a well-formed event containing plausible nonsense, which then flowed into detector correlation — `source_ip="user"` would have accumulated in `failed_attempts` and eventually raised a brute-force alert against an "IP address" named `user`.
+
+### Lessons learned
+
+- **A fixture written alongside its parser tests nothing.** `ssh_dataset_v1.txt` contains only the simplest form of each line, because it was authored while the parser was authored — the two agreed by construction. The test suite passed at 100% while four line shapes from any real server would have been parsed into garbage. A test built from the same assumptions as the code cannot falsify those assumptions.
+- **Silent wrongness is worse than a crash.** Every one of the bugs above returned a valid-looking event. A `ValueError` on line 1 would have been found on Day 1; instead the errors were invisible until the parser was pointed at output it had never seen.
+- **Optionality was the missing primitive.** Every `if "user" in parts` in the old parser was a hand-rolled, single-case version of `(?:...)?` — written once per variant somebody happened to encounter. The regex expresses the whole class in four characters, including the variants nobody enumerated.
+- **The conversion was a deletion.** 248 lines to 138, twenty `.split()`/`.index()` call sites to zero, nine functions to one loop. Regex is usually argued for on power; here the stronger argument was less code to be wrong in.
+- **Knowing where not to apply it matters as much.** PAM `key=value` context and Docker's JSON log driver are both better served by pair-scanning and `json.loads` respectively. Converting everything to regex on principle would have made the PAM path worse.
+
+### Commits table
+
+| Commit | Author | Description |
+|--------|--------|-------------|
+| [100a2ed](https://github.com/AnkitB1405/Linux-Log-Parser/commit/100a2ed) | AnkitB1405 | **Regex conversion** — envelope pattern + message table replace token-index parsing and the ordered if-chain; 248 → 138 lines, output unchanged |
+| [35dce82](https://github.com/AnkitB1405/Linux-Log-Parser/commit/35dce82) | Claude | AI assistance statement in `README.md`, root `__pycache__` ignored, regenerated `outputs/*.json` and `graphify-out/` |
+| *(this entry)* | Claude | Day 5 journal, `ROADMAP.md` and `README.md` refresh, `journal/regex_lab.py` |
+
+### Metrics
+
+| Metric | Day 4 | Day 5 | Δ |
+|--------|-------|-------|---|
+| Commits (cumulative) | 28 | 30 | +2 |
+| `parser/ssh_parser.py` lines | 248 | 138 | −110 |
+| Parser functions | 12 | 2 | −10 |
+| `.split()` / `.index()` call sites | 20 | 0 | −20 |
+| Compiled patterns | 0 | 11 | +11 |
+| Real-world line variants parsed correctly | 2 / 6 | 6 / 6 | +4 |
+| Parser event types | 9 | 9 | — |
+| Detectors | 5 | 5 | — |
+| Detection rules | 9 | 9 | — |
+| Automated tests | 1 | 1 | — |
+
+Current run against `sample_logs/ssh_dataset_v1.txt`: **62 events → 17 alerts** (3 high, 14 medium), 0 parser errors — unchanged from Day 4, which was the point.
+
+### Parser progress
+
+Still nine SSH event types; the scope was held fixed so the strategy change could be proven output-neutral. What changed is what the parser can survive. The old implementation fit one machine's log formatting because it was written against one machine's sample file; the new one describes what OpenSSH prints, which is the same text on Kali, Linux Mint and Ubuntu 8.04 alike. The 1900-year timestamp limitation remains, now with a cheaper fix available: `journalctl -o json` supplies `__REALTIME_TIMESTAMP` in microseconds since epoch, which removes the missing-year problem rather than working around it.
+
+### Detection progress
+
+Unchanged by design — no detector was touched. The indirect gain is input quality: four classes of malformed event can no longer reach the correlation stage, which removes a category of false positive that would have appeared the first time this ran against a live host rather than the fixture.
+
+### Engineering progress
+
+The parser is now the shape the roadmap needs. Phase 2 (additional parsers) was previously blocked twice over — once on the schema, closed on Day 4, and once on parsing strategy, since a token-index parser cannot read Apache's combined log format at all: a quoted request and a free-form user-agent break any fixed token offset. Both blockers are now gone, and a second source costs one pattern table.
+
+---
+
 ## Current Status
 
-**Estimated project completion:** ~40% (weighted across all 11 phases; V1 core is well underway)
+**Estimated project completion:** ~43% (weighted across all 11 phases; V1 core is well underway)
 
-**Current phase:** Phase 1 — SSH Monitoring Engine (~95%); **Phase 4 (schema normalization) complete**; Phase 5 (Outputs) underway
+**Current phase:** Phase 1 — SSH Monitoring Engine (~97%); **Phase 4 (schema normalization) complete**; Phase 5 (Outputs) underway
 
 **Current focus:**
-> Phase 4 is closed. Next is the second parser now that the schema can absorb one, plus the outstanding severity-band fixes.
+> The parser is regex-based and split into envelope + message layers, which was the second and last blocker under Phase 2. Next is the second log source, plus the outstanding severity-band fixes.
 
 **Next milestone:**
+- Begin Phase 2 second parser (Syslog or Authentication logs) — now a pattern table rather than a new parser module
 - Fix the shadowed severity bands — `credential_compromise.py` tests `>= 5` before `>= 8`, so the `high` branch is unreachable (output-neutral on the current fixture, but a real hydra run trivially exceeds 8 and would still be reported `medium`)
 - Fix the duplicate medium+high `behavior_anomaly` on a single IP (`behavior.py`)
-- Begin Phase 2 second parser (Syslog or Authentication logs) against the normalized schema
-- Parse `Accepted publickey` — currently unmatched by `identify_event()`, so key-based logins (including a stolen-key login present in the sample set) produce no event at all
 - Give `monitor`-severity alerts their own bucket in `generate_statistics()`
+- Resolve the 1900-year timestamps, most cheaply by consuming `journalctl -o json`
 - Validate against real attack traffic from the Metasploitable homelab VM once provisioned
+
+**Closed, not deferred:**
+- `Accepted publickey` parsing. Measured at +2 events and no alert change, and the monitored host runs password authentication by deliberate choice, so the event type is out of scope until a key-authenticated host is added. The pattern row is one word from supporting it.
 
 ---
 

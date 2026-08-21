@@ -23,7 +23,7 @@ Completed foundational planning and design.
 
 # Phase 1 — SSH Monitoring Engine 🔄
 
-Current Progress: ~95%
+Current Progress: ~97%
 
 ## SSH Parser
 
@@ -39,8 +39,13 @@ Current Progress: ~95%
 - [x] Timestamp support
 - [x] Parser robustness improvements
 - [x] All parsers routed through the normalized schema
-- [ ] Accepted publickey (key-based logins currently produce no event)
-- [ ] Year-aware timestamps (syslog carries no year — see `ssh_parser.py:15`)
+- [x] Regex-based parsing (pattern table replaces token-index parsing)
+- [x] Envelope / message split (syslog wrapper parsed separately from the message body)
+- [x] Line-variant tolerance (`invalid user` / `authenticating user` prefixes, missing usernames)
+- [ ] Year-aware timestamps (syslog carries no year — cheapest fix is `journalctl -o json`)
+- ~~Accepted publickey~~ — out of scope: the monitored host runs password authentication by
+  choice. Measured at +2 events, 0 alert change. One word in the `successful_login` pattern
+  if a key-authenticated host is ever added.
 
 ## SSH Detection Engine
 
@@ -76,6 +81,12 @@ Planned:
 # Phase 2 — Additional Parsers
 
 Current Progress: 0%
+
+> **Unblocked as of Day 5.** Both dependencies are closed: the normalized event schema
+> (Phase 4) and regex parsing with an envelope/message split (Day 5). A new source is now a
+> pattern table dispatched on the envelope's `process` field, not a new parser module.
+> Apache in particular was not implementable before — a quoted request line and a free-form
+> user-agent defeat any fixed token offset.
 
 ## Docker Parser
 
@@ -452,7 +463,7 @@ Focus Areas:
 ```text
 Phase 0   ██████████ 100%
 
-Phase 1   █████████░ 95%
+Phase 1   █████████░ 97%
 
 Phase 2   ░░░░░░░░░░ 0%
 

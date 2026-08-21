@@ -170,7 +170,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "parser_event_schema",
-      "community": 0,
+      "community": 1,
       "norm_label": "event_schema.py"
     },
     {
@@ -180,7 +180,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "parser_event_schema_create_event",
-      "community": 0,
+      "community": 1,
       "norm_label": "create_event()"
     },
     {
@@ -190,7 +190,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "parser_event_schema_rationale_14",
-      "community": 0,
+      "community": 1,
       "norm_label": "build a normalized event.      every parser routes through this, so the top-leve"
     },
     {
@@ -200,208 +200,38 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "parser_ssh_parser",
-      "community": 0,
+      "community": 1,
       "norm_label": "ssh_parser.py"
     },
     {
       "label": "parse_timestamp()",
       "file_type": "code",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L8",
+      "source_location": "L86",
       "_origin": "ast",
       "id": "parser_ssh_parser_parse_timestamp",
-      "community": 0,
+      "community": 1,
       "norm_label": "parse_timestamp()"
-    },
-    {
-      "label": "parse_host()",
-      "file_type": "code",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L27",
-      "_origin": "ast",
-      "id": "parser_ssh_parser_parse_host",
-      "community": 0,
-      "norm_label": "parse_host()"
-    },
-    {
-      "label": "parse_username()",
-      "file_type": "code",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L36",
-      "_origin": "ast",
-      "id": "parser_ssh_parser_parse_username",
-      "community": 0,
-      "norm_label": "parse_username()"
-    },
-    {
-      "label": "parse_failed_login()",
-      "file_type": "code",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L47",
-      "_origin": "ast",
-      "id": "parser_ssh_parser_parse_failed_login",
-      "community": 0,
-      "norm_label": "parse_failed_login()"
-    },
-    {
-      "label": "parse_successful_login()",
-      "file_type": "code",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L65",
-      "_origin": "ast",
-      "id": "parser_ssh_parser_parse_successful_login",
-      "community": 0,
-      "norm_label": "parse_successful_login()"
-    },
-    {
-      "label": "parse_session_opened()",
-      "file_type": "code",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L83",
-      "_origin": "ast",
-      "id": "parser_ssh_parser_parse_session_opened",
-      "community": 0,
-      "norm_label": "parse_session_opened()"
-    },
-    {
-      "label": "parse_invalid_user()",
-      "file_type": "code",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L100",
-      "_origin": "ast",
-      "id": "parser_ssh_parser_parse_invalid_user",
-      "community": 0,
-      "norm_label": "parse_invalid_user()"
-    },
-    {
-      "label": "parse_connection_closed()",
-      "file_type": "code",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L114",
-      "_origin": "ast",
-      "id": "parser_ssh_parser_parse_connection_closed",
-      "community": 0,
-      "norm_label": "parse_connection_closed()"
-    },
-    {
-      "label": "parse_key_values()",
-      "file_type": "code",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L137",
-      "_origin": "ast",
-      "id": "parser_ssh_parser_parse_key_values",
-      "community": 0,
-      "norm_label": "parse_key_values()"
-    },
-    {
-      "label": "parse_auth_failure()",
-      "file_type": "code",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L152",
-      "_origin": "ast",
-      "id": "parser_ssh_parser_parse_auth_failure",
-      "community": 0,
-      "norm_label": "parse_auth_failure()"
-    },
-    {
-      "label": "parse_multiple_failures()",
-      "file_type": "code",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L173",
-      "_origin": "ast",
-      "id": "parser_ssh_parser_parse_multiple_failures",
-      "community": 0,
-      "norm_label": "parse_multiple_failures()"
-    },
-    {
-      "label": "parse_service_started()",
-      "file_type": "code",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L193",
-      "_origin": "ast",
-      "id": "parser_ssh_parser_parse_service_started",
-      "community": 0,
-      "norm_label": "parse_service_started()"
-    },
-    {
-      "label": "parse_service_stopped()",
-      "file_type": "code",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L203",
-      "_origin": "ast",
-      "id": "parser_ssh_parser_parse_service_stopped",
-      "community": 0,
-      "norm_label": "parse_service_stopped()"
     },
     {
       "label": "identify_event()",
       "file_type": "code",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L213",
+      "source_location": "L94",
       "_origin": "ast",
       "id": "parser_ssh_parser_identify_event",
-      "community": 0,
+      "community": 1,
       "norm_label": "identify_event()"
     },
     {
-      "label": "Hostname sits directly after the timestamp:     `Jun 11 15:00:00 Sentinel sshd-s",
+      "label": "Parse one syslog line into a normalized event, or None if no pattern     claims",
       "file_type": "rationale",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L28",
+      "source_location": "L95",
       "_origin": "ast",
-      "id": "parser_ssh_parser_rationale_28",
-      "community": 0,
-      "norm_label": "hostname sits directly after the timestamp:     `jun 11 15:00:00 sentinel sshd-s"
-    },
-    {
-      "label": "Lines vary between `... for user X ...` and `... for X ...`.",
-      "file_type": "rationale",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L37",
-      "_origin": "ast",
-      "id": "parser_ssh_parser_rationale_37",
-      "community": 0,
-      "norm_label": "lines vary between `... for user x ...` and `... for x ...`."
-    },
-    {
-      "label": "Extract username and source IP     from a failed SSH login event.",
-      "file_type": "rationale",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L48",
-      "_origin": "ast",
-      "id": "parser_ssh_parser_rationale_48",
-      "community": 0,
-      "norm_label": "extract username and source ip     from a failed ssh login event."
-    },
-    {
-      "label": "Extract username and source IP     from a successful SSH login event.",
-      "file_type": "rationale",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L66",
-      "_origin": "ast",
-      "id": "parser_ssh_parser_rationale_66",
-      "community": 0,
-      "norm_label": "extract username and source ip     from a successful ssh login event."
-    },
-    {
-      "label": "PAM lines carry `key=value` tokens: uid=0 euid=0 tty=ssh ruser= rhost=1.2.3.4",
-      "file_type": "rationale",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L138",
-      "_origin": "ast",
-      "id": "parser_ssh_parser_rationale_138",
-      "community": 0,
-      "norm_label": "pam lines carry `key=value` tokens: uid=0 euid=0 tty=ssh ruser= rhost=1.2.3.4"
-    },
-    {
-      "label": "Identify the SSH event type from a log line.      Order matters: \"more authentic",
-      "file_type": "rationale",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L214",
-      "_origin": "ast",
-      "id": "parser_ssh_parser_rationale_214",
-      "community": 0,
-      "norm_label": "identify the ssh event type from a log line.      order matters: \"more authentic"
+      "id": "parser_ssh_parser_rationale_95",
+      "community": 1,
+      "norm_label": "parse one syslog line into a normalized event, or none if no pattern     claims"
     },
     {
       "label": "regex_lab.py",
@@ -590,7 +420,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "architecture",
-      "community": 6,
+      "community": 10,
       "norm_label": "architecture.md"
     },
     {
@@ -1124,10 +954,120 @@
       "norm_label": "engineering progress"
     },
     {
-      "label": "Current Status",
+      "label": "Day 5",
       "file_type": "document",
       "source_file": "DOCUMENTATION.md",
       "source_location": "L333",
+      "_origin": "ast",
+      "id": "documentation_day_5",
+      "community": 0,
+      "norm_label": "day 5"
+    },
+    {
+      "label": "Summary",
+      "file_type": "document",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L338",
+      "_origin": "ast",
+      "id": "documentation_summary_338",
+      "community": 0,
+      "norm_label": "summary"
+    },
+    {
+      "label": "Implemented features",
+      "file_type": "document",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L346",
+      "_origin": "ast",
+      "id": "documentation_implemented_features_346",
+      "community": 0,
+      "norm_label": "implemented features"
+    },
+    {
+      "label": "Architecture decisions",
+      "file_type": "document",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L356",
+      "_origin": "ast",
+      "id": "documentation_architecture_decisions_356",
+      "community": 0,
+      "norm_label": "architecture decisions"
+    },
+    {
+      "label": "Bugs fixed",
+      "file_type": "document",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L364",
+      "_origin": "ast",
+      "id": "documentation_bugs_fixed_364",
+      "community": 0,
+      "norm_label": "bugs fixed"
+    },
+    {
+      "label": "Lessons learned",
+      "file_type": "document",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L375",
+      "_origin": "ast",
+      "id": "documentation_lessons_learned_375",
+      "community": 0,
+      "norm_label": "lessons learned"
+    },
+    {
+      "label": "Commits table",
+      "file_type": "document",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L383",
+      "_origin": "ast",
+      "id": "documentation_commits_table_383",
+      "community": 0,
+      "norm_label": "commits table"
+    },
+    {
+      "label": "Metrics",
+      "file_type": "document",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L391",
+      "_origin": "ast",
+      "id": "documentation_metrics_391",
+      "community": 0,
+      "norm_label": "metrics"
+    },
+    {
+      "label": "Parser progress",
+      "file_type": "document",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L408",
+      "_origin": "ast",
+      "id": "documentation_parser_progress_408",
+      "community": 0,
+      "norm_label": "parser progress"
+    },
+    {
+      "label": "Detection progress",
+      "file_type": "document",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L412",
+      "_origin": "ast",
+      "id": "documentation_detection_progress_412",
+      "community": 0,
+      "norm_label": "detection progress"
+    },
+    {
+      "label": "Engineering progress",
+      "file_type": "document",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L416",
+      "_origin": "ast",
+      "id": "documentation_engineering_progress_416",
+      "community": 0,
+      "norm_label": "engineering progress"
+    },
+    {
+      "label": "Current Status",
+      "file_type": "document",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L422",
       "_origin": "ast",
       "id": "documentation_current_status",
       "community": 7,
@@ -1140,7 +1080,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "readme",
-      "community": 6,
+      "community": 10,
       "norm_label": "readme.md"
     },
     {
@@ -1197,7 +1137,7 @@
       "label": "Detection Engine",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L75",
+      "source_location": "L91",
       "_origin": "ast",
       "id": "readme_detection_engine",
       "community": 5,
@@ -1207,7 +1147,7 @@
       "label": "Current Detections",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L79",
+      "source_location": "L95",
       "_origin": "ast",
       "id": "readme_current_detections",
       "community": 5,
@@ -1217,7 +1157,7 @@
       "label": "SSH Brute Force",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L89",
+      "source_location": "L105",
       "_origin": "ast",
       "id": "readme_ssh_brute_force",
       "community": 5,
@@ -1227,7 +1167,7 @@
       "label": "Service Anomaly",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L99",
+      "source_location": "L115",
       "_origin": "ast",
       "id": "readme_service_anomaly",
       "community": 5,
@@ -1237,7 +1177,7 @@
       "label": "Credential Compromise",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L103",
+      "source_location": "L119",
       "_origin": "ast",
       "id": "readme_credential_compromise",
       "community": 5,
@@ -1247,7 +1187,7 @@
       "label": "Behaviour Analysis",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L107",
+      "source_location": "L123",
       "_origin": "ast",
       "id": "readme_behaviour_analysis",
       "community": 5,
@@ -1257,7 +1197,7 @@
       "label": "Session Anomaly",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L111",
+      "source_location": "L127",
       "_origin": "ast",
       "id": "readme_session_anomaly",
       "community": 5,
@@ -1267,7 +1207,7 @@
       "label": "Alert Format",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L143",
+      "source_location": "L159",
       "_origin": "ast",
       "id": "readme_alert_format",
       "community": 5,
@@ -1277,7 +1217,7 @@
       "label": "Testing",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L167",
+      "source_location": "L183",
       "_origin": "ast",
       "id": "readme_testing",
       "community": 5,
@@ -1287,7 +1227,7 @@
       "label": "Project Structure",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L183",
+      "source_location": "L199",
       "_origin": "ast",
       "id": "readme_project_structure",
       "community": 5,
@@ -1297,7 +1237,7 @@
       "label": "Workflow",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L226",
+      "source_location": "L242",
       "_origin": "ast",
       "id": "readme_workflow",
       "community": 5,
@@ -1307,17 +1247,17 @@
       "label": "Graphify Support",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L258",
+      "source_location": "L274",
       "_origin": "ast",
       "id": "readme_graphify_support",
-      "community": 6,
+      "community": 10,
       "norm_label": "graphify support"
     },
     {
       "label": "Roadmap",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L276",
+      "source_location": "L292",
       "_origin": "ast",
       "id": "readme_roadmap",
       "community": 6,
@@ -1327,7 +1267,7 @@
       "label": "V1",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L278",
+      "source_location": "L294",
       "_origin": "ast",
       "id": "readme_v1",
       "community": 6,
@@ -1337,7 +1277,7 @@
       "label": "Parsers",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L282",
+      "source_location": "L298",
       "_origin": "ast",
       "id": "readme_parsers",
       "community": 6,
@@ -1347,7 +1287,7 @@
       "label": "Detectors",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L290",
+      "source_location": "L306",
       "_origin": "ast",
       "id": "readme_detectors",
       "community": 6,
@@ -1357,7 +1297,7 @@
       "label": "Alerting",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L300",
+      "source_location": "L316",
       "_origin": "ast",
       "id": "readme_alerting",
       "community": 6,
@@ -1367,7 +1307,7 @@
       "label": "V2",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L308",
+      "source_location": "L324",
       "_origin": "ast",
       "id": "readme_v2",
       "community": 6,
@@ -1377,7 +1317,7 @@
       "label": "Design Philosophy",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L327",
+      "source_location": "L343",
       "_origin": "ast",
       "id": "readme_design_philosophy",
       "community": 6,
@@ -1387,17 +1327,27 @@
       "label": "Status",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L342",
+      "source_location": "L358",
       "_origin": "ast",
       "id": "readme_status",
       "community": 6,
       "norm_label": "status"
     },
     {
+      "label": "AI Assistance",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L372",
+      "_origin": "ast",
+      "id": "readme_ai_assistance",
+      "community": 6,
+      "norm_label": "ai assistance"
+    },
+    {
       "label": "Author",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L354",
+      "source_location": "L384",
       "_origin": "ast",
       "id": "readme_author",
       "community": 6,
@@ -1467,7 +1417,7 @@
       "label": "SSH Detection Engine",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L45",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "roadmap_ssh_detection_engine",
       "community": 3,
@@ -1477,7 +1427,7 @@
       "label": "Engineering",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L63",
+      "source_location": "L68",
       "_origin": "ast",
       "id": "roadmap_engineering",
       "community": 3,
@@ -1487,7 +1437,7 @@
       "label": "Phase 2 \u2014 Additional Parsers",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L76",
+      "source_location": "L81",
       "_origin": "ast",
       "id": "roadmap_phase_2_additional_parsers",
       "community": 3,
@@ -1497,7 +1447,7 @@
       "label": "Docker Parser",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L80",
+      "source_location": "L91",
       "_origin": "ast",
       "id": "roadmap_docker_parser",
       "community": 3,
@@ -1507,7 +1457,7 @@
       "label": "Syslog Parser",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L93",
+      "source_location": "L104",
       "_origin": "ast",
       "id": "roadmap_syslog_parser",
       "community": 3,
@@ -1517,7 +1467,7 @@
       "label": "Authentication Parser",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L105",
+      "source_location": "L116",
       "_origin": "ast",
       "id": "roadmap_authentication_parser",
       "community": 3,
@@ -1527,7 +1477,7 @@
       "label": "Apache / Nginx Parser",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L118",
+      "source_location": "L129",
       "_origin": "ast",
       "id": "roadmap_apache_nginx_parser",
       "community": 3,
@@ -1537,7 +1487,7 @@
       "label": "Phase 3 \u2014 Detection Expansion",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L129",
+      "source_location": "L140",
       "_origin": "ast",
       "id": "roadmap_phase_3_detection_expansion",
       "community": 3,
@@ -1547,7 +1497,7 @@
       "label": "Service Instability",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L148",
+      "source_location": "L159",
       "_origin": "ast",
       "id": "roadmap_service_instability",
       "community": 3,
@@ -1557,7 +1507,7 @@
       "label": "Persistence Detection",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L152",
+      "source_location": "L163",
       "_origin": "ast",
       "id": "roadmap_persistence_detection",
       "community": 3,
@@ -1567,7 +1517,7 @@
       "label": "Behaviour Analysis",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L168",
+      "source_location": "L179",
       "_origin": "ast",
       "id": "roadmap_behaviour_analysis",
       "community": 3,
@@ -1577,7 +1527,7 @@
       "label": "Phase 4 \u2014 Event Normalization \u2705",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L178",
+      "source_location": "L189",
       "_origin": "ast",
       "id": "roadmap_phase_4_event_normalization",
       "community": 3,
@@ -1587,7 +1537,7 @@
       "label": "Phase 5 \u2014 Outputs \ud83d\udd04",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L226",
+      "source_location": "L237",
       "_origin": "ast",
       "id": "roadmap_phase_5_outputs",
       "community": 3,
@@ -1597,7 +1547,7 @@
       "label": "Phase 6 \u2014 Graphify Integration",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L274",
+      "source_location": "L285",
       "_origin": "ast",
       "id": "roadmap_phase_6_graphify_integration",
       "community": 3,
@@ -1607,7 +1557,7 @@
       "label": "Phase 7 \u2014 Dashboard",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L293",
+      "source_location": "L304",
       "_origin": "ast",
       "id": "roadmap_phase_7_dashboard",
       "community": 3,
@@ -1617,7 +1567,7 @@
       "label": "Phase 8 \u2014 Alerting",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L315",
+      "source_location": "L326",
       "_origin": "ast",
       "id": "roadmap_phase_8_alerting",
       "community": 3,
@@ -1627,7 +1577,7 @@
       "label": "Phase 9 \u2014 Real-Time Monitoring",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L329",
+      "source_location": "L340",
       "_origin": "ast",
       "id": "roadmap_phase_9_real_time_monitoring",
       "community": 3,
@@ -1637,7 +1587,7 @@
       "label": "Phase 10 \u2014 AI Layer (V2)",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L381",
+      "source_location": "L392",
       "_origin": "ast",
       "id": "roadmap_phase_10_ai_layer_v2",
       "community": 3,
@@ -1647,7 +1597,7 @@
       "label": "V1 Goals",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L419",
+      "source_location": "L430",
       "_origin": "ast",
       "id": "roadmap_v1_goals",
       "community": 3,
@@ -1657,7 +1607,7 @@
       "label": "V2 Goals",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L434",
+      "source_location": "L445",
       "_origin": "ast",
       "id": "roadmap_v2_goals",
       "community": 3,
@@ -1667,7 +1617,7 @@
       "label": "Progress Overview",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L450",
+      "source_location": "L461",
       "_origin": "ast",
       "id": "roadmap_progress_overview",
       "community": 3,
@@ -1680,7 +1630,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "security",
-      "community": 6,
+      "community": 10,
       "norm_label": "security.md"
     },
     {
@@ -2187,99 +2137,11 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L157",
+      "source_location": "L129",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_auth_failure",
-      "target": "parser_event_schema_create_event"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L127",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_connection_closed",
-      "target": "parser_event_schema_create_event"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L55",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_failed_login",
-      "target": "parser_event_schema_create_event"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L104",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_invalid_user",
-      "target": "parser_event_schema_create_event"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L178",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_multiple_failures",
-      "target": "parser_event_schema_create_event"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L195",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_service_started",
-      "target": "parser_event_schema_create_event"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L205",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_service_stopped",
-      "target": "parser_event_schema_create_event"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L90",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_session_opened",
-      "target": "parser_event_schema_create_event"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L73",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_successful_login",
-      "target": "parser_event_schema_create_event"
+      "source": "parser_ssh_parser_identify_event",
+      "target": "parser_event_schema_create_event",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2295,131 +2157,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L99",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser",
-      "target": "parser_ssh_parser_parse_auth_failure"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L82",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser",
-      "target": "parser_ssh_parser_parse_connection_closed"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser",
-      "target": "parser_ssh_parser_parse_failed_login"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L27",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser",
-      "target": "parser_ssh_parser_parse_host"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L64",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser",
-      "target": "parser_ssh_parser_parse_invalid_user"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L137",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser",
-      "target": "parser_ssh_parser_parse_key_values"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L139",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser",
-      "target": "parser_ssh_parser_parse_multiple_failures"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L174",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser",
-      "target": "parser_ssh_parser_parse_service_started"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L184",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser",
-      "target": "parser_ssh_parser_parse_service_stopped"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L46",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser",
-      "target": "parser_ssh_parser_parse_session_opened"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L23",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser",
-      "target": "parser_ssh_parser_parse_successful_login"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
       "source_location": "L3",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "parser_ssh_parser",
       "target": "parser_ssh_parser_parse_timestamp"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L36",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser",
-      "target": "parser_ssh_parser_parse_username"
     },
     {
       "relation": "imports_from",
@@ -2437,401 +2179,21 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L160",
+      "source_location": "L130",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_auth_failure",
-      "target": "parser_ssh_parser_parse_timestamp"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L121",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_connection_closed",
-      "target": "parser_ssh_parser_parse_timestamp"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L42",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_failed_login",
-      "target": "parser_ssh_parser_parse_timestamp"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L105",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_invalid_user",
-      "target": "parser_ssh_parser_parse_timestamp"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L194",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_multiple_failures",
-      "target": "parser_ssh_parser_parse_timestamp"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L202",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_service_started",
-      "target": "parser_ssh_parser_parse_timestamp"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L211",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_service_stopped",
-      "target": "parser_ssh_parser_parse_timestamp"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L88",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_session_opened",
-      "target": "parser_ssh_parser_parse_timestamp"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L70",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_successful_login",
-      "target": "parser_ssh_parser_parse_timestamp"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L161",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_auth_failure",
-      "target": "parser_ssh_parser_parse_host"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L131",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_connection_closed",
-      "target": "parser_ssh_parser_parse_host"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L59",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_failed_login",
-      "target": "parser_ssh_parser_parse_host"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L108",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_invalid_user",
-      "target": "parser_ssh_parser_parse_host"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L182",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_multiple_failures",
-      "target": "parser_ssh_parser_parse_host"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L199",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_service_started",
-      "target": "parser_ssh_parser_parse_host"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L209",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_service_stopped",
-      "target": "parser_ssh_parser_parse_host"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L94",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_session_opened",
-      "target": "parser_ssh_parser_parse_host"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L77",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_successful_login",
-      "target": "parser_ssh_parser_parse_host"
+      "source": "parser_ssh_parser_identify_event",
+      "target": "parser_ssh_parser_parse_timestamp",
+      "confidence_score": 1.0
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L28",
+      "source_location": "L95",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_rationale_28",
-      "target": "parser_ssh_parser_parse_host"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L60",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_failed_login",
-      "target": "parser_ssh_parser_parse_username"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L78",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_successful_login",
-      "target": "parser_ssh_parser_parse_username"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L37",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_rationale_37",
-      "target": "parser_ssh_parser_parse_username"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L202",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_identify_event",
-      "target": "parser_ssh_parser_parse_failed_login"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L48",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_rationale_48",
-      "target": "parser_ssh_parser_parse_failed_login"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L199",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_identify_event",
-      "target": "parser_ssh_parser_parse_successful_login"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L66",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_rationale_66",
-      "target": "parser_ssh_parser_parse_successful_login"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L208",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_identify_event",
-      "target": "parser_ssh_parser_parse_session_opened"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L205",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_identify_event",
-      "target": "parser_ssh_parser_parse_invalid_user"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L211",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_identify_event",
-      "target": "parser_ssh_parser_parse_connection_closed"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L155",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_auth_failure",
-      "target": "parser_ssh_parser_parse_key_values"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L176",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_parse_multiple_failures",
-      "target": "parser_ssh_parser_parse_key_values"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L138",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_rationale_138",
-      "target": "parser_ssh_parser_parse_key_values"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L217",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_identify_event",
-      "target": "parser_ssh_parser_parse_auth_failure"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L214",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_identify_event",
-      "target": "parser_ssh_parser_parse_multiple_failures"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L220",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_identify_event",
-      "target": "parser_ssh_parser_parse_service_started"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L223",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_identify_event",
-      "target": "parser_ssh_parser_parse_service_stopped"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "parser/ssh_parser.py",
-      "source_location": "L214",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "parser_ssh_parser_rationale_214",
-      "target": "parser_ssh_parser_identify_event"
+      "source": "parser_ssh_parser_rationale_95",
+      "target": "parser_ssh_parser_identify_event",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -2861,9 +2223,9 @@
       "source_file": "regex_lab.py",
       "source_location": "L291",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "regex_lab",
-      "target": "regex_lab_checks",
-      "confidence_score": 1.0
+      "target": "regex_lab_checks"
     },
     {
       "relation": "contains",
@@ -2871,9 +2233,9 @@
       "source_file": "regex_lab.py",
       "source_location": "L244",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "regex_lab",
-      "target": "regex_lab_identify",
-      "confidence_score": 1.0
+      "target": "regex_lab_identify"
     },
     {
       "relation": "contains",
@@ -2881,9 +2243,9 @@
       "source_file": "regex_lab.py",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "regex_lab",
-      "target": "regex_lab_section_1_matching",
-      "confidence_score": 1.0
+      "target": "regex_lab_section_1_matching"
     },
     {
       "relation": "contains",
@@ -2891,9 +2253,9 @@
       "source_file": "regex_lab.py",
       "source_location": "L79",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "regex_lab",
-      "target": "regex_lab_section_2_capturing",
-      "confidence_score": 1.0
+      "target": "regex_lab_section_2_capturing"
     },
     {
       "relation": "contains",
@@ -2901,9 +2263,9 @@
       "source_file": "regex_lab.py",
       "source_location": "L121",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "regex_lab",
-      "target": "regex_lab_section_3_optional",
-      "confidence_score": 1.0
+      "target": "regex_lab_section_3_optional"
     },
     {
       "relation": "contains",
@@ -2911,9 +2273,9 @@
       "source_file": "regex_lab.py",
       "source_location": "L155",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "regex_lab",
-      "target": "regex_lab_section_4_be_specific",
-      "confidence_score": 1.0
+      "target": "regex_lab_section_4_be_specific"
     },
     {
       "relation": "contains",
@@ -2921,9 +2283,9 @@
       "source_file": "regex_lab.py",
       "source_location": "L184",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "regex_lab",
-      "target": "regex_lab_section_5_greedy",
-      "confidence_score": 1.0
+      "target": "regex_lab_section_5_greedy"
     },
     {
       "relation": "contains",
@@ -2931,9 +2293,9 @@
       "source_file": "regex_lab.py",
       "source_location": "L255",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "regex_lab",
-      "target": "regex_lab_section_6_table",
-      "confidence_score": 1.0
+      "target": "regex_lab_section_6_table"
     },
     {
       "relation": "contains",
@@ -2941,9 +2303,9 @@
       "source_file": "regex_lab.py",
       "source_location": "L354",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "regex_lab",
-      "target": "regex_lab_section_8_exercises",
-      "confidence_score": 1.0
+      "target": "regex_lab_section_8_exercises"
     },
     {
       "relation": "rationale_for",
@@ -2951,9 +2313,9 @@
       "source_file": "regex_lab.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "regex_lab_rationale_1",
-      "target": "regex_lab",
-      "confidence_score": 1.0
+      "target": "regex_lab"
     },
     {
       "relation": "calls",
@@ -2962,9 +2324,9 @@
       "source_file": "regex_lab.py",
       "source_location": "L314",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "regex_lab_checks",
-      "target": "regex_lab_identify",
-      "confidence_score": 1.0
+      "target": "regex_lab_identify"
     },
     {
       "relation": "rationale_for",
@@ -2972,9 +2334,9 @@
       "source_file": "regex_lab.py",
       "source_location": "L245",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "regex_lab_rationale_245",
-      "target": "regex_lab_identify",
-      "confidence_score": 1.0
+      "target": "regex_lab_identify"
     },
     {
       "relation": "calls",
@@ -2983,9 +2345,9 @@
       "source_file": "regex_lab.py",
       "source_location": "L276",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "regex_lab_section_6_table",
-      "target": "regex_lab_identify",
-      "confidence_score": 1.0
+      "target": "regex_lab_identify"
     },
     {
       "relation": "calls",
@@ -2994,9 +2356,9 @@
       "source_file": "regex_lab.py",
       "source_location": "L359",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "regex_lab_section_8_exercises",
-      "target": "regex_lab_identify",
-      "confidence_score": 1.0
+      "target": "regex_lab_identify"
     },
     {
       "relation": "contains",
@@ -3257,8 +2619,18 @@
       "source_file": "DOCUMENTATION.md",
       "source_location": "L244",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "documentation_linux_log_parser_development_journal",
-      "target": "documentation_day_4",
+      "target": "documentation_day_4"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L333",
+      "weight": 1.0,
+      "source": "documentation_linux_log_parser_development_journal",
+      "target": "documentation_day_5",
       "confidence_score": 1.0
     },
     {
@@ -3537,9 +2909,9 @@
       "source_file": "DOCUMENTATION.md",
       "source_location": "L276",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "documentation_day_4",
-      "target": "documentation_architecture_decisions_276",
-      "confidence_score": 1.0
+      "target": "documentation_architecture_decisions_276"
     },
     {
       "relation": "contains",
@@ -3547,9 +2919,9 @@
       "source_file": "DOCUMENTATION.md",
       "source_location": "L284",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "documentation_day_4",
-      "target": "documentation_bugs_fixed",
-      "confidence_score": 1.0
+      "target": "documentation_bugs_fixed"
     },
     {
       "relation": "contains",
@@ -3557,9 +2929,9 @@
       "source_file": "DOCUMENTATION.md",
       "source_location": "L295",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "documentation_day_4",
-      "target": "documentation_commits_table_295",
-      "confidence_score": 1.0
+      "target": "documentation_commits_table_295"
     },
     {
       "relation": "contains",
@@ -3567,9 +2939,9 @@
       "source_file": "DOCUMENTATION.md",
       "source_location": "L323",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "documentation_day_4",
-      "target": "documentation_detection_progress_323",
-      "confidence_score": 1.0
+      "target": "documentation_detection_progress_323"
     },
     {
       "relation": "contains",
@@ -3577,9 +2949,9 @@
       "source_file": "DOCUMENTATION.md",
       "source_location": "L327",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "documentation_day_4",
-      "target": "documentation_engineering_progress_327",
-      "confidence_score": 1.0
+      "target": "documentation_engineering_progress_327"
     },
     {
       "relation": "contains",
@@ -3587,9 +2959,9 @@
       "source_file": "DOCUMENTATION.md",
       "source_location": "L255",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "documentation_day_4",
-      "target": "documentation_implemented_features_255",
-      "confidence_score": 1.0
+      "target": "documentation_implemented_features_255"
     },
     {
       "relation": "contains",
@@ -3597,9 +2969,9 @@
       "source_file": "DOCUMENTATION.md",
       "source_location": "L288",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "documentation_day_4",
-      "target": "documentation_lessons_learned_288",
-      "confidence_score": 1.0
+      "target": "documentation_lessons_learned_288"
     },
     {
       "relation": "contains",
@@ -3607,9 +2979,9 @@
       "source_file": "DOCUMENTATION.md",
       "source_location": "L304",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "documentation_day_4",
-      "target": "documentation_metrics_304",
-      "confidence_score": 1.0
+      "target": "documentation_metrics_304"
     },
     {
       "relation": "contains",
@@ -3617,9 +2989,9 @@
       "source_file": "DOCUMENTATION.md",
       "source_location": "L319",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "documentation_day_4",
-      "target": "documentation_parser_progress_319",
-      "confidence_score": 1.0
+      "target": "documentation_parser_progress_319"
     },
     {
       "relation": "contains",
@@ -3627,8 +2999,108 @@
       "source_file": "DOCUMENTATION.md",
       "source_location": "L249",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "documentation_day_4",
-      "target": "documentation_summary_249",
+      "target": "documentation_summary_249"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L356",
+      "weight": 1.0,
+      "source": "documentation_day_5",
+      "target": "documentation_architecture_decisions_356",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L364",
+      "weight": 1.0,
+      "source": "documentation_day_5",
+      "target": "documentation_bugs_fixed_364",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L383",
+      "weight": 1.0,
+      "source": "documentation_day_5",
+      "target": "documentation_commits_table_383",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L412",
+      "weight": 1.0,
+      "source": "documentation_day_5",
+      "target": "documentation_detection_progress_412",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L416",
+      "weight": 1.0,
+      "source": "documentation_day_5",
+      "target": "documentation_engineering_progress_416",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L346",
+      "weight": 1.0,
+      "source": "documentation_day_5",
+      "target": "documentation_implemented_features_346",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L375",
+      "weight": 1.0,
+      "source": "documentation_day_5",
+      "target": "documentation_lessons_learned_375",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L391",
+      "weight": 1.0,
+      "source": "documentation_day_5",
+      "target": "documentation_metrics_391",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L408",
+      "weight": 1.0,
+      "source": "documentation_day_5",
+      "target": "documentation_parser_progress_408",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L338",
+      "weight": 1.0,
+      "source": "documentation_day_5",
+      "target": "documentation_summary_338",
       "confidence_score": 1.0
     },
     {
@@ -3737,9 +3209,9 @@
       "source_file": "README.md",
       "source_location": "L167",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_homelab_log_parser_linux",
-      "target": "readme_testing",
-      "confidence_score": 1.0
+      "target": "readme_testing"
     },
     {
       "relation": "contains",
@@ -3767,9 +3239,9 @@
       "source_file": "README.md",
       "source_location": "L143",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_detection_engine",
-      "target": "readme_alert_format",
-      "confidence_score": 1.0
+      "target": "readme_alert_format"
     },
     {
       "relation": "contains",
@@ -3830,6 +3302,16 @@
       "confidence_score": 1.0,
       "source": "readme_detection_engine",
       "target": "readme_ssh_brute_force"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L372",
+      "weight": 1.0,
+      "source": "readme_roadmap",
+      "target": "readme_ai_assistance",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -4263,5 +3745,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "80d857e75c49f870c913770133c77688f86db334"
+  "built_at_commit": "35dce822a3696ad4a11ab4c0e203ea65e4d6dae3"
 }
