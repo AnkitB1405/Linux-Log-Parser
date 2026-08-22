@@ -30,7 +30,7 @@ The following documents and artifacts are maintained as part of the project engi
 | [ARCHITECTURE.md](ARCHITECTURE.md) | System Design | 🚧 |
 | [SECURITY.md](SECURITY.md) | Threat Model | 🚧 |
 | [screenshots/](screenshots/) | Visual Assets | 🚧 |
-| [journal/](journal/) | Notes and learning material | 🚧 |
+| journal/ | Personal notes and runnable learning labs — kept local, gitignored | — |
 | [outputs/](outputs/) | Events and Alerts | ✅ |
 | [test_detectors.py](test_detectors.py) | Detection Regression Test | ✅ |
 
@@ -216,9 +216,6 @@ Log_Parser/
 ├── sample_logs/
 │   ├── sample_ssh_log.txt
 │   └── ssh_dataset_v1.txt
-│
-├── journal/
-│   └── regex_lab.py
 │
 ├── graphify-out/
 │

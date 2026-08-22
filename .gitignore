@@ -7,3 +7,4 @@ graphify-out/cache/**
 CLAUDE.md
 .claude/
 __pycache__/
+journal/
