@@ -1,3 +1,16 @@
+# Per-IP failed-login activity across sliding windows, to surface distributed
+# or patterned attackers. Bands are ordered high-first and chained, so exactly
+# one fires — previously both were plain `if`s, so an IP with 4+ suspicious
+# windows raised a medium *and* a high for the same evidence.
+WINDOW_SECONDS = 1800
+BURST = 3
+
+BANDS = [
+    (4, "high", "investigate immediately"),
+    (2, "medium", "monitor activity"),
+]
+
+
 def detect_behavior(events):
 
     # ip -> [(timestamp, event_id), ...]
@@ -19,48 +32,57 @@ def detect_behavior(events):
 
     for ip, entries in login_history.items():
         entries.sort()
-        suspicious_windows = 0
 
-        for i in range(len(entries)):
-            count = 1
+        suspicious_windows = count_bursts(entries)
+        severity, action = severity_for(suspicious_windows)
 
-            for j in range(i + 1, len(entries)):
-                delta = entries[j][0] - entries[i][0]
+        if severity is None:
+            continue
 
-                if delta.total_seconds() <= 1800:
-                    count += 1
-
-                else:
-                    break
-
-            if count >= 3:
-                suspicious_windows += 1
-
-        latest = entries[-1][0]
-        event_ids = [e[1] for e in entries]
-
-        if suspicious_windows >= 2:
-            alerts.append({
-                "severity": "medium",
-                "alert_type": "behavior_anomaly",
-                "service": log_sources[ip],
-                "source_ip": ip,
-                "windows": suspicious_windows,
-                "timestamp": latest,
-                "event_ids": event_ids,
-                "recommended_action": "monitor activity"
-            })
-
-        if suspicious_windows >= 4:
-            alerts.append({
-                "severity": "high",
-                "alert_type": "behavior_anomaly",
-                "service": log_sources[ip],
-                "source_ip": ip,
-                "windows": suspicious_windows,
-                "timestamp": latest,
-                "event_ids": event_ids,
-                "recommended_action": "investigate immediately"
-            })
+        alerts.append({
+            "severity": severity,
+            "alert_type": "behavior_anomaly",
+            "service": log_sources[ip],
+            "source_ip": ip,
+            "windows": suspicious_windows,
+            "timestamp": entries[-1][0],
+            "event_ids": [e[1] for e in entries],
+            "recommended_action": action
+        })
 
     return alerts
+
+
+def count_bursts(entries):
+    """
+    How many windows starting at an entry hold at least BURST attempts.
+
+    ponytail: O(n^2) over one IP's failed logins. Fine at this volume; if a
+    single IP ever produces tens of thousands, walk it with two indices.
+    """
+
+    windows = 0
+
+    for i in range(len(entries)):
+        count = 1
+
+        for j in range(i + 1, len(entries)):
+            if (entries[j][0] - entries[i][0]).total_seconds() <= WINDOW_SECONDS:
+                count += 1
+            else:
+                break
+
+        if count >= BURST:
+            windows += 1
+
+    return windows
+
+
+def severity_for(count):
+    """First band whose threshold is met. (None, None) below the lowest."""
+
+    for threshold, severity, action in BANDS:
+        if count >= threshold:
+            return severity, action
+
+    return None, None

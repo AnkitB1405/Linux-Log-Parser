@@ -1,26 +1,30 @@
+from collections import Counter
+
+# Seeded so the keys exist even at zero — a dashboard reading this wants a
+# stable shape, not a field that vanishes on a quiet day.
+SEVERITIES = ("high", "medium", "monitor")
+
+
 def generate_statistics(events, alerts):
+
     statistics = {
         "total_events": len(events),
         "total_alerts": len(alerts),
-        "high_alerts": 0,
-        "medium_alerts": 0,
+        **{f"{severity}_alerts": 0 for severity in SEVERITIES},
         "services": {},
         "event_types": {}
     }
 
+    # Counted by name rather than an if/elif chain, so a severity that is not
+    # listed above still gets a bucket instead of being silently dropped —
+    # `monitor` alerts were landing only in total_alerts.
     for alert in alerts:
-        severity = alert["severity"]
+        key = f"{alert.get('severity') or 'unknown'}_alerts"
+        statistics[key] = statistics.get(key, 0) + 1
 
-        if severity == "high":
-            statistics["high_alerts"] += 1
-
-        elif severity == "medium":
-            statistics["medium_alerts"] += 1
-
-    for event in events:
-        service = event.get("log_source")
-        event_type = event["event_type"]
-        statistics["services"][service] = statistics["services"].get(service, 0) + 1
-        statistics["event_types"][event_type] = statistics["event_types"].get(event_type, 0) + 1
+    statistics["services"] = dict(
+        Counter(event.get("log_source") for event in events))
+    statistics["event_types"] = dict(
+        Counter(event["event_type"] for event in events))
 
     return statistics

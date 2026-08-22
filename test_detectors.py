@@ -10,6 +10,8 @@ Run from the repo root:  python3 test_detectors.py
 """
 
 from parser.ssh_parser import identify_event
+from parser.docker_parser import identify_event as identify_docker_event
+from detectors.container_anomaly import detect_container_anomaly
 from detectors.bruteforce import detect_bruteforce
 from detectors.service_anomaly import detect_service_anomaly
 from detectors.credential_compromise import detect_credential_compromise
@@ -18,13 +20,23 @@ from detectors.session_anomaly import detect_session_anomaly
 from detectors.auth_anomaly import detect_auth_anomaly
 
 DATASET = "sample_logs/ssh_dataset_v1.txt"
+DOCKER_DATASET = "sample_logs/docker_events_v1.jsonl"
+
+# Captured from a real homelab `docker events` run. Service names and build
+# labels are redacted; every event shape, sequence and command is untouched.
+EXPECTED_DOCKER_EVENTS = 84
+
+# (severity, container, command) — health-check execs must NOT appear here.
+EXPECTED_CONTAINER_ALERTS = [
+    ("high", "lp-web", "sh -c cat /etc/passwd"),
+    ("medium", "lp-web", "ls /"),
+]
 
 # (alert_type, entity, severity) — entity is the source_ip, username or
 # service the alert is about, whichever the detector keys on.
 EXPECTED_ALERTS = [
     ("behavior_anomaly", "192.0.2.20", "medium"),
     ("behavior_anomaly", "198.51.100.55", "high"),
-    ("behavior_anomaly", "198.51.100.55", "medium"),
     ("behavior_anomaly", "203.0.113.40", "medium"),
     ("bruteforce", "198.51.100.10", "medium"),
     ("bruteforce", "198.51.100.11", "medium"),
@@ -85,6 +97,38 @@ def entity(alert):
     return alert.get("source_ip") or alert.get("username") or alert.get("service")
 
 
+def check_docker():
+    """The Docker path: JSON in, normalized events out, probes suppressed."""
+
+    with open(DOCKER_DATASET) as file:
+        events = [e for e in (identify_docker_event(l) for l in file) if e]
+
+    assert len(events) == EXPECTED_DOCKER_EVENTS, (
+        f"docker event count changed: {len(events)}")
+
+    for event in events:
+        assert event["log_source"] == "docker", event
+        # Docker events carry no user or address; inventing either would be
+        # worse than leaving them empty.
+        assert event["username"] is None and event["source_ip"] is None, event
+        # real epoch timestamps, unlike the BSD syslog path
+        assert event["timestamp"].year > 2000, event
+
+    # the attribute allowlist must hold: no compose/OCI build metadata leaks
+    for event in events:
+        leaked = [k for k in event["details"] if k.startswith(("com.docker", "org.opencontainers"))]
+        assert not leaked, f"build metadata leaked into details: {leaked}"
+
+    alerts = detect_container_anomaly(events)
+    got = sorted((a["severity"], a["container"], a["command"]) for a in alerts)
+    assert got == sorted(EXPECTED_CONTAINER_ALERTS), (
+        f"container alert set changed\n  got: {got}")
+
+    execs = [e for e in events if e["event_type"] == "container_exec_created"]
+    print(f"OK  {len(events)} docker events, {len(alerts)} container alerts, "
+          f"{len(execs) - len(alerts)} health-check execs suppressed")
+
+
 def main():
     events, errors = build_events()
 
@@ -134,6 +178,8 @@ def main():
     print(f"OK  {len(events)} events, {len(alerts)} alerts, {len(errors)} errors")
     print(f"OK  event shape normalized via create_event()")
     print(f"OK  all {len(alerts)} alerts carry timestamp + event_ids")
+
+    check_docker()
 
 
 if __name__ == "__main__":
