@@ -1,8 +1,9 @@
 {
     "total_events": 64,
-    "total_alerts": 19,
+    "total_alerts": 18,
     "high_alerts": 5,
-    "medium_alerts": 14,
+    "medium_alerts": 13,
+    "monitor_alerts": 0,
     "services": {
         "ssh": 64
     },

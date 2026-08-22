@@ -5,7 +5,7 @@
         "source_ip": "198.51.100.10",
         "timestamp": "1900-06-11T15:01:11",
         "event_ids": [
-            "44fdd363b111"
+            "f35b6731fd3f"
         ],
         "recommended_action": "monitor"
     },
@@ -15,7 +15,7 @@
         "source_ip": "198.51.100.11",
         "timestamp": "1900-06-11T15:02:12",
         "event_ids": [
-            "e9d712cb45c5"
+            "735e4d393a42"
         ],
         "recommended_action": "monitor"
     },
@@ -25,7 +25,7 @@
         "source_ip": "203.0.113.40",
         "timestamp": "1900-06-11T15:03:18",
         "event_ids": [
-            "bd0d0b6a9359"
+            "2981ded352bb"
         ],
         "recommended_action": "monitor"
     },
@@ -35,7 +35,7 @@
         "source_ip": "203.0.113.90",
         "timestamp": "1900-06-11T15:55:12",
         "event_ids": [
-            "c735bfd16183"
+            "3771b1ae0093"
         ],
         "recommended_action": "monitor"
     },
@@ -46,10 +46,10 @@
         "attempts": 4,
         "timestamp": "1900-06-11T15:03:14",
         "event_ids": [
-            "03c471038761",
-            "e40c2d6b4d34",
-            "2b7247ea5d27",
-            "25ef00d664bf"
+            "6d4674dddaf1",
+            "6b27b4e59dc1",
+            "6b23bd9e09c4",
+            "349767121273"
         ],
         "recommended_action": "monitor"
     },
@@ -59,11 +59,11 @@
         "source_ip": "203.0.113.40",
         "timestamp": "1900-06-11T15:03:18",
         "event_ids": [
-            "03c471038761",
-            "e40c2d6b4d34",
-            "2b7247ea5d27",
-            "25ef00d664bf",
-            "bd0d0b6a9359"
+            "6d4674dddaf1",
+            "6b27b4e59dc1",
+            "6b23bd9e09c4",
+            "349767121273",
+            "2981ded352bb"
         ],
         "recommended_action": "block_ip and report"
     },
@@ -74,11 +74,11 @@
         "attempts": 5,
         "timestamp": "1900-06-11T15:07:40",
         "event_ids": [
-            "bdd3347f5cef",
-            "6cc91b54c883",
-            "ddc58d3515eb",
-            "428d04b0aa14",
-            "f912b12059fe"
+            "40731aa7554f",
+            "f09f182eb48d",
+            "a8d76a43a2a4",
+            "94eaf4508dae",
+            "04c28ede00b5"
         ],
         "recommended_action": "monitor"
     },
@@ -89,12 +89,12 @@
         "events": 6,
         "timestamp": "1900-06-11T15:50:25",
         "event_ids": [
-            "edd1ee57b9e0",
-            "1eb67ea3521d",
-            "e7bad2f7440f",
-            "f6a14702f73f",
-            "439cbc56933a",
-            "ad6bfcc326f4"
+            "33bab6653819",
+            "a804a82cbc41",
+            "b9b9fa62777d",
+            "fde8e266e868",
+            "423098e6a149",
+            "2c09471cb8e1"
         ],
         "recommended_action": "investigate service immediately"
     },
@@ -107,12 +107,12 @@
         "failed_attempts": 5,
         "timestamp": "1900-06-11T15:08:20",
         "event_ids": [
-            "bdd3347f5cef",
-            "6cc91b54c883",
-            "ddc58d3515eb",
-            "428d04b0aa14",
-            "f912b12059fe",
-            "640115023c38"
+            "40731aa7554f",
+            "f09f182eb48d",
+            "a8d76a43a2a4",
+            "94eaf4508dae",
+            "04c28ede00b5",
+            "0bed91d48917"
         ],
         "recommended_action": "verify login"
     },
@@ -124,10 +124,10 @@
         "windows": 2,
         "timestamp": "1900-06-11T15:03:14",
         "event_ids": [
-            "03c471038761",
-            "e40c2d6b4d34",
-            "2b7247ea5d27",
-            "25ef00d664bf"
+            "6d4674dddaf1",
+            "6b27b4e59dc1",
+            "6b23bd9e09c4",
+            "349767121273"
         ],
         "recommended_action": "monitor activity"
     },
@@ -139,30 +139,11 @@
         "windows": 3,
         "timestamp": "1900-06-11T15:07:40",
         "event_ids": [
-            "bdd3347f5cef",
-            "6cc91b54c883",
-            "ddc58d3515eb",
-            "428d04b0aa14",
-            "f912b12059fe"
-        ],
-        "recommended_action": "monitor activity"
-    },
-    {
-        "severity": "medium",
-        "alert_type": "behavior_anomaly",
-        "service": "ssh",
-        "source_ip": "198.51.100.55",
-        "windows": 6,
-        "timestamp": "1900-06-11T15:36:00",
-        "event_ids": [
-            "79fe3ffae20e",
-            "d7a79766f272",
-            "95305291cf63",
-            "e176e0f34b93",
-            "c59971c60e82",
-            "03bbd381b57f",
-            "75137809a101",
-            "81e45e2fcff8"
+            "40731aa7554f",
+            "f09f182eb48d",
+            "a8d76a43a2a4",
+            "94eaf4508dae",
+            "04c28ede00b5"
         ],
         "recommended_action": "monitor activity"
     },
@@ -174,14 +155,14 @@
         "windows": 6,
         "timestamp": "1900-06-11T15:36:00",
         "event_ids": [
-            "79fe3ffae20e",
-            "d7a79766f272",
-            "95305291cf63",
-            "e176e0f34b93",
-            "c59971c60e82",
-            "03bbd381b57f",
-            "75137809a101",
-            "81e45e2fcff8"
+            "69b9300cef03",
+            "b6d489124244",
+            "4daf91a51681",
+            "849f307a9918",
+            "c676400eca88",
+            "79ef1662bbba",
+            "5cb5415f70db",
+            "5686f648be43"
         ],
         "recommended_action": "investigate immediately"
     },
@@ -193,8 +174,8 @@
         "duration": 12.0,
         "timestamp": "1900-06-11T15:10:12",
         "event_ids": [
-            "ecfc28393b5a",
-            "e3c122be5087"
+            "06bab47dcdfa",
+            "836ed274e5c2"
         ],
         "recommended_action": "monitor"
     },
@@ -206,8 +187,8 @@
         "duration": 10.0,
         "timestamp": "1900-06-11T15:11:10",
         "event_ids": [
-            "1ec61c334b20",
-            "2c135a1af7c6"
+            "7469b811dc66",
+            "6f3f42401b7b"
         ],
         "recommended_action": "monitor"
     },
@@ -219,8 +200,8 @@
         "duration": 8.0,
         "timestamp": "1900-06-11T15:12:08",
         "event_ids": [
-            "56d3cc37e0a0",
-            "63eb1154c84a"
+            "81e73c4e618f",
+            "b0775a6d9104"
         ],
         "recommended_action": "monitor"
     },
@@ -232,8 +213,8 @@
         "duration": 6.0,
         "timestamp": "1900-06-11T15:40:06",
         "event_ids": [
-            "a12a251eae31",
-            "d0d911b163e7"
+            "17979eaeb286",
+            "66802567b4e2"
         ],
         "recommended_action": "monitor"
     },
@@ -246,7 +227,7 @@
         "auth_method": "publickey",
         "timestamp": "1900-06-11T15:09:00",
         "event_ids": [
-            "a168e70f138d"
+            "ee1630d258b9"
         ],
         "recommended_action": "inspect authorized_keys for this user and revoke unknown keys"
     },
@@ -259,7 +240,7 @@
         "auth_method": "publickey",
         "timestamp": "1900-06-11T15:42:00",
         "event_ids": [
-            "d805f8171457"
+            "d31c4cf1bcd6"
         ],
         "recommended_action": "inspect authorized_keys for this user and revoke unknown keys"
     }
