@@ -21,19 +21,33 @@ Status: 🚧 Educational / homelab-grade. This is **not** production-hardened de
 | Credential compromise | `credential_compromise` | Burst of failures then a success on same user+IP |
 | Distributed / patterned attacker behaviour | `behavior` | Multiple suspicious 30-min windows per IP |
 | Session anomalies | `session_anomaly` | Session opened and closed within 20 seconds |
+| Unsanctioned authentication method | `auth_anomaly` | A **successful** login by any method outside `SANCTIONED_AUTH_METHODS` (`{"password"}`). These hosts never use key auth, so a publickey success means a key was installed that nobody sanctioned — a persistence indicator, not an intrusion attempt |
+| Interactive access to a container | `container_anomaly` | `docker exec` into a running container, with liveness probes suppressed by command pattern |
+| Container configured to reach the host | `container_escape` | `Privileged`, host pid/net/ipc namespaces, disabled confinement, dangerous capabilities, the Docker socket, or a read-write bind of a sensitive host path — minus what is already expected for that container |
 
-**Out of scope (today):** non-SSH log sources, kernel/network-level attacks, malware, container escapes, data exfiltration, log tampering that removes lines, and any host the parser has no logs for.
+**Out of scope (today):** kernel/network-level attacks, malware, data exfiltration, log tampering that removes lines, web and application logs, and any host the parser has no logs for.
 
-**Adversary assumption:** an unauthenticated or low-privileged remote attacker probing SSH, or an attacker whose activity is visible in standard `sshd`/PAM log output.
+**Partly in scope:** container escape *configuration* is assessed (`container_escape`), but only for events the collector has enriched with `docker inspect` output. Escape *behaviour* — what a container actually did with that access — is not observed at all.
+
+**Adversary assumption:** an unauthenticated or low-privileged remote attacker probing SSH, or an attacker whose activity is visible in standard `sshd`/PAM/`dockerd` log output.
+
+### Deployment context
+
+The monitored services are **reachable only over the Tailscale tailnet**; none of the Docker workloads are published to the public internet, and SSH is not exposed on a public interface. That is a real and load-bearing mitigating control: the realistic Docker adversary is not an anonymous internet scanner but someone already inside the tailnet, or a compromised container reached through a vulnerability in a service the owner runs.
+
+This changes the *likelihood* of the Docker threats above, not their *impact* — a container holding `/var/run/docker.sock` is still equivalent to root on the host once reached. Detection is therefore built to catch the post-compromise stage: a new container appearing with host access, an unexpected `docker exec`, a key installed for an authentication method that is never used. It is not a perimeter control and does not pretend to be one.
+
+Note also that the tailnet is why `KNOWN_ROOT_IPS` contains `100.x` addresses: those are tailnet peers, and the planned trust-tier work generalises exactly this — `100.64.0.0/10` is the owner, LAN is probably the owner, anything else is not.
 
 ---
 
 ## Current Assumptions
 
 - **Log integrity is trusted.** The engine assumes logs are complete and unmodified. An attacker who can edit or delete log lines can evade detection.
-- **Timestamps are reliable and monotonic.** Parsing uses `%b %d %H:%M:%S` with **no year** — year is not present in standard syslog lines, so cross-year and DST edge cases are undefined.
-- **Single host / single log file** per run. No multi-host correlation.
-- **Known-good root IPs are correctly configured.** `KNOWN_ROOT_IPS` is a hardcoded allowlist in `detectors/bruteforce.py`; stale entries cause missed or false alerts.
+- **Timestamps are reliable and monotonic.** The Mint homelab — the always-on install — reads RFC3339 `auth.log` and carries a real year and UTC offset. The BSD path (journald short output, Metasploitable) still has no year in the line and lands in 1900, so cross-year and DST edge cases are undefined there. Docker events carry epoch timestamps and are unaffected.
+- **Single host, multiple sources** per run. SSH and Docker are parsed into one event stream on one machine. There is no multi-*host* correlation: one copy of the project runs on each device and reads only that device's logs.
+- **Two hardcoded allowlists are correctly maintained.** `KNOWN_ROOT_IPS` (`detectors/bruteforce.py`) and `ALLOWED` (`detectors/container_escape.py`); stale entries cause missed or false alerts in both directions. `ALLOWED` is keyed on container **name** rather than id, because compose recreates containers and ids change on every `up`.
+- **Container configuration is only known if enriched.** `docker events` carries none of the escape-relevant fields — verified as zero occurrences across 84 captured events. `container_escape` skips un-enriched events rather than treating them as safe, so before the collector exists it reports nothing at all. Silence there means "not observed", never "clean".
 - **Batch processing.** All events are loaded into memory and analyzed together; there is no live monitoring yet.
 - **Local, offline operation.** No network calls, no external threat intel.
 

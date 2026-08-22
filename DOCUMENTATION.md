@@ -419,25 +419,134 @@ The parser is now the shape the roadmap needs. Phase 2 (additional parsers) was 
 
 ---
 
+## Day 6
+
+**Dates:** 2026-08-21 → 2026-08-23
+**Commits:** 6 (`bd01e9d`, `da66712`, `22e4f57`, `d83f7bc`, `17661f8`, `0bc62d2`), plus the documentation commit carrying this entry
+
+### Summary
+
+Day 6 turned a single-source SSH tool into a multi-source engine. Three things happened, in order.
+
+First, the SSH parser stopped being written for one machine. Day 5 split parsing into an envelope layer and a message layer; Day 6 used that split for what it was for, adding a second envelope so the parser reads Linux Mint's RFC3339 `auth.log` as well as journald's BSD format. Which envelope matches is how the format is detected — nothing declares it. A companion module answers the other half of the question, working out at runtime which log *this* machine keeps.
+
+Second, Phase 1 was closed out. Two severity-band bugs turned out to be the same mistake twice, and a third gap left an entire severity tier uncounted.
+
+Third, Docker landed — parser, two detectors, fixture, and wiring into the pipeline. The parser deliberately does not use regex, one day after the migration that introduced it.
+
+The run is now **148 events from two sources producing 20 alerts**, verified to be exactly what the two sources produce independently.
+
+### Implemented features
+
+- **Second envelope, and format auto-detection** (`parser/ssh_parser.py`) — `ENVELOPES` is a table of `(name, timestamp_parser, pattern)` tried in order. `rfc3339` reads Linux Mint's `auth.log` (`2026-08-19T10:09:15.247212+05:30`) with a real year and offset; `bsd` reads journald short output and classic syslog. A file mixing both parses correctly line by line.
+- **Machine detection** (`parser/log_source.py`) — `detect_ssh_log()` prefers `/var/log/auth.log` where it exists and is readable, falling back to `journalctl`. Kali ships no `auth.log`; Mint and Metasploitable do. `read_lines()` drops journald's own `-- Boot … --` and `-- No entries --` markers, which are not log lines and would otherwise be counted as parse failures.
+- **Live mode** — `python3 main.py --live` reads this machine's real SSH log instead of the fixture. A plain run is unchanged, so the pinned test stays reproducible.
+- **Four new SSH event types** — `session_closed`, `max_auth_attempts`, `user_unknown`, `preauth_failure`. The last covers scanner traffic (connection reset, bad banner, refused key exchange) and is deliberately *not* called brute force: no credential was offered.
+- **PAM `user=` promoted to `username`** — PAM is where root targeting is actually named, and it was being buried in `details`.
+- **Quoted `key=value` parsing** — dockerd writes logrus context whose values contain spaces. The previous `(\w+)=(\S*)` truncated `msg="Daemon has completed initialization"` to `"Daemon`. Now `(\w+)=("[^"]*"|\S*)`, quoted form first.
+- **Docker events parser** (`parser/docker_parser.py`) — `json.loads` plus an `ACTIONS` table on `(Type, Action)`. 84/84 captured events parse, with real epoch timestamps.
+- **Three new detectors** — `auth_anomaly` (a successful login by an unsanctioned method), `container_anomaly` (`docker exec`, health-check probes suppressed), `container_escape` (HostConfig assessed for routes onto the host).
+- **Multi-source pipeline** (`main.py`) — both sources parsed into one event list, every detector run over it.
+- **Detector registry** (`detectors/registry.py`) — one list, imported by both the pipeline and the test.
+- **Redacted Docker fixture** (`sample_logs/docker_events_v1.jsonl`) — 84 events captured from the real homelab.
+
+### Architecture decisions
+
+- **The Docker parser is not regex, one day after the regex migration.** `docker events` emits JSON; something already did the parsing. Re-deriving that structure with patterns would be slower and would break on any value containing a brace or a quote. The envelope/message split still holds — JSON structure is Docker's envelope, `ACTIONS` is its message table. The general rule: regex is for text written to be *read*; `json.loads` is for text written to be *parsed*. Neither `parse_key_values` (PAM) nor the JSON path was converted to regex on principle, because that would have made both worse.
+- **`Accepted publickey` is parsed as an anomaly, not accepted as a login.** It had been excluded on the grounds that password auth is the only method in use. That reasoning was inverted: because key auth is never configured on any of these machines, a *successful* publickey login means a key exists that nobody installed, which is how an intruder keeps access after a break-in. The parser must match it precisely so a detector can raise on it.
+- **Missing evidence produces silence, not reassurance.** `container_escape` skips events with no `host_config` rather than treating them as safe. A detector that quietly passes un-enriched containers is worse than one that does not run, because it looks like coverage.
+- **Privilege is a state, not an event.** Portainer holds `/var/run/docker.sock` every second of every day, legitimately. Alerting on the state means alerting on the homelab's own infrastructure forever, which is how a detector gets muted. `ALLOWED` records expected findings per container and only unexpected ones raise — keyed on container **name**, because compose destroys and recreates containers and ids change on every `up`.
+- **Ordinary data volumes stay silent.** Six of the homelab's ten containers bind-mount `/docker/*` or `/nas/*`; that is how Docker persistence normally works. Only sensitive host paths raise, and read-only mounts of them do not — reading `/etc` is a much smaller thing than rewriting it.
+- **Enrichment belongs in the collector, not the parser.** `docker inspect` needs a live daemon and a network call per container. Keeping parsers as pure text→event functions is what lets them be tested against a fixture and run against archived captures.
+- **The learning material left the repository.** `journal/` is gitignored. The labs restate logic that lives for real in `parser/`, and a second copy of a pattern table drifts out of sync with the first.
+
+### Bugs fixed
+
+- **`credential_compromise` — `high` was unreachable.** Bands were ordered `if recent >= 5 … elif recent >= 8`, so a burst of twelve failures reported `medium`. Output-neutral on the fixture; a real hydra run trivially exceeds eight.
+- **`behavior` — one IP, two verdicts.** Two plain `if` statements rather than a chain, so four or more suspicious windows raised a `medium` *and* a `high` citing identical evidence.
+- **Both had the same root cause.** Each band carried its own copy of the alert dict, which let the two branches drift apart. Both are now ordered `BANDS` tables feeding one shared dict, so a threshold change cannot be applied to one branch and missed in the other.
+- **`generate_statistics` dropped a whole severity.** Only `high` and `medium` had buckets; `monitor` alerts landed in `total_alerts` and nowhere else. Counting is now by severity name, so an unlisted severity gets a bucket instead of vanishing.
+- **The test had drifted from the pipeline.** `test_detectors.py` held its own copy of the detector list, and `container_anomaly` had been added to `main.py` but not to it — the test was silently no longer covering a detector that was running. Both now import `detectors/registry.py`.
+- **journald markers counted as parse failures.** `-- Boot 3f2a… --` and `-- No entries --` are journalctl's own output, not log lines.
+
+### Lessons learned
+
+- **The same shape of bug appeared four times in one sprint.** Two unreachable severity bands, a missing statistics bucket, and a test that had stopped covering a detector — every one caused by the same fact being written down twice and the copies drifting. Each fix was to remove the duplication, not to correct the copy. Where a list must exist twice, it should exist once and be imported.
+- **Knowing what a log does *not* contain is worth as much as parsing what it does.** The most valuable finding of the Docker work was negative: `Privileged`, `PidMode`, `docker.sock` and `Binds` appear zero times across 84 events, despite containers being started with all of them while the capture ran. No amount of parser work would have found them, and only running code against real data revealed it.
+- **A detector that fires on normal operation is a detector that gets deleted.** Health-check execs and Portainer's socket mount are both completely routine, and both would trigger the obvious rule constantly. Suppression and baselining are not refinements to add later; without them neither detector would survive its first night.
+- **Reference data from an idle machine is worse than none.** The local Docker daemon has never run a container, so its logs would have produced a parser fitted to nothing. Every Docker finding in this sprint came from a capture taken on the machine that actually runs the workload.
+- **A stated reason can be right while its conclusion is wrong.** `Accepted publickey` was excluded because key auth is never used. That is true, and it is precisely why the line matters — the correct response was to parse it and alert, not to ignore it.
+
+### Commits table
+
+| Commit | Author | Description |
+|--------|--------|-------------|
+| [bd01e9d](https://github.com/AnkitB1405/Linux-Log-Parser/commit/bd01e9d) | AnkitB1405 | Multi-envelope SSH parsing, machine detection, `--live` mode, four new event types, PAM `user=` promotion, `auth_anomaly` detector |
+| [da66712](https://github.com/AnkitB1405/Linux-Log-Parser/commit/da66712) | AnkitB1405 | Docker events parser, `container_anomaly` detector, both severity-band fixes, `monitor` statistics bucket |
+| [22e4f57](https://github.com/AnkitB1405/Linux-Log-Parser/commit/22e4f57) | Claude | Redacted 84-event Docker fixture, refreshed outputs |
+| [d83f7bc](https://github.com/AnkitB1405/Linux-Log-Parser/commit/d83f7bc) | Claude | `journal/` gitignored — learning labs kept local |
+| [17661f8](https://github.com/AnkitB1405/Linux-Log-Parser/commit/17661f8) | AnkitB1405 | Multi-source pipeline, detector registry, quoted `key=value`, `container_escape` assessment |
+| [0bc62d2](https://github.com/AnkitB1405/Linux-Log-Parser/commit/0bc62d2) | Claude | Outputs refreshed for the merged pipeline |
+| *(this entry)* | Claude | Day 6 journal, `ROADMAP.md`, `README.md` and `SECURITY.md` refresh |
+
+### Metrics
+
+| Metric | Day 5 | Day 6 | Δ |
+|--------|-------|-------|---|
+| Commits (cumulative) | 31 | 37 | +6 |
+| Log sources | 1 | 2 | +1 |
+| Parsers | 1 | 2 | +1 |
+| Envelope formats | 1 | 2 | +1 |
+| Detectors | 5 | 8 | +3 |
+| SSH event types | 9 | 13 | +4 |
+| Docker event types | 0 | 15 | +15 |
+| Events per run | 62 | 148 | +86 |
+| Alerts per run | 17 | 20 | +3 |
+| Real captured events under test | 0 | 84 | +84 |
+
+Current run: **148 events (64 ssh, 84 docker) → 20 alerts** (6 high, 14 medium), 0 parser errors.
+
+### Parser progress
+
+Two sources, two very different parsing strategies, one event shape. The SSH parser reads two envelope formats and thirteen event types; the Docker parser reads JSON and fifteen. Neither knows the other exists, and no detector can tell which produced an event — `create_event()` is what makes that true.
+
+The 1900-timestamp limitation now applies only to the BSD path. The Mint homelab, which is the always-on install, carries real years and offsets throughout.
+
+### Detection progress
+
+Coverage moved from one attack surface to two. SSH detection gained a genuine new class — an unsanctioned authentication method, which is a persistence indicator rather than an intrusion attempt — and Docker arrived with two detectors covering container access and container configuration.
+
+Both Docker detectors are built around suppression, because both would otherwise fire constantly on normal operation. That was the central design problem, not an afterthought.
+
+`container_escape` is complete as judgement and unproven as plumbing: it is tested against real captured `HostConfig` shapes and the homelab's real bind layouts, but has never seen a live enriched event, because the collector that would attach them does not exist yet.
+
+### Engineering progress
+
+Phase 1 is closed. Phase 2 has its first non-SSH source in the pipeline, which was the milestone the schema (Day 4) and the regex conversion (Day 5) were both prerequisites for — a second source cost a pattern table and a detector, not a rewrite.
+
+The recurring engineering lesson of this sprint was about duplication: four separate defects, all caused by one fact recorded twice. The detector list, the severity bands and the statistics buckets each now exist once.
+
+---
+
 ## Current Status
 
-**Estimated project completion:** ~43% (weighted across all 11 phases; V1 core is well underway)
+**Estimated project completion:** ~50% (weighted across all 11 phases)
 
-**Current phase:** Phase 1 — SSH Monitoring Engine (~97%); **Phase 4 (schema normalization) complete**; Phase 5 (Outputs) underway
+**Current phase:** **Phase 1 complete**; Phase 2 (Additional Parsers) ~30%; Phase 3 (Detection Expansion) ~55%; Phase 5 (Outputs) 50%
 
 **Current focus:**
-> The parser is regex-based and split into envelope + message layers, which was the second and last blocker under Phase 2. Next is the second log source, plus the outstanding severity-band fixes.
+> Two log sources are in the pipeline and eight detectors run over the merged stream. The next dependency is the Docker events collector, which unblocks both the live feed and container-escape enrichment.
 
 **Next milestone:**
-- Begin Phase 2 second parser (Syslog or Authentication logs) — now a pattern table rather than a new parser module
-- Fix the shadowed severity bands — `credential_compromise.py` tests `>= 5` before `>= 8`, so the `high` branch is unreachable (output-neutral on the current fixture, but a real hydra run trivially exceeds 8 and would still be reported `medium`)
-- Fix the duplicate medium+high `behavior_anomaly` on a single IP (`behavior.py`)
-- Give `monitor`-severity alerts their own bucket in `generate_statistics()`
-- Resolve the 1900-year timestamps, most cheaply by consuming `journalctl -o json`
-- Validate against real attack traffic from the Metasploitable homelab VM once provisioned
+- **Docker events collector** — `docker events` is in-memory only and lost on daemon restart, so nothing can be read retroactively. Blocks the live feed *and* `container_escape`, which is written but cannot fire without HostConfig enrichment
+- Validate the SSH parser against the homelab's real `auth.log` (`python3 main.py --live` on the Mint box)
+- `docker inspect` enrichment in the collector, cached by container id
+- Re-key `service_anomaly` on service identity — it buckets on `log_source`, which is `docker` for every container, so three containers restarting once each would read as instability
+- Replace `KNOWN_ROOT_IPS` with trust tiers (tailnet / LAN / public)
+- Historical retention (Phase 5) — the hidden dependency under the dashboard, the AI layer, lateral movement, and real escape baselining
 
 **Closed, not deferred:**
-- `Accepted publickey` parsing. Measured at +2 events and no alert change, and the monitored host runs password authentication by deliberate choice, so the event type is out of scope until a key-authenticated host is added. The pattern row is one word from supporting it.
+- Mixed 1900/real-year timestamps across machines. One copy of the project runs on each device and reads only that device's own log, so logs are never merged across machines. The always-on Mint install uses the RFC3339 path and has real years throughout.
 
 ---
 

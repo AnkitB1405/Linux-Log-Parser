@@ -90,7 +90,7 @@ same shape:
 
 ## Detection Engine
 
-The SSH detection engine now runs five independent detectors over the normalized event stream.
+The detection engine runs **eight** independent detectors over the normalized event stream, which now carries events from **two log sources**.
 
 ### Current Detections
 
@@ -101,6 +101,9 @@ The SSH detection engine now runs five independent detectors over the normalized
 | **Credential Compromise** | Failed-login bursts followed by a success on the same user + IP |
 | **Behaviour Analysis** | Distributed / patterned attacker behaviour across sliding windows |
 | **Session Anomaly** | Abnormally short SSH sessions |
+| **Auth Anomaly** | A successful login by an authentication method these hosts never use |
+| **Container Anomaly** | `docker exec` into a running container, health-check probes suppressed |
+| **Container Escape** | Containers configured with a route onto the host filesystem or daemon |
 
 ### SSH Brute Force
 
@@ -298,7 +301,7 @@ Focus on foundational log parsing and detections.
 ### Parsers
 
 - [x] SSH
-- [ ] Docker
+- [x] Docker (events API)
 - [ ] Syslog
 - [ ] Authentication Logs
 - [ ] Apache/Nginx
@@ -363,9 +366,9 @@ Actively being developed and expanded.
 
 Current focus:
 
-> The SSH parser is regex-based, split into envelope and message layers. Together with the
-> normalized schema this closes both blockers under Phase 2, so the next step is the second
-> (non-SSH) log source, alongside the outstanding detector severity-band fixes.
+> Phase 1 is complete. Two log sources — SSH and Docker — feed one merged event stream that
+> eight detectors run over. Next is the Docker events collector, which unblocks both the live
+> feed and container-escape enrichment.
 
 ---
 

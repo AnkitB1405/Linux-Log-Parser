@@ -21,9 +21,9 @@ Completed foundational planning and design.
 
 ---
 
-# Phase 1 — SSH Monitoring Engine 🔄
+# Phase 1 — SSH Monitoring Engine ✅
 
-Current Progress: ~97%
+Current Progress: 100%
 
 ## SSH Parser
 
@@ -42,7 +42,10 @@ Current Progress: ~97%
 - [x] Regex-based parsing (pattern table replaces token-index parsing)
 - [x] Envelope / message split (syslog wrapper parsed separately from the message body)
 - [x] Line-variant tolerance (`invalid user` / `authenticating user` prefixes, missing usernames)
-- [ ] Year-aware timestamps (syslog carries no year — cheapest fix is `journalctl -o json`)
+- [x] Year-aware timestamps on the primary target (Mint's RFC3339 `auth.log`; the BSD path still lands in 1900)
+- [x] Multi-envelope parsing with format auto-detection
+- [x] Log-source auto-detection per machine (`parser/log_source.py`)
+- [x] `Accepted publickey` — parsed and alerted on as an unsanctioned auth method
 - ~~Accepted publickey~~ — out of scope: the monitored host runs password authentication by
   choice. Measured at +2 events, 0 alert change. One word in the `successful_login` pattern
   if a key-authenticated host is ever added.
@@ -72,15 +75,15 @@ Planned:
 - [x] Persist Alerts
 - [x] Alert → event traceability (`event_ids`)
 - [x] Regression test for the detection engine (`test_detectors.py`)
-- [ ] Severity band fixes (`credential_compromise` high branch unreachable; duplicate `behavior_anomaly`)
+- [x] Severity band fixes (both were non-exclusive tiers caused by a duplicated alert dict)
 - [ ] Detection History
 - [ ] Event Archiving
 
 ---
 
-# Phase 2 — Additional Parsers
+# Phase 2 — Additional Parsers 🔄
 
-Current Progress: 0%
+Current Progress: ~30%
 
 > **Unblocked as of Day 5.** Both dependencies are closed: the normalized event schema
 > (Phase 4) and regex parsing with an envelope/message split (Day 5). A new source is now a
@@ -92,12 +95,16 @@ Current Progress: 0%
 
 Planned events:
 
-- [ ] Container Started
-- [ ] Container Stopped
-- [ ] Container Restarted
-- [ ] Container Created
-- [ ] Container Deleted
-- [ ] Container Exec
+- [x] Container Started
+- [x] Container Stopped
+- [x] Container Restarted
+- [x] Container Created
+- [x] Container Deleted
+- [x] Container Exec (with the executed command)
+- [x] Container Died / Killed, with exit code and signal
+- [ ] Events collector (docker events is in-memory only — blocks the live feed)
+- [ ] `docker inspect` enrichment for HostConfig
+- [ ] Container stdout (json-file driver)
 
 ---
 
@@ -137,9 +144,9 @@ Planned events:
 
 ---
 
-# Phase 3 — Detection Expansion
+# Phase 3 — Detection Expansion 🔄
 
-Current Progress: ~35%
+Current Progress: ~55%
 
 Implemented detectors:
 
@@ -150,7 +157,7 @@ Implemented detectors:
 Planned detectors:
 
 - [ ] Persistence Detector
-- [ ] Container Anomaly Detector
+- [x] Container Anomaly Detector (`container_anomaly`, `container_escape`)
 - [ ] Lateral Movement Detector
 - [ ] Network Abuse Detector
 
@@ -275,7 +282,7 @@ Planned capabilities:
 - [x] Save alerts
 - [x] Run statistics
 - [ ] Historical retention
-- [ ] `monitor`-severity alerts get their own statistics bucket
+- [x] `monitor`-severity alerts get their own statistics bucket
 
 Outputs are overwritten on every run — there is no run history and no alert
 deduplication yet.
@@ -463,11 +470,11 @@ Focus Areas:
 ```text
 Phase 0   ██████████ 100%
 
-Phase 1   █████████░ 97%
+Phase 1   ██████████ 100%
 
-Phase 2   ░░░░░░░░░░ 0%
+Phase 2   ███░░░░░░░ 30%
 
-Phase 3   ████░░░░░░ 35%
+Phase 3   █████░░░░░ 55%
 
 Phase 4   ██████████ 100%
 
