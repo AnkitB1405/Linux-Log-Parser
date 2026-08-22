@@ -12,12 +12,8 @@ Run from the repo root:  python3 test_detectors.py
 from parser.ssh_parser import identify_event
 from parser.docker_parser import identify_event as identify_docker_event
 from detectors.container_anomaly import detect_container_anomaly
-from detectors.bruteforce import detect_bruteforce
-from detectors.service_anomaly import detect_service_anomaly
-from detectors.credential_compromise import detect_credential_compromise
-from detectors.behavior import detect_behavior
-from detectors.session_anomaly import detect_session_anomaly
-from detectors.auth_anomaly import detect_auth_anomaly
+from detectors.container_escape import detect_container_escape, assess
+from detectors.registry import run_detectors
 
 DATASET = "sample_logs/ssh_dataset_v1.txt"
 DOCKER_DATASET = "sample_logs/docker_events_v1.jsonl"
@@ -53,6 +49,8 @@ EXPECTED_ALERTS = [
     ("slow_bruteforce", "192.0.2.20", "medium"),
     ("unauthorized_auth_method", "192.0.2.25", "high"),
     ("unauthorized_auth_method", "192.0.2.91", "high"),
+    ("container_exec", "lp-web", "high"),
+    ("container_exec", "lp-web", "medium"),
 ]
 
 EXPECTED_EVENT_TYPES = {
@@ -64,37 +62,88 @@ EXPECTED_EVENT_TYPES = {
     "session_opened": 7,
     "connection_closed": 4,
     "service_stopped": 6,
+    "container_created": 7,
+    "container_started": 10,
+    "container_stopped": 5,
+    "container_restarted": 3,
+    "container_killed": 5,
+    "container_died": 10,
+    "container_destroyed": 7,
+    "container_attached": 5,
+    "container_exec_created": 4,
+    "container_exec_started": 4,
+    "container_exec_died": 4,
+    "network_connected": 10,
+    "network_disconnected": 10,
 }
 
 
 def build_events():
+    """Both sources merged, mirroring what main.py actually runs."""
+
     events, errors = [], []
 
-    with open(DATASET) as file:
-        for line in file:
-            try:
-                event = identify_event(line)
-                if event:
-                    events.append(event)
-            except Exception as e:
-                errors.append((line.strip(), str(e)))
+    for path, parse in ((DATASET, identify_event),
+                        (DOCKER_DATASET, identify_docker_event)):
+        with open(path) as file:
+            for line in file:
+                try:
+                    event = parse(line)
+                    if event:
+                        events.append(event)
+                except Exception as e:
+                    errors.append((line.strip(), str(e)))
 
     return events, errors
 
 
-def run_detectors(events):
-    return (
-        detect_bruteforce(events)
-        + detect_service_anomaly(events)
-        + detect_credential_compromise(events)
-        + detect_behavior(events)
-        + detect_session_anomaly(events)
-        + detect_auth_anomaly(events)
-    )
-
-
 def entity(alert):
-    return alert.get("source_ip") or alert.get("username") or alert.get("service")
+    return (alert.get("source_ip") or alert.get("username")
+            or alert.get("container") or alert.get("service"))
+
+
+def check_escape_assessment():
+    """
+    The escape assessment, against the two HostConfig shapes captured from the
+    homelab plus the real bind layouts of its running containers.
+
+    These are configs, not events — the collector is what will attach them, so
+    until it exists this pins the judgement rather than the pipeline.
+    """
+
+    captured_privileged = {
+        "Privileged": True, "PidMode": "host", "NetworkMode": "bridge",
+        "IpcMode": "private", "SecurityOpt": ["label=disable"], "CapAdd": None,
+        "Binds": ["/var/run/docker.sock:/var/run/docker.sock", "/:/host:ro"],
+    }
+    captured_safe = {
+        "Privileged": False, "PidMode": "", "NetworkMode": "bridge",
+        "IpcMode": "private", "SecurityOpt": None, "CapAdd": None, "Binds": None,
+    }
+
+    assert assess(captured_privileged) == {
+        "privileged", "pid_host", "docker_socket", "security_disabled"}
+    assert assess(captured_safe) == set()
+
+    # Real homelab bind layouts: ordinary data volumes must stay silent, or
+    # the detector alerts on six of ten containers and gets switched off.
+    quiet = [
+        ["/docker/n8n:/home/node/.n8n"],
+        ["/nas/photos:/usr/src/app/upload", "/etc/localtime:/etc/localtime:ro"],
+        ["immich_model-cache:/cache"],
+        ["/docker/openwebui:/app/backend/data"],
+    ]
+    for binds in quiet:
+        assert assess({"Binds": binds}) == set(), binds
+
+    # ...but the genuinely dangerous ones must not be
+    assert assess({"Binds": ["/etc:/host-etc"]}) == {"sensitive_mount:/etc"}
+    assert assess({"Binds": ["/:/host"]}) == {"sensitive_mount:/"}
+    assert assess({"Binds": ["/etc:/host-etc:ro"]}) == set(), "ro mount should not raise"
+    assert assess({"CapAdd": ["SYS_ADMIN"]}) == {"cap_sys_admin"}
+
+    print("OK  escape assessment: 4 findings on the captured privileged config, "
+          "0 on every real data-volume layout")
 
 
 def check_docker():
@@ -124,7 +173,17 @@ def check_docker():
     assert got == sorted(EXPECTED_CONTAINER_ALERTS), (
         f"container alert set changed\n  got: {got}")
 
+    # Un-enriched events must produce NO escape alerts. `docker events`
+    # carries none of these fields, and silence is the correct answer to
+    # missing evidence — not an assumption that the container was safe.
+    assert detect_container_escape(events) == [], (
+        "escape detector fired without HostConfig enrichment")
+
+    check_escape_assessment()
+
+    # the probes must be seen and rejected, not simply absent
     execs = [e for e in events if e["event_type"] == "container_exec_created"]
+    assert len(execs) > len(alerts), "no health-check exec in the fixture to suppress"
     print(f"OK  {len(events)} docker events, {len(alerts)} container alerts, "
           f"{len(execs) - len(alerts)} health-check execs suppressed")
 
@@ -142,8 +201,7 @@ def main():
     for event in events:
         missing = required - set(event)
         assert not missing, f"{event['event_type']} missing {missing}"
-        assert event["log_source"] == "ssh", event
-        assert event["host"] == "Sentinel", event
+        assert event["log_source"] in ("ssh", "docker"), event
 
     ids = [e["id"] for e in events]
     assert len(set(ids)) == len(ids), "event ids are not unique"

@@ -1,26 +1,25 @@
 import sys
 
-from parser.ssh_parser import identify_event
+from parser.ssh_parser import identify_event as parse_ssh
+from parser.docker_parser import identify_event as parse_docker
 from parser.log_source import detect_platform, detect_ssh_log, read_lines
-from detectors.bruteforce import detect_bruteforce
-from detectors.service_anomaly import detect_service_anomaly
-from detectors.credential_compromise import detect_credential_compromise
-from detectors.behavior import detect_behavior
-from detectors.session_anomaly import detect_session_anomaly
-from detectors.auth_anomaly import detect_auth_anomaly
+
+from detectors.registry import DETECTORS
+
 from outputs.persistence import *
 from outputs.stats import generate_statistics
 
-DATASET = "sample_logs/ssh_dataset_v1.txt"
+SSH_DATASET = "sample_logs/ssh_dataset_v1.txt"
+DOCKER_DATASET = "sample_logs/docker_events_v1.jsonl"
 
-
-def read_input():
+def sources():
     """
-    The fixture by default, so a plain run stays reproducible.
+    (label, lines, parser) for every log this run should read.
 
-    `python3 main.py --live` reads whatever this machine actually keeps —
-    /var/log/auth.log on the Mint homelab and Metasploitable, journalctl on
-    Kali. Neither the caller nor the parser is told which; both are detected.
+    `--live` swaps the SSH fixture for whatever this machine actually keeps,
+    detected at runtime. Docker always reads the captured fixture: Docker holds
+    its event log in memory and loses it on daemon restart, so a live path
+    needs a collector writing that file continuously — not built yet.
     """
 
     if "--live" in sys.argv:
@@ -31,78 +30,64 @@ def read_input():
             raise SystemExit(f"no readable SSH log found on {platform}")
 
         print(f"reading live SSH log on {platform}")
-        yield from read_lines(kind, target)
+        yield "ssh", list(read_lines(kind, target)), parse_ssh
 
     else:
-        with open(DATASET) as file:
-            yield from file
+        with open(SSH_DATASET) as file:
+            yield "ssh", file.readlines(), parse_ssh
+
+    with open(DOCKER_DATASET) as file:
+        yield "docker", file.readlines(), parse_docker
 
 
-events = []
-errors = []
+def collect_events():
+    """Parse every source into one normalized event list."""
 
-for line in read_input():
+    events = []
+    errors = []
 
-    try:
-        event = identify_event(line)
+    for label, lines, parse in sources():
+        parsed = 0
 
-        if event:
-            events.append(event)
+        for line in lines:
+            try:
+                event = parse(line)
 
-    except Exception as e:
+                if event:
+                    events.append(event)
+                    parsed += 1
 
-        errors.append({
-            "line": line.strip(),
-            "error": str(e)
-        })
+            except Exception as e:
+                errors.append({
+                    "source": label,
+                    "line": line.strip(),
+                    "error": str(e)
+                })
+
+        print(f"  {label:<8} {parsed} events from {len(lines)} lines")
+
+    return events, errors
+
+
+print("\nSources:\n")
+events, errors = collect_events()
 
 all_alerts = []
 
 print("\nAlerts:\n")
 
-alerts = detect_bruteforce(events)
-for alert in alerts:
-    print(alert)
-    all_alerts.append(alert)
+# Every detector filters by event_type, so each only sees the events it cares
+# about and sources can be merged freely.
+for detect in DETECTORS:
+    for alert in detect(events):
+        print(alert)
+        all_alerts.append(alert)
 
-service_alerts = detect_service_anomaly(events)
-for alert in service_alerts:
-    print(alert)
-    all_alerts.append(alert)
-
-credential_alerts = detect_credential_compromise(events)
-for alert in credential_alerts:
-    print(alert)
-    all_alerts.append(alert)
-
-behavior_alerts = detect_behavior(events)
-for alert in behavior_alerts:
-    print(alert)
-    all_alerts.append(alert)
-
-session_alerts = detect_session_anomaly(events)
-for alert in session_alerts:
-    print(alert)
-    all_alerts.append(alert)
-
-auth_alerts = detect_auth_anomaly(events)
-for alert in auth_alerts:
-    print(alert)
-    all_alerts.append(alert)
-
-statistics = generate_statistics(
-    events,
-    all_alerts
-)
+statistics = generate_statistics(events, all_alerts)
 
 save_events(events)
 save_alerts(all_alerts)
 save_statistics(statistics)
-
-'''
-for event in events:
-    print(event)
-'''
 
 print("\nErrors\n")
 

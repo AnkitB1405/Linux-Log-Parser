@@ -136,10 +136,16 @@ SSH_PATTERNS = [
     ("service_stopped", re.compile(r"Stopped ssh\.service")),
 ]
 
-# PAM writes its context as `key=value` tokens rather than prose:
-#   logname= uid=0 euid=0 tty=ssh ruser= rhost=45.155.205.211  user=root
+# Several daemons write context as `key=value` tokens rather than prose:
+#
+#   PAM      logname= uid=0 tty=ssh ruser= rhost=45.155.205.211  user=root
+#   dockerd  time="2026-08-21T13:24:48+05:30" level=info msg="Daemon started"
+#
 # Order is not guaranteed, so scan for pairs instead of describing a layout.
-KEY_VALUE = re.compile(r"(\w+)=(\S*)")
+# The value is either a quoted run — which may contain spaces — or a bare
+# token. Quoted is tried first: with a plain `\S*` the dockerd line above
+# truncates msg to `"Daemon`, silently dropping the rest of the message.
+KEY_VALUE = re.compile(r'(\w+)=("[^"]*"|\S*)')
 
 PAM_EVENTS = {
     "authentication_failure",
@@ -148,6 +154,15 @@ PAM_EVENTS = {
 }
 
 SCHEMA_FIELDS = ("username", "source_ip")
+
+
+def key_values(message):
+    """`key=value` pairs from a message, quotes stripped, empties as None."""
+
+    return {
+        key: value.strip('"') or None
+        for key, value in KEY_VALUE.findall(message)
+    }
 
 
 def parse_line(line):
@@ -196,7 +211,7 @@ def identify_event(line):
         }
 
         if event_type in PAM_EVENTS:
-            values = {k: v or None for k, v in KEY_VALUE.findall(message)}
+            values = key_values(message)
             fields["source_ip"] = values.pop("rhost", None)
             # PAM names the targeted account `user=`. Promote it, or root
             # targeting is invisible to every detector that keys on username.
