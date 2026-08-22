@@ -1,6 +1,6 @@
 [
     {
-        "id": "1d2ae39c3d3c",
+        "id": "196a389d7407",
         "timestamp": "1900-06-11T15:00:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -11,7 +11,7 @@
         "details": {}
     },
     {
-        "id": "96d7274eb010",
+        "id": "123886ed2099",
         "timestamp": "1900-06-11T15:01:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -22,7 +22,7 @@
         "details": {}
     },
     {
-        "id": "7cfdb8323112",
+        "id": "a490fbdf621c",
         "timestamp": "1900-06-11T15:01:02",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -33,7 +33,7 @@
         "details": {}
     },
     {
-        "id": "c5e1a0de0d2b",
+        "id": "5e9fcfac9550",
         "timestamp": "1900-06-11T15:01:05",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -44,7 +44,7 @@
         "details": {}
     },
     {
-        "id": "3004a4f0ebc9",
+        "id": "90ab40124157",
         "timestamp": "1900-06-11T15:01:08",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -55,7 +55,7 @@
         "details": {}
     },
     {
-        "id": "f35b6731fd3f",
+        "id": "960cc7f2afc9",
         "timestamp": "1900-06-11T15:01:11",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -73,7 +73,7 @@
         }
     },
     {
-        "id": "2573d6521553",
+        "id": "030ced7caf01",
         "timestamp": "1900-06-11T15:02:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -84,7 +84,7 @@
         "details": {}
     },
     {
-        "id": "7890c6c9ffd4",
+        "id": "c186dcf956e8",
         "timestamp": "1900-06-11T15:02:04",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -95,7 +95,7 @@
         "details": {}
     },
     {
-        "id": "f373507c9311",
+        "id": "a1d92fcfa1d1",
         "timestamp": "1900-06-11T15:02:06",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -106,7 +106,7 @@
         "details": {}
     },
     {
-        "id": "669bb9a4b532",
+        "id": "fcf460a6b871",
         "timestamp": "1900-06-11T15:02:08",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -117,7 +117,7 @@
         "details": {}
     },
     {
-        "id": "735e4d393a42",
+        "id": "1654adc4bd17",
         "timestamp": "1900-06-11T15:02:12",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -135,7 +135,7 @@
         }
     },
     {
-        "id": "6d4674dddaf1",
+        "id": "1e62e4bede23",
         "timestamp": "1900-06-11T15:03:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -146,7 +146,7 @@
         "details": {}
     },
     {
-        "id": "6b27b4e59dc1",
+        "id": "20646cd146da",
         "timestamp": "1900-06-11T15:03:04",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -157,7 +157,7 @@
         "details": {}
     },
     {
-        "id": "6b23bd9e09c4",
+        "id": "ac7b7340cb9e",
         "timestamp": "1900-06-11T15:03:09",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -168,7 +168,7 @@
         "details": {}
     },
     {
-        "id": "349767121273",
+        "id": "294fb6f119c8",
         "timestamp": "1900-06-11T15:03:14",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -179,7 +179,7 @@
         "details": {}
     },
     {
-        "id": "2981ded352bb",
+        "id": "234d23309651",
         "timestamp": "1900-06-11T15:03:18",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -197,7 +197,7 @@
         }
     },
     {
-        "id": "40731aa7554f",
+        "id": "4b11e2d139a0",
         "timestamp": "1900-06-11T15:05:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -208,7 +208,7 @@
         "details": {}
     },
     {
-        "id": "f09f182eb48d",
+        "id": "7c81e9c3404e",
         "timestamp": "1900-06-11T15:05:40",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -219,7 +219,7 @@
         "details": {}
     },
     {
-        "id": "a8d76a43a2a4",
+        "id": "377a8f8882ec",
         "timestamp": "1900-06-11T15:06:20",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -230,7 +230,7 @@
         "details": {}
     },
     {
-        "id": "94eaf4508dae",
+        "id": "e781eae7bf3a",
         "timestamp": "1900-06-11T15:07:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -241,7 +241,7 @@
         "details": {}
     },
     {
-        "id": "04c28ede00b5",
+        "id": "dd0db8977307",
         "timestamp": "1900-06-11T15:07:40",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -252,7 +252,7 @@
         "details": {}
     },
     {
-        "id": "0bed91d48917",
+        "id": "e72c00de96d3",
         "timestamp": "1900-06-11T15:08:20",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -265,7 +265,7 @@
         }
     },
     {
-        "id": "de15b51719ba",
+        "id": "6c0c286754b2",
         "timestamp": "1900-06-11T15:08:20",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -278,7 +278,7 @@
         }
     },
     {
-        "id": "ee1630d258b9",
+        "id": "d634fba952d3",
         "timestamp": "1900-06-11T15:09:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -291,7 +291,7 @@
         }
     },
     {
-        "id": "c320e57ca1fd",
+        "id": "b9ed8aa57183",
         "timestamp": "1900-06-11T15:09:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -304,7 +304,7 @@
         }
     },
     {
-        "id": "855c1bb71cb3",
+        "id": "a976fd4d0222",
         "timestamp": "1900-06-11T15:10:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -317,7 +317,7 @@
         }
     },
     {
-        "id": "06bab47dcdfa",
+        "id": "413e72bd465a",
         "timestamp": "1900-06-11T15:10:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -330,7 +330,7 @@
         }
     },
     {
-        "id": "836ed274e5c2",
+        "id": "551bd6e2f781",
         "timestamp": "1900-06-11T15:10:12",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -341,7 +341,7 @@
         "details": {}
     },
     {
-        "id": "32cff1fbae10",
+        "id": "2c9a36f242a2",
         "timestamp": "1900-06-11T15:11:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -354,7 +354,7 @@
         }
     },
     {
-        "id": "7469b811dc66",
+        "id": "23eeb2014f35",
         "timestamp": "1900-06-11T15:11:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -367,7 +367,7 @@
         }
     },
     {
-        "id": "6f3f42401b7b",
+        "id": "2f48d32fd295",
         "timestamp": "1900-06-11T15:11:10",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -378,7 +378,7 @@
         "details": {}
     },
     {
-        "id": "c9084dbc2a42",
+        "id": "a441992ca77d",
         "timestamp": "1900-06-11T15:12:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -391,7 +391,7 @@
         }
     },
     {
-        "id": "81e73c4e618f",
+        "id": "3cdbda384f1b",
         "timestamp": "1900-06-11T15:12:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -404,7 +404,7 @@
         }
     },
     {
-        "id": "b0775a6d9104",
+        "id": "1e7d8bef4c9e",
         "timestamp": "1900-06-11T15:12:08",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -415,7 +415,7 @@
         "details": {}
     },
     {
-        "id": "616bee54e3ec",
+        "id": "1fa5759c737a",
         "timestamp": "1900-06-11T15:13:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -426,7 +426,7 @@
         "details": {}
     },
     {
-        "id": "a5924c5682b8",
+        "id": "21cdf5c5ab7a",
         "timestamp": "1900-06-11T15:13:03",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -437,7 +437,7 @@
         "details": {}
     },
     {
-        "id": "469d3cc57bc1",
+        "id": "b2f62c923e07",
         "timestamp": "1900-06-11T15:13:20",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -448,7 +448,7 @@
         "details": {}
     },
     {
-        "id": "4933deaa054a",
+        "id": "55814ee8987a",
         "timestamp": "1900-06-11T15:13:24",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -459,7 +459,7 @@
         "details": {}
     },
     {
-        "id": "44b42a0bf48e",
+        "id": "a4db5625ad51",
         "timestamp": "1900-06-11T15:13:40",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -470,7 +470,7 @@
         "details": {}
     },
     {
-        "id": "409a8654c95e",
+        "id": "fa2e9d077735",
         "timestamp": "1900-06-11T15:13:45",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -481,7 +481,7 @@
         "details": {}
     },
     {
-        "id": "69b9300cef03",
+        "id": "43db7029365d",
         "timestamp": "1900-06-11T15:15:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -492,7 +492,7 @@
         "details": {}
     },
     {
-        "id": "b6d489124244",
+        "id": "2ef7fe71675b",
         "timestamp": "1900-06-11T15:18:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -503,7 +503,7 @@
         "details": {}
     },
     {
-        "id": "4daf91a51681",
+        "id": "167519f71dcb",
         "timestamp": "1900-06-11T15:21:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -514,7 +514,7 @@
         "details": {}
     },
     {
-        "id": "849f307a9918",
+        "id": "81ff4f194a04",
         "timestamp": "1900-06-11T15:24:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -525,7 +525,7 @@
         "details": {}
     },
     {
-        "id": "c676400eca88",
+        "id": "07838dac3ccf",
         "timestamp": "1900-06-11T15:27:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -536,7 +536,7 @@
         "details": {}
     },
     {
-        "id": "79ef1662bbba",
+        "id": "69115464e816",
         "timestamp": "1900-06-11T15:30:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -547,7 +547,7 @@
         "details": {}
     },
     {
-        "id": "5cb5415f70db",
+        "id": "bc3a8a629a2e",
         "timestamp": "1900-06-11T15:33:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -558,7 +558,7 @@
         "details": {}
     },
     {
-        "id": "5686f648be43",
+        "id": "7f36f0eece39",
         "timestamp": "1900-06-11T15:36:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -569,7 +569,7 @@
         "details": {}
     },
     {
-        "id": "3432a32a06ef",
+        "id": "2873e7d5c485",
         "timestamp": "1900-06-11T15:40:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -582,7 +582,7 @@
         }
     },
     {
-        "id": "17979eaeb286",
+        "id": "dda6feedf9ab",
         "timestamp": "1900-06-11T15:40:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -595,7 +595,7 @@
         }
     },
     {
-        "id": "66802567b4e2",
+        "id": "99825498c625",
         "timestamp": "1900-06-11T15:40:06",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -606,7 +606,7 @@
         "details": {}
     },
     {
-        "id": "d31c4cf1bcd6",
+        "id": "e0e06770989e",
         "timestamp": "1900-06-11T15:42:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -619,7 +619,7 @@
         }
     },
     {
-        "id": "496a61d04635",
+        "id": "47acbf0c493a",
         "timestamp": "1900-06-11T15:42:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -632,7 +632,7 @@
         }
     },
     {
-        "id": "33bab6653819",
+        "id": "d65cdf1a4c82",
         "timestamp": "1900-06-11T15:50:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -643,7 +643,7 @@
         "details": {}
     },
     {
-        "id": "a804a82cbc41",
+        "id": "51245691ebdb",
         "timestamp": "1900-06-11T15:50:05",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -654,7 +654,7 @@
         "details": {}
     },
     {
-        "id": "b9b9fa62777d",
+        "id": "da06db6a523d",
         "timestamp": "1900-06-11T15:50:10",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -665,7 +665,7 @@
         "details": {}
     },
     {
-        "id": "fde8e266e868",
+        "id": "df82c32c0735",
         "timestamp": "1900-06-11T15:50:15",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -676,7 +676,7 @@
         "details": {}
     },
     {
-        "id": "423098e6a149",
+        "id": "3cc3959d238c",
         "timestamp": "1900-06-11T15:50:20",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -687,7 +687,7 @@
         "details": {}
     },
     {
-        "id": "2c09471cb8e1",
+        "id": "272ee9520ae7",
         "timestamp": "1900-06-11T15:50:25",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -698,7 +698,7 @@
         "details": {}
     },
     {
-        "id": "ea0ccecde77d",
+        "id": "cce54540fe10",
         "timestamp": "1900-06-11T15:55:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -709,7 +709,7 @@
         "details": {}
     },
     {
-        "id": "ef41fe3d65dc",
+        "id": "6a4c977170e2",
         "timestamp": "1900-06-11T15:55:02",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -720,7 +720,7 @@
         "details": {}
     },
     {
-        "id": "05da3d80dea5",
+        "id": "3242f8d74338",
         "timestamp": "1900-06-11T15:55:05",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -731,7 +731,7 @@
         "details": {}
     },
     {
-        "id": "dcfb4a22f44b",
+        "id": "f2f282655003",
         "timestamp": "1900-06-11T15:55:09",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -742,7 +742,7 @@
         "details": {}
     },
     {
-        "id": "3771b1ae0093",
+        "id": "283d77d471d3",
         "timestamp": "1900-06-11T15:55:12",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -757,6 +757,1295 @@
             "euid": "0",
             "tty": "ssh",
             "ruser": null
+        }
+    },
+    {
+        "id": "22a2a55074a2",
+        "timestamp": "2026-08-21T22:08:08.427131",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_created",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "5baf1a79bcd6",
+        "timestamp": "2026-08-21T22:08:08.754704",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "network_connected",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "bridge",
+            "container_id": "908682d5290e2700bcf8fe565d4acfa29e0f93ab33cfd35346f6da1cbce30b7b"
+        }
+    },
+    {
+        "id": "f569c8ed9270",
+        "timestamp": "2026-08-21T22:08:08.773001",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_started",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "66a7c974187d",
+        "timestamp": "2026-08-21T22:08:09.799866",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_exec_created",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "execID": "e1222346d40a9aefbcd7302c949adc73ff92cb2d76c43674af32c0ba4146c4aa",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d",
+            "command": "ls /"
+        }
+    },
+    {
+        "id": "2126d6e1d680",
+        "timestamp": "2026-08-21T22:08:09.804721",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_exec_started",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "execID": "e1222346d40a9aefbcd7302c949adc73ff92cb2d76c43674af32c0ba4146c4aa",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d",
+            "command": "ls /"
+        }
+    },
+    {
+        "id": "353f5bc2dba4",
+        "timestamp": "2026-08-21T22:08:09.853418",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_exec_died",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "execID": "e1222346d40a9aefbcd7302c949adc73ff92cb2d76c43674af32c0ba4146c4aa",
+            "exitCode": 0,
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "e4d7683b305c",
+        "timestamp": "2026-08-21T22:08:09.877100",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_exec_created",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "execID": "be64437132cdafe7978838ad598240f3535205f295074fb9f36e24572e24744f",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d",
+            "command": "sh -c cat /etc/passwd"
+        }
+    },
+    {
+        "id": "7408ddde7a22",
+        "timestamp": "2026-08-21T22:08:09.878924",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_exec_started",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "execID": "be64437132cdafe7978838ad598240f3535205f295074fb9f36e24572e24744f",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d",
+            "command": "sh -c cat /etc/passwd"
+        }
+    },
+    {
+        "id": "4fe1af49fb03",
+        "timestamp": "2026-08-21T22:08:09.933767",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_exec_died",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "execID": "be64437132cdafe7978838ad598240f3535205f295074fb9f36e24572e24744f",
+            "exitCode": 0,
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "62a70a7af028",
+        "timestamp": "2026-08-21T22:08:09.968445",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_killed",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "signal": "3",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "2ccebd3a04f2",
+        "timestamp": "2026-08-21T22:08:10.112709",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "network_disconnected",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "bridge",
+            "container_id": "908682d5290e2700bcf8fe565d4acfa29e0f93ab33cfd35346f6da1cbce30b7b"
+        }
+    },
+    {
+        "id": "fc8f2ee093d7",
+        "timestamp": "2026-08-21T22:08:10.113890",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_stopped",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "369f3f01188a",
+        "timestamp": "2026-08-21T22:08:10.119274",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_died",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "exitCode": 0,
+            "execDuration": "1",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "17c8a59a8fd6",
+        "timestamp": "2026-08-21T22:08:10.258085",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "network_connected",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "bridge",
+            "container_id": "908682d5290e2700bcf8fe565d4acfa29e0f93ab33cfd35346f6da1cbce30b7b"
+        }
+    },
+    {
+        "id": "d4c47ec5abd8",
+        "timestamp": "2026-08-21T22:08:10.275649",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_started",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "32d23b18d837",
+        "timestamp": "2026-08-21T22:08:10.275688",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_restarted",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "bf871c2488cd",
+        "timestamp": "2026-08-21T22:08:10.313168",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_killed",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "signal": "3",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "68dcd085229c",
+        "timestamp": "2026-08-21T22:08:10.437221",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "network_disconnected",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "bridge",
+            "container_id": "908682d5290e2700bcf8fe565d4acfa29e0f93ab33cfd35346f6da1cbce30b7b"
+        }
+    },
+    {
+        "id": "6f5bc03f0e80",
+        "timestamp": "2026-08-21T22:08:10.437807",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_stopped",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "d04a2f55fca3",
+        "timestamp": "2026-08-21T22:08:10.442907",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_died",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "exitCode": 0,
+            "execDuration": "0",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "c29bfd4cece0",
+        "timestamp": "2026-08-21T22:08:10.592675",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "network_connected",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "bridge",
+            "container_id": "908682d5290e2700bcf8fe565d4acfa29e0f93ab33cfd35346f6da1cbce30b7b"
+        }
+    },
+    {
+        "id": "6663ef988489",
+        "timestamp": "2026-08-21T22:08:10.607458",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_started",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "31650a5e4242",
+        "timestamp": "2026-08-21T22:08:10.607494",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_restarted",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "148451613c36",
+        "timestamp": "2026-08-21T22:08:10.644569",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_killed",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "signal": "3",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "cce3d81de39b",
+        "timestamp": "2026-08-21T22:08:10.758349",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "network_disconnected",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "bridge",
+            "container_id": "908682d5290e2700bcf8fe565d4acfa29e0f93ab33cfd35346f6da1cbce30b7b"
+        }
+    },
+    {
+        "id": "ce56038aa7b7",
+        "timestamp": "2026-08-21T22:08:10.759299",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_stopped",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "e2fe40635736",
+        "timestamp": "2026-08-21T22:08:10.763078",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_died",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "exitCode": 0,
+            "execDuration": "0",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "31b27d7f6ff9",
+        "timestamp": "2026-08-21T22:08:10.900002",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "network_connected",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "bridge",
+            "container_id": "908682d5290e2700bcf8fe565d4acfa29e0f93ab33cfd35346f6da1cbce30b7b"
+        }
+    },
+    {
+        "id": "24adeeeee9d8",
+        "timestamp": "2026-08-21T22:08:10.914312",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_started",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "ca8ef9a961da",
+        "timestamp": "2026-08-21T22:08:10.914354",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_restarted",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "8241c6374cb6",
+        "timestamp": "2026-08-21T22:08:10.953040",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_killed",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "signal": "3",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "79ff0bd08830",
+        "timestamp": "2026-08-21T22:08:11.075037",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "network_disconnected",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "bridge",
+            "container_id": "908682d5290e2700bcf8fe565d4acfa29e0f93ab33cfd35346f6da1cbce30b7b"
+        }
+    },
+    {
+        "id": "fcce931ca78a",
+        "timestamp": "2026-08-21T22:08:11.091367",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_stopped",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "04634ed3bea2",
+        "timestamp": "2026-08-21T22:08:11.093980",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_died",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "exitCode": 0,
+            "execDuration": "0",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "712cbbeb92d3",
+        "timestamp": "2026-08-21T22:08:11.255802",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "network_connected",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "bridge",
+            "container_id": "908682d5290e2700bcf8fe565d4acfa29e0f93ab33cfd35346f6da1cbce30b7b"
+        }
+    },
+    {
+        "id": "dcebdfcc48aa",
+        "timestamp": "2026-08-21T22:08:11.272547",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_started",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "5b6ef2e76daa",
+        "timestamp": "2026-08-21T22:08:11.337929",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_created",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-privileged",
+            "image": "alpine",
+            "container_id": "b0b9188891e460b5231fd0fbdc9844b3bc70c4d9e2655e01b94b24b060015261"
+        }
+    },
+    {
+        "id": "5bf6fec7290b",
+        "timestamp": "2026-08-21T22:08:11.342080",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_attached",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-privileged",
+            "image": "alpine",
+            "container_id": "b0b9188891e460b5231fd0fbdc9844b3bc70c4d9e2655e01b94b24b060015261"
+        }
+    },
+    {
+        "id": "dfb92d9f9d94",
+        "timestamp": "2026-08-21T22:08:11.498518",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "network_connected",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "bridge",
+            "container_id": "908682d5290e2700bcf8fe565d4acfa29e0f93ab33cfd35346f6da1cbce30b7b"
+        }
+    },
+    {
+        "id": "51c1f0e1d1e7",
+        "timestamp": "2026-08-21T22:08:11.514642",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_started",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-privileged",
+            "image": "alpine",
+            "container_id": "b0b9188891e460b5231fd0fbdc9844b3bc70c4d9e2655e01b94b24b060015261"
+        }
+    },
+    {
+        "id": "4cb8f6e301fe",
+        "timestamp": "2026-08-21T22:08:11.631787",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "network_disconnected",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "bridge",
+            "container_id": "908682d5290e2700bcf8fe565d4acfa29e0f93ab33cfd35346f6da1cbce30b7b"
+        }
+    },
+    {
+        "id": "4e5c77657b6f",
+        "timestamp": "2026-08-21T22:08:11.644480",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_died",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-privileged",
+            "image": "alpine",
+            "exitCode": 0,
+            "execDuration": "0",
+            "container_id": "b0b9188891e460b5231fd0fbdc9844b3bc70c4d9e2655e01b94b24b060015261"
+        }
+    },
+    {
+        "id": "0d61a88117f9",
+        "timestamp": "2026-08-21T22:08:11.651930",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_destroyed",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-privileged",
+            "image": "alpine",
+            "container_id": "b0b9188891e460b5231fd0fbdc9844b3bc70c4d9e2655e01b94b24b060015261"
+        }
+    },
+    {
+        "id": "2592b11e63a8",
+        "timestamp": "2026-08-21T22:08:11.697806",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_created",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-pidhost",
+            "image": "alpine",
+            "container_id": "4f49b7d336675b29da5ca916596120937b2c18385b047600f4e6c21a33b1ac74"
+        }
+    },
+    {
+        "id": "97ac5c83375e",
+        "timestamp": "2026-08-21T22:08:11.699759",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_attached",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-pidhost",
+            "image": "alpine",
+            "container_id": "4f49b7d336675b29da5ca916596120937b2c18385b047600f4e6c21a33b1ac74"
+        }
+    },
+    {
+        "id": "80d22c20d740",
+        "timestamp": "2026-08-21T22:08:11.830827",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "network_connected",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "bridge",
+            "container_id": "908682d5290e2700bcf8fe565d4acfa29e0f93ab33cfd35346f6da1cbce30b7b"
+        }
+    },
+    {
+        "id": "107c6dc13bdd",
+        "timestamp": "2026-08-21T22:08:11.854120",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_started",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-pidhost",
+            "image": "alpine",
+            "container_id": "4f49b7d336675b29da5ca916596120937b2c18385b047600f4e6c21a33b1ac74"
+        }
+    },
+    {
+        "id": "4ae0a2294ef1",
+        "timestamp": "2026-08-21T22:08:11.962300",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "network_disconnected",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "bridge",
+            "container_id": "908682d5290e2700bcf8fe565d4acfa29e0f93ab33cfd35346f6da1cbce30b7b"
+        }
+    },
+    {
+        "id": "8782c11d72a5",
+        "timestamp": "2026-08-21T22:08:11.983408",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_died",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-pidhost",
+            "image": "alpine",
+            "exitCode": 0,
+            "execDuration": "0",
+            "container_id": "4f49b7d336675b29da5ca916596120937b2c18385b047600f4e6c21a33b1ac74"
+        }
+    },
+    {
+        "id": "c925b8ff7a91",
+        "timestamp": "2026-08-21T22:08:11.988809",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_destroyed",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-pidhost",
+            "image": "alpine",
+            "container_id": "4f49b7d336675b29da5ca916596120937b2c18385b047600f4e6c21a33b1ac74"
+        }
+    },
+    {
+        "id": "c65a767e277f",
+        "timestamp": "2026-08-21T22:08:12.035754",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_created",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-sock",
+            "image": "alpine",
+            "container_id": "fc25176d7c98496f413ff5aed600ce085addd4540f0c0e9d44cf240a35c5f194"
+        }
+    },
+    {
+        "id": "1afe3aaf2b6a",
+        "timestamp": "2026-08-21T22:08:12.037545",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_attached",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-sock",
+            "image": "alpine",
+            "container_id": "fc25176d7c98496f413ff5aed600ce085addd4540f0c0e9d44cf240a35c5f194"
+        }
+    },
+    {
+        "id": "3b493ae76a94",
+        "timestamp": "2026-08-21T22:08:12.178780",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "network_connected",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "bridge",
+            "container_id": "908682d5290e2700bcf8fe565d4acfa29e0f93ab33cfd35346f6da1cbce30b7b"
+        }
+    },
+    {
+        "id": "3de2633f374d",
+        "timestamp": "2026-08-21T22:08:12.197527",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_started",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-sock",
+            "image": "alpine",
+            "container_id": "fc25176d7c98496f413ff5aed600ce085addd4540f0c0e9d44cf240a35c5f194"
+        }
+    },
+    {
+        "id": "6834864183e0",
+        "timestamp": "2026-08-21T22:08:12.281337",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "network_disconnected",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "bridge",
+            "container_id": "908682d5290e2700bcf8fe565d4acfa29e0f93ab33cfd35346f6da1cbce30b7b"
+        }
+    },
+    {
+        "id": "f41cb25e667d",
+        "timestamp": "2026-08-21T22:08:12.295815",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_died",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-sock",
+            "image": "alpine",
+            "exitCode": 0,
+            "execDuration": "0",
+            "container_id": "fc25176d7c98496f413ff5aed600ce085addd4540f0c0e9d44cf240a35c5f194"
+        }
+    },
+    {
+        "id": "2d67fb1cba2f",
+        "timestamp": "2026-08-21T22:08:12.301094",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_destroyed",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-sock",
+            "image": "alpine",
+            "container_id": "fc25176d7c98496f413ff5aed600ce085addd4540f0c0e9d44cf240a35c5f194"
+        }
+    },
+    {
+        "id": "91946f777501",
+        "timestamp": "2026-08-21T22:08:12.355676",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_created",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-hostmount",
+            "image": "alpine",
+            "container_id": "b447a05e539a7843dae748434a44318752fffa7d52f1f89d28b8eb58b86d5e9f"
+        }
+    },
+    {
+        "id": "3bd9150ad3f7",
+        "timestamp": "2026-08-21T22:08:12.357994",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_attached",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-hostmount",
+            "image": "alpine",
+            "container_id": "b447a05e539a7843dae748434a44318752fffa7d52f1f89d28b8eb58b86d5e9f"
+        }
+    },
+    {
+        "id": "eb8a0f6afb1d",
+        "timestamp": "2026-08-21T22:08:12.504066",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "network_connected",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "bridge",
+            "container_id": "908682d5290e2700bcf8fe565d4acfa29e0f93ab33cfd35346f6da1cbce30b7b"
+        }
+    },
+    {
+        "id": "122677997832",
+        "timestamp": "2026-08-21T22:08:12.520751",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_started",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-hostmount",
+            "image": "alpine",
+            "container_id": "b447a05e539a7843dae748434a44318752fffa7d52f1f89d28b8eb58b86d5e9f"
+        }
+    },
+    {
+        "id": "b347d68d9a5b",
+        "timestamp": "2026-08-21T22:08:12.607723",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "network_disconnected",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "bridge",
+            "container_id": "908682d5290e2700bcf8fe565d4acfa29e0f93ab33cfd35346f6da1cbce30b7b"
+        }
+    },
+    {
+        "id": "d5eca30dd7e6",
+        "timestamp": "2026-08-21T22:08:12.621379",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_died",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-hostmount",
+            "image": "alpine",
+            "exitCode": 0,
+            "execDuration": "0",
+            "container_id": "b447a05e539a7843dae748434a44318752fffa7d52f1f89d28b8eb58b86d5e9f"
+        }
+    },
+    {
+        "id": "62078e3b408a",
+        "timestamp": "2026-08-21T22:08:12.626573",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_destroyed",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-hostmount",
+            "image": "alpine",
+            "container_id": "b447a05e539a7843dae748434a44318752fffa7d52f1f89d28b8eb58b86d5e9f"
+        }
+    },
+    {
+        "id": "3c40d1f8eb92",
+        "timestamp": "2026-08-21T22:08:12.675290",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_created",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-crash",
+            "image": "alpine",
+            "container_id": "a235469646f13801211b22ecdfd861cc5c15dec1564f4b6398bdfb4e62ff691a"
+        }
+    },
+    {
+        "id": "c18656272620",
+        "timestamp": "2026-08-21T22:08:12.677136",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_attached",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-crash",
+            "image": "alpine",
+            "container_id": "a235469646f13801211b22ecdfd861cc5c15dec1564f4b6398bdfb4e62ff691a"
+        }
+    },
+    {
+        "id": "47601e518bdd",
+        "timestamp": "2026-08-21T22:08:12.811532",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "network_connected",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "bridge",
+            "container_id": "908682d5290e2700bcf8fe565d4acfa29e0f93ab33cfd35346f6da1cbce30b7b"
+        }
+    },
+    {
+        "id": "8bffe5007f95",
+        "timestamp": "2026-08-21T22:08:12.827191",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_started",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-crash",
+            "image": "alpine",
+            "container_id": "a235469646f13801211b22ecdfd861cc5c15dec1564f4b6398bdfb4e62ff691a"
+        }
+    },
+    {
+        "id": "107b8df3a8f0",
+        "timestamp": "2026-08-21T22:08:12.917019",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "network_disconnected",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "bridge",
+            "container_id": "908682d5290e2700bcf8fe565d4acfa29e0f93ab33cfd35346f6da1cbce30b7b"
+        }
+    },
+    {
+        "id": "898882cc51fe",
+        "timestamp": "2026-08-21T22:08:12.924949",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_died",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-crash",
+            "image": "alpine",
+            "exitCode": 3,
+            "execDuration": "0",
+            "container_id": "a235469646f13801211b22ecdfd861cc5c15dec1564f4b6398bdfb4e62ff691a"
+        }
+    },
+    {
+        "id": "998c7f4f4a4c",
+        "timestamp": "2026-08-21T22:08:12.930630",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_destroyed",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-crash",
+            "image": "alpine",
+            "container_id": "a235469646f13801211b22ecdfd861cc5c15dec1564f4b6398bdfb4e62ff691a"
+        }
+    },
+    {
+        "id": "48af81e619f7",
+        "timestamp": "2026-08-21T22:08:12.979762",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_created",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-created",
+            "image": "alpine",
+            "container_id": "dfb1bf76e8c139f32163eec13ee377d8c528dcdf05736e617623f4721a05c310"
+        }
+    },
+    {
+        "id": "496b56adcf7c",
+        "timestamp": "2026-08-21T22:08:13.004732",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_destroyed",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-created",
+            "image": "alpine",
+            "container_id": "dfb1bf76e8c139f32163eec13ee377d8c528dcdf05736e617623f4721a05c310"
+        }
+    },
+    {
+        "id": "74b0c8c16b94",
+        "timestamp": "2026-08-21T22:08:13.039682",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_killed",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "signal": "3",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "d8516c36d52c",
+        "timestamp": "2026-08-21T22:08:13.157061",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "network_disconnected",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "bridge",
+            "container_id": "908682d5290e2700bcf8fe565d4acfa29e0f93ab33cfd35346f6da1cbce30b7b"
+        }
+    },
+    {
+        "id": "0bffa3b64ed4",
+        "timestamp": "2026-08-21T22:08:13.167424",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_stopped",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "93f5ad1592da",
+        "timestamp": "2026-08-21T22:08:13.170750",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_died",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "exitCode": 0,
+            "execDuration": "1",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "c9ec1fb4cc14",
+        "timestamp": "2026-08-21T22:08:13.197562",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_destroyed",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "lp-web",
+            "image": "nginx:alpine",
+            "container_id": "ca35dc08d8a52fb18aaa7df846aa8d8c77c801fae87773b800319efb8b7b1b4d"
+        }
+    },
+    {
+        "id": "f367d04c48ba",
+        "timestamp": "2026-08-21T22:08:15.329116",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_exec_created",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "svc_mlworker",
+            "image": "registry.example/mlworker:v1",
+            "execID": "b734609a0f6ca500a1e3e975f7380d06b43075c0b1bff3c0562c70af9545f856",
+            "container_id": "8051825a76d0d491a1e8985f0b5afd5789721afdd75c3e6dac46c446de83ff5a",
+            "command": "/bin/sh -c python3 healthcheck.py"
+        }
+    },
+    {
+        "id": "bff01b2f4a3d",
+        "timestamp": "2026-08-21T22:08:15.329243",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_exec_started",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "svc_mlworker",
+            "image": "registry.example/mlworker:v1",
+            "execID": "b734609a0f6ca500a1e3e975f7380d06b43075c0b1bff3c0562c70af9545f856",
+            "container_id": "8051825a76d0d491a1e8985f0b5afd5789721afdd75c3e6dac46c446de83ff5a",
+            "command": "/bin/sh -c python3 healthcheck.py"
+        }
+    },
+    {
+        "id": "edca52e6c645",
+        "timestamp": "2026-08-21T22:08:15.866543",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_exec_created",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "svc_cache",
+            "image": "registry.example/cache:9",
+            "execID": "252d302c9c364b728e518beac55f6d9f3c58941c58649cf63648b7c33cc40c44",
+            "container_id": "8377c0c25ad4600869680d7551343713625017428484823e9137d429a50e1a34",
+            "command": "/bin/sh -c redis-cli ping || exit 1"
+        }
+    },
+    {
+        "id": "e3857502aea4",
+        "timestamp": "2026-08-21T22:08:15.866611",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_exec_started",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "svc_cache",
+            "image": "registry.example/cache:9",
+            "execID": "252d302c9c364b728e518beac55f6d9f3c58941c58649cf63648b7c33cc40c44",
+            "container_id": "8377c0c25ad4600869680d7551343713625017428484823e9137d429a50e1a34",
+            "command": "/bin/sh -c redis-cli ping || exit 1"
+        }
+    },
+    {
+        "id": "59b2d9ef5dfe",
+        "timestamp": "2026-08-21T22:08:15.929948",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_exec_died",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "svc_cache",
+            "image": "registry.example/cache:9",
+            "execID": "252d302c9c364b728e518beac55f6d9f3c58941c58649cf63648b7c33cc40c44",
+            "exitCode": 0,
+            "container_id": "8377c0c25ad4600869680d7551343713625017428484823e9137d429a50e1a34"
+        }
+    },
+    {
+        "id": "8feab1917020",
+        "timestamp": "2026-08-21T22:08:16.007272",
+        "log_source": "docker",
+        "host": "local",
+        "event_type": "container_exec_died",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "name": "svc_mlworker",
+            "image": "registry.example/mlworker:v1",
+            "execID": "b734609a0f6ca500a1e3e975f7380d06b43075c0b1bff3c0562c70af9545f856",
+            "exitCode": 0,
+            "container_id": "8051825a76d0d491a1e8985f0b5afd5789721afdd75c3e6dac46c446de83ff5a"
         }
     }
 ]

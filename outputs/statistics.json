@@ -1,11 +1,12 @@
 {
-    "total_events": 64,
-    "total_alerts": 18,
-    "high_alerts": 5,
-    "medium_alerts": 13,
+    "total_events": 148,
+    "total_alerts": 20,
+    "high_alerts": 6,
+    "medium_alerts": 14,
     "monitor_alerts": 0,
     "services": {
-        "ssh": 64
+        "ssh": 64,
+        "docker": 84
     },
     "event_types": {
         "service_started": 7,
@@ -15,6 +16,19 @@
         "successful_login": 7,
         "session_opened": 7,
         "connection_closed": 4,
-        "service_stopped": 6
+        "service_stopped": 6,
+        "container_created": 7,
+        "network_connected": 10,
+        "container_started": 10,
+        "container_exec_created": 4,
+        "container_exec_started": 4,
+        "container_exec_died": 4,
+        "container_killed": 5,
+        "network_disconnected": 10,
+        "container_stopped": 5,
+        "container_died": 10,
+        "container_restarted": 3,
+        "container_attached": 5,
+        "container_destroyed": 7
     }
 }
