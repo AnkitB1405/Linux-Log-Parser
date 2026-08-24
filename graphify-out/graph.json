@@ -4,6 +4,26 @@
   "graph": {},
   "nodes": [
     {
+      "label": "auth_anomaly.py",
+      "file_type": "code",
+      "source_file": "detectors/auth_anomaly.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "detectors_auth_anomaly",
+      "community": 1,
+      "norm_label": "auth_anomaly.py"
+    },
+    {
+      "label": "detect_auth_anomaly()",
+      "file_type": "code",
+      "source_file": "detectors/auth_anomaly.py",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "detectors_auth_anomaly_detect_auth_anomaly",
+      "community": 1,
+      "norm_label": "detect_auth_anomaly()"
+    },
+    {
       "label": "behavior.py",
       "file_type": "code",
       "source_file": "detectors/behavior.py",
@@ -17,11 +37,51 @@
       "label": "detect_behavior()",
       "file_type": "code",
       "source_file": "detectors/behavior.py",
-      "source_location": "L1",
+      "source_location": "L14",
       "_origin": "ast",
       "id": "detectors_behavior_detect_behavior",
       "community": 1,
       "norm_label": "detect_behavior()"
+    },
+    {
+      "label": "count_bursts()",
+      "file_type": "code",
+      "source_file": "detectors/behavior.py",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "detectors_behavior_count_bursts",
+      "community": 1,
+      "norm_label": "count_bursts()"
+    },
+    {
+      "label": "severity_for()",
+      "file_type": "code",
+      "source_file": "detectors/behavior.py",
+      "source_location": "L81",
+      "_origin": "ast",
+      "id": "detectors_behavior_severity_for",
+      "community": 1,
+      "norm_label": "severity_for()"
+    },
+    {
+      "label": "How many windows starting at an entry hold at least BURST attempts.      ponytai",
+      "file_type": "rationale",
+      "source_file": "detectors/behavior.py",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "detectors_behavior_rationale_57",
+      "community": 1,
+      "norm_label": "how many windows starting at an entry hold at least burst attempts.      ponytai"
+    },
+    {
+      "label": "First band whose threshold is met. (None, None) below the lowest.",
+      "file_type": "rationale",
+      "source_file": "detectors/behavior.py",
+      "source_location": "L82",
+      "_origin": "ast",
+      "id": "detectors_behavior_rationale_82",
+      "community": 1,
+      "norm_label": "first band whose threshold is met. (none, none) below the lowest."
     },
     {
       "label": "bruteforce.py",
@@ -42,6 +102,176 @@
       "id": "detectors_bruteforce_detect_bruteforce",
       "community": 1,
       "norm_label": "detect_bruteforce()"
+    },
+    {
+      "label": "container_anomaly.py",
+      "file_type": "code",
+      "source_file": "detectors/container_anomaly.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "detectors_container_anomaly",
+      "community": 1,
+      "norm_label": "container_anomaly.py"
+    },
+    {
+      "label": "detect_container_anomaly()",
+      "file_type": "code",
+      "source_file": "detectors/container_anomaly.py",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "detectors_container_anomaly_detect_container_anomaly",
+      "community": 1,
+      "norm_label": "detect_container_anomaly()"
+    },
+    {
+      "label": "is_probe()",
+      "file_type": "code",
+      "source_file": "detectors/container_anomaly.py",
+      "source_location": "L70",
+      "_origin": "ast",
+      "id": "detectors_container_anomaly_is_probe",
+      "community": 1,
+      "norm_label": "is_probe()"
+    },
+    {
+      "label": "is_shell()",
+      "file_type": "code",
+      "source_file": "detectors/container_anomaly.py",
+      "source_location": "L76",
+      "_origin": "ast",
+      "id": "detectors_container_anomaly_is_shell",
+      "community": 1,
+      "norm_label": "is_shell()"
+    },
+    {
+      "label": "`docker exec` into a running container is the container equivalent of an SSH log",
+      "file_type": "rationale",
+      "source_file": "detectors/container_anomaly.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "detectors_container_anomaly_rationale_1",
+      "community": 1,
+      "norm_label": "`docker exec` into a running container is the container equivalent of an ssh log"
+    },
+    {
+      "label": "True when the command invokes a shell. The binary may be bare or a full     path",
+      "file_type": "rationale",
+      "source_file": "detectors/container_anomaly.py",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "detectors_container_anomaly_rationale_77",
+      "community": 1,
+      "norm_label": "true when the command invokes a shell. the binary may be bare or a full     path"
+    },
+    {
+      "label": "container_escape.py",
+      "file_type": "code",
+      "source_file": "detectors/container_escape.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "detectors_container_escape",
+      "community": 1,
+      "norm_label": "container_escape.py"
+    },
+    {
+      "label": "detect_container_escape()",
+      "file_type": "code",
+      "source_file": "detectors/container_escape.py",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "detectors_container_escape_detect_container_escape",
+      "community": 1,
+      "norm_label": "detect_container_escape()"
+    },
+    {
+      "label": "assess()",
+      "file_type": "code",
+      "source_file": "detectors/container_escape.py",
+      "source_location": "L91",
+      "_origin": "ast",
+      "id": "detectors_container_escape_assess",
+      "community": 1,
+      "norm_label": "assess()"
+    },
+    {
+      "label": "assess_bind()",
+      "file_type": "code",
+      "source_file": "detectors/container_escape.py",
+      "source_location": "L122",
+      "_origin": "ast",
+      "id": "detectors_container_escape_assess_bind",
+      "community": 1,
+      "norm_label": "assess_bind()"
+    },
+    {
+      "label": "Containers configured with a route out onto the host.  These are not events \u2014 th",
+      "file_type": "rationale",
+      "source_file": "detectors/container_escape.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "detectors_container_escape_rationale_1",
+      "community": 1,
+      "norm_label": "containers configured with a route out onto the host.  these are not events \u2014 th"
+    },
+    {
+      "label": "Every escape route this HostConfig grants, as a set of tags.",
+      "file_type": "rationale",
+      "source_file": "detectors/container_escape.py",
+      "source_location": "L92",
+      "_origin": "ast",
+      "id": "detectors_container_escape_rationale_92",
+      "community": 1,
+      "norm_label": "every escape route this hostconfig grants, as a set of tags."
+    },
+    {
+      "label": "One `host:container[:opts]` bind. Read-only mounts of sensitive paths are     re",
+      "file_type": "rationale",
+      "source_file": "detectors/container_escape.py",
+      "source_location": "L123",
+      "_origin": "ast",
+      "id": "detectors_container_escape_rationale_123",
+      "community": 1,
+      "norm_label": "one `host:container[:opts]` bind. read-only mounts of sensitive paths are     re"
+    },
+    {
+      "label": "registry.py",
+      "file_type": "code",
+      "source_file": "detectors/registry.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "detectors_registry",
+      "community": 1,
+      "norm_label": "registry.py"
+    },
+    {
+      "label": "run_detectors()",
+      "file_type": "code",
+      "source_file": "detectors/registry.py",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "detectors_registry_run_detectors",
+      "community": 1,
+      "norm_label": "run_detectors()"
+    },
+    {
+      "label": "The detector list, in one place.  main.py runs these and test_detectors.py pins",
+      "file_type": "rationale",
+      "source_file": "detectors/registry.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "detectors_registry_rationale_1",
+      "community": 1,
+      "norm_label": "the detector list, in one place.  main.py runs these and test_detectors.py pins"
+    },
+    {
+      "label": "Every detector over one merged event list, alerts concatenated.",
+      "file_type": "rationale",
+      "source_file": "detectors/registry.py",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "detectors_registry_rationale_32",
+      "community": 1,
+      "norm_label": "every detector over one merged event list, alerts concatenated."
     },
     {
       "label": "service_anomaly.py",
@@ -90,8 +320,48 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "main",
-      "community": 1,
+      "community": 9,
       "norm_label": "main.py"
+    },
+    {
+      "label": "sources()",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "main_sources",
+      "community": 9,
+      "norm_label": "sources()"
+    },
+    {
+      "label": "collect_events()",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "main_collect_events",
+      "community": 9,
+      "norm_label": "collect_events()"
+    },
+    {
+      "label": "(label, lines, parser) for every log this run should read.      `--live` swaps t",
+      "file_type": "rationale",
+      "source_file": "main.py",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "main_rationale_16",
+      "community": 9,
+      "norm_label": "(label, lines, parser) for every log this run should read.      `--live` swaps t"
+    },
+    {
+      "label": "Parse every source into one normalized event list.",
+      "file_type": "rationale",
+      "source_file": "main.py",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "main_rationale_44",
+      "community": 9,
+      "norm_label": "parse every source into one normalized event list."
     },
     {
       "label": "persistence.py",
@@ -150,18 +420,98 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "outputs_stats",
-      "community": 1,
+      "community": 9,
       "norm_label": "stats.py"
     },
     {
       "label": "generate_statistics()",
       "file_type": "code",
       "source_file": "outputs/stats.py",
-      "source_location": "L1",
+      "source_location": "L8",
       "_origin": "ast",
       "id": "outputs_stats_generate_statistics",
-      "community": 1,
+      "community": 9,
       "norm_label": "generate_statistics()"
+    },
+    {
+      "label": "docker_parser.py",
+      "file_type": "code",
+      "source_file": "parser/docker_parser.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "parser_docker_parser",
+      "community": 9,
+      "norm_label": "docker_parser.py"
+    },
+    {
+      "label": "parse_action()",
+      "file_type": "code",
+      "source_file": "parser/docker_parser.py",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "parser_docker_parser_parse_action",
+      "community": 9,
+      "norm_label": "parse_action()"
+    },
+    {
+      "label": "identify_event()",
+      "file_type": "code",
+      "source_file": "parser/docker_parser.py",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "parser_docker_parser_identify_event",
+      "community": 9,
+      "norm_label": "identify_event()"
+    },
+    {
+      "label": "parse_timestamp()",
+      "file_type": "code",
+      "source_file": "parser/docker_parser.py",
+      "source_location": "L121",
+      "_origin": "ast",
+      "id": "parser_docker_parser_parse_timestamp",
+      "community": 9,
+      "norm_label": "parse_timestamp()"
+    },
+    {
+      "label": "Parser for `docker events --format '{{json .}}'`.  Deliberately not regex. The s",
+      "file_type": "rationale",
+      "source_file": "parser/docker_parser.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "parser_docker_parser_rationale_1",
+      "community": 9,
+      "norm_label": "parser for `docker events --format '{{json .}}'`.  deliberately not regex. the s"
+    },
+    {
+      "label": "Split Docker's Action field.      It is not a bare enum for exec events \u2014 the co",
+      "file_type": "rationale",
+      "source_file": "parser/docker_parser.py",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "parser_docker_parser_rationale_56",
+      "community": 9,
+      "norm_label": "split docker's action field.      it is not a bare enum for exec events \u2014 the co"
+    },
+    {
+      "label": "Parse one JSON event line into a normalized event, or None.",
+      "file_type": "rationale",
+      "source_file": "parser/docker_parser.py",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "parser_docker_parser_rationale_72",
+      "community": 9,
+      "norm_label": "parse one json event line into a normalized event, or none."
+    },
+    {
+      "label": "timeNano is nanoseconds since epoch, time is whole seconds. Either way     this",
+      "file_type": "rationale",
+      "source_file": "parser/docker_parser.py",
+      "source_location": "L122",
+      "_origin": "ast",
+      "id": "parser_docker_parser_rationale_122",
+      "community": 9,
+      "norm_label": "timenano is nanoseconds since epoch, time is whole seconds. either way     this"
     },
     {
       "label": "event_schema.py",
@@ -170,7 +520,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "parser_event_schema",
-      "community": 1,
+      "community": 9,
       "norm_label": "event_schema.py"
     },
     {
@@ -180,7 +530,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "parser_event_schema_create_event",
-      "community": 1,
+      "community": 9,
       "norm_label": "create_event()"
     },
     {
@@ -190,8 +540,88 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "parser_event_schema_rationale_14",
-      "community": 1,
+      "community": 9,
       "norm_label": "build a normalized event.      every parser routes through this, so the top-leve"
+    },
+    {
+      "label": "log_source.py",
+      "file_type": "code",
+      "source_file": "parser/log_source.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "parser_log_source",
+      "community": 9,
+      "norm_label": "log_source.py"
+    },
+    {
+      "label": "detect_platform()",
+      "file_type": "code",
+      "source_file": "parser/log_source.py",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "parser_log_source_detect_platform",
+      "community": 9,
+      "norm_label": "detect_platform()"
+    },
+    {
+      "label": "detect_ssh_log()",
+      "file_type": "code",
+      "source_file": "parser/log_source.py",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "parser_log_source_detect_ssh_log",
+      "community": 9,
+      "norm_label": "detect_ssh_log()"
+    },
+    {
+      "label": "read_lines()",
+      "file_type": "code",
+      "source_file": "parser/log_source.py",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "parser_log_source_read_lines",
+      "community": 9,
+      "norm_label": "read_lines()"
+    },
+    {
+      "label": "Work out where this machine keeps its SSH logs.  The parser detects the *format*",
+      "file_type": "rationale",
+      "source_file": "parser/log_source.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "parser_log_source_rationale_1",
+      "community": 9,
+      "norm_label": "work out where this machine keeps its ssh logs.  the parser detects the *format*"
+    },
+    {
+      "label": "(pretty name, id) from /etc/os-release; (\"unknown\", \"unknown\") if absent.",
+      "file_type": "rationale",
+      "source_file": "parser/log_source.py",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "parser_log_source_rationale_29",
+      "community": 9,
+      "norm_label": "(pretty name, id) from /etc/os-release; (\"unknown\", \"unknown\") if absent."
+    },
+    {
+      "label": "Where to read SSH events on this machine, as (kind, target).     `kind` is \"file",
+      "file_type": "rationale",
+      "source_file": "parser/log_source.py",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "parser_log_source_rationale_46",
+      "community": 9,
+      "norm_label": "where to read ssh events on this machine, as (kind, target).     `kind` is \"file"
+    },
+    {
+      "label": "Yield raw log lines from whatever detect_ssh_log() selected.",
+      "file_type": "rationale",
+      "source_file": "parser/log_source.py",
+      "source_location": "L65",
+      "_origin": "ast",
+      "id": "parser_log_source_rationale_65",
+      "community": 9,
+      "norm_label": "yield raw log lines from whatever detect_ssh_log() selected."
     },
     {
       "label": "ssh_parser.py",
@@ -200,158 +630,98 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "parser_ssh_parser",
-      "community": 1,
+      "community": 9,
       "norm_label": "ssh_parser.py"
     },
     {
-      "label": "parse_timestamp()",
+      "label": "_parse_rfc3339()",
       "file_type": "code",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L86",
+      "source_location": "L30",
       "_origin": "ast",
-      "id": "parser_ssh_parser_parse_timestamp",
-      "community": 1,
-      "norm_label": "parse_timestamp()"
+      "id": "parser_ssh_parser_parse_rfc3339",
+      "community": 9,
+      "norm_label": "_parse_rfc3339()"
+    },
+    {
+      "label": "_parse_bsd()",
+      "file_type": "code",
+      "source_file": "parser/ssh_parser.py",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "parser_ssh_parser_parse_bsd",
+      "community": 9,
+      "norm_label": "_parse_bsd()"
+    },
+    {
+      "label": "key_values()",
+      "file_type": "code",
+      "source_file": "parser/ssh_parser.py",
+      "source_location": "L159",
+      "_origin": "ast",
+      "id": "parser_ssh_parser_key_values",
+      "community": 9,
+      "norm_label": "key_values()"
+    },
+    {
+      "label": "parse_line()",
+      "file_type": "code",
+      "source_file": "parser/ssh_parser.py",
+      "source_location": "L168",
+      "_origin": "ast",
+      "id": "parser_ssh_parser_parse_line",
+      "community": 9,
+      "norm_label": "parse_line()"
     },
     {
       "label": "identify_event()",
       "file_type": "code",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L94",
+      "source_location": "L186",
       "_origin": "ast",
       "id": "parser_ssh_parser_identify_event",
-      "community": 1,
+      "community": 9,
       "norm_label": "identify_event()"
     },
     {
-      "label": "Parse one syslog line into a normalized event, or None if no pattern     claims",
+      "label": "Linux Mint / rsyslog. Carries a real year and offset, so this is exact.",
       "file_type": "rationale",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L95",
+      "source_location": "L31",
       "_origin": "ast",
-      "id": "parser_ssh_parser_rationale_95",
-      "community": 1,
-      "norm_label": "parse one syslog line into a normalized event, or none if no pattern     claims"
+      "id": "parser_ssh_parser_rationale_31",
+      "community": 9,
+      "norm_label": "linux mint / rsyslog. carries a real year and offset, so this is exact."
     },
     {
-      "label": "regex_lab.py",
-      "file_type": "code",
-      "source_file": "regex_lab.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "regex_lab",
-      "community": 11,
-      "norm_label": "regex_lab.py"
-    },
-    {
-      "label": "section_1_matching()",
-      "file_type": "code",
-      "source_file": "regex_lab.py",
-      "source_location": "L48",
-      "_origin": "ast",
-      "id": "regex_lab_section_1_matching",
-      "community": 11,
-      "norm_label": "section_1_matching()"
-    },
-    {
-      "label": "section_2_capturing()",
-      "file_type": "code",
-      "source_file": "regex_lab.py",
-      "source_location": "L79",
-      "_origin": "ast",
-      "id": "regex_lab_section_2_capturing",
-      "community": 11,
-      "norm_label": "section_2_capturing()"
-    },
-    {
-      "label": "section_3_optional()",
-      "file_type": "code",
-      "source_file": "regex_lab.py",
-      "source_location": "L121",
-      "_origin": "ast",
-      "id": "regex_lab_section_3_optional",
-      "community": 11,
-      "norm_label": "section_3_optional()"
-    },
-    {
-      "label": "section_4_be_specific()",
-      "file_type": "code",
-      "source_file": "regex_lab.py",
-      "source_location": "L155",
-      "_origin": "ast",
-      "id": "regex_lab_section_4_be_specific",
-      "community": 11,
-      "norm_label": "section_4_be_specific()"
-    },
-    {
-      "label": "section_5_greedy()",
-      "file_type": "code",
-      "source_file": "regex_lab.py",
-      "source_location": "L184",
-      "_origin": "ast",
-      "id": "regex_lab_section_5_greedy",
-      "community": 11,
-      "norm_label": "section_5_greedy()"
-    },
-    {
-      "label": "identify()",
-      "file_type": "code",
-      "source_file": "regex_lab.py",
-      "source_location": "L244",
-      "_origin": "ast",
-      "id": "regex_lab_identify",
-      "community": 11,
-      "norm_label": "identify()"
-    },
-    {
-      "label": "section_6_table()",
-      "file_type": "code",
-      "source_file": "regex_lab.py",
-      "source_location": "L255",
-      "_origin": "ast",
-      "id": "regex_lab_section_6_table",
-      "community": 11,
-      "norm_label": "section_6_table()"
-    },
-    {
-      "label": "checks()",
-      "file_type": "code",
-      "source_file": "regex_lab.py",
-      "source_location": "L291",
-      "_origin": "ast",
-      "id": "regex_lab_checks",
-      "community": 11,
-      "norm_label": "checks()"
-    },
-    {
-      "label": "section_8_exercises()",
-      "file_type": "code",
-      "source_file": "regex_lab.py",
-      "source_location": "L354",
-      "_origin": "ast",
-      "id": "regex_lab_section_8_exercises",
-      "community": 11,
-      "norm_label": "section_8_exercises()"
-    },
-    {
-      "label": "Regex lab \u2014 learn `re` on this project's own log lines.  Not part of the pipelin",
+      "label": "`key=value` pairs from a message, quotes stripped, empties as None.",
       "file_type": "rationale",
-      "source_file": "regex_lab.py",
-      "source_location": "L1",
+      "source_file": "parser/ssh_parser.py",
+      "source_location": "L160",
       "_origin": "ast",
-      "id": "regex_lab_rationale_1",
-      "community": 11,
-      "norm_label": "regex lab \u2014 learn `re` on this project's own log lines.  not part of the pipelin"
+      "id": "parser_ssh_parser_rationale_160",
+      "community": 9,
+      "norm_label": "`key=value` pairs from a message, quotes stripped, empties as none."
     },
     {
-      "label": "First pattern that matches wins. Returns (event_type, fields) or None.",
+      "label": "Split a raw line into (timestamp, host, process, message), or None.",
       "file_type": "rationale",
-      "source_file": "regex_lab.py",
-      "source_location": "L245",
+      "source_file": "parser/ssh_parser.py",
+      "source_location": "L169",
       "_origin": "ast",
-      "id": "regex_lab_rationale_245",
-      "community": 11,
-      "norm_label": "first pattern that matches wins. returns (event_type, fields) or none."
+      "id": "parser_ssh_parser_rationale_169",
+      "community": 9,
+      "norm_label": "split a raw line into (timestamp, host, process, message), or none."
+    },
+    {
+      "label": "Parse one log line into a normalized event, or None if no pattern claims     it.",
+      "file_type": "rationale",
+      "source_file": "parser/ssh_parser.py",
+      "source_location": "L187",
+      "_origin": "ast",
+      "id": "parser_ssh_parser_rationale_187",
+      "community": 9,
+      "norm_label": "parse one log line into a normalized event, or none if no pattern claims     it."
     },
     {
       "label": "test_detectors.py",
@@ -367,37 +737,47 @@
       "label": "build_events()",
       "file_type": "code",
       "source_file": "test_detectors.py",
-      "source_location": "L55",
+      "source_location": "L81",
       "_origin": "ast",
       "id": "test_detectors_build_events",
       "community": 1,
       "norm_label": "build_events()"
     },
     {
-      "label": "run_detectors()",
-      "file_type": "code",
-      "source_file": "test_detectors.py",
-      "source_location": "L70",
-      "_origin": "ast",
-      "id": "test_detectors_run_detectors",
-      "community": 1,
-      "norm_label": "run_detectors()"
-    },
-    {
       "label": "entity()",
       "file_type": "code",
       "source_file": "test_detectors.py",
-      "source_location": "L80",
+      "source_location": "L100",
       "_origin": "ast",
       "id": "test_detectors_entity",
       "community": 1,
       "norm_label": "entity()"
     },
     {
+      "label": "check_escape_assessment()",
+      "file_type": "code",
+      "source_file": "test_detectors.py",
+      "source_location": "L105",
+      "_origin": "ast",
+      "id": "test_detectors_check_escape_assessment",
+      "community": 1,
+      "norm_label": "check_escape_assessment()"
+    },
+    {
+      "label": "check_docker()",
+      "file_type": "code",
+      "source_file": "test_detectors.py",
+      "source_location": "L149",
+      "_origin": "ast",
+      "id": "test_detectors_check_docker",
+      "community": 1,
+      "norm_label": "check_docker()"
+    },
+    {
       "label": "main()",
       "file_type": "code",
       "source_file": "test_detectors.py",
-      "source_location": "L84",
+      "source_location": "L191",
       "_origin": "ast",
       "id": "test_detectors_main",
       "community": 1,
@@ -414,13 +794,43 @@
       "norm_label": "regression check for the detection engine.  pins the alert set produced by sampl"
     },
     {
+      "label": "Both sources merged, mirroring what main.py actually runs.",
+      "file_type": "rationale",
+      "source_file": "test_detectors.py",
+      "source_location": "L82",
+      "_origin": "ast",
+      "id": "test_detectors_rationale_82",
+      "community": 1,
+      "norm_label": "both sources merged, mirroring what main.py actually runs."
+    },
+    {
+      "label": "The escape assessment, against the two HostConfig shapes captured from the     h",
+      "file_type": "rationale",
+      "source_file": "test_detectors.py",
+      "source_location": "L106",
+      "_origin": "ast",
+      "id": "test_detectors_rationale_106",
+      "community": 1,
+      "norm_label": "the escape assessment, against the two hostconfig shapes captured from the     h"
+    },
+    {
+      "label": "The Docker path: JSON in, normalized events out, probes suppressed.",
+      "file_type": "rationale",
+      "source_file": "test_detectors.py",
+      "source_location": "L150",
+      "_origin": "ast",
+      "id": "test_detectors_rationale_150",
+      "community": 1,
+      "norm_label": "the docker path: json in, normalized events out, probes suppressed."
+    },
+    {
       "label": "ARCHITECTURE.md",
       "file_type": "document",
       "source_file": "ARCHITECTURE.md",
       "source_location": "L1",
       "_origin": "ast",
       "id": "architecture",
-      "community": 10,
+      "community": 8,
       "norm_label": "architecture.md"
     },
     {
@@ -530,7 +940,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "documentation",
-      "community": 7,
+      "community": 2,
       "norm_label": "documentation.md"
     },
     {
@@ -540,7 +950,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "documentation_linux_log_parser_development_journal",
-      "community": 7,
+      "community": 2,
       "norm_label": "linux log parser development journal"
     },
     {
@@ -650,7 +1060,7 @@
       "source_location": "L106",
       "_origin": "ast",
       "id": "documentation_day_2",
-      "community": 9,
+      "community": 2,
       "norm_label": "day 2"
     },
     {
@@ -660,7 +1070,7 @@
       "source_location": "L111",
       "_origin": "ast",
       "id": "documentation_summary_111",
-      "community": 9,
+      "community": 2,
       "norm_label": "summary"
     },
     {
@@ -670,7 +1080,7 @@
       "source_location": "L115",
       "_origin": "ast",
       "id": "documentation_implemented_features_115",
-      "community": 9,
+      "community": 2,
       "norm_label": "implemented features"
     },
     {
@@ -680,7 +1090,7 @@
       "source_location": "L126",
       "_origin": "ast",
       "id": "documentation_architecture_decisions_126",
-      "community": 9,
+      "community": 2,
       "norm_label": "architecture decisions"
     },
     {
@@ -690,7 +1100,7 @@
       "source_location": "L133",
       "_origin": "ast",
       "id": "documentation_lessons_learned_133",
-      "community": 9,
+      "community": 2,
       "norm_label": "lessons learned"
     },
     {
@@ -700,7 +1110,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "documentation_commits_table_140",
-      "community": 9,
+      "community": 2,
       "norm_label": "commits table"
     },
     {
@@ -710,7 +1120,7 @@
       "source_location": "L149",
       "_origin": "ast",
       "id": "documentation_metrics_149",
-      "community": 9,
+      "community": 2,
       "norm_label": "metrics"
     },
     {
@@ -720,7 +1130,7 @@
       "source_location": "L161",
       "_origin": "ast",
       "id": "documentation_parser_progress_161",
-      "community": 9,
+      "community": 2,
       "norm_label": "parser progress"
     },
     {
@@ -730,7 +1140,7 @@
       "source_location": "L165",
       "_origin": "ast",
       "id": "documentation_detection_progress_165",
-      "community": 9,
+      "community": 2,
       "norm_label": "detection progress"
     },
     {
@@ -740,7 +1150,7 @@
       "source_location": "L169",
       "_origin": "ast",
       "id": "documentation_engineering_progress_169",
-      "community": 9,
+      "community": 2,
       "norm_label": "engineering progress"
     },
     {
@@ -1064,13 +1474,123 @@
       "norm_label": "engineering progress"
     },
     {
-      "label": "Current Status",
+      "label": "Day 6",
       "file_type": "document",
       "source_file": "DOCUMENTATION.md",
       "source_location": "L422",
       "_origin": "ast",
+      "id": "documentation_day_6",
+      "community": 11,
+      "norm_label": "day 6"
+    },
+    {
+      "label": "Summary",
+      "file_type": "document",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L427",
+      "_origin": "ast",
+      "id": "documentation_summary_427",
+      "community": 11,
+      "norm_label": "summary"
+    },
+    {
+      "label": "Implemented features",
+      "file_type": "document",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L439",
+      "_origin": "ast",
+      "id": "documentation_implemented_features_439",
+      "community": 11,
+      "norm_label": "implemented features"
+    },
+    {
+      "label": "Architecture decisions",
+      "file_type": "document",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L453",
+      "_origin": "ast",
+      "id": "documentation_architecture_decisions_453",
+      "community": 11,
+      "norm_label": "architecture decisions"
+    },
+    {
+      "label": "Bugs fixed",
+      "file_type": "document",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L463",
+      "_origin": "ast",
+      "id": "documentation_bugs_fixed_463",
+      "community": 11,
+      "norm_label": "bugs fixed"
+    },
+    {
+      "label": "Lessons learned",
+      "file_type": "document",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L472",
+      "_origin": "ast",
+      "id": "documentation_lessons_learned_472",
+      "community": 11,
+      "norm_label": "lessons learned"
+    },
+    {
+      "label": "Commits table",
+      "file_type": "document",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L480",
+      "_origin": "ast",
+      "id": "documentation_commits_table_480",
+      "community": 11,
+      "norm_label": "commits table"
+    },
+    {
+      "label": "Metrics",
+      "file_type": "document",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L492",
+      "_origin": "ast",
+      "id": "documentation_metrics_492",
+      "community": 11,
+      "norm_label": "metrics"
+    },
+    {
+      "label": "Parser progress",
+      "file_type": "document",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L509",
+      "_origin": "ast",
+      "id": "documentation_parser_progress_509",
+      "community": 11,
+      "norm_label": "parser progress"
+    },
+    {
+      "label": "Detection progress",
+      "file_type": "document",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L515",
+      "_origin": "ast",
+      "id": "documentation_detection_progress_515",
+      "community": 11,
+      "norm_label": "detection progress"
+    },
+    {
+      "label": "Engineering progress",
+      "file_type": "document",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L523",
+      "_origin": "ast",
+      "id": "documentation_engineering_progress_523",
+      "community": 11,
+      "norm_label": "engineering progress"
+    },
+    {
+      "label": "Current Status",
+      "file_type": "document",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L531",
+      "_origin": "ast",
       "id": "documentation_current_status",
-      "community": 7,
+      "community": 2,
       "norm_label": "current status"
     },
     {
@@ -1080,7 +1600,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "readme",
-      "community": 10,
+      "community": 8,
       "norm_label": "readme.md"
     },
     {
@@ -1157,7 +1677,7 @@
       "label": "SSH Brute Force",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L105",
+      "source_location": "L108",
       "_origin": "ast",
       "id": "readme_ssh_brute_force",
       "community": 5,
@@ -1167,7 +1687,7 @@
       "label": "Service Anomaly",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L115",
+      "source_location": "L118",
       "_origin": "ast",
       "id": "readme_service_anomaly",
       "community": 5,
@@ -1177,7 +1697,7 @@
       "label": "Credential Compromise",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L119",
+      "source_location": "L122",
       "_origin": "ast",
       "id": "readme_credential_compromise",
       "community": 5,
@@ -1187,7 +1707,7 @@
       "label": "Behaviour Analysis",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L123",
+      "source_location": "L126",
       "_origin": "ast",
       "id": "readme_behaviour_analysis",
       "community": 5,
@@ -1197,7 +1717,7 @@
       "label": "Session Anomaly",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L127",
+      "source_location": "L130",
       "_origin": "ast",
       "id": "readme_session_anomaly",
       "community": 5,
@@ -1207,7 +1727,7 @@
       "label": "Alert Format",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L159",
+      "source_location": "L162",
       "_origin": "ast",
       "id": "readme_alert_format",
       "community": 5,
@@ -1217,7 +1737,7 @@
       "label": "Testing",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L183",
+      "source_location": "L186",
       "_origin": "ast",
       "id": "readme_testing",
       "community": 5,
@@ -1227,7 +1747,7 @@
       "label": "Project Structure",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L199",
+      "source_location": "L202",
       "_origin": "ast",
       "id": "readme_project_structure",
       "community": 5,
@@ -1237,7 +1757,7 @@
       "label": "Workflow",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L242",
+      "source_location": "L245",
       "_origin": "ast",
       "id": "readme_workflow",
       "community": 5,
@@ -1247,17 +1767,17 @@
       "label": "Graphify Support",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L274",
+      "source_location": "L277",
       "_origin": "ast",
       "id": "readme_graphify_support",
-      "community": 10,
+      "community": 8,
       "norm_label": "graphify support"
     },
     {
       "label": "Roadmap",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L292",
+      "source_location": "L295",
       "_origin": "ast",
       "id": "readme_roadmap",
       "community": 6,
@@ -1267,7 +1787,7 @@
       "label": "V1",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L294",
+      "source_location": "L297",
       "_origin": "ast",
       "id": "readme_v1",
       "community": 6,
@@ -1277,7 +1797,7 @@
       "label": "Parsers",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L298",
+      "source_location": "L301",
       "_origin": "ast",
       "id": "readme_parsers",
       "community": 6,
@@ -1287,7 +1807,7 @@
       "label": "Detectors",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L306",
+      "source_location": "L309",
       "_origin": "ast",
       "id": "readme_detectors",
       "community": 6,
@@ -1297,7 +1817,7 @@
       "label": "Alerting",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L316",
+      "source_location": "L319",
       "_origin": "ast",
       "id": "readme_alerting",
       "community": 6,
@@ -1307,7 +1827,7 @@
       "label": "V2",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L324",
+      "source_location": "L327",
       "_origin": "ast",
       "id": "readme_v2",
       "community": 6,
@@ -1317,7 +1837,7 @@
       "label": "Design Philosophy",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L343",
+      "source_location": "L346",
       "_origin": "ast",
       "id": "readme_design_philosophy",
       "community": 6,
@@ -1327,7 +1847,7 @@
       "label": "Status",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L358",
+      "source_location": "L361",
       "_origin": "ast",
       "id": "readme_status",
       "community": 6,
@@ -1337,7 +1857,7 @@
       "label": "AI Assistance",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L372",
+      "source_location": "L375",
       "_origin": "ast",
       "id": "readme_ai_assistance",
       "community": 6,
@@ -1347,7 +1867,7 @@
       "label": "Author",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L384",
+      "source_location": "L387",
       "_origin": "ast",
       "id": "readme_author",
       "community": 6,
@@ -1394,14 +1914,14 @@
       "norm_label": "completed"
     },
     {
-      "label": "Phase 1 \u2014 SSH Monitoring Engine \ud83d\udd04",
+      "label": "Phase 1 \u2014 SSH Monitoring Engine \u2705",
       "file_type": "document",
       "source_file": "ROADMAP.md",
       "source_location": "L24",
       "_origin": "ast",
       "id": "roadmap_phase_1_ssh_monitoring_engine",
       "community": 3,
-      "norm_label": "phase 1 \u2014 ssh monitoring engine \ud83d\udd04"
+      "norm_label": "phase 1 \u2014 ssh monitoring engine \u2705"
     },
     {
       "label": "SSH Parser",
@@ -1417,7 +1937,7 @@
       "label": "SSH Detection Engine",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L50",
+      "source_location": "L53",
       "_origin": "ast",
       "id": "roadmap_ssh_detection_engine",
       "community": 3,
@@ -1427,27 +1947,27 @@
       "label": "Engineering",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L68",
+      "source_location": "L71",
       "_origin": "ast",
       "id": "roadmap_engineering",
       "community": 3,
       "norm_label": "engineering"
     },
     {
-      "label": "Phase 2 \u2014 Additional Parsers",
+      "label": "Phase 2 \u2014 Additional Parsers \ud83d\udd04",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L81",
+      "source_location": "L84",
       "_origin": "ast",
       "id": "roadmap_phase_2_additional_parsers",
       "community": 3,
-      "norm_label": "phase 2 \u2014 additional parsers"
+      "norm_label": "phase 2 \u2014 additional parsers \ud83d\udd04"
     },
     {
       "label": "Docker Parser",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L91",
+      "source_location": "L94",
       "_origin": "ast",
       "id": "roadmap_docker_parser",
       "community": 3,
@@ -1457,7 +1977,7 @@
       "label": "Syslog Parser",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L104",
+      "source_location": "L111",
       "_origin": "ast",
       "id": "roadmap_syslog_parser",
       "community": 3,
@@ -1467,7 +1987,7 @@
       "label": "Authentication Parser",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L116",
+      "source_location": "L123",
       "_origin": "ast",
       "id": "roadmap_authentication_parser",
       "community": 3,
@@ -1477,27 +1997,27 @@
       "label": "Apache / Nginx Parser",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L129",
+      "source_location": "L136",
       "_origin": "ast",
       "id": "roadmap_apache_nginx_parser",
       "community": 3,
       "norm_label": "apache / nginx parser"
     },
     {
-      "label": "Phase 3 \u2014 Detection Expansion",
+      "label": "Phase 3 \u2014 Detection Expansion \ud83d\udd04",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L140",
+      "source_location": "L147",
       "_origin": "ast",
       "id": "roadmap_phase_3_detection_expansion",
       "community": 3,
-      "norm_label": "phase 3 \u2014 detection expansion"
+      "norm_label": "phase 3 \u2014 detection expansion \ud83d\udd04"
     },
     {
       "label": "Service Instability",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L159",
+      "source_location": "L166",
       "_origin": "ast",
       "id": "roadmap_service_instability",
       "community": 3,
@@ -1507,7 +2027,7 @@
       "label": "Persistence Detection",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L163",
+      "source_location": "L170",
       "_origin": "ast",
       "id": "roadmap_persistence_detection",
       "community": 3,
@@ -1517,7 +2037,7 @@
       "label": "Behaviour Analysis",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L179",
+      "source_location": "L186",
       "_origin": "ast",
       "id": "roadmap_behaviour_analysis",
       "community": 3,
@@ -1527,7 +2047,7 @@
       "label": "Phase 4 \u2014 Event Normalization \u2705",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L189",
+      "source_location": "L196",
       "_origin": "ast",
       "id": "roadmap_phase_4_event_normalization",
       "community": 3,
@@ -1537,7 +2057,7 @@
       "label": "Phase 5 \u2014 Outputs \ud83d\udd04",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L237",
+      "source_location": "L244",
       "_origin": "ast",
       "id": "roadmap_phase_5_outputs",
       "community": 3,
@@ -1547,7 +2067,7 @@
       "label": "Phase 6 \u2014 Graphify Integration",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L285",
+      "source_location": "L292",
       "_origin": "ast",
       "id": "roadmap_phase_6_graphify_integration",
       "community": 3,
@@ -1557,7 +2077,7 @@
       "label": "Phase 7 \u2014 Dashboard",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L304",
+      "source_location": "L311",
       "_origin": "ast",
       "id": "roadmap_phase_7_dashboard",
       "community": 3,
@@ -1567,7 +2087,7 @@
       "label": "Phase 8 \u2014 Alerting",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L326",
+      "source_location": "L333",
       "_origin": "ast",
       "id": "roadmap_phase_8_alerting",
       "community": 3,
@@ -1577,7 +2097,7 @@
       "label": "Phase 9 \u2014 Real-Time Monitoring",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L340",
+      "source_location": "L347",
       "_origin": "ast",
       "id": "roadmap_phase_9_real_time_monitoring",
       "community": 3,
@@ -1587,7 +2107,7 @@
       "label": "Phase 10 \u2014 AI Layer (V2)",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L392",
+      "source_location": "L399",
       "_origin": "ast",
       "id": "roadmap_phase_10_ai_layer_v2",
       "community": 3,
@@ -1597,7 +2117,7 @@
       "label": "V1 Goals",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L430",
+      "source_location": "L437",
       "_origin": "ast",
       "id": "roadmap_v1_goals",
       "community": 3,
@@ -1607,7 +2127,7 @@
       "label": "V2 Goals",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L445",
+      "source_location": "L452",
       "_origin": "ast",
       "id": "roadmap_v2_goals",
       "community": 3,
@@ -1617,7 +2137,7 @@
       "label": "Progress Overview",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L461",
+      "source_location": "L468",
       "_origin": "ast",
       "id": "roadmap_progress_overview",
       "community": 3,
@@ -1630,7 +2150,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "security",
-      "community": 10,
+      "community": 8,
       "norm_label": "security.md"
     },
     {
@@ -1654,10 +2174,20 @@
       "norm_label": "threat model"
     },
     {
+      "label": "Deployment context",
+      "file_type": "document",
+      "source_file": "SECURITY.md",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "security_deployment_context",
+      "community": 10,
+      "norm_label": "deployment context"
+    },
+    {
       "label": "Current Assumptions",
       "file_type": "document",
       "source_file": "SECURITY.md",
-      "source_location": "L31",
+      "source_location": "L44",
       "_origin": "ast",
       "id": "security_current_assumptions",
       "community": 10,
@@ -1667,7 +2197,7 @@
       "label": "Limitations",
       "file_type": "document",
       "source_file": "SECURITY.md",
-      "source_location": "L42",
+      "source_location": "L56",
       "_origin": "ast",
       "id": "security_limitations",
       "community": 10,
@@ -1677,7 +2207,7 @@
       "label": "False Positives",
       "file_type": "document",
       "source_file": "SECURITY.md",
-      "source_location": "L53",
+      "source_location": "L67",
       "_origin": "ast",
       "id": "security_false_positives",
       "community": 10,
@@ -1687,7 +2217,7 @@
       "label": "False Negatives",
       "file_type": "document",
       "source_file": "SECURITY.md",
-      "source_location": "L67",
+      "source_location": "L81",
       "_origin": "ast",
       "id": "security_false_negatives",
       "community": 10,
@@ -1697,7 +2227,7 @@
       "label": "Parser Assumptions",
       "file_type": "document",
       "source_file": "SECURITY.md",
-      "source_location": "L80",
+      "source_location": "L94",
       "_origin": "ast",
       "id": "security_parser_assumptions",
       "community": 10,
@@ -1707,7 +2237,7 @@
       "label": "Synthetic Datasets",
       "file_type": "document",
       "source_file": "SECURITY.md",
-      "source_location": "L89",
+      "source_location": "L103",
       "_origin": "ast",
       "id": "security_synthetic_datasets",
       "community": 10,
@@ -1717,7 +2247,7 @@
       "label": "Roadmap for Production Readiness",
       "file_type": "document",
       "source_file": "SECURITY.md",
-      "source_location": "L98",
+      "source_location": "L112",
       "_origin": "ast",
       "id": "security_roadmap_for_production_readiness",
       "community": 10,
@@ -1725,6 +2255,48 @@
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/auth_anomaly.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "detectors_auth_anomaly",
+      "target": "detectors_auth_anomaly_detect_auth_anomaly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/registry.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "detectors_registry",
+      "target": "detectors_auth_anomaly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/registry.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "detectors_registry",
+      "target": "detectors_auth_anomaly_detect_auth_anomaly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/behavior.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "detectors_behavior",
+      "target": "detectors_behavior_count_bursts",
+      "confidence_score": 1.0
+    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
@@ -1736,6 +2308,27 @@
       "target": "detectors_behavior_detect_behavior"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/behavior.py",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "detectors_behavior",
+      "target": "detectors_behavior_severity_for",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/registry.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "detectors_registry",
+      "target": "detectors_behavior",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -1756,39 +2349,81 @@
       "confidence_score": 1.0,
       "source": "test_detectors",
       "target": "detectors_behavior"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "main.py",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "main",
-      "target": "detectors_behavior_detect_behavior"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "test_detectors.py",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "test_detectors",
-      "target": "detectors_behavior_detect_behavior"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "test_detectors.py",
-      "source_location": "L75",
+      "source_file": "detectors/behavior.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "detectors_behavior_detect_behavior",
+      "target": "detectors_behavior_count_bursts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/behavior.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "detectors_behavior_detect_behavior",
+      "target": "detectors_behavior_severity_for",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/registry.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "detectors_registry",
+      "target": "detectors_behavior_detect_behavior",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L5",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "test_detectors_run_detectors",
+      "source": "main",
       "target": "detectors_behavior_detect_behavior"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_detectors.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_detectors",
+      "target": "detectors_behavior_detect_behavior"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/behavior.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "detectors_behavior_rationale_57",
+      "target": "detectors_behavior_count_bursts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/behavior.py",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "detectors_behavior_rationale_82",
+      "target": "detectors_behavior_severity_for",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1804,6 +2439,17 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "detectors/registry.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "detectors_registry",
+      "target": "detectors_bruteforce",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "main.py",
       "source_location": "L2",
       "weight": 1.0,
@@ -1826,6 +2472,17 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "detectors/registry.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "detectors_registry",
+      "target": "detectors_bruteforce_detect_bruteforce",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "main.py",
       "source_location": "L2",
       "weight": 1.0,
@@ -1845,15 +2502,408 @@
       "target": "detectors_bruteforce_detect_bruteforce"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/container_anomaly.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "detectors_container_anomaly",
+      "target": "detectors_container_anomaly_detect_container_anomaly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/container_anomaly.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "detectors_container_anomaly",
+      "target": "detectors_container_anomaly_is_probe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/container_anomaly.py",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "detectors_container_anomaly",
+      "target": "detectors_container_anomaly_is_shell",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/container_anomaly.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "detectors_container_anomaly_rationale_1",
+      "target": "detectors_container_anomaly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/registry.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "detectors_registry",
+      "target": "detectors_container_anomaly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_detectors.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "test_detectors",
+      "target": "detectors_container_anomaly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/container_anomaly.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "detectors_container_anomaly_detect_container_anomaly",
+      "target": "detectors_container_anomaly_is_probe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/container_anomaly.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "detectors_container_anomaly_detect_container_anomaly",
+      "target": "detectors_container_anomaly_is_shell",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/registry.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "detectors_registry",
+      "target": "detectors_container_anomaly_detect_container_anomaly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_detectors.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "test_detectors",
+      "target": "detectors_container_anomaly_detect_container_anomaly",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "test_detectors.py",
-      "source_location": "L72",
+      "source_location": "L171",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "test_detectors_run_detectors",
-      "target": "detectors_bruteforce_detect_bruteforce"
+      "source": "test_detectors_check_docker",
+      "target": "detectors_container_anomaly_detect_container_anomaly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/container_anomaly.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "detectors_container_anomaly_rationale_77",
+      "target": "detectors_container_anomaly_is_shell",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/container_escape.py",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "detectors_container_escape",
+      "target": "detectors_container_escape_assess",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/container_escape.py",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "detectors_container_escape",
+      "target": "detectors_container_escape_assess_bind",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/container_escape.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "detectors_container_escape",
+      "target": "detectors_container_escape_detect_container_escape",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/container_escape.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "detectors_container_escape_rationale_1",
+      "target": "detectors_container_escape",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/registry.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "detectors_registry",
+      "target": "detectors_container_escape",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_detectors.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "test_detectors",
+      "target": "detectors_container_escape",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/container_escape.py",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "detectors_container_escape_detect_container_escape",
+      "target": "detectors_container_escape_assess",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/registry.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "detectors_registry",
+      "target": "detectors_container_escape_detect_container_escape",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_detectors.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "test_detectors",
+      "target": "detectors_container_escape_detect_container_escape",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test_detectors.py",
+      "source_location": "L179",
+      "weight": 1.0,
+      "source": "test_detectors_check_docker",
+      "target": "detectors_container_escape_detect_container_escape",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/container_escape.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "detectors_container_escape_assess",
+      "target": "detectors_container_escape_assess_bind",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/container_escape.py",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "detectors_container_escape_rationale_92",
+      "target": "detectors_container_escape_assess",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_detectors.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "test_detectors",
+      "target": "detectors_container_escape_assess",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test_detectors.py",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "test_detectors_check_escape_assessment",
+      "target": "detectors_container_escape_assess",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/container_escape.py",
+      "source_location": "L123",
+      "weight": 1.0,
+      "source": "detectors_container_escape_rationale_123",
+      "target": "detectors_container_escape_assess_bind",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/registry.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "detectors_registry",
+      "target": "detectors_registry_run_detectors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/registry.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "detectors_registry",
+      "target": "detectors_service_anomaly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/registry.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "detectors_registry",
+      "target": "detectors_service_anomaly_detect_service_anomaly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/registry.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "detectors_registry",
+      "target": "detectors_session_anomaly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/registry.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "detectors_registry",
+      "target": "detectors_session_anomaly_detect_session_anomaly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/registry.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "detectors_registry_rationale_1",
+      "target": "detectors_registry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "main",
+      "target": "detectors_registry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_detectors.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "test_detectors",
+      "target": "detectors_registry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "detectors/registry.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "detectors_registry_rationale_32",
+      "target": "detectors_registry_run_detectors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_detectors.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "test_detectors",
+      "target": "detectors_registry_run_detectors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test_detectors.py",
+      "source_location": "L215",
+      "weight": 1.0,
+      "source": "test_detectors_main",
+      "target": "detectors_registry_run_detectors",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1907,17 +2957,6 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "test_detectors",
-      "target": "detectors_service_anomaly_detect_service_anomaly"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "test_detectors.py",
-      "source_location": "L73",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "test_detectors_run_detectors",
       "target": "detectors_service_anomaly_detect_service_anomaly"
     },
     {
@@ -1975,15 +3014,24 @@
       "target": "detectors_session_anomaly_detect_session_anomaly"
     },
     {
-      "relation": "calls",
-      "context": "call",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "test_detectors.py",
-      "source_location": "L76",
+      "source_file": "main.py",
+      "source_location": "L43",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "test_detectors_run_detectors",
-      "target": "detectors_session_anomaly_detect_session_anomaly"
+      "source": "main",
+      "target": "main_collect_events",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "main",
+      "target": "main_sources",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -2023,6 +3071,72 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "main.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "main",
+      "target": "parser_docker_parser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "main",
+      "target": "parser_docker_parser_identify_event",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "main",
+      "target": "parser_log_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "main",
+      "target": "parser_log_source_detect_platform",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "main",
+      "target": "parser_log_source_detect_ssh_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "main",
+      "target": "parser_log_source_read_lines",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2039,6 +3153,70 @@
       "confidence_score": 1.0,
       "source": "main",
       "target": "parser_ssh_parser_identify_event"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "main_collect_events",
+      "target": "main_sources",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "main_rationale_16",
+      "target": "main_sources",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "main_sources",
+      "target": "parser_log_source_detect_platform",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "main_sources",
+      "target": "parser_log_source_detect_ssh_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "main_sources",
+      "target": "parser_log_source_read_lines",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "main_rationale_44",
+      "target": "main_collect_events",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2093,6 +3271,175 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "parser/docker_parser.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "parser_docker_parser",
+      "target": "parser_docker_parser_identify_event",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/docker_parser.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "parser_docker_parser",
+      "target": "parser_docker_parser_parse_action",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/docker_parser.py",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "parser_docker_parser",
+      "target": "parser_docker_parser_parse_timestamp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/docker_parser.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "parser_docker_parser",
+      "target": "parser_event_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/docker_parser.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "parser_docker_parser",
+      "target": "parser_event_schema_create_event",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/docker_parser.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "parser_docker_parser_rationale_1",
+      "target": "parser_docker_parser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_detectors.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "test_detectors",
+      "target": "parser_docker_parser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/docker_parser.py",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "parser_docker_parser_identify_event",
+      "target": "parser_docker_parser_parse_action",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/docker_parser.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "parser_docker_parser_rationale_56",
+      "target": "parser_docker_parser_parse_action",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/docker_parser.py",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "parser_docker_parser_identify_event",
+      "target": "parser_docker_parser_parse_timestamp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/docker_parser.py",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "parser_docker_parser_identify_event",
+      "target": "parser_event_schema_create_event",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/docker_parser.py",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "parser_docker_parser_rationale_72",
+      "target": "parser_docker_parser_identify_event",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_detectors.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "test_detectors",
+      "target": "parser_docker_parser_identify_event",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test_detectors.py",
+      "source_location": "L153",
+      "weight": 1.0,
+      "source": "test_detectors_check_docker",
+      "target": "parser_docker_parser_identify_event",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/docker_parser.py",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "parser_docker_parser_rationale_122",
+      "target": "parser_docker_parser_parse_timestamp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "parser/ssh_parser.py",
+      "source_location": "L177",
+      "weight": 1.0,
+      "source": "parser_ssh_parser_parse_line",
+      "target": "parser_docker_parser_parse_timestamp"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "parser/event_schema.py",
       "source_location": "L1",
       "weight": 1.0,
@@ -2139,8 +3486,100 @@
       "source_file": "parser/ssh_parser.py",
       "source_location": "L129",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "parser_ssh_parser_identify_event",
-      "target": "parser_event_schema_create_event",
+      "target": "parser_event_schema_create_event"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/log_source.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "parser_log_source",
+      "target": "parser_log_source_detect_platform",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/log_source.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "parser_log_source",
+      "target": "parser_log_source_detect_ssh_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/log_source.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "parser_log_source",
+      "target": "parser_log_source_read_lines",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/log_source.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "parser_log_source",
+      "target": "parser_ssh_parser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/log_source.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "parser_log_source",
+      "target": "parser_ssh_parser_parse_line",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/log_source.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "parser_log_source_rationale_1",
+      "target": "parser_log_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/log_source.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "parser_log_source_rationale_29",
+      "target": "parser_log_source_detect_platform",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/log_source.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "parser_log_source_rationale_46",
+      "target": "parser_log_source_detect_ssh_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/log_source.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "parser_log_source_rationale_65",
+      "target": "parser_log_source_read_lines",
       "confidence_score": 1.0
     },
     {
@@ -2157,11 +3596,41 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L3",
+      "source_location": "L159",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "parser_ssh_parser",
-      "target": "parser_ssh_parser_parse_timestamp"
+      "target": "parser_ssh_parser_key_values",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/ssh_parser.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "parser_ssh_parser",
+      "target": "parser_ssh_parser_parse_bsd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/ssh_parser.py",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "parser_ssh_parser",
+      "target": "parser_ssh_parser_parse_line",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/ssh_parser.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "parser_ssh_parser",
+      "target": "parser_ssh_parser_parse_rfc3339",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -2175,23 +3644,64 @@
       "target": "parser_ssh_parser"
     },
     {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/ssh_parser.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "parser_ssh_parser_rationale_31",
+      "target": "parser_ssh_parser_parse_rfc3339",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L130",
+      "source_location": "L214",
       "weight": 1.0,
       "source": "parser_ssh_parser_identify_event",
-      "target": "parser_ssh_parser_parse_timestamp",
+      "target": "parser_ssh_parser_key_values",
       "confidence_score": 1.0
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "parser/ssh_parser.py",
-      "source_location": "L95",
+      "source_location": "L160",
       "weight": 1.0,
-      "source": "parser_ssh_parser_rationale_95",
+      "source": "parser_ssh_parser_rationale_160",
+      "target": "parser_ssh_parser_key_values",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/ssh_parser.py",
+      "source_location": "L192",
+      "weight": 1.0,
+      "source": "parser_ssh_parser_identify_event",
+      "target": "parser_ssh_parser_parse_line",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/ssh_parser.py",
+      "source_location": "L169",
+      "weight": 1.0,
+      "source": "parser_ssh_parser_rationale_169",
+      "target": "parser_ssh_parser_parse_line",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "parser/ssh_parser.py",
+      "source_location": "L187",
+      "weight": 1.0,
+      "source": "parser_ssh_parser_rationale_187",
       "target": "parser_ssh_parser_identify_event",
       "confidence_score": 1.0
     },
@@ -2220,155 +3730,32 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "regex_lab.py",
-      "source_location": "L291",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "regex_lab",
-      "target": "regex_lab_checks"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "regex_lab.py",
-      "source_location": "L244",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "regex_lab",
-      "target": "regex_lab_identify"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "regex_lab.py",
-      "source_location": "L48",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "regex_lab",
-      "target": "regex_lab_section_1_matching"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "regex_lab.py",
-      "source_location": "L79",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "regex_lab",
-      "target": "regex_lab_section_2_capturing"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "regex_lab.py",
-      "source_location": "L121",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "regex_lab",
-      "target": "regex_lab_section_3_optional"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "regex_lab.py",
-      "source_location": "L155",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "regex_lab",
-      "target": "regex_lab_section_4_be_specific"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "regex_lab.py",
-      "source_location": "L184",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "regex_lab",
-      "target": "regex_lab_section_5_greedy"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "regex_lab.py",
-      "source_location": "L255",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "regex_lab",
-      "target": "regex_lab_section_6_table"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "regex_lab.py",
-      "source_location": "L354",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "regex_lab",
-      "target": "regex_lab_section_8_exercises"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "regex_lab.py",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "regex_lab_rationale_1",
-      "target": "regex_lab"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "regex_lab.py",
-      "source_location": "L314",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "regex_lab_checks",
-      "target": "regex_lab_identify"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "regex_lab.py",
-      "source_location": "L245",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "regex_lab_rationale_245",
-      "target": "regex_lab_identify"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "regex_lab.py",
-      "source_location": "L276",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "regex_lab_section_6_table",
-      "target": "regex_lab_identify"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "regex_lab.py",
-      "source_location": "L359",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "regex_lab_section_8_exercises",
-      "target": "regex_lab_identify"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "test_detectors.py",
       "source_location": "L55",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "test_detectors",
       "target": "test_detectors_build_events"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test_detectors.py",
+      "source_location": "L149",
+      "weight": 1.0,
+      "source": "test_detectors",
+      "target": "test_detectors_check_docker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test_detectors.py",
+      "source_location": "L105",
+      "weight": 1.0,
+      "source": "test_detectors",
+      "target": "test_detectors_check_escape_assessment",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2389,16 +3776,6 @@
       "confidence_score": 1.0,
       "source": "test_detectors",
       "target": "test_detectors_main"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "test_detectors.py",
-      "source_location": "L70",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "test_detectors",
-      "target": "test_detectors_run_detectors"
     },
     {
       "relation": "rationale_for",
@@ -2422,15 +3799,14 @@
       "target": "test_detectors_build_events"
     },
     {
-      "relation": "calls",
-      "context": "call",
+      "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "test_detectors.py",
-      "source_location": "L109",
+      "source_location": "L82",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "test_detectors_main",
-      "target": "test_detectors_run_detectors"
+      "source": "test_detectors_rationale_82",
+      "target": "test_detectors_build_events",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2442,6 +3818,48 @@
       "confidence_score": 1.0,
       "source": "test_detectors_main",
       "target": "test_detectors_entity"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test_detectors.py",
+      "source_location": "L182",
+      "weight": 1.0,
+      "source": "test_detectors_check_docker",
+      "target": "test_detectors_check_escape_assessment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test_detectors.py",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "test_detectors_rationale_106",
+      "target": "test_detectors_check_escape_assessment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test_detectors.py",
+      "source_location": "L240",
+      "weight": 1.0,
+      "source": "test_detectors_main",
+      "target": "test_detectors_check_docker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test_detectors.py",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "test_detectors_rationale_150",
+      "target": "test_detectors_check_docker",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2629,8 +4047,18 @@
       "source_file": "DOCUMENTATION.md",
       "source_location": "L333",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "documentation_linux_log_parser_development_journal",
-      "target": "documentation_day_5",
+      "target": "documentation_day_5"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L422",
+      "weight": 1.0,
+      "source": "documentation_linux_log_parser_development_journal",
+      "target": "documentation_day_6",
       "confidence_score": 1.0
     },
     {
@@ -3009,9 +4437,9 @@
       "source_file": "DOCUMENTATION.md",
       "source_location": "L356",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "documentation_day_5",
-      "target": "documentation_architecture_decisions_356",
-      "confidence_score": 1.0
+      "target": "documentation_architecture_decisions_356"
     },
     {
       "relation": "contains",
@@ -3019,9 +4447,9 @@
       "source_file": "DOCUMENTATION.md",
       "source_location": "L364",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "documentation_day_5",
-      "target": "documentation_bugs_fixed_364",
-      "confidence_score": 1.0
+      "target": "documentation_bugs_fixed_364"
     },
     {
       "relation": "contains",
@@ -3029,9 +4457,9 @@
       "source_file": "DOCUMENTATION.md",
       "source_location": "L383",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "documentation_day_5",
-      "target": "documentation_commits_table_383",
-      "confidence_score": 1.0
+      "target": "documentation_commits_table_383"
     },
     {
       "relation": "contains",
@@ -3039,9 +4467,9 @@
       "source_file": "DOCUMENTATION.md",
       "source_location": "L412",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "documentation_day_5",
-      "target": "documentation_detection_progress_412",
-      "confidence_score": 1.0
+      "target": "documentation_detection_progress_412"
     },
     {
       "relation": "contains",
@@ -3049,9 +4477,9 @@
       "source_file": "DOCUMENTATION.md",
       "source_location": "L416",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "documentation_day_5",
-      "target": "documentation_engineering_progress_416",
-      "confidence_score": 1.0
+      "target": "documentation_engineering_progress_416"
     },
     {
       "relation": "contains",
@@ -3059,9 +4487,9 @@
       "source_file": "DOCUMENTATION.md",
       "source_location": "L346",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "documentation_day_5",
-      "target": "documentation_implemented_features_346",
-      "confidence_score": 1.0
+      "target": "documentation_implemented_features_346"
     },
     {
       "relation": "contains",
@@ -3069,9 +4497,9 @@
       "source_file": "DOCUMENTATION.md",
       "source_location": "L375",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "documentation_day_5",
-      "target": "documentation_lessons_learned_375",
-      "confidence_score": 1.0
+      "target": "documentation_lessons_learned_375"
     },
     {
       "relation": "contains",
@@ -3079,9 +4507,9 @@
       "source_file": "DOCUMENTATION.md",
       "source_location": "L391",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "documentation_day_5",
-      "target": "documentation_metrics_391",
-      "confidence_score": 1.0
+      "target": "documentation_metrics_391"
     },
     {
       "relation": "contains",
@@ -3089,9 +4517,9 @@
       "source_file": "DOCUMENTATION.md",
       "source_location": "L408",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "documentation_day_5",
-      "target": "documentation_parser_progress_408",
-      "confidence_score": 1.0
+      "target": "documentation_parser_progress_408"
     },
     {
       "relation": "contains",
@@ -3099,8 +4527,108 @@
       "source_file": "DOCUMENTATION.md",
       "source_location": "L338",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "documentation_day_5",
-      "target": "documentation_summary_338",
+      "target": "documentation_summary_338"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L453",
+      "weight": 1.0,
+      "source": "documentation_day_6",
+      "target": "documentation_architecture_decisions_453",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L463",
+      "weight": 1.0,
+      "source": "documentation_day_6",
+      "target": "documentation_bugs_fixed_463",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L480",
+      "weight": 1.0,
+      "source": "documentation_day_6",
+      "target": "documentation_commits_table_480",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L515",
+      "weight": 1.0,
+      "source": "documentation_day_6",
+      "target": "documentation_detection_progress_515",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L523",
+      "weight": 1.0,
+      "source": "documentation_day_6",
+      "target": "documentation_engineering_progress_523",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L439",
+      "weight": 1.0,
+      "source": "documentation_day_6",
+      "target": "documentation_implemented_features_439",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L472",
+      "weight": 1.0,
+      "source": "documentation_day_6",
+      "target": "documentation_lessons_learned_472",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L492",
+      "weight": 1.0,
+      "source": "documentation_day_6",
+      "target": "documentation_metrics_492",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L509",
+      "weight": 1.0,
+      "source": "documentation_day_6",
+      "target": "documentation_parser_progress_509",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DOCUMENTATION.md",
+      "source_location": "L427",
+      "weight": 1.0,
+      "source": "documentation_day_6",
+      "target": "documentation_summary_427",
       "confidence_score": 1.0
     },
     {
@@ -3309,9 +4837,9 @@
       "source_file": "README.md",
       "source_location": "L372",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_roadmap",
-      "target": "readme_ai_assistance",
-      "confidence_score": 1.0
+      "target": "readme_ai_assistance"
     },
     {
       "relation": "contains",
@@ -3742,8 +5270,18 @@
       "confidence_score": 1.0,
       "source": "security_security_considerations_homelab_log_parser_linux",
       "target": "security_threat_model"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "SECURITY.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "security_threat_model",
+      "target": "security_deployment_context",
+      "confidence_score": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "35dce822a3696ad4a11ab4c0e203ea65e4d6dae3"
+  "built_at_commit": "dc8a36d3c5ac3cc068fc69cdabf1602af73e04eb"
 }

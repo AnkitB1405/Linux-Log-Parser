@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   "main.py": {
-    "mtime": 1783431629.040569,
-    "ast_hash": "122fb98103e088b8279664caddcef04d",
+    "mtime": 1787422094.8658903,
+    "ast_hash": "2ba47be382aead2d727151e64c15eb4c",
     "semantic_hash": ""
   },
   "parser/event_schema.py": {
@@ -15,8 +15,8 @@
     "semantic_hash": ""
   },
   "parser/ssh_parser.py": {
-    "mtime": 1787115524.4951746,
-    "ast_hash": "658e37bfcce5be59ec42f575a6fa4093",
+    "mtime": 1787425769.2200112,
+    "ast_hash": "749acc96a7f8d2c56f905735b872c5b0",
     "semantic_hash": ""
   },
   "Convos_and_notes.txt": {
@@ -25,13 +25,13 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1787122769.6922977,
-    "ast_hash": "e24d10427f48fac032bc6442b18df4fb",
+    "mtime": 1787430629.0626433,
+    "ast_hash": "1efa2117940580e49cf446bdb10eafd4",
     "semantic_hash": ""
   },
   "detectors/behavior.py": {
-    "mtime": 1786017344.26785,
-    "ast_hash": "a1ee5cad50a8174d03c257139eaaf66c",
+    "mtime": 1787381420.14782,
+    "ast_hash": "411abdf590f9f980903e6160b3945383",
     "semantic_hash": ""
   },
   "detectors/service_anomaly.py": {
@@ -55,13 +55,13 @@
     "semantic_hash": ""
   },
   "outputs/alerts.json": {
-    "mtime": 1787115533.7858057,
-    "ast_hash": "dae6c2ba20f7d1d33803fb9692038c09",
+    "mtime": 1787430155.0667353,
+    "ast_hash": "720bd14a4af311111bd67484da2e6655",
     "semantic_hash": ""
   },
   "outputs/events.json": {
-    "mtime": 1787115533.7850235,
-    "ast_hash": "b6c4e6505fa85165ebef17ca5369f733",
+    "mtime": 1787430155.0620213,
+    "ast_hash": "35fd9973ab9548981126bd18f0823c19",
     "semantic_hash": ""
   },
   "outputs/persistence.py": {
@@ -70,13 +70,13 @@
     "semantic_hash": ""
   },
   "outputs/statistics.json": {
-    "mtime": 1787115533.7859147,
-    "ast_hash": "0007f93307cbea897635085d8938f5f5",
+    "mtime": 1787430155.0668433,
+    "ast_hash": "8eced2830b66231d27ac9a2f3c07628f",
     "semantic_hash": ""
   },
   "outputs/stats.py": {
-    "mtime": 1786017355.3920648,
-    "ast_hash": "5a2c2988af5bffc0d730a4c98934c1e5",
+    "mtime": 1787381444.9027033,
+    "ast_hash": "437e0f997d62a3df5b4dd15ec3ae0ef7",
     "semantic_hash": ""
   },
   "ARCHITECTURE.md": {
@@ -85,28 +85,53 @@
     "semantic_hash": ""
   },
   "DOCUMENTATION.md": {
-    "mtime": 1787122729.5568514,
-    "ast_hash": "6c5e86989b22f51aaacc7069a720fb3b",
+    "mtime": 1787430596.0166645,
+    "ast_hash": "b488b3802861b843f456acf62d557a7a",
     "semantic_hash": ""
   },
   "ROADMAP.md": {
-    "mtime": 1787122753.082599,
-    "ast_hash": "7a571e71b6faf35d4ace7e8e850ae8e8",
+    "mtime": 1787430596.0185604,
+    "ast_hash": "917f7bb4aabe2e20251519695c9985ee",
     "semantic_hash": ""
   },
   "SECURITY.md": {
-    "mtime": 1783318946.6125035,
-    "ast_hash": "aeaef8c5f56bda0612537ef6602595b5",
+    "mtime": 1787430629.040454,
+    "ast_hash": "fd3dfbbd681bebd42bb56758e71684fa",
     "semantic_hash": ""
   },
   "test_detectors.py": {
-    "mtime": 1786017388.2006958,
-    "ast_hash": "2a685a8b411ba94b7ac822441528d3f0",
+    "mtime": 1787430154.8964255,
+    "ast_hash": "2b5d3d137c3ed1854464ac536681d608",
     "semantic_hash": ""
   },
-  "regex_lab.py": {
-    "mtime": 1786271504.7340117,
-    "ast_hash": "6ad4c2e33b318410c538295fa9401dde",
+  "detectors/auth_anomaly.py": {
+    "mtime": 1787335195.8746657,
+    "ast_hash": "1e70972b04e3c626b0c453e34bb3aa91",
+    "semantic_hash": ""
+  },
+  "detectors/container_anomaly.py": {
+    "mtime": 1787381582.8069837,
+    "ast_hash": "e4bb4de814065088c2bfd834c773e8cd",
+    "semantic_hash": ""
+  },
+  "detectors/container_escape.py": {
+    "mtime": 1787430128.791869,
+    "ast_hash": "3782a660a63788445e276e070eae0b3d",
+    "semantic_hash": ""
+  },
+  "detectors/registry.py": {
+    "mtime": 1787430154.8961542,
+    "ast_hash": "bb97daa7b284ce9c248530e6d07c39c1",
+    "semantic_hash": ""
+  },
+  "parser/docker_parser.py": {
+    "mtime": 1787381545.399799,
+    "ast_hash": "49c66707e4ed19fe5fec397a0b5994f8",
+    "semantic_hash": ""
+  },
+  "parser/log_source.py": {
+    "mtime": 1787333307.4008992,
+    "ast_hash": "4f842fcfc68e58844490a60204cf2ac4",
     "semantic_hash": ""
   }
 }
