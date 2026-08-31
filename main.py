@@ -4,6 +4,7 @@ from datetime import datetime
 
 from parser.ssh_parser import identify_event as parse_ssh, set_reference_time
 from parser.docker_parser import identify_event as parse_docker
+from parser.web_parser import identify_event as parse_web
 from parser.log_source import detect_platform, detect_ssh_log, read_lines
 
 from detectors.registry import DETECTORS
@@ -13,6 +14,7 @@ from outputs.stats import generate_statistics
 
 SSH_DATASET = "sample_logs/ssh_dataset_v1.txt"
 DOCKER_DATASET = "sample_logs/docker_events_v1.jsonl"
+WEB_DATASET = "sample_logs/web_access_v1.log"
 
 def sources():
     """
@@ -44,6 +46,9 @@ def sources():
 
     with open(DOCKER_DATASET) as file:
         yield "docker", file.readlines(), parse_docker
+
+    with open(WEB_DATASET) as file:
+        yield "web", file.readlines(), parse_web
 
 
 def collect_events():

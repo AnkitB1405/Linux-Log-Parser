@@ -14,12 +14,14 @@ from datetime import datetime
 
 from parser.ssh_parser import identify_event, set_reference_time, _parse_bsd
 from parser.docker_parser import identify_event as identify_docker_event
+from parser.web_parser import identify_event as identify_web_event
 from detectors.container_anomaly import detect_container_anomaly
 from detectors.container_escape import detect_container_escape, assess
 from detectors.registry import run_detectors
 
 DATASET = "sample_logs/ssh_dataset_v1.txt"
 DOCKER_DATASET = "sample_logs/docker_events_v1.jsonl"
+WEB_DATASET = "sample_logs/web_access_v1.log"
 
 # Captured from a real homelab `docker events` run. Service names and build
 # labels are redacted; every event shape, sequence and command is untouched.
@@ -53,6 +55,9 @@ EXPECTED_ALERTS = [
     ("unauthorized_auth_method", "192.0.2.91", "high"),
     ("container_exec", "lp-web", "high"),
     ("container_exec", "lp-web", "medium"),
+    ("web_scanning", "172.17.0.1", "high"),
+    ("web_credential_compromise", "203.0.113.77", "high"),
+    ("web_server_errors", "198.51.100.9", "medium"),
 ]
 
 EXPECTED_EVENT_TYPES = {
@@ -77,6 +82,12 @@ EXPECTED_EVENT_TYPES = {
     "container_exec_died": 4,
     "network_connected": 10,
     "network_disconnected": 10,
+    "http_request": 6,
+    "http_not_found": 12,
+    "http_auth_failure": 2,
+    "http_client_error": 1,
+    "http_server_error": 3,
+    "http_error_log": 2,
 }
 
 
@@ -91,7 +102,8 @@ def build_events():
     set_reference_time(datetime.fromtimestamp(os.path.getmtime(DATASET)))
 
     for path, parse in ((DATASET, identify_event),
-                        (DOCKER_DATASET, identify_docker_event)):
+                        (DOCKER_DATASET, identify_docker_event),
+                        (WEB_DATASET, identify_web_event)):
         with open(path) as file:
             for line in file:
                 try:
@@ -232,7 +244,7 @@ def main():
     for event in events:
         missing = required - set(event)
         assert not missing, f"{event['event_type']} missing {missing}"
-        assert event["log_source"] in ("ssh", "docker"), event
+        assert event["log_source"] in ("ssh", "docker", "web"), event
 
     ids = [e["id"] for e in events]
     assert len(set(ids)) == len(ids), "event ids are not unique"
