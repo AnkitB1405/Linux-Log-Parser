@@ -83,7 +83,7 @@ Planned:
 
 # Phase 2 — Additional Parsers 🔄
 
-Current Progress: ~30%
+Current Progress: ~50%
 
 > **Unblocked as of Day 5.** Both dependencies are closed: the normalized event schema
 > (Phase 4) and regex parsing with an envelope/message split (Day 5). A new source is now a
@@ -137,10 +137,13 @@ Planned events:
 
 Planned events:
 
-- [ ] 404 Detection
-- [ ] 500 Error Detection
-- [ ] Web Scanning Detection
-- [ ] Traffic Anomalies
+- [x] 404 Detection
+- [x] 500 Error Detection
+- [x] Web Scanning Detection (volume + self-identifying scanner agents)
+- [x] Web credential attack (401/403 burst, and burst-then-success)
+- [ ] Traffic Anomalies (volume/rate baselining)
+- [x] Apache/Nginx access log parser (Common + Combined)
+- [x] Apache error log parser
 
 ---
 
@@ -526,7 +529,7 @@ Phase 0   ██████████ 100%
 
 Phase 1   ██████████ 100%
 
-Phase 2   ███░░░░░░░ 30%
+Phase 2   █████░░░░░ 50%
 
 Phase 3   █████░░░░░ 55%
 
