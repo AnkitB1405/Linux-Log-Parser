@@ -3,9 +3,9 @@
         "severity": "medium",
         "alert_type": "bruteforce",
         "source_ip": "198.51.100.10",
-        "timestamp": "1900-06-11T15:01:11",
+        "timestamp": "2026-06-11T15:01:11",
         "event_ids": [
-            "960cc7f2afc9"
+            "a77ee1ce3c40"
         ],
         "recommended_action": "monitor"
     },
@@ -13,9 +13,9 @@
         "severity": "medium",
         "alert_type": "bruteforce",
         "source_ip": "198.51.100.11",
-        "timestamp": "1900-06-11T15:02:12",
+        "timestamp": "2026-06-11T15:02:12",
         "event_ids": [
-            "1654adc4bd17"
+            "06d10bfe6983"
         ],
         "recommended_action": "monitor"
     },
@@ -23,9 +23,9 @@
         "severity": "medium",
         "alert_type": "bruteforce",
         "source_ip": "203.0.113.40",
-        "timestamp": "1900-06-11T15:03:18",
+        "timestamp": "2026-06-11T15:03:18",
         "event_ids": [
-            "234d23309651"
+            "706952b86e10"
         ],
         "recommended_action": "monitor"
     },
@@ -33,23 +33,9 @@
         "severity": "medium",
         "alert_type": "bruteforce",
         "source_ip": "203.0.113.90",
-        "timestamp": "1900-06-11T15:55:12",
+        "timestamp": "2026-06-11T15:55:12",
         "event_ids": [
-            "283d77d471d3"
-        ],
-        "recommended_action": "monitor"
-    },
-    {
-        "severity": "medium",
-        "alert_type": "root_attack",
-        "source_ip": "203.0.113.40",
-        "attempts": 4,
-        "timestamp": "1900-06-11T15:03:14",
-        "event_ids": [
-            "1e62e4bede23",
-            "20646cd146da",
-            "ac7b7340cb9e",
-            "294fb6f119c8"
+            "9778085085e6"
         ],
         "recommended_action": "monitor"
     },
@@ -57,44 +43,45 @@
         "severity": "high",
         "alert_type": "root_bruteforce",
         "source_ip": "203.0.113.40",
-        "timestamp": "1900-06-11T15:03:18",
+        "timestamp": "2026-06-11T15:03:18",
         "event_ids": [
-            "1e62e4bede23",
-            "20646cd146da",
-            "ac7b7340cb9e",
-            "294fb6f119c8",
-            "234d23309651"
+            "814a4f80ced9",
+            "cd7d6aede324",
+            "55c22bb4dba3",
+            "374709922a52",
+            "706952b86e10"
         ],
-        "recommended_action": "block_ip and report"
+        "recommended_action": "block_ip and report",
+        "attempts": 4
     },
     {
         "severity": "medium",
         "alert_type": "slow_bruteforce",
         "source_ip": "192.0.2.20",
-        "attempts": 5,
-        "timestamp": "1900-06-11T15:07:40",
+        "timestamp": "2026-06-11T15:07:40",
         "event_ids": [
-            "4b11e2d139a0",
-            "7c81e9c3404e",
-            "377a8f8882ec",
-            "e781eae7bf3a",
-            "dd0db8977307"
+            "0a6cac1e99a9",
+            "5cb7857c79d1",
+            "bdb3fffe8c00",
+            "85bd1d7f32f3",
+            "212c97b7359a"
         ],
-        "recommended_action": "monitor"
+        "recommended_action": "monitor",
+        "attempts": 5
     },
     {
         "severity": "high",
         "alert_type": "service_instability",
         "service": "ssh",
         "events": 6,
-        "timestamp": "1900-06-11T15:50:25",
+        "timestamp": "2026-06-11T15:50:25",
         "event_ids": [
-            "d65cdf1a4c82",
-            "51245691ebdb",
-            "da06db6a523d",
-            "df82c32c0735",
-            "3cc3959d238c",
-            "272ee9520ae7"
+            "ae2a2f998749",
+            "ac7000b9bebd",
+            "6afdd3b6fabd",
+            "730c11b68c58",
+            "e028979d23be",
+            "b70c4d47abdb"
         ],
         "recommended_action": "investigate service immediately"
     },
@@ -105,14 +92,14 @@
         "username": "analyst",
         "source_ip": "192.0.2.20",
         "failed_attempts": 5,
-        "timestamp": "1900-06-11T15:08:20",
+        "timestamp": "2026-06-11T15:08:20",
         "event_ids": [
-            "4b11e2d139a0",
-            "7c81e9c3404e",
-            "377a8f8882ec",
-            "e781eae7bf3a",
-            "dd0db8977307",
-            "e72c00de96d3"
+            "0a6cac1e99a9",
+            "5cb7857c79d1",
+            "bdb3fffe8c00",
+            "85bd1d7f32f3",
+            "212c97b7359a",
+            "c0f443feb288"
         ],
         "recommended_action": "verify login"
     },
@@ -122,12 +109,12 @@
         "service": "ssh",
         "source_ip": "203.0.113.40",
         "windows": 2,
-        "timestamp": "1900-06-11T15:03:14",
+        "timestamp": "2026-06-11T15:03:14",
         "event_ids": [
-            "1e62e4bede23",
-            "20646cd146da",
-            "ac7b7340cb9e",
-            "294fb6f119c8"
+            "814a4f80ced9",
+            "cd7d6aede324",
+            "55c22bb4dba3",
+            "374709922a52"
         ],
         "recommended_action": "monitor activity"
     },
@@ -137,13 +124,13 @@
         "service": "ssh",
         "source_ip": "192.0.2.20",
         "windows": 3,
-        "timestamp": "1900-06-11T15:07:40",
+        "timestamp": "2026-06-11T15:07:40",
         "event_ids": [
-            "4b11e2d139a0",
-            "7c81e9c3404e",
-            "377a8f8882ec",
-            "e781eae7bf3a",
-            "dd0db8977307"
+            "0a6cac1e99a9",
+            "5cb7857c79d1",
+            "bdb3fffe8c00",
+            "85bd1d7f32f3",
+            "212c97b7359a"
         ],
         "recommended_action": "monitor activity"
     },
@@ -153,16 +140,16 @@
         "service": "ssh",
         "source_ip": "198.51.100.55",
         "windows": 6,
-        "timestamp": "1900-06-11T15:36:00",
+        "timestamp": "2026-06-11T15:36:00",
         "event_ids": [
-            "43db7029365d",
-            "2ef7fe71675b",
-            "167519f71dcb",
-            "81ff4f194a04",
-            "07838dac3ccf",
-            "69115464e816",
-            "bc3a8a629a2e",
-            "7f36f0eece39"
+            "80948f789dc9",
+            "a2213af70bb5",
+            "367a2bdb8a4c",
+            "2087b8625de6",
+            "4e5aef9419c7",
+            "ae6efb568317",
+            "a3774f4f283a",
+            "8c0946c51188"
         ],
         "recommended_action": "investigate immediately"
     },
@@ -172,10 +159,10 @@
         "service": "ssh",
         "username": "user01",
         "duration": 12.0,
-        "timestamp": "1900-06-11T15:10:12",
+        "timestamp": "2026-06-11T15:10:12",
         "event_ids": [
-            "413e72bd465a",
-            "551bd6e2f781"
+            "14838dddb1d6",
+            "301256c3919c"
         ],
         "recommended_action": "monitor"
     },
@@ -185,10 +172,10 @@
         "service": "ssh",
         "username": "user02",
         "duration": 10.0,
-        "timestamp": "1900-06-11T15:11:10",
+        "timestamp": "2026-06-11T15:11:10",
         "event_ids": [
-            "23eeb2014f35",
-            "2f48d32fd295"
+            "afd1c0f6c214",
+            "7a8a28fe8c6c"
         ],
         "recommended_action": "monitor"
     },
@@ -198,10 +185,10 @@
         "service": "ssh",
         "username": "user03",
         "duration": 8.0,
-        "timestamp": "1900-06-11T15:12:08",
+        "timestamp": "2026-06-11T15:12:08",
         "event_ids": [
-            "3cdbda384f1b",
-            "1e7d8bef4c9e"
+            "4b0c538bf748",
+            "ebf38c68a5a2"
         ],
         "recommended_action": "monitor"
     },
@@ -211,10 +198,10 @@
         "service": "ssh",
         "username": "engineer",
         "duration": 6.0,
-        "timestamp": "1900-06-11T15:40:06",
+        "timestamp": "2026-06-11T15:40:06",
         "event_ids": [
-            "dda6feedf9ab",
-            "99825498c625"
+            "00bcac42212b",
+            "e65dcd955f43"
         ],
         "recommended_action": "monitor"
     },
@@ -225,9 +212,9 @@
         "username": "developer",
         "source_ip": "192.0.2.25",
         "auth_method": "publickey",
-        "timestamp": "1900-06-11T15:09:00",
+        "timestamp": "2026-06-11T15:09:00",
         "event_ids": [
-            "d634fba952d3"
+            "a0d71c607054"
         ],
         "recommended_action": "inspect authorized_keys for this user and revoke unknown keys"
     },
@@ -238,9 +225,9 @@
         "username": "operator",
         "source_ip": "192.0.2.91",
         "auth_method": "publickey",
-        "timestamp": "1900-06-11T15:42:00",
+        "timestamp": "2026-06-11T15:42:00",
         "event_ids": [
-            "e0e06770989e"
+            "5c2916022b4d"
         ],
         "recommended_action": "inspect authorized_keys for this user and revoke unknown keys"
     },
@@ -253,7 +240,7 @@
         "command": "ls /",
         "timestamp": "2026-08-21T22:08:09.799866",
         "event_ids": [
-            "66a7c974187d"
+            "3a8461f665f9"
         ],
         "recommended_action": "confirm this exec was expected"
     },
@@ -266,7 +253,7 @@
         "command": "sh -c cat /etc/passwd",
         "timestamp": "2026-08-21T22:08:09.877100",
         "event_ids": [
-            "e4d7683b305c"
+            "eba51b2d55ff"
         ],
         "recommended_action": "interactive shell in a container \u2014 confirm who ran it"
     }
