@@ -135,9 +135,12 @@ def check_escaped_quotes():
     Line shape below is taken from that dataset.
     """
 
-    line = (r'192.168.10.81 - - [04/Mar/2020:18:02:09 +0000] '
-            r'"GET /forumdisplay.php?f=2&comma=\\".system('id').\\" HTTP/1.1" '
-            r'200 4512 "-" "Mozilla/5.00 (Nikto/2.1.5)"')
+    # The request field as Apache writes it: the payload's own quotes escaped.
+    request = r"""GET /forumdisplay.php?f=2&comma=\".system('id').\" HTTP/1.1"""
+    agent = "Mozilla/5.00 (Nikto/2.1.5)"
+
+    line = (f'192.168.10.81 - - [04/Mar/2020:18:02:09 +0000] '
+            f'"{request}" 200 4512 "-" "{agent}"')
 
     event = identify_web_event(line)
 
