@@ -42,7 +42,7 @@ Current Progress: 100%
 - [x] Regex-based parsing (pattern table replaces token-index parsing)
 - [x] Envelope / message split (syslog wrapper parsed separately from the message body)
 - [x] Line-variant tolerance (`invalid user` / `authenticating user` prefixes, missing usernames)
-- [x] Year-aware timestamps on the primary target (Mint's RFC3339 `auth.log`; the BSD path still lands in 1900)
+- [x] Year-aware timestamps on **both** paths — Mint's RFC3339 carries a real year; year-less BSD lines resolve against the log file's mtime with Dec→Jan rollover handled
 - [x] Multi-envelope parsing with format auto-detection
 - [x] Log-source auto-detection per machine (`parser/log_source.py`)
 - [x] `Accepted publickey` — parsed and alerted on as an unsanctioned auth method
@@ -75,7 +75,7 @@ Planned:
 - [x] Persist Alerts
 - [x] Alert → event traceability (`event_ids`)
 - [x] Regression test for the detection engine (`test_detectors.py`)
-- [x] Severity band fixes (both were non-exclusive tiers caused by a duplicated alert dict)
+- [x] Severity band fixes — all three cases were non-exclusive tiers caused by a duplicated alert dict (`credential_compromise`, `behavior`, `root_attack`/`root_bruteforce`)
 - [ ] Detection History
 - [ ] Event Archiving
 
@@ -465,6 +465,60 @@ Focus Areas:
 
 ---
 
+# Phase 11 — External Evaluation (AIT Log Data Set) 🔄
+
+Current Progress: 0%
+
+> **Why this phase exists.** Every "it works" result so far is circular. The SSH
+> fixture was written alongside the parser and the sample blocks were generated
+> to match the expected format, so the input passes by construction. The one
+> time genuinely external data arrived — 84 real Docker events — it immediately
+> produced four findings that changed the design. AIT provides external ground
+> truth with published labels for the first time.
+
+Dataset: Landauer, M., Skopik, F., Frank, M., Hotwagner, W., Wurzenberger, M., &
+Rauber, A. (2022). *Maintainable Log Datasets for Evaluation of Intrusion
+Detection Systems.* IEEE TDSC. 8 datasets, 20 log file types, 8 files labelled
+for 10 unique attack steps.
+
+## Feasibility (do these before anything else)
+
+- [ ] Coverage check — which of AIT's 20 log types can the current parsers consume
+- [ ] Schema check — does the AIT label format map onto `create_event()` without a rewrite (**v1 blocker if not**)
+
+## Evaluation
+
+- [ ] Tag v1 and stop adding scope
+- [ ] Pick one or two AIT datasets for tuning; hold the rest out untouched
+- [ ] Run v1 against the tuning set; record TP / FP / FN per detector per scenario
+- [ ] Run against the holdout set **without further tuning**
+- [ ] Report tuned and holdout numbers separately in the README
+- [ ] Results table including the rows that look bad
+- [ ] Write up the delta between synthetic and AIT performance
+
+## Methodology rules (non-negotiable)
+
+- Tuning on the full set and reporting only the tuned figures is circular
+  validation laundered through a respectable dataset. Hold data out.
+- If holdout numbers are worse, say so. That disclosure is worth more than the
+  numbers.
+- Do not claim the dataset is "one of the best". Cite it and let the citation
+  carry the weight.
+- Target reporting format: `SSH brute force: 0.91 recall, 0.34 precision —
+  false positives dominated by X`.
+
+## Explicitly out of scope
+
+- **Wazuh.** Running the mature SIEM you are building a worse version of, inside
+  the same project, is self-defeating. It belongs in a separate SIEM /
+  Detection Engineering Lab project, where it is useful as a *benchmark* to
+  measure this engine against — not as a component of it.
+- Anything not already in Phases 0–10. v1 scope is frozen: SSH + Docker +
+  syslog + network, rule-based detection.
+
+
+---
+
 # Progress Overview
 
 ```text
@@ -489,6 +543,7 @@ Phase 8   ░░░░░░░░░░ 0%
 Phase 9   ░░░░░░░░░░ 0%
 
 Phase 10  ░░░░░░░░░░ 0%
+Phase 11  ░░░░░░░░░░ 0%
 ```
 
 ---
