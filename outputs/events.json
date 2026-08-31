@@ -1,6 +1,6 @@
 [
     {
-        "id": "ece91ee2f28e",
+        "id": "31dbe96835e0",
         "timestamp": "2026-06-11T15:00:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -11,7 +11,7 @@
         "details": {}
     },
     {
-        "id": "31ec6c472bce",
+        "id": "b035d385d61a",
         "timestamp": "2026-06-11T15:01:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -22,7 +22,7 @@
         "details": {}
     },
     {
-        "id": "8b320d57f601",
+        "id": "d664f950b5d6",
         "timestamp": "2026-06-11T15:01:02",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -33,7 +33,7 @@
         "details": {}
     },
     {
-        "id": "804f5fe93de2",
+        "id": "97c2759adccd",
         "timestamp": "2026-06-11T15:01:05",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -44,7 +44,7 @@
         "details": {}
     },
     {
-        "id": "dfc0427be868",
+        "id": "a6887c83a5a8",
         "timestamp": "2026-06-11T15:01:08",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -55,7 +55,7 @@
         "details": {}
     },
     {
-        "id": "a77ee1ce3c40",
+        "id": "6e57a1310f98",
         "timestamp": "2026-06-11T15:01:11",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -73,7 +73,7 @@
         }
     },
     {
-        "id": "9795f848342d",
+        "id": "402784bc8270",
         "timestamp": "2026-06-11T15:02:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -84,7 +84,7 @@
         "details": {}
     },
     {
-        "id": "c93c1c938e71",
+        "id": "c7c9380c517f",
         "timestamp": "2026-06-11T15:02:04",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -95,7 +95,7 @@
         "details": {}
     },
     {
-        "id": "832dd9f77e37",
+        "id": "13df8ddae019",
         "timestamp": "2026-06-11T15:02:06",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -106,7 +106,7 @@
         "details": {}
     },
     {
-        "id": "304c712d55eb",
+        "id": "750987aa2e87",
         "timestamp": "2026-06-11T15:02:08",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -117,7 +117,7 @@
         "details": {}
     },
     {
-        "id": "06d10bfe6983",
+        "id": "7bc52fd1457f",
         "timestamp": "2026-06-11T15:02:12",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -135,7 +135,7 @@
         }
     },
     {
-        "id": "814a4f80ced9",
+        "id": "bf6abd35378a",
         "timestamp": "2026-06-11T15:03:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -146,7 +146,7 @@
         "details": {}
     },
     {
-        "id": "cd7d6aede324",
+        "id": "f40553edf02a",
         "timestamp": "2026-06-11T15:03:04",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -157,7 +157,7 @@
         "details": {}
     },
     {
-        "id": "55c22bb4dba3",
+        "id": "e00f5fea3e91",
         "timestamp": "2026-06-11T15:03:09",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -168,7 +168,7 @@
         "details": {}
     },
     {
-        "id": "374709922a52",
+        "id": "583fbf691e8c",
         "timestamp": "2026-06-11T15:03:14",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -179,7 +179,7 @@
         "details": {}
     },
     {
-        "id": "706952b86e10",
+        "id": "dbb55668be10",
         "timestamp": "2026-06-11T15:03:18",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -197,7 +197,7 @@
         }
     },
     {
-        "id": "0a6cac1e99a9",
+        "id": "b16bfc6d501e",
         "timestamp": "2026-06-11T15:05:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -208,7 +208,7 @@
         "details": {}
     },
     {
-        "id": "5cb7857c79d1",
+        "id": "6bcfe0e9caf1",
         "timestamp": "2026-06-11T15:05:40",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -219,7 +219,7 @@
         "details": {}
     },
     {
-        "id": "bdb3fffe8c00",
+        "id": "349785e0bce9",
         "timestamp": "2026-06-11T15:06:20",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -230,7 +230,7 @@
         "details": {}
     },
     {
-        "id": "85bd1d7f32f3",
+        "id": "709a68436fdd",
         "timestamp": "2026-06-11T15:07:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -241,7 +241,7 @@
         "details": {}
     },
     {
-        "id": "212c97b7359a",
+        "id": "805cdb2d0c91",
         "timestamp": "2026-06-11T15:07:40",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -252,7 +252,7 @@
         "details": {}
     },
     {
-        "id": "c0f443feb288",
+        "id": "3c314df6a8be",
         "timestamp": "2026-06-11T15:08:20",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -265,7 +265,7 @@
         }
     },
     {
-        "id": "7a36eb74411b",
+        "id": "0584aff759ca",
         "timestamp": "2026-06-11T15:08:20",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -278,7 +278,7 @@
         }
     },
     {
-        "id": "a0d71c607054",
+        "id": "0ffff6595309",
         "timestamp": "2026-06-11T15:09:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -291,7 +291,7 @@
         }
     },
     {
-        "id": "01061d2e5649",
+        "id": "f65d897a5b02",
         "timestamp": "2026-06-11T15:09:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -304,7 +304,7 @@
         }
     },
     {
-        "id": "e4bb2c41c957",
+        "id": "354945fd9191",
         "timestamp": "2026-06-11T15:10:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -317,7 +317,7 @@
         }
     },
     {
-        "id": "14838dddb1d6",
+        "id": "a6b9856f38ee",
         "timestamp": "2026-06-11T15:10:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -330,7 +330,7 @@
         }
     },
     {
-        "id": "301256c3919c",
+        "id": "4769b51d09c0",
         "timestamp": "2026-06-11T15:10:12",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -341,7 +341,7 @@
         "details": {}
     },
     {
-        "id": "80c9a5d1f7f8",
+        "id": "e8011224937e",
         "timestamp": "2026-06-11T15:11:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -354,7 +354,7 @@
         }
     },
     {
-        "id": "afd1c0f6c214",
+        "id": "9597d0375235",
         "timestamp": "2026-06-11T15:11:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -367,7 +367,7 @@
         }
     },
     {
-        "id": "7a8a28fe8c6c",
+        "id": "b60012587392",
         "timestamp": "2026-06-11T15:11:10",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -378,7 +378,7 @@
         "details": {}
     },
     {
-        "id": "4fa83bfb8b6d",
+        "id": "1bad8a4b607f",
         "timestamp": "2026-06-11T15:12:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -391,7 +391,7 @@
         }
     },
     {
-        "id": "4b0c538bf748",
+        "id": "dbf580a0d83f",
         "timestamp": "2026-06-11T15:12:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -404,7 +404,7 @@
         }
     },
     {
-        "id": "ebf38c68a5a2",
+        "id": "add56ab74ed4",
         "timestamp": "2026-06-11T15:12:08",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -415,7 +415,7 @@
         "details": {}
     },
     {
-        "id": "4cefbd04d5d0",
+        "id": "8e8e10c47c26",
         "timestamp": "2026-06-11T15:13:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -426,7 +426,7 @@
         "details": {}
     },
     {
-        "id": "80b27b61b0ae",
+        "id": "ef2740248d8f",
         "timestamp": "2026-06-11T15:13:03",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -437,7 +437,7 @@
         "details": {}
     },
     {
-        "id": "fceec837eeae",
+        "id": "6b4dd6aeed20",
         "timestamp": "2026-06-11T15:13:20",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -448,7 +448,7 @@
         "details": {}
     },
     {
-        "id": "4d773d8e6be0",
+        "id": "1acb07a0c03b",
         "timestamp": "2026-06-11T15:13:24",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -459,7 +459,7 @@
         "details": {}
     },
     {
-        "id": "8770ad0b72cb",
+        "id": "9b264adf1d14",
         "timestamp": "2026-06-11T15:13:40",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -470,7 +470,7 @@
         "details": {}
     },
     {
-        "id": "a8cd79b6cd19",
+        "id": "29cf55b2df17",
         "timestamp": "2026-06-11T15:13:45",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -481,7 +481,7 @@
         "details": {}
     },
     {
-        "id": "80948f789dc9",
+        "id": "76e6454d46bc",
         "timestamp": "2026-06-11T15:15:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -492,7 +492,7 @@
         "details": {}
     },
     {
-        "id": "a2213af70bb5",
+        "id": "dc4954e5a5da",
         "timestamp": "2026-06-11T15:18:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -503,7 +503,7 @@
         "details": {}
     },
     {
-        "id": "367a2bdb8a4c",
+        "id": "106f45479ebb",
         "timestamp": "2026-06-11T15:21:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -514,7 +514,7 @@
         "details": {}
     },
     {
-        "id": "2087b8625de6",
+        "id": "ec8d4abccd70",
         "timestamp": "2026-06-11T15:24:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -525,7 +525,7 @@
         "details": {}
     },
     {
-        "id": "4e5aef9419c7",
+        "id": "0689a663422d",
         "timestamp": "2026-06-11T15:27:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -536,7 +536,7 @@
         "details": {}
     },
     {
-        "id": "ae6efb568317",
+        "id": "d146ae37e4b8",
         "timestamp": "2026-06-11T15:30:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -547,7 +547,7 @@
         "details": {}
     },
     {
-        "id": "a3774f4f283a",
+        "id": "f96080f9773c",
         "timestamp": "2026-06-11T15:33:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -558,7 +558,7 @@
         "details": {}
     },
     {
-        "id": "8c0946c51188",
+        "id": "d86a76b21035",
         "timestamp": "2026-06-11T15:36:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -569,7 +569,7 @@
         "details": {}
     },
     {
-        "id": "41a2349e3c1e",
+        "id": "a0e4848613db",
         "timestamp": "2026-06-11T15:40:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -582,7 +582,7 @@
         }
     },
     {
-        "id": "00bcac42212b",
+        "id": "1fa20f99b903",
         "timestamp": "2026-06-11T15:40:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -595,7 +595,7 @@
         }
     },
     {
-        "id": "e65dcd955f43",
+        "id": "4a89037e3896",
         "timestamp": "2026-06-11T15:40:06",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -606,7 +606,7 @@
         "details": {}
     },
     {
-        "id": "5c2916022b4d",
+        "id": "72910581657b",
         "timestamp": "2026-06-11T15:42:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -619,7 +619,7 @@
         }
     },
     {
-        "id": "27ef18730f9a",
+        "id": "3cc6776d2b64",
         "timestamp": "2026-06-11T15:42:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -632,7 +632,7 @@
         }
     },
     {
-        "id": "ae2a2f998749",
+        "id": "d9f37f8e4182",
         "timestamp": "2026-06-11T15:50:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -643,7 +643,7 @@
         "details": {}
     },
     {
-        "id": "ac7000b9bebd",
+        "id": "767cf2b72b1f",
         "timestamp": "2026-06-11T15:50:05",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -654,7 +654,7 @@
         "details": {}
     },
     {
-        "id": "6afdd3b6fabd",
+        "id": "756ec74fd3de",
         "timestamp": "2026-06-11T15:50:10",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -665,7 +665,7 @@
         "details": {}
     },
     {
-        "id": "730c11b68c58",
+        "id": "b15528ffbf24",
         "timestamp": "2026-06-11T15:50:15",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -676,7 +676,7 @@
         "details": {}
     },
     {
-        "id": "e028979d23be",
+        "id": "b39f6695014c",
         "timestamp": "2026-06-11T15:50:20",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -687,7 +687,7 @@
         "details": {}
     },
     {
-        "id": "b70c4d47abdb",
+        "id": "1ea56228ad94",
         "timestamp": "2026-06-11T15:50:25",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -698,7 +698,7 @@
         "details": {}
     },
     {
-        "id": "dcbdab64cb9c",
+        "id": "ad5ad1a2f879",
         "timestamp": "2026-06-11T15:55:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -709,7 +709,7 @@
         "details": {}
     },
     {
-        "id": "f9afcbc9679f",
+        "id": "5414185e3c4e",
         "timestamp": "2026-06-11T15:55:02",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -720,7 +720,7 @@
         "details": {}
     },
     {
-        "id": "aeb3a2282351",
+        "id": "b06ca149b41d",
         "timestamp": "2026-06-11T15:55:05",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -731,7 +731,7 @@
         "details": {}
     },
     {
-        "id": "67444f1d7835",
+        "id": "c8b052a25916",
         "timestamp": "2026-06-11T15:55:09",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -742,7 +742,7 @@
         "details": {}
     },
     {
-        "id": "9778085085e6",
+        "id": "4193a9a5818e",
         "timestamp": "2026-06-11T15:55:12",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -760,7 +760,7 @@
         }
     },
     {
-        "id": "8c1278b33d3b",
+        "id": "c77fd27ddef4",
         "timestamp": "2026-08-21T22:08:08.427131",
         "log_source": "docker",
         "host": "local",
@@ -775,7 +775,7 @@
         }
     },
     {
-        "id": "790905be29c7",
+        "id": "40086609beec",
         "timestamp": "2026-08-21T22:08:08.754704",
         "log_source": "docker",
         "host": "local",
@@ -789,7 +789,7 @@
         }
     },
     {
-        "id": "629dc68549e1",
+        "id": "ec22d54c38d4",
         "timestamp": "2026-08-21T22:08:08.773001",
         "log_source": "docker",
         "host": "local",
@@ -804,7 +804,7 @@
         }
     },
     {
-        "id": "3a8461f665f9",
+        "id": "d4de12d36465",
         "timestamp": "2026-08-21T22:08:09.799866",
         "log_source": "docker",
         "host": "local",
@@ -821,7 +821,7 @@
         }
     },
     {
-        "id": "979d4bd7b948",
+        "id": "5d673b982f74",
         "timestamp": "2026-08-21T22:08:09.804721",
         "log_source": "docker",
         "host": "local",
@@ -838,7 +838,7 @@
         }
     },
     {
-        "id": "f70dd1e81b25",
+        "id": "0f5eadac65c4",
         "timestamp": "2026-08-21T22:08:09.853418",
         "log_source": "docker",
         "host": "local",
@@ -855,7 +855,7 @@
         }
     },
     {
-        "id": "eba51b2d55ff",
+        "id": "700f7643d00d",
         "timestamp": "2026-08-21T22:08:09.877100",
         "log_source": "docker",
         "host": "local",
@@ -872,7 +872,7 @@
         }
     },
     {
-        "id": "ef8e65961de0",
+        "id": "c91cb1d57324",
         "timestamp": "2026-08-21T22:08:09.878924",
         "log_source": "docker",
         "host": "local",
@@ -889,7 +889,7 @@
         }
     },
     {
-        "id": "56989d9625ac",
+        "id": "5d22d8944424",
         "timestamp": "2026-08-21T22:08:09.933767",
         "log_source": "docker",
         "host": "local",
@@ -906,7 +906,7 @@
         }
     },
     {
-        "id": "2986b37bd1a5",
+        "id": "c0e8d23072f4",
         "timestamp": "2026-08-21T22:08:09.968445",
         "log_source": "docker",
         "host": "local",
@@ -922,7 +922,7 @@
         }
     },
     {
-        "id": "a076e8a3b2ba",
+        "id": "238b0d684c76",
         "timestamp": "2026-08-21T22:08:10.112709",
         "log_source": "docker",
         "host": "local",
@@ -936,7 +936,7 @@
         }
     },
     {
-        "id": "a4334feef45c",
+        "id": "c95352e03fba",
         "timestamp": "2026-08-21T22:08:10.113890",
         "log_source": "docker",
         "host": "local",
@@ -951,7 +951,7 @@
         }
     },
     {
-        "id": "36765f465271",
+        "id": "208a003502c2",
         "timestamp": "2026-08-21T22:08:10.119274",
         "log_source": "docker",
         "host": "local",
@@ -968,7 +968,7 @@
         }
     },
     {
-        "id": "2cdb07937ff6",
+        "id": "eb0be4ee9754",
         "timestamp": "2026-08-21T22:08:10.258085",
         "log_source": "docker",
         "host": "local",
@@ -982,7 +982,7 @@
         }
     },
     {
-        "id": "66a329093b2f",
+        "id": "47b4ed0741df",
         "timestamp": "2026-08-21T22:08:10.275649",
         "log_source": "docker",
         "host": "local",
@@ -997,7 +997,7 @@
         }
     },
     {
-        "id": "bc853f043151",
+        "id": "a2350a8e8aab",
         "timestamp": "2026-08-21T22:08:10.275688",
         "log_source": "docker",
         "host": "local",
@@ -1012,7 +1012,7 @@
         }
     },
     {
-        "id": "11ab4bff097a",
+        "id": "2b2f2dd2a37d",
         "timestamp": "2026-08-21T22:08:10.313168",
         "log_source": "docker",
         "host": "local",
@@ -1028,7 +1028,7 @@
         }
     },
     {
-        "id": "458f7b33fc71",
+        "id": "0c72123d0826",
         "timestamp": "2026-08-21T22:08:10.437221",
         "log_source": "docker",
         "host": "local",
@@ -1042,7 +1042,7 @@
         }
     },
     {
-        "id": "3998eb2e47a1",
+        "id": "484f2134b009",
         "timestamp": "2026-08-21T22:08:10.437807",
         "log_source": "docker",
         "host": "local",
@@ -1057,7 +1057,7 @@
         }
     },
     {
-        "id": "52c0bf87ffe8",
+        "id": "5779c32adec1",
         "timestamp": "2026-08-21T22:08:10.442907",
         "log_source": "docker",
         "host": "local",
@@ -1074,7 +1074,7 @@
         }
     },
     {
-        "id": "e9ea5966fca6",
+        "id": "bc19c96e59d5",
         "timestamp": "2026-08-21T22:08:10.592675",
         "log_source": "docker",
         "host": "local",
@@ -1088,7 +1088,7 @@
         }
     },
     {
-        "id": "b188c543fd34",
+        "id": "cece11632b2b",
         "timestamp": "2026-08-21T22:08:10.607458",
         "log_source": "docker",
         "host": "local",
@@ -1103,7 +1103,7 @@
         }
     },
     {
-        "id": "f418ac4c5f2f",
+        "id": "49d648d0a420",
         "timestamp": "2026-08-21T22:08:10.607494",
         "log_source": "docker",
         "host": "local",
@@ -1118,7 +1118,7 @@
         }
     },
     {
-        "id": "88c64c92f138",
+        "id": "52ee349480fc",
         "timestamp": "2026-08-21T22:08:10.644569",
         "log_source": "docker",
         "host": "local",
@@ -1134,7 +1134,7 @@
         }
     },
     {
-        "id": "16716dd69794",
+        "id": "82d34e7b0269",
         "timestamp": "2026-08-21T22:08:10.758349",
         "log_source": "docker",
         "host": "local",
@@ -1148,7 +1148,7 @@
         }
     },
     {
-        "id": "8c9ed4ebaae4",
+        "id": "fe2721775119",
         "timestamp": "2026-08-21T22:08:10.759299",
         "log_source": "docker",
         "host": "local",
@@ -1163,7 +1163,7 @@
         }
     },
     {
-        "id": "fe43b36b9c67",
+        "id": "4c934348d83f",
         "timestamp": "2026-08-21T22:08:10.763078",
         "log_source": "docker",
         "host": "local",
@@ -1180,7 +1180,7 @@
         }
     },
     {
-        "id": "cf0f09774455",
+        "id": "33bcf15d61c2",
         "timestamp": "2026-08-21T22:08:10.900002",
         "log_source": "docker",
         "host": "local",
@@ -1194,7 +1194,7 @@
         }
     },
     {
-        "id": "3f3c40bd7eca",
+        "id": "dbc851d51372",
         "timestamp": "2026-08-21T22:08:10.914312",
         "log_source": "docker",
         "host": "local",
@@ -1209,7 +1209,7 @@
         }
     },
     {
-        "id": "4fdd97821df3",
+        "id": "ce2c7cc8a6a6",
         "timestamp": "2026-08-21T22:08:10.914354",
         "log_source": "docker",
         "host": "local",
@@ -1224,7 +1224,7 @@
         }
     },
     {
-        "id": "26e6477a0a6c",
+        "id": "e78b22f90401",
         "timestamp": "2026-08-21T22:08:10.953040",
         "log_source": "docker",
         "host": "local",
@@ -1240,7 +1240,7 @@
         }
     },
     {
-        "id": "43b5a81221c5",
+        "id": "71af5ed69f94",
         "timestamp": "2026-08-21T22:08:11.075037",
         "log_source": "docker",
         "host": "local",
@@ -1254,7 +1254,7 @@
         }
     },
     {
-        "id": "4f9bf9739870",
+        "id": "5b1ca456eee2",
         "timestamp": "2026-08-21T22:08:11.091367",
         "log_source": "docker",
         "host": "local",
@@ -1269,7 +1269,7 @@
         }
     },
     {
-        "id": "8837c028f5a9",
+        "id": "bbbcec43dd6f",
         "timestamp": "2026-08-21T22:08:11.093980",
         "log_source": "docker",
         "host": "local",
@@ -1286,7 +1286,7 @@
         }
     },
     {
-        "id": "e8b89baf9cd9",
+        "id": "a6f3742b9b8e",
         "timestamp": "2026-08-21T22:08:11.255802",
         "log_source": "docker",
         "host": "local",
@@ -1300,7 +1300,7 @@
         }
     },
     {
-        "id": "abb7ea189edd",
+        "id": "aa72d71735db",
         "timestamp": "2026-08-21T22:08:11.272547",
         "log_source": "docker",
         "host": "local",
@@ -1315,7 +1315,7 @@
         }
     },
     {
-        "id": "60517a4f74e7",
+        "id": "d128eac33432",
         "timestamp": "2026-08-21T22:08:11.337929",
         "log_source": "docker",
         "host": "local",
@@ -1330,7 +1330,7 @@
         }
     },
     {
-        "id": "11a604127c78",
+        "id": "8b5e1ed65717",
         "timestamp": "2026-08-21T22:08:11.342080",
         "log_source": "docker",
         "host": "local",
@@ -1345,7 +1345,7 @@
         }
     },
     {
-        "id": "5ba1d06451a2",
+        "id": "f7635f2e5750",
         "timestamp": "2026-08-21T22:08:11.498518",
         "log_source": "docker",
         "host": "local",
@@ -1359,7 +1359,7 @@
         }
     },
     {
-        "id": "4f67c92649da",
+        "id": "f1f3ce58e969",
         "timestamp": "2026-08-21T22:08:11.514642",
         "log_source": "docker",
         "host": "local",
@@ -1374,7 +1374,7 @@
         }
     },
     {
-        "id": "62ebc3196b5b",
+        "id": "3626a9e5ec67",
         "timestamp": "2026-08-21T22:08:11.631787",
         "log_source": "docker",
         "host": "local",
@@ -1388,7 +1388,7 @@
         }
     },
     {
-        "id": "a441f98582d0",
+        "id": "e2a608ac5ed0",
         "timestamp": "2026-08-21T22:08:11.644480",
         "log_source": "docker",
         "host": "local",
@@ -1405,7 +1405,7 @@
         }
     },
     {
-        "id": "e028098fe3ab",
+        "id": "01e40ad0e1c8",
         "timestamp": "2026-08-21T22:08:11.651930",
         "log_source": "docker",
         "host": "local",
@@ -1420,7 +1420,7 @@
         }
     },
     {
-        "id": "77682bf6879d",
+        "id": "683cbeb05b54",
         "timestamp": "2026-08-21T22:08:11.697806",
         "log_source": "docker",
         "host": "local",
@@ -1435,7 +1435,7 @@
         }
     },
     {
-        "id": "4b3692ae45fd",
+        "id": "2092695928cb",
         "timestamp": "2026-08-21T22:08:11.699759",
         "log_source": "docker",
         "host": "local",
@@ -1450,7 +1450,7 @@
         }
     },
     {
-        "id": "d5d572994a19",
+        "id": "11f705bad6a2",
         "timestamp": "2026-08-21T22:08:11.830827",
         "log_source": "docker",
         "host": "local",
@@ -1464,7 +1464,7 @@
         }
     },
     {
-        "id": "a6e8fc4494e0",
+        "id": "cd89e8f67cdf",
         "timestamp": "2026-08-21T22:08:11.854120",
         "log_source": "docker",
         "host": "local",
@@ -1479,7 +1479,7 @@
         }
     },
     {
-        "id": "d040ea5f6084",
+        "id": "72f95d7e8733",
         "timestamp": "2026-08-21T22:08:11.962300",
         "log_source": "docker",
         "host": "local",
@@ -1493,7 +1493,7 @@
         }
     },
     {
-        "id": "ff500b78fe84",
+        "id": "93e2ac0706e9",
         "timestamp": "2026-08-21T22:08:11.983408",
         "log_source": "docker",
         "host": "local",
@@ -1510,7 +1510,7 @@
         }
     },
     {
-        "id": "98bfe52edefe",
+        "id": "2a11bc63ceff",
         "timestamp": "2026-08-21T22:08:11.988809",
         "log_source": "docker",
         "host": "local",
@@ -1525,7 +1525,7 @@
         }
     },
     {
-        "id": "98dcc64818c4",
+        "id": "7bfc4b9eed45",
         "timestamp": "2026-08-21T22:08:12.035754",
         "log_source": "docker",
         "host": "local",
@@ -1540,7 +1540,7 @@
         }
     },
     {
-        "id": "4950f9bae9bb",
+        "id": "d97c9b11f9a6",
         "timestamp": "2026-08-21T22:08:12.037545",
         "log_source": "docker",
         "host": "local",
@@ -1555,7 +1555,7 @@
         }
     },
     {
-        "id": "a1a7090a0740",
+        "id": "91dfbbf6bf96",
         "timestamp": "2026-08-21T22:08:12.178780",
         "log_source": "docker",
         "host": "local",
@@ -1569,7 +1569,7 @@
         }
     },
     {
-        "id": "202ca55f2c95",
+        "id": "a01f564f546e",
         "timestamp": "2026-08-21T22:08:12.197527",
         "log_source": "docker",
         "host": "local",
@@ -1584,7 +1584,7 @@
         }
     },
     {
-        "id": "c927c505f6d9",
+        "id": "b06bf2a549d3",
         "timestamp": "2026-08-21T22:08:12.281337",
         "log_source": "docker",
         "host": "local",
@@ -1598,7 +1598,7 @@
         }
     },
     {
-        "id": "9d4bc5445f35",
+        "id": "c468bcc24780",
         "timestamp": "2026-08-21T22:08:12.295815",
         "log_source": "docker",
         "host": "local",
@@ -1615,7 +1615,7 @@
         }
     },
     {
-        "id": "8bc670e553fa",
+        "id": "a0aa6440fcca",
         "timestamp": "2026-08-21T22:08:12.301094",
         "log_source": "docker",
         "host": "local",
@@ -1630,7 +1630,7 @@
         }
     },
     {
-        "id": "6c343855efaa",
+        "id": "7fc9b93b6367",
         "timestamp": "2026-08-21T22:08:12.355676",
         "log_source": "docker",
         "host": "local",
@@ -1645,7 +1645,7 @@
         }
     },
     {
-        "id": "58cd09c37e73",
+        "id": "3cf34a648a31",
         "timestamp": "2026-08-21T22:08:12.357994",
         "log_source": "docker",
         "host": "local",
@@ -1660,7 +1660,7 @@
         }
     },
     {
-        "id": "142c38bb460b",
+        "id": "e7f98348f3ff",
         "timestamp": "2026-08-21T22:08:12.504066",
         "log_source": "docker",
         "host": "local",
@@ -1674,7 +1674,7 @@
         }
     },
     {
-        "id": "d047921bdcc1",
+        "id": "8f7305042ac8",
         "timestamp": "2026-08-21T22:08:12.520751",
         "log_source": "docker",
         "host": "local",
@@ -1689,7 +1689,7 @@
         }
     },
     {
-        "id": "444bbffeaa97",
+        "id": "089d5b576f00",
         "timestamp": "2026-08-21T22:08:12.607723",
         "log_source": "docker",
         "host": "local",
@@ -1703,7 +1703,7 @@
         }
     },
     {
-        "id": "aaff7b78a080",
+        "id": "997c59943db3",
         "timestamp": "2026-08-21T22:08:12.621379",
         "log_source": "docker",
         "host": "local",
@@ -1720,7 +1720,7 @@
         }
     },
     {
-        "id": "ea4da8c7ae8a",
+        "id": "4187ec6de512",
         "timestamp": "2026-08-21T22:08:12.626573",
         "log_source": "docker",
         "host": "local",
@@ -1735,7 +1735,7 @@
         }
     },
     {
-        "id": "07d7c4bda0ae",
+        "id": "89b5bd051a15",
         "timestamp": "2026-08-21T22:08:12.675290",
         "log_source": "docker",
         "host": "local",
@@ -1750,7 +1750,7 @@
         }
     },
     {
-        "id": "c160bb4bdc15",
+        "id": "ae9ce67b317a",
         "timestamp": "2026-08-21T22:08:12.677136",
         "log_source": "docker",
         "host": "local",
@@ -1765,7 +1765,7 @@
         }
     },
     {
-        "id": "27719df7c303",
+        "id": "b477900f73c7",
         "timestamp": "2026-08-21T22:08:12.811532",
         "log_source": "docker",
         "host": "local",
@@ -1779,7 +1779,7 @@
         }
     },
     {
-        "id": "da1266260d81",
+        "id": "ce4faaf9fe7d",
         "timestamp": "2026-08-21T22:08:12.827191",
         "log_source": "docker",
         "host": "local",
@@ -1794,7 +1794,7 @@
         }
     },
     {
-        "id": "02bd38d29464",
+        "id": "c0039460d694",
         "timestamp": "2026-08-21T22:08:12.917019",
         "log_source": "docker",
         "host": "local",
@@ -1808,7 +1808,7 @@
         }
     },
     {
-        "id": "db4a0f176bba",
+        "id": "6acbc9e63334",
         "timestamp": "2026-08-21T22:08:12.924949",
         "log_source": "docker",
         "host": "local",
@@ -1825,7 +1825,7 @@
         }
     },
     {
-        "id": "9bd1e89e274c",
+        "id": "8bf542b2316e",
         "timestamp": "2026-08-21T22:08:12.930630",
         "log_source": "docker",
         "host": "local",
@@ -1840,7 +1840,7 @@
         }
     },
     {
-        "id": "12570166135f",
+        "id": "81d274f026dd",
         "timestamp": "2026-08-21T22:08:12.979762",
         "log_source": "docker",
         "host": "local",
@@ -1855,7 +1855,7 @@
         }
     },
     {
-        "id": "7deec138a424",
+        "id": "73344f361d81",
         "timestamp": "2026-08-21T22:08:13.004732",
         "log_source": "docker",
         "host": "local",
@@ -1870,7 +1870,7 @@
         }
     },
     {
-        "id": "4488094278eb",
+        "id": "e9d5b732d79e",
         "timestamp": "2026-08-21T22:08:13.039682",
         "log_source": "docker",
         "host": "local",
@@ -1886,7 +1886,7 @@
         }
     },
     {
-        "id": "bc334ecf7d94",
+        "id": "3fa1549ce2bc",
         "timestamp": "2026-08-21T22:08:13.157061",
         "log_source": "docker",
         "host": "local",
@@ -1900,7 +1900,7 @@
         }
     },
     {
-        "id": "9ce07204487d",
+        "id": "a6164a284060",
         "timestamp": "2026-08-21T22:08:13.167424",
         "log_source": "docker",
         "host": "local",
@@ -1915,7 +1915,7 @@
         }
     },
     {
-        "id": "2b009ddb6503",
+        "id": "a070f362b4c6",
         "timestamp": "2026-08-21T22:08:13.170750",
         "log_source": "docker",
         "host": "local",
@@ -1932,7 +1932,7 @@
         }
     },
     {
-        "id": "139b36cd115f",
+        "id": "a3f46174a073",
         "timestamp": "2026-08-21T22:08:13.197562",
         "log_source": "docker",
         "host": "local",
@@ -1947,7 +1947,7 @@
         }
     },
     {
-        "id": "e683b249c3cb",
+        "id": "ce9ec5a504ec",
         "timestamp": "2026-08-21T22:08:15.329116",
         "log_source": "docker",
         "host": "local",
@@ -1964,7 +1964,7 @@
         }
     },
     {
-        "id": "178fb3817f94",
+        "id": "bb1b8f046cd3",
         "timestamp": "2026-08-21T22:08:15.329243",
         "log_source": "docker",
         "host": "local",
@@ -1981,7 +1981,7 @@
         }
     },
     {
-        "id": "a26e697c10cf",
+        "id": "11472d671bb1",
         "timestamp": "2026-08-21T22:08:15.866543",
         "log_source": "docker",
         "host": "local",
@@ -1998,7 +1998,7 @@
         }
     },
     {
-        "id": "6383b4c07f25",
+        "id": "9bd2634385d3",
         "timestamp": "2026-08-21T22:08:15.866611",
         "log_source": "docker",
         "host": "local",
@@ -2015,7 +2015,7 @@
         }
     },
     {
-        "id": "1f1cf9356e10",
+        "id": "3cb222896fe3",
         "timestamp": "2026-08-21T22:08:15.929948",
         "log_source": "docker",
         "host": "local",
@@ -2032,7 +2032,7 @@
         }
     },
     {
-        "id": "76d9add1757f",
+        "id": "3f78ba91595d",
         "timestamp": "2026-08-21T22:08:16.007272",
         "log_source": "docker",
         "host": "local",
@@ -2046,6 +2046,476 @@
             "execID": "b734609a0f6ca500a1e3e975f7380d06b43075c0b1bff3c0562c70af9545f856",
             "exitCode": 0,
             "container_id": "8051825a76d0d491a1e8985f0b5afd5789721afdd75c3e6dac46c446de83ff5a"
+        }
+    },
+    {
+        "id": "f8f588d59b80",
+        "timestamp": "2026-08-31T12:10:44+00:00",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_request",
+        "severity": null,
+        "username": null,
+        "source_ip": "172.17.0.1",
+        "details": {
+            "status": 200,
+            "method": "GET",
+            "path": "/",
+            "protocol": "HTTP/1.1",
+            "size": 896,
+            "user_agent": "curl/8.21.0"
+        }
+    },
+    {
+        "id": "29052e66072c",
+        "timestamp": "2026-08-31T12:10:44+00:00",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_request",
+        "severity": null,
+        "username": null,
+        "source_ip": "172.17.0.1",
+        "details": {
+            "status": 200,
+            "method": "GET",
+            "path": "/index.html",
+            "protocol": "HTTP/1.1",
+            "size": 896,
+            "user_agent": "curl/8.21.0"
+        }
+    },
+    {
+        "id": "945d28cf2c68",
+        "timestamp": "2026-08-31T12:10:44+00:00",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_request",
+        "severity": null,
+        "username": null,
+        "source_ip": "172.17.0.1",
+        "details": {
+            "status": 200,
+            "method": "GET",
+            "path": "/",
+            "protocol": "HTTP/1.1",
+            "size": 896,
+            "user_agent": "curl/8.21.0"
+        }
+    },
+    {
+        "id": "ab0ba14be72b",
+        "timestamp": "2026-08-31T12:10:44+00:00",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_request",
+        "severity": null,
+        "username": null,
+        "source_ip": "172.17.0.1",
+        "details": {
+            "status": 200,
+            "method": "GET",
+            "path": "/50x.html",
+            "protocol": "HTTP/1.1",
+            "size": 497,
+            "user_agent": "curl/8.21.0"
+        }
+    },
+    {
+        "id": "b7d1e964f46e",
+        "timestamp": "2026-08-31T12:10:44+00:00",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_not_found",
+        "severity": null,
+        "username": null,
+        "source_ip": "172.17.0.1",
+        "details": {
+            "status": 404,
+            "method": "GET",
+            "path": "/admin",
+            "protocol": "HTTP/1.1",
+            "size": 153,
+            "user_agent": "Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:map_codes)",
+            "scanner_agent": "nikto"
+        }
+    },
+    {
+        "id": "7cffa7bb15cd",
+        "timestamp": "2026-08-31T12:10:44+00:00",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_not_found",
+        "severity": null,
+        "username": null,
+        "source_ip": "172.17.0.1",
+        "details": {
+            "status": 404,
+            "method": "GET",
+            "path": "/wp-login.php",
+            "protocol": "HTTP/1.1",
+            "size": 153,
+            "user_agent": "Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:map_codes)",
+            "scanner_agent": "nikto"
+        }
+    },
+    {
+        "id": "d6d6943aa8cf",
+        "timestamp": "2026-08-31T12:10:44+00:00",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_not_found",
+        "severity": null,
+        "username": null,
+        "source_ip": "172.17.0.1",
+        "details": {
+            "status": 404,
+            "method": "GET",
+            "path": "/.env",
+            "protocol": "HTTP/1.1",
+            "size": 153,
+            "user_agent": "Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:map_codes)",
+            "scanner_agent": "nikto"
+        }
+    },
+    {
+        "id": "074e0474cafa",
+        "timestamp": "2026-08-31T12:10:44+00:00",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_not_found",
+        "severity": null,
+        "username": null,
+        "source_ip": "172.17.0.1",
+        "details": {
+            "status": 404,
+            "method": "GET",
+            "path": "/phpmyadmin",
+            "protocol": "HTTP/1.1",
+            "size": 153,
+            "user_agent": "Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:map_codes)",
+            "scanner_agent": "nikto"
+        }
+    },
+    {
+        "id": "83ab8c89b238",
+        "timestamp": "2026-08-31T12:10:44+00:00",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_not_found",
+        "severity": null,
+        "username": null,
+        "source_ip": "172.17.0.1",
+        "details": {
+            "status": 404,
+            "method": "GET",
+            "path": "/.git/config",
+            "protocol": "HTTP/1.1",
+            "size": 153,
+            "user_agent": "Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:map_codes)",
+            "scanner_agent": "nikto"
+        }
+    },
+    {
+        "id": "430535a832e4",
+        "timestamp": "2026-08-31T12:10:44+00:00",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_not_found",
+        "severity": null,
+        "username": null,
+        "source_ip": "172.17.0.1",
+        "details": {
+            "status": 404,
+            "method": "GET",
+            "path": "/backup.sql",
+            "protocol": "HTTP/1.1",
+            "size": 153,
+            "user_agent": "Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:map_codes)",
+            "scanner_agent": "nikto"
+        }
+    },
+    {
+        "id": "594d177811da",
+        "timestamp": "2026-08-31T12:10:44+00:00",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_not_found",
+        "severity": null,
+        "username": null,
+        "source_ip": "172.17.0.1",
+        "details": {
+            "status": 404,
+            "method": "GET",
+            "path": "/config.php",
+            "protocol": "HTTP/1.1",
+            "size": 153,
+            "user_agent": "Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:map_codes)",
+            "scanner_agent": "nikto"
+        }
+    },
+    {
+        "id": "ca52caa83a7f",
+        "timestamp": "2026-08-31T12:10:44+00:00",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_not_found",
+        "severity": null,
+        "username": null,
+        "source_ip": "172.17.0.1",
+        "details": {
+            "status": 404,
+            "method": "GET",
+            "path": "/shell.php",
+            "protocol": "HTTP/1.1",
+            "size": 153,
+            "user_agent": "Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:map_codes)",
+            "scanner_agent": "nikto"
+        }
+    },
+    {
+        "id": "8c58f5823c03",
+        "timestamp": "2026-08-31T12:10:44+00:00",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_not_found",
+        "severity": null,
+        "username": null,
+        "source_ip": "172.17.0.1",
+        "details": {
+            "status": 404,
+            "method": "GET",
+            "path": "/cgi-bin/test.cgi",
+            "protocol": "HTTP/1.1",
+            "size": 153,
+            "user_agent": "Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:map_codes)",
+            "scanner_agent": "nikto"
+        }
+    },
+    {
+        "id": "18b929ee93b5",
+        "timestamp": "2026-08-31T12:10:44+00:00",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_request",
+        "severity": null,
+        "username": null,
+        "source_ip": "172.17.0.1",
+        "details": {
+            "status": 200,
+            "method": "GET",
+            "path": "/index.html?id=1%27+OR+1%3D1--",
+            "protocol": "HTTP/1.1",
+            "size": 896,
+            "user_agent": "sqlmap/1.7.2#stable (https://sqlmap.org)",
+            "scanner_agent": "sqlmap"
+        }
+    },
+    {
+        "id": "ad961e5a917f",
+        "timestamp": "2026-08-31T12:10:44+00:00",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_not_found",
+        "severity": null,
+        "username": null,
+        "source_ip": "172.17.0.1",
+        "details": {
+            "status": 404,
+            "method": "POST",
+            "path": "/login",
+            "protocol": "HTTP/1.1",
+            "size": 153,
+            "user_agent": "curl/8.21.0"
+        }
+    },
+    {
+        "id": "22e7f409c607",
+        "timestamp": "2026-08-31T12:10:44+00:00",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_not_found",
+        "severity": null,
+        "username": null,
+        "source_ip": "172.17.0.1",
+        "details": {
+            "status": 404,
+            "method": "GET",
+            "path": "/style.css",
+            "protocol": "HTTP/1.1",
+            "size": 153,
+            "referer": "http://127.0.0.1:8099/",
+            "user_agent": "Mozilla/5.0 (X11; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0"
+        }
+    },
+    {
+        "id": "6bcafeda4a5e",
+        "timestamp": "2026-08-31T12:10:44+00:00",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_not_found",
+        "severity": null,
+        "username": null,
+        "source_ip": "172.17.0.1",
+        "details": {
+            "status": 404,
+            "method": "GET",
+            "path": "/etc/passwd",
+            "protocol": "HTTP/1.1",
+            "size": 153,
+            "user_agent": "curl/8.21.0"
+        }
+    },
+    {
+        "id": "6118c76eb398",
+        "timestamp": "2026-08-31T12:11:02+00:00",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_auth_failure",
+        "severity": null,
+        "username": null,
+        "source_ip": "203.0.113.77",
+        "details": {
+            "status": 401,
+            "method": "GET",
+            "path": "/reports",
+            "protocol": "HTTP/1.1",
+            "size": 381,
+            "user_agent": "python-requests/2.31.0"
+        }
+    },
+    {
+        "id": "01ef9ed07a5c",
+        "timestamp": "2026-08-31T12:11:04+00:00",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_auth_failure",
+        "severity": null,
+        "username": null,
+        "source_ip": "203.0.113.77",
+        "details": {
+            "status": 401,
+            "method": "GET",
+            "path": "/reports",
+            "protocol": "HTTP/1.1",
+            "size": 381,
+            "user_agent": "python-requests/2.31.0"
+        }
+    },
+    {
+        "id": "90e5fffaf316",
+        "timestamp": "2026-08-31T12:11:06+00:00",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_request",
+        "severity": null,
+        "username": "analyst",
+        "source_ip": "203.0.113.77",
+        "details": {
+            "status": 200,
+            "method": "GET",
+            "path": "/reports",
+            "protocol": "HTTP/1.1",
+            "size": 5120,
+            "user_agent": "python-requests/2.31.0"
+        }
+    },
+    {
+        "id": "cc21f4a7d540",
+        "timestamp": "2026-08-31T12:12:01+00:00",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_server_error",
+        "severity": null,
+        "username": null,
+        "source_ip": "198.51.100.9",
+        "details": {
+            "status": 500,
+            "method": "POST",
+            "path": "/api/export",
+            "protocol": "HTTP/1.1",
+            "size": 617,
+            "user_agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "id": "5a58b1fb3d8d",
+        "timestamp": "2026-08-31T12:12:03+00:00",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_server_error",
+        "severity": null,
+        "username": null,
+        "source_ip": "198.51.100.9",
+        "details": {
+            "status": 500,
+            "method": "POST",
+            "path": "/api/export",
+            "protocol": "HTTP/1.1",
+            "size": 617,
+            "user_agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "id": "f945fe7eae29",
+        "timestamp": "2026-08-31T12:12:05+00:00",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_server_error",
+        "severity": null,
+        "username": null,
+        "source_ip": "198.51.100.9",
+        "details": {
+            "status": 500,
+            "method": "POST",
+            "path": "/api/export",
+            "protocol": "HTTP/1.1",
+            "size": 617,
+            "user_agent": "Mozilla/5.0"
+        }
+    },
+    {
+        "id": "dd3a1e03ddd9",
+        "timestamp": "2026-08-31T12:13:00+00:00",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_client_error",
+        "severity": null,
+        "username": null,
+        "source_ip": "192.0.2.44",
+        "details": {
+            "status": 400,
+            "method": "BADMETHOD",
+            "path": "/\\x00",
+            "protocol": "HTTP/9.9",
+            "size": 157
+        }
+    },
+    {
+        "id": "541e0bdd8402",
+        "timestamp": "2026-08-31T12:14:07.918273",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_error_log",
+        "severity": null,
+        "username": null,
+        "source_ip": "192.0.2.44",
+        "details": {
+            "module": "core:error",
+            "message": "AH00037: Symbolic link not allowed or link target not accessible: /var/www/html/backup"
+        }
+    },
+    {
+        "id": "8ecd2cc34e82",
+        "timestamp": "2026-08-31T12:14:09.114509",
+        "log_source": "web",
+        "host": null,
+        "event_type": "http_error_log",
+        "severity": null,
+        "username": null,
+        "source_ip": "203.0.113.77",
+        "details": {
+            "module": "php:error",
+            "message": "PHP Fatal error:  Uncaught Error: Call to undefined function in /var/www/html/api/export.php:88"
         }
     }
 ]

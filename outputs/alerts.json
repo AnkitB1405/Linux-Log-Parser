@@ -5,7 +5,7 @@
         "source_ip": "198.51.100.10",
         "timestamp": "2026-06-11T15:01:11",
         "event_ids": [
-            "a77ee1ce3c40"
+            "6e57a1310f98"
         ],
         "recommended_action": "monitor"
     },
@@ -15,7 +15,7 @@
         "source_ip": "198.51.100.11",
         "timestamp": "2026-06-11T15:02:12",
         "event_ids": [
-            "06d10bfe6983"
+            "7bc52fd1457f"
         ],
         "recommended_action": "monitor"
     },
@@ -25,7 +25,7 @@
         "source_ip": "203.0.113.40",
         "timestamp": "2026-06-11T15:03:18",
         "event_ids": [
-            "706952b86e10"
+            "dbb55668be10"
         ],
         "recommended_action": "monitor"
     },
@@ -35,7 +35,7 @@
         "source_ip": "203.0.113.90",
         "timestamp": "2026-06-11T15:55:12",
         "event_ids": [
-            "9778085085e6"
+            "4193a9a5818e"
         ],
         "recommended_action": "monitor"
     },
@@ -45,11 +45,11 @@
         "source_ip": "203.0.113.40",
         "timestamp": "2026-06-11T15:03:18",
         "event_ids": [
-            "814a4f80ced9",
-            "cd7d6aede324",
-            "55c22bb4dba3",
-            "374709922a52",
-            "706952b86e10"
+            "bf6abd35378a",
+            "f40553edf02a",
+            "e00f5fea3e91",
+            "583fbf691e8c",
+            "dbb55668be10"
         ],
         "recommended_action": "block_ip and report",
         "attempts": 4
@@ -60,11 +60,11 @@
         "source_ip": "192.0.2.20",
         "timestamp": "2026-06-11T15:07:40",
         "event_ids": [
-            "0a6cac1e99a9",
-            "5cb7857c79d1",
-            "bdb3fffe8c00",
-            "85bd1d7f32f3",
-            "212c97b7359a"
+            "b16bfc6d501e",
+            "6bcfe0e9caf1",
+            "349785e0bce9",
+            "709a68436fdd",
+            "805cdb2d0c91"
         ],
         "recommended_action": "monitor",
         "attempts": 5
@@ -76,12 +76,12 @@
         "events": 6,
         "timestamp": "2026-06-11T15:50:25",
         "event_ids": [
-            "ae2a2f998749",
-            "ac7000b9bebd",
-            "6afdd3b6fabd",
-            "730c11b68c58",
-            "e028979d23be",
-            "b70c4d47abdb"
+            "d9f37f8e4182",
+            "767cf2b72b1f",
+            "756ec74fd3de",
+            "b15528ffbf24",
+            "b39f6695014c",
+            "1ea56228ad94"
         ],
         "recommended_action": "investigate service immediately"
     },
@@ -94,12 +94,12 @@
         "failed_attempts": 5,
         "timestamp": "2026-06-11T15:08:20",
         "event_ids": [
-            "0a6cac1e99a9",
-            "5cb7857c79d1",
-            "bdb3fffe8c00",
-            "85bd1d7f32f3",
-            "212c97b7359a",
-            "c0f443feb288"
+            "b16bfc6d501e",
+            "6bcfe0e9caf1",
+            "349785e0bce9",
+            "709a68436fdd",
+            "805cdb2d0c91",
+            "3c314df6a8be"
         ],
         "recommended_action": "verify login"
     },
@@ -111,10 +111,10 @@
         "windows": 2,
         "timestamp": "2026-06-11T15:03:14",
         "event_ids": [
-            "814a4f80ced9",
-            "cd7d6aede324",
-            "55c22bb4dba3",
-            "374709922a52"
+            "bf6abd35378a",
+            "f40553edf02a",
+            "e00f5fea3e91",
+            "583fbf691e8c"
         ],
         "recommended_action": "monitor activity"
     },
@@ -126,11 +126,11 @@
         "windows": 3,
         "timestamp": "2026-06-11T15:07:40",
         "event_ids": [
-            "0a6cac1e99a9",
-            "5cb7857c79d1",
-            "bdb3fffe8c00",
-            "85bd1d7f32f3",
-            "212c97b7359a"
+            "b16bfc6d501e",
+            "6bcfe0e9caf1",
+            "349785e0bce9",
+            "709a68436fdd",
+            "805cdb2d0c91"
         ],
         "recommended_action": "monitor activity"
     },
@@ -142,14 +142,14 @@
         "windows": 6,
         "timestamp": "2026-06-11T15:36:00",
         "event_ids": [
-            "80948f789dc9",
-            "a2213af70bb5",
-            "367a2bdb8a4c",
-            "2087b8625de6",
-            "4e5aef9419c7",
-            "ae6efb568317",
-            "a3774f4f283a",
-            "8c0946c51188"
+            "76e6454d46bc",
+            "dc4954e5a5da",
+            "106f45479ebb",
+            "ec8d4abccd70",
+            "0689a663422d",
+            "d146ae37e4b8",
+            "f96080f9773c",
+            "d86a76b21035"
         ],
         "recommended_action": "investigate immediately"
     },
@@ -161,8 +161,8 @@
         "duration": 12.0,
         "timestamp": "2026-06-11T15:10:12",
         "event_ids": [
-            "14838dddb1d6",
-            "301256c3919c"
+            "a6b9856f38ee",
+            "4769b51d09c0"
         ],
         "recommended_action": "monitor"
     },
@@ -174,8 +174,8 @@
         "duration": 10.0,
         "timestamp": "2026-06-11T15:11:10",
         "event_ids": [
-            "afd1c0f6c214",
-            "7a8a28fe8c6c"
+            "9597d0375235",
+            "b60012587392"
         ],
         "recommended_action": "monitor"
     },
@@ -187,8 +187,8 @@
         "duration": 8.0,
         "timestamp": "2026-06-11T15:12:08",
         "event_ids": [
-            "4b0c538bf748",
-            "ebf38c68a5a2"
+            "dbf580a0d83f",
+            "add56ab74ed4"
         ],
         "recommended_action": "monitor"
     },
@@ -200,8 +200,8 @@
         "duration": 6.0,
         "timestamp": "2026-06-11T15:40:06",
         "event_ids": [
-            "00bcac42212b",
-            "e65dcd955f43"
+            "1fa20f99b903",
+            "4a89037e3896"
         ],
         "recommended_action": "monitor"
     },
@@ -214,7 +214,7 @@
         "auth_method": "publickey",
         "timestamp": "2026-06-11T15:09:00",
         "event_ids": [
-            "a0d71c607054"
+            "0ffff6595309"
         ],
         "recommended_action": "inspect authorized_keys for this user and revoke unknown keys"
     },
@@ -227,7 +227,7 @@
         "auth_method": "publickey",
         "timestamp": "2026-06-11T15:42:00",
         "event_ids": [
-            "5c2916022b4d"
+            "72910581657b"
         ],
         "recommended_action": "inspect authorized_keys for this user and revoke unknown keys"
     },
@@ -240,7 +240,7 @@
         "command": "ls /",
         "timestamp": "2026-08-21T22:08:09.799866",
         "event_ids": [
-            "3a8461f665f9"
+            "d4de12d36465"
         ],
         "recommended_action": "confirm this exec was expected"
     },
@@ -253,8 +253,61 @@
         "command": "sh -c cat /etc/passwd",
         "timestamp": "2026-08-21T22:08:09.877100",
         "event_ids": [
-            "eba51b2d55ff"
+            "700f7643d00d"
         ],
         "recommended_action": "interactive shell in a container \u2014 confirm who ran it"
+    },
+    {
+        "severity": "high",
+        "alert_type": "web_scanning",
+        "service": "web",
+        "source_ip": "172.17.0.1",
+        "not_found": 12,
+        "scanner": "nikto",
+        "timestamp": "2026-08-31T12:10:44+00:00",
+        "event_ids": [
+            "074e0474cafa",
+            "22e7f409c607",
+            "430535a832e4",
+            "594d177811da",
+            "6bcafeda4a5e",
+            "7cffa7bb15cd",
+            "83ab8c89b238",
+            "8c58f5823c03",
+            "ad961e5a917f",
+            "b7d1e964f46e",
+            "ca52caa83a7f",
+            "d6d6943aa8cf"
+        ],
+        "recommended_action": "block_ip \u2014 nikto identified itself in the user agent"
+    },
+    {
+        "severity": "high",
+        "alert_type": "web_credential_compromise",
+        "service": "web",
+        "source_ip": "203.0.113.77",
+        "path": "/reports",
+        "failures": 2,
+        "timestamp": "2026-08-31T12:11:06+00:00",
+        "event_ids": [
+            "6118c76eb398",
+            "01ef9ed07a5c",
+            "90e5fffaf316"
+        ],
+        "recommended_action": "verify this session and reset the credential"
+    },
+    {
+        "severity": "medium",
+        "alert_type": "web_server_errors",
+        "service": "web",
+        "source_ip": "198.51.100.9",
+        "errors": 3,
+        "timestamp": "2026-08-31T12:12:05+00:00",
+        "event_ids": [
+            "cc21f4a7d540",
+            "5a58b1fb3d8d",
+            "f945fe7eae29"
+        ],
+        "recommended_action": "repeated 5xx from one address \u2014 check whether input is breaking the app"
     }
 ]

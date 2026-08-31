@@ -1,12 +1,13 @@
 {
-    "total_events": 148,
-    "total_alerts": 19,
-    "high_alerts": 6,
-    "medium_alerts": 13,
+    "total_events": 174,
+    "total_alerts": 22,
+    "high_alerts": 8,
+    "medium_alerts": 14,
     "monitor_alerts": 0,
     "services": {
         "ssh": 64,
-        "docker": 84
+        "docker": 84,
+        "web": 26
     },
     "event_types": {
         "service_started": 7,
@@ -29,6 +30,12 @@
         "container_died": 10,
         "container_restarted": 3,
         "container_attached": 5,
-        "container_destroyed": 7
+        "container_destroyed": 7,
+        "http_request": 6,
+        "http_not_found": 12,
+        "http_auth_failure": 2,
+        "http_server_error": 3,
+        "http_client_error": 1,
+        "http_error_log": 2
     }
 }
