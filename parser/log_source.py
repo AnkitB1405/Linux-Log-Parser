@@ -12,6 +12,7 @@ Run from the repo root, like the rest of the project.
 """
 
 import os
+import platform
 import shutil
 import subprocess
 
@@ -28,18 +29,12 @@ JOURNAL_CMD = [
 def detect_platform():
     """(pretty name, id) from /etc/os-release; ("unknown", "unknown") if absent."""
 
-    values = {}
-
     try:
-        with open("/etc/os-release") as file:
-            for line in file:
-                key, sep, value = line.partition("=")
-                if sep:
-                    values[key.strip()] = value.strip().strip('"')
+        release = platform.freedesktop_os_release()
     except OSError:
-        pass
+        return "unknown", "unknown"
 
-    return values.get("PRETTY_NAME", "unknown"), values.get("ID", "unknown")
+    return release.get("PRETTY_NAME", "unknown"), release.get("ID", "unknown")
 
 
 def detect_ssh_log():

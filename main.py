@@ -1,12 +1,14 @@
+import os
 import sys
+from datetime import datetime
 
-from parser.ssh_parser import identify_event as parse_ssh
+from parser.ssh_parser import identify_event as parse_ssh, set_reference_time
 from parser.docker_parser import identify_event as parse_docker
 from parser.log_source import detect_platform, detect_ssh_log, read_lines
 
 from detectors.registry import DETECTORS
 
-from outputs.persistence import *
+from outputs.persistence import save
 from outputs.stats import generate_statistics
 
 SSH_DATASET = "sample_logs/ssh_dataset_v1.txt"
@@ -33,6 +35,10 @@ def sources():
         yield "ssh", list(read_lines(kind, target)), parse_ssh
 
     else:
+        # Year-less BSD timestamps are anchored to the file's own mtime, so an
+        # archived log is read in the year it was written, not this one.
+        set_reference_time(datetime.fromtimestamp(os.path.getmtime(SSH_DATASET)))
+
         with open(SSH_DATASET) as file:
             yield "ssh", file.readlines(), parse_ssh
 
@@ -85,9 +91,9 @@ for detect in DETECTORS:
 
 statistics = generate_statistics(events, all_alerts)
 
-save_events(events)
-save_alerts(all_alerts)
-save_statistics(statistics)
+save("events", events)
+save("alerts", all_alerts)
+save("statistics", statistics)
 
 print("\nErrors\n")
 

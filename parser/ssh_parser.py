@@ -33,12 +33,37 @@ def _parse_rfc3339(stamp):
     return datetime.fromisoformat(stamp)
 
 
+# BSD syslog lines carry no year, so one has to be supplied. The reference
+# point is the log file's mtime where the caller knows it (see
+# set_reference_time), otherwise now — which is right for a live tail and for
+# a file being written today.
+REFERENCE = datetime.now()
+
+
+def set_reference_time(when):
+    """Anchor year-less BSD timestamps to a known point, e.g. a file's mtime."""
+
+    global REFERENCE
+    REFERENCE = when
+
+
 def _parse_bsd(stamp):
-    # ponytail: BSD syslog carries no year, so these land in 1900. Harmless
-    # while detectors only use deltas inside one file; breaks across a
-    # Dec->Jan boundary. The Mint path above has no such problem, and
-    # `journalctl -o short-iso` would remove it on the others.
-    return datetime.strptime(stamp, "%b %d %H:%M:%S")
+    """
+    A year-less `Aug 19 10:09:15`, resolved against REFERENCE.
+
+    Rollover matters: a file written in January still holds December lines
+    from the year before. A month later than the reference is therefore last
+    year's, not next year's — without this, a Dec->Jan span produces a delta
+    of roughly minus 365 days and every time-window detector silently stops
+    firing.
+    """
+
+    parsed = datetime.strptime(f"{REFERENCE.year} {stamp}", "%Y %b %d %H:%M:%S")
+
+    if parsed.month > REFERENCE.month:
+        parsed = parsed.replace(year=REFERENCE.year - 1)
+
+    return parsed
 
 
 ENVELOPES = [

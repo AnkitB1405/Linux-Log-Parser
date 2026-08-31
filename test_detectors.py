@@ -9,7 +9,10 @@ that moves this set is a behaviour change and should be deliberate.
 Run from the repo root:  python3 test_detectors.py
 """
 
-from parser.ssh_parser import identify_event
+import os
+from datetime import datetime
+
+from parser.ssh_parser import identify_event, set_reference_time, _parse_bsd
 from parser.docker_parser import identify_event as identify_docker_event
 from detectors.container_anomaly import detect_container_anomaly
 from detectors.container_escape import detect_container_escape, assess
@@ -39,7 +42,6 @@ EXPECTED_ALERTS = [
     ("bruteforce", "203.0.113.40", "medium"),
     ("bruteforce", "203.0.113.90", "medium"),
     ("credential_compromise", "192.0.2.20", "medium"),
-    ("root_attack", "203.0.113.40", "medium"),
     ("root_bruteforce", "203.0.113.40", "high"),
     ("service_instability", "ssh", "high"),
     ("short_session", "engineer", "medium"),
@@ -83,6 +85,11 @@ def build_events():
 
     events, errors = [], []
 
+    # Anchor year-less timestamps to the fixture's mtime, exactly as main.py
+    # does — a test that reads the input differently from the pipeline stops
+    # testing the pipeline.
+    set_reference_time(datetime.fromtimestamp(os.path.getmtime(DATASET)))
+
     for path, parse in ((DATASET, identify_event),
                         (DOCKER_DATASET, identify_docker_event)):
         with open(path) as file:
@@ -100,6 +107,30 @@ def build_events():
 def entity(alert):
     return (alert.get("source_ip") or alert.get("username")
             or alert.get("container") or alert.get("service"))
+
+
+def check_timestamps():
+    """
+    Year-less BSD timestamps must resolve to a real year, and a December ->
+    January span must not go backwards. Before the fix every event landed in
+    1900 and that span produced a delta of about minus 365 days, which
+    silently stopped every time-window detector from firing.
+    """
+
+    original = datetime.now()
+
+    try:
+        set_reference_time(datetime(2027, 1, 3, 9, 0))
+        december = _parse_bsd("Dec 31 23:58:00")
+        january = _parse_bsd("Jan  1 00:02:00")
+
+        assert december.year == 2026, december
+        assert january.year == 2027, january
+        assert (january - december).total_seconds() == 240, "Dec->Jan went backwards"
+    finally:
+        set_reference_time(original)
+
+    print("OK  year-less timestamps resolve, Dec->Jan span stays positive")
 
 
 def check_escape_assessment():
@@ -237,6 +268,7 @@ def main():
     print(f"OK  event shape normalized via create_event()")
     print(f"OK  all {len(alerts)} alerts carry timestamp + event_ids")
 
+    check_timestamps()
     check_docker()
 
 

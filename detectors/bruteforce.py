@@ -1,8 +1,25 @@
+# Homelab addresses that legitimately log in as root. Tailnet peers — the
+# planned trust-tier work generalises this from three literals to a rule.
 KNOWN_ROOT_IPS = {
     "100.112.185.127",
     "100.89.181.9",
-    "100.110.185.112"
+    "100.110.185.112",
 }
+
+PAM_WINDOW = 180
+ROOT_WINDOW = 600
+SLOW_WINDOW = 600
+
+# Root targeting needs a real attempt count. This previously read `>= 1`,
+# which can never be false — `recent` is filtered against `latest`, and
+# `latest - latest` is always 0 — so every single failed root login raised an
+# alert.
+ROOT_MIN = 3
+
+SLOW_BANDS = [
+    (8, "high", "block_ip and report"),
+    (5, "medium", "monitor"),
+]
 
 
 def detect_bruteforce(events):
@@ -24,8 +41,6 @@ def detect_bruteforce(events):
         entry = (event["timestamp"], event["id"])
         event_type = event["event_type"]
 
-        # Failed Login
-
         if event_type == "failed_login":
 
             failed_attempts.setdefault(ip, []).append(entry)
@@ -33,131 +48,101 @@ def detect_bruteforce(events):
             if event["username"] == "root":
                 root_attempts.setdefault(ip, []).append(entry)
 
-        # Authentication Failure
-
         elif event_type == "authentication_failure":
 
             failed_attempts.setdefault(ip, []).append(entry)
-
-        # Multiple Auth Failures
 
         elif event_type == "multiple_auth_failures":
 
             pam_attempts.setdefault(ip, []).append(entry)
 
-        # Successful Login
-
         elif event_type == "successful_login":
 
             if event["username"] == "root" and ip not in KNOWN_ROOT_IPS:
 
-                alerts.append({
-                    "severity": "monitor",
-                    "alert_type": "unknown_root_login",
-                    "source_ip": ip,
-                    "timestamp": event["timestamp"],
-                    "event_ids": [event["id"]],
-                    "recommended_action":
-                    "verify source"
-                })
+                alerts.append(build(
+                    "monitor", "unknown_root_login", ip, [entry],
+                    "verify source"))
 
-    # PAM
+    # PAM signals
 
     for ip, entries in pam_attempts.items():
         entries.sort()
 
-        if len(entries) == 1:
+        if len(entries) >= 2 and delta(entries) <= PAM_WINDOW:
+            alerts.append(build(
+                "high", "bruteforce", ip, entries, "block_ip and report"))
+        else:
+            alerts.append(build(
+                "medium", "bruteforce", ip, entries, "monitor"))
 
-            alerts.append({
-                "severity": "medium",
-                "alert_type": "bruteforce",
-                "source_ip": ip,
-                "timestamp": entries[-1][0],
-                "event_ids": [e[1] for e in entries],
-                "recommended_action":
-                "monitor"
-            })
-
-        elif len(entries) >= 2:
-            delta = entries[-1][0] - entries[-2][0]
-
-            if delta.total_seconds() <= 180:
-
-                alerts.append({
-                    "severity": "high",
-                    "alert_type": "bruteforce",
-                    "source_ip": ip,
-                    "timestamp": entries[-1][0],
-                    "event_ids": [e[1] for e in entries],
-                    "recommended_action":
-                    "block_ip and report"
-                })
-
-    # Root
+    # Root targeting. These are two bands of one finding, not two findings —
+    # ordered so exactly one fires, or the same evidence raises both.
 
     for ip, entries in root_attempts.items():
         entries.sort()
-        latest = entries[-1][0]
-        recent = [e for e in entries if (latest - e[0]).total_seconds() <= 600]
+        recent = within(entries, ROOT_WINDOW)
 
-        if len(recent) >= 1:
-
-            alerts.append({
-                "severity": "medium",
-                "alert_type": "root_attack",
-                "source_ip": ip,
-                "attempts": len(recent),
-                "timestamp": latest,
-                "event_ids": [e[1] for e in recent],
-                "recommended_action":
-                "monitor"
-            })
+        if len(recent) < ROOT_MIN:
+            continue
 
         if ip in pam_attempts:
+            alerts.append(build(
+                "high", "root_bruteforce", ip, recent + pam_attempts[ip],
+                "block_ip and report", attempts=len(recent)))
+        else:
+            alerts.append(build(
+                "medium", "root_attack", ip, recent,
+                "monitor", attempts=len(recent)))
 
-            correlated = recent + pam_attempts[ip]
-
-            alerts.append({
-                "severity": "high",
-                "alert_type": "root_bruteforce",
-                "source_ip": ip,
-                "timestamp": max(e[0] for e in correlated),
-                "event_ids": [e[1] for e in correlated],
-                "recommended_action":
-                "block_ip and report"
-            })
-
-    # Slow brute force
+    # Slow brute force — volume from one address, whoever it targets
 
     for ip, entries in failed_attempts.items():
         entries.sort()
-        latest = entries[-1][0]
-        recent = [e for e in entries if (latest - e[0]).total_seconds() <= 600]
+        recent = within(entries, SLOW_WINDOW)
+        severity, action = band(SLOW_BANDS, len(recent))
 
-        if 5 <= len(recent) < 8:
-
-            alerts.append({
-                "severity": "medium",
-                "alert_type": "slow_bruteforce",
-                "source_ip": ip,
-                "attempts": len(recent),
-                "timestamp": latest,
-                "event_ids": [e[1] for e in recent],
-                "recommended_action":
-                "monitor"
-            })
-
-        elif len(recent) >= 8:
-
-            alerts.append({
-                "severity": "high",
-                "alert_type": "slow_bruteforce",
-                "source_ip": ip,
-                "attempts": len(recent),
-                "timestamp": latest,
-                "event_ids": [e[1] for e in recent],
-                "recommended_action":
-                "block_ip and report"
-            })
+        if severity:
+            alerts.append(build(
+                severity, "slow_bruteforce", ip, recent, action,
+                attempts=len(recent)))
 
     return alerts
+
+
+def build(severity, alert_type, ip, entries, action, **extra):
+    """One alert shape. Timestamp and evidence always come from the events."""
+
+    return {
+        "severity": severity,
+        "alert_type": alert_type,
+        "source_ip": ip,
+        "timestamp": max(e[0] for e in entries),
+        "event_ids": [e[1] for e in entries],
+        "recommended_action": action,
+        **extra,
+    }
+
+
+def within(entries, seconds):
+    """Entries falling inside `seconds` of the most recent one."""
+
+    latest = entries[-1][0]
+
+    return [e for e in entries if (latest - e[0]).total_seconds() <= seconds]
+
+
+def delta(entries):
+    """Seconds between the last two entries."""
+
+    return (entries[-1][0] - entries[-2][0]).total_seconds()
+
+
+def band(bands, count):
+    """First band whose threshold is met. (None, None) below the lowest."""
+
+    for threshold, severity, action in bands:
+        if count >= threshold:
+            return severity, action
+
+    return None, None
