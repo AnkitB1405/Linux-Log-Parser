@@ -121,6 +121,33 @@ def entity(alert):
             or alert.get("container") or alert.get("service"))
 
 
+def check_escaped_quotes():
+    """
+    Attack payloads carry quotes; ordinary browsing does not.
+
+    Apache escapes a quote inside the request field as \\". A naive
+    `"[^"]*"` stops at the first one, which silently drops the request.
+    Measured against 100,445 real lines from the AIT Log Data Set
+    (Landauer et al., 2022): the naive form dropped 100 lines and every one
+    was an attack — XSS and command injection. The parser was discarding
+    exactly the traffic it exists to see.
+
+    Line shape below is taken from that dataset.
+    """
+
+    line = (r'192.168.10.81 - - [04/Mar/2020:18:02:09 +0000] '
+            r'"GET /forumdisplay.php?f=2&comma=\\".system('id').\\" HTTP/1.1" '
+            r'200 4512 "-" "Mozilla/5.00 (Nikto/2.1.5)"')
+
+    event = identify_web_event(line)
+
+    assert event is not None, "escaped quote in the request dropped the line"
+    assert "system(" in event["details"]["path"], event["details"]
+    assert event["details"]["scanner_agent"] == "nikto", event["details"]
+
+    print("OK  escaped quotes in request fields parse (AIT regression)")
+
+
 def check_timestamps():
     """
     Year-less BSD timestamps must resolve to a real year, and a December ->
@@ -280,6 +307,7 @@ def main():
     print(f"OK  event shape normalized via create_event()")
     print(f"OK  all {len(alerts)} alerts carry timestamp + event_ids")
 
+    check_escaped_quotes()
     check_timestamps()
     check_docker()
 

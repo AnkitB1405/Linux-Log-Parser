@@ -22,13 +22,25 @@ from parser.event_schema import create_event
 LOG_SOURCE = "web"
 
 # Common Log Format plus the two combined-format fields. Quoted runs are
-# matched as `"[^"]*"` rather than `\S+` precisely because they contain spaces.
+# matched as quoted runs rather than `\S+` precisely because they contain
+# spaces.
+#
+# `(?:[^"\\]|\\.)*` — anything that is not a quote or a backslash, OR a
+# backslash and whatever follows it. A plain `[^"]*` stops at the first
+# escaped quote, and Apache escapes quotes inside the request as `\"`.
+#
+# That is not a cosmetic difference. Against 100,445 real AIT lines the naive
+# form dropped 100 of them, and every single one was an attack: XSS and
+# command-injection payloads carry quotes, ordinary browsing does not. The
+# parser was silently discarding exactly the traffic worth seeing.
+QUOTED = r'(?:[^"\\]|\\.)*'
+
 ACCESS = re.compile(
     r'^(?P<source_ip>\S+) \S+ (?P<username>\S+) '
     r'\[(?P<timestamp>[^\]]+)\] '
-    r'"(?P<request>[^"]*)" '
+    r'"(?P<request>' + QUOTED + r')" '
     r'(?P<status>\d{3}) (?P<size>\S+)'
-    r'(?: "(?P<referer>[^"]*)" "(?P<user_agent>[^"]*)")?'
+    r'(?: "(?P<referer>' + QUOTED + r')" "(?P<user_agent>' + QUOTED + r')")?'
 )
 
 #   [Wed Aug 31 12:10:44.123456 2026] [php:error] [pid 12] [client 1.2.3.4:5432] message
