@@ -1,3 +1,6 @@
+from detectors.bruteforce import within
+
+
 def detect_service_anomaly(events):
 
     # service -> [(timestamp, event_id), ...]
@@ -18,8 +21,10 @@ def detect_service_anomaly(events):
 
     for service, entries in service_events.items():
         entries.sort()
-        latest = entries[-1][0]
-        recent = [e for e in entries if (latest - e[0]).total_seconds() <= 300]
+        # Densest window anywhere, not just the last one — see the note in
+        # detectors/bruteforce.py:within(). A restart storm in the morning is
+        # invisible to a window anchored on the evening's last event.
+        recent = within(entries, 300)
 
         if len(recent) >= 5:
             alerts.append({
@@ -27,7 +32,7 @@ def detect_service_anomaly(events):
                 "alert_type": "service_instability",
                 "service": service,
                 "events": len(recent),
-                "timestamp": latest,
+                "timestamp": recent[-1][0],
                 "event_ids": [e[1] for e in recent],
                 "recommended_action":
                 "investigate service immediately"
@@ -39,7 +44,7 @@ def detect_service_anomaly(events):
                 "alert_type": "service_instability",
                 "service": service,
                 "events": len(recent),
-                "timestamp": latest,
+                "timestamp": recent[-1][0],
                 "event_ids": [e[1] for e in recent],
                 "recommended_action":
                 "monitor service"

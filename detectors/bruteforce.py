@@ -125,11 +125,31 @@ def build(severity, alert_type, ip, entries, action, **extra):
 
 
 def within(entries, seconds):
-    """Entries falling inside `seconds` of the most recent one."""
+    """
+    The densest run of entries inside any `seconds` window, anywhere in the
+    list. `entries` must be sorted.
 
-    latest = entries[-1][0]
+    This previously anchored on the most recent entry, which meant only the
+    tail of the log was ever examined. Measured against the AIT Log Data Set:
+    a labelled hydra attack of 286 authentication failures in 222 seconds went
+    completely undetected, because the last failure in the file was 24 hours
+    later and the 600-second window from there excluded the entire burst.
 
-    return [e for e in entries if (latest - e[0]).total_seconds() <= seconds]
+    Batch analysis has to look everywhere, not just at the end. Two pointers,
+    so this stays linear.
+    """
+
+    best = []
+    start = 0
+
+    for end in range(len(entries)):
+        while (entries[end][0] - entries[start][0]).total_seconds() > seconds:
+            start += 1
+
+        if end - start + 1 > len(best):
+            best = entries[start:end + 1]
+
+    return best
 
 
 def delta(entries):
