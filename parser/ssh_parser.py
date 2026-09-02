@@ -91,6 +91,19 @@ ENVELOPES = [
 
 # Matches IPv4 and IPv6 alike, including the Tailscale ULAs
 # (fd7a:115c:a1e0::b201:1f2c) the homelab logs are full of.
+# Which processes this parser is entitled to speak for.
+#
+# /var/log/auth.log is NOT an SSH log — it is the authentication log, shared by
+# cron, sudo, dovecot, su and anything else using PAM. Real AIT auth.log data
+# is 910 CRON lines and 314 dovecot lines with no sshd at all, and without this
+# check every one of them parsed "successfully" as an SSH event: cron jobs
+# became SSH sessions and a mail-server brute force became SSH authentication
+# failure. 100% coverage, 100% wrong.
+#
+# systemd is included because `Started ssh.service` is written by systemd, not
+# by sshd; those two patterns are specific enough that no other unit matches.
+SSH_PROCESSES = {"sshd", "sshd-session", "sshd-auth", "systemd"}
+
 IP = r"[0-9a-fA-F.:]+"
 
 # `Connection closed by ...` names the account three different ways, or not
@@ -219,7 +232,11 @@ def identify_event(line):
     if envelope is None:
         return None
 
-    timestamp, host, _process, message = envelope
+    timestamp, host, process, message = envelope
+
+    # The line may be from cron, sudo or dovecot sharing the same file.
+    if process not in SSH_PROCESSES:
+        return None
 
     for event_type, pattern in SSH_PATTERNS:
 
