@@ -1,6 +1,6 @@
 [
     {
-        "id": "31dbe96835e0",
+        "id": "d0668bd50400",
         "timestamp": "2026-06-11T15:00:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -11,7 +11,7 @@
         "details": {}
     },
     {
-        "id": "b035d385d61a",
+        "id": "87eb3e626866",
         "timestamp": "2026-06-11T15:01:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -22,7 +22,7 @@
         "details": {}
     },
     {
-        "id": "d664f950b5d6",
+        "id": "9285e9abcaf3",
         "timestamp": "2026-06-11T15:01:02",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -33,7 +33,7 @@
         "details": {}
     },
     {
-        "id": "97c2759adccd",
+        "id": "1f22706075f6",
         "timestamp": "2026-06-11T15:01:05",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -44,7 +44,7 @@
         "details": {}
     },
     {
-        "id": "a6887c83a5a8",
+        "id": "a53a9a38edad",
         "timestamp": "2026-06-11T15:01:08",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -55,7 +55,7 @@
         "details": {}
     },
     {
-        "id": "6e57a1310f98",
+        "id": "066c1d412f44",
         "timestamp": "2026-06-11T15:01:11",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -73,7 +73,7 @@
         }
     },
     {
-        "id": "402784bc8270",
+        "id": "617c9875a68a",
         "timestamp": "2026-06-11T15:02:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -84,7 +84,7 @@
         "details": {}
     },
     {
-        "id": "c7c9380c517f",
+        "id": "74e4093f9642",
         "timestamp": "2026-06-11T15:02:04",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -95,7 +95,7 @@
         "details": {}
     },
     {
-        "id": "13df8ddae019",
+        "id": "50f31a9a5d36",
         "timestamp": "2026-06-11T15:02:06",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -106,7 +106,7 @@
         "details": {}
     },
     {
-        "id": "750987aa2e87",
+        "id": "b8ef8901716b",
         "timestamp": "2026-06-11T15:02:08",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -117,7 +117,7 @@
         "details": {}
     },
     {
-        "id": "7bc52fd1457f",
+        "id": "9661eadeef35",
         "timestamp": "2026-06-11T15:02:12",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -135,7 +135,7 @@
         }
     },
     {
-        "id": "bf6abd35378a",
+        "id": "c596ce9bcacb",
         "timestamp": "2026-06-11T15:03:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -146,7 +146,7 @@
         "details": {}
     },
     {
-        "id": "f40553edf02a",
+        "id": "e9c847c4ef2f",
         "timestamp": "2026-06-11T15:03:04",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -157,7 +157,7 @@
         "details": {}
     },
     {
-        "id": "e00f5fea3e91",
+        "id": "1b485b984567",
         "timestamp": "2026-06-11T15:03:09",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -168,7 +168,7 @@
         "details": {}
     },
     {
-        "id": "583fbf691e8c",
+        "id": "8b6406589d81",
         "timestamp": "2026-06-11T15:03:14",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -179,7 +179,7 @@
         "details": {}
     },
     {
-        "id": "dbb55668be10",
+        "id": "3e3816044dad",
         "timestamp": "2026-06-11T15:03:18",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -197,7 +197,7 @@
         }
     },
     {
-        "id": "b16bfc6d501e",
+        "id": "f58fb12398ec",
         "timestamp": "2026-06-11T15:05:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -208,7 +208,7 @@
         "details": {}
     },
     {
-        "id": "6bcfe0e9caf1",
+        "id": "b5f453f51924",
         "timestamp": "2026-06-11T15:05:40",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -219,7 +219,7 @@
         "details": {}
     },
     {
-        "id": "349785e0bce9",
+        "id": "5dde57b59a9a",
         "timestamp": "2026-06-11T15:06:20",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -230,7 +230,7 @@
         "details": {}
     },
     {
-        "id": "709a68436fdd",
+        "id": "962430ef4025",
         "timestamp": "2026-06-11T15:07:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -241,7 +241,7 @@
         "details": {}
     },
     {
-        "id": "805cdb2d0c91",
+        "id": "1e81ebdb44ad",
         "timestamp": "2026-06-11T15:07:40",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -252,7 +252,7 @@
         "details": {}
     },
     {
-        "id": "3c314df6a8be",
+        "id": "fbdaab40a266",
         "timestamp": "2026-06-11T15:08:20",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -265,7 +265,7 @@
         }
     },
     {
-        "id": "0584aff759ca",
+        "id": "edeb87b7b5d9",
         "timestamp": "2026-06-11T15:08:20",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -278,7 +278,7 @@
         }
     },
     {
-        "id": "0ffff6595309",
+        "id": "861013851800",
         "timestamp": "2026-06-11T15:09:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -291,7 +291,7 @@
         }
     },
     {
-        "id": "f65d897a5b02",
+        "id": "c19e0650698a",
         "timestamp": "2026-06-11T15:09:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -304,7 +304,7 @@
         }
     },
     {
-        "id": "354945fd9191",
+        "id": "9fd2ea7e6709",
         "timestamp": "2026-06-11T15:10:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -317,7 +317,7 @@
         }
     },
     {
-        "id": "a6b9856f38ee",
+        "id": "c9dcde2d463a",
         "timestamp": "2026-06-11T15:10:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -330,7 +330,7 @@
         }
     },
     {
-        "id": "4769b51d09c0",
+        "id": "1aace9e9a546",
         "timestamp": "2026-06-11T15:10:12",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -341,7 +341,7 @@
         "details": {}
     },
     {
-        "id": "e8011224937e",
+        "id": "57eff5e54c6b",
         "timestamp": "2026-06-11T15:11:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -354,7 +354,7 @@
         }
     },
     {
-        "id": "9597d0375235",
+        "id": "4ad8d7e99a96",
         "timestamp": "2026-06-11T15:11:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -367,7 +367,7 @@
         }
     },
     {
-        "id": "b60012587392",
+        "id": "fae47da47e8b",
         "timestamp": "2026-06-11T15:11:10",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -378,7 +378,7 @@
         "details": {}
     },
     {
-        "id": "1bad8a4b607f",
+        "id": "a2d0a2f67728",
         "timestamp": "2026-06-11T15:12:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -391,7 +391,7 @@
         }
     },
     {
-        "id": "dbf580a0d83f",
+        "id": "a86e6f176124",
         "timestamp": "2026-06-11T15:12:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -404,7 +404,7 @@
         }
     },
     {
-        "id": "add56ab74ed4",
+        "id": "b169f4a30ecc",
         "timestamp": "2026-06-11T15:12:08",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -415,7 +415,7 @@
         "details": {}
     },
     {
-        "id": "8e8e10c47c26",
+        "id": "45ed0c681f00",
         "timestamp": "2026-06-11T15:13:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -426,7 +426,7 @@
         "details": {}
     },
     {
-        "id": "ef2740248d8f",
+        "id": "e5dd01072dcc",
         "timestamp": "2026-06-11T15:13:03",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -437,7 +437,7 @@
         "details": {}
     },
     {
-        "id": "6b4dd6aeed20",
+        "id": "9556dc66b1c0",
         "timestamp": "2026-06-11T15:13:20",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -448,7 +448,7 @@
         "details": {}
     },
     {
-        "id": "1acb07a0c03b",
+        "id": "e05a6b709af5",
         "timestamp": "2026-06-11T15:13:24",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -459,7 +459,7 @@
         "details": {}
     },
     {
-        "id": "9b264adf1d14",
+        "id": "31802838a58d",
         "timestamp": "2026-06-11T15:13:40",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -470,7 +470,7 @@
         "details": {}
     },
     {
-        "id": "29cf55b2df17",
+        "id": "56868d4ef3f2",
         "timestamp": "2026-06-11T15:13:45",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -481,7 +481,7 @@
         "details": {}
     },
     {
-        "id": "76e6454d46bc",
+        "id": "a04a2884f386",
         "timestamp": "2026-06-11T15:15:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -492,7 +492,7 @@
         "details": {}
     },
     {
-        "id": "dc4954e5a5da",
+        "id": "0c734e84a331",
         "timestamp": "2026-06-11T15:18:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -503,7 +503,7 @@
         "details": {}
     },
     {
-        "id": "106f45479ebb",
+        "id": "b97b8dd0ef94",
         "timestamp": "2026-06-11T15:21:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -514,7 +514,7 @@
         "details": {}
     },
     {
-        "id": "ec8d4abccd70",
+        "id": "905c6b5f344f",
         "timestamp": "2026-06-11T15:24:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -525,7 +525,7 @@
         "details": {}
     },
     {
-        "id": "0689a663422d",
+        "id": "10ce3f76cdee",
         "timestamp": "2026-06-11T15:27:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -536,7 +536,7 @@
         "details": {}
     },
     {
-        "id": "d146ae37e4b8",
+        "id": "742302781bd7",
         "timestamp": "2026-06-11T15:30:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -547,7 +547,7 @@
         "details": {}
     },
     {
-        "id": "f96080f9773c",
+        "id": "a18230ab87b6",
         "timestamp": "2026-06-11T15:33:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -558,7 +558,7 @@
         "details": {}
     },
     {
-        "id": "d86a76b21035",
+        "id": "f38ee444c402",
         "timestamp": "2026-06-11T15:36:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -569,7 +569,7 @@
         "details": {}
     },
     {
-        "id": "a0e4848613db",
+        "id": "4f6bdee4b5a6",
         "timestamp": "2026-06-11T15:40:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -582,7 +582,7 @@
         }
     },
     {
-        "id": "1fa20f99b903",
+        "id": "01f60a91e05d",
         "timestamp": "2026-06-11T15:40:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -595,7 +595,7 @@
         }
     },
     {
-        "id": "4a89037e3896",
+        "id": "5001fd2e30b1",
         "timestamp": "2026-06-11T15:40:06",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -606,7 +606,7 @@
         "details": {}
     },
     {
-        "id": "72910581657b",
+        "id": "43e27a12d59e",
         "timestamp": "2026-06-11T15:42:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -619,7 +619,7 @@
         }
     },
     {
-        "id": "3cc6776d2b64",
+        "id": "ea168b9c9d00",
         "timestamp": "2026-06-11T15:42:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -632,7 +632,7 @@
         }
     },
     {
-        "id": "d9f37f8e4182",
+        "id": "48e6f9d5c267",
         "timestamp": "2026-06-11T15:50:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -643,7 +643,7 @@
         "details": {}
     },
     {
-        "id": "767cf2b72b1f",
+        "id": "81c8eef347fd",
         "timestamp": "2026-06-11T15:50:05",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -654,7 +654,7 @@
         "details": {}
     },
     {
-        "id": "756ec74fd3de",
+        "id": "1ac87f98065c",
         "timestamp": "2026-06-11T15:50:10",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -665,7 +665,7 @@
         "details": {}
     },
     {
-        "id": "b15528ffbf24",
+        "id": "0d4da142f5ed",
         "timestamp": "2026-06-11T15:50:15",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -676,7 +676,7 @@
         "details": {}
     },
     {
-        "id": "b39f6695014c",
+        "id": "e2f60988f061",
         "timestamp": "2026-06-11T15:50:20",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -687,7 +687,7 @@
         "details": {}
     },
     {
-        "id": "1ea56228ad94",
+        "id": "5eede0364b9d",
         "timestamp": "2026-06-11T15:50:25",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -698,7 +698,7 @@
         "details": {}
     },
     {
-        "id": "ad5ad1a2f879",
+        "id": "9e79310c660b",
         "timestamp": "2026-06-11T15:55:00",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -709,7 +709,7 @@
         "details": {}
     },
     {
-        "id": "5414185e3c4e",
+        "id": "878106ab4000",
         "timestamp": "2026-06-11T15:55:02",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -720,7 +720,7 @@
         "details": {}
     },
     {
-        "id": "b06ca149b41d",
+        "id": "d24d4beef8bd",
         "timestamp": "2026-06-11T15:55:05",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -731,7 +731,7 @@
         "details": {}
     },
     {
-        "id": "c8b052a25916",
+        "id": "67ffb63531de",
         "timestamp": "2026-06-11T15:55:09",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -742,7 +742,7 @@
         "details": {}
     },
     {
-        "id": "4193a9a5818e",
+        "id": "479d71be46a5",
         "timestamp": "2026-06-11T15:55:12",
         "log_source": "ssh",
         "host": "Sentinel",
@@ -760,7 +760,7 @@
         }
     },
     {
-        "id": "c77fd27ddef4",
+        "id": "07e0d74f1d80",
         "timestamp": "2026-08-21T22:08:08.427131",
         "log_source": "docker",
         "host": "local",
@@ -775,7 +775,7 @@
         }
     },
     {
-        "id": "40086609beec",
+        "id": "1f2640fc916c",
         "timestamp": "2026-08-21T22:08:08.754704",
         "log_source": "docker",
         "host": "local",
@@ -789,7 +789,7 @@
         }
     },
     {
-        "id": "ec22d54c38d4",
+        "id": "b0e78326c6cd",
         "timestamp": "2026-08-21T22:08:08.773001",
         "log_source": "docker",
         "host": "local",
@@ -804,7 +804,7 @@
         }
     },
     {
-        "id": "d4de12d36465",
+        "id": "e1b309cb1bcc",
         "timestamp": "2026-08-21T22:08:09.799866",
         "log_source": "docker",
         "host": "local",
@@ -821,7 +821,7 @@
         }
     },
     {
-        "id": "5d673b982f74",
+        "id": "4200e3ddc622",
         "timestamp": "2026-08-21T22:08:09.804721",
         "log_source": "docker",
         "host": "local",
@@ -838,7 +838,7 @@
         }
     },
     {
-        "id": "0f5eadac65c4",
+        "id": "9152f6ae49ff",
         "timestamp": "2026-08-21T22:08:09.853418",
         "log_source": "docker",
         "host": "local",
@@ -855,7 +855,7 @@
         }
     },
     {
-        "id": "700f7643d00d",
+        "id": "5aaee2e0e5c9",
         "timestamp": "2026-08-21T22:08:09.877100",
         "log_source": "docker",
         "host": "local",
@@ -872,7 +872,7 @@
         }
     },
     {
-        "id": "c91cb1d57324",
+        "id": "4c78732a5edf",
         "timestamp": "2026-08-21T22:08:09.878924",
         "log_source": "docker",
         "host": "local",
@@ -889,7 +889,7 @@
         }
     },
     {
-        "id": "5d22d8944424",
+        "id": "3be31e3df7b3",
         "timestamp": "2026-08-21T22:08:09.933767",
         "log_source": "docker",
         "host": "local",
@@ -906,7 +906,7 @@
         }
     },
     {
-        "id": "c0e8d23072f4",
+        "id": "c4db0baa6684",
         "timestamp": "2026-08-21T22:08:09.968445",
         "log_source": "docker",
         "host": "local",
@@ -922,7 +922,7 @@
         }
     },
     {
-        "id": "238b0d684c76",
+        "id": "b9497a5ed90f",
         "timestamp": "2026-08-21T22:08:10.112709",
         "log_source": "docker",
         "host": "local",
@@ -936,7 +936,7 @@
         }
     },
     {
-        "id": "c95352e03fba",
+        "id": "084f440959e2",
         "timestamp": "2026-08-21T22:08:10.113890",
         "log_source": "docker",
         "host": "local",
@@ -951,7 +951,7 @@
         }
     },
     {
-        "id": "208a003502c2",
+        "id": "d2eefee43ddf",
         "timestamp": "2026-08-21T22:08:10.119274",
         "log_source": "docker",
         "host": "local",
@@ -968,7 +968,7 @@
         }
     },
     {
-        "id": "eb0be4ee9754",
+        "id": "815d21db5ae5",
         "timestamp": "2026-08-21T22:08:10.258085",
         "log_source": "docker",
         "host": "local",
@@ -982,7 +982,7 @@
         }
     },
     {
-        "id": "47b4ed0741df",
+        "id": "bfda75e97ef0",
         "timestamp": "2026-08-21T22:08:10.275649",
         "log_source": "docker",
         "host": "local",
@@ -997,7 +997,7 @@
         }
     },
     {
-        "id": "a2350a8e8aab",
+        "id": "c9d16618f201",
         "timestamp": "2026-08-21T22:08:10.275688",
         "log_source": "docker",
         "host": "local",
@@ -1012,7 +1012,7 @@
         }
     },
     {
-        "id": "2b2f2dd2a37d",
+        "id": "315c4669aea3",
         "timestamp": "2026-08-21T22:08:10.313168",
         "log_source": "docker",
         "host": "local",
@@ -1028,7 +1028,7 @@
         }
     },
     {
-        "id": "0c72123d0826",
+        "id": "e11d49826b15",
         "timestamp": "2026-08-21T22:08:10.437221",
         "log_source": "docker",
         "host": "local",
@@ -1042,7 +1042,7 @@
         }
     },
     {
-        "id": "484f2134b009",
+        "id": "06b6ef486acf",
         "timestamp": "2026-08-21T22:08:10.437807",
         "log_source": "docker",
         "host": "local",
@@ -1057,7 +1057,7 @@
         }
     },
     {
-        "id": "5779c32adec1",
+        "id": "8aaa3caa1d0b",
         "timestamp": "2026-08-21T22:08:10.442907",
         "log_source": "docker",
         "host": "local",
@@ -1074,7 +1074,7 @@
         }
     },
     {
-        "id": "bc19c96e59d5",
+        "id": "46a7dd40ce47",
         "timestamp": "2026-08-21T22:08:10.592675",
         "log_source": "docker",
         "host": "local",
@@ -1088,7 +1088,7 @@
         }
     },
     {
-        "id": "cece11632b2b",
+        "id": "09cb68f5c835",
         "timestamp": "2026-08-21T22:08:10.607458",
         "log_source": "docker",
         "host": "local",
@@ -1103,7 +1103,7 @@
         }
     },
     {
-        "id": "49d648d0a420",
+        "id": "a617a7cf4795",
         "timestamp": "2026-08-21T22:08:10.607494",
         "log_source": "docker",
         "host": "local",
@@ -1118,7 +1118,7 @@
         }
     },
     {
-        "id": "52ee349480fc",
+        "id": "51c5b33ca663",
         "timestamp": "2026-08-21T22:08:10.644569",
         "log_source": "docker",
         "host": "local",
@@ -1134,7 +1134,7 @@
         }
     },
     {
-        "id": "82d34e7b0269",
+        "id": "7cb415cc767f",
         "timestamp": "2026-08-21T22:08:10.758349",
         "log_source": "docker",
         "host": "local",
@@ -1148,7 +1148,7 @@
         }
     },
     {
-        "id": "fe2721775119",
+        "id": "9db1bfb5df97",
         "timestamp": "2026-08-21T22:08:10.759299",
         "log_source": "docker",
         "host": "local",
@@ -1163,7 +1163,7 @@
         }
     },
     {
-        "id": "4c934348d83f",
+        "id": "5211e3eb2ad5",
         "timestamp": "2026-08-21T22:08:10.763078",
         "log_source": "docker",
         "host": "local",
@@ -1180,7 +1180,7 @@
         }
     },
     {
-        "id": "33bcf15d61c2",
+        "id": "59dd058f8784",
         "timestamp": "2026-08-21T22:08:10.900002",
         "log_source": "docker",
         "host": "local",
@@ -1194,7 +1194,7 @@
         }
     },
     {
-        "id": "dbc851d51372",
+        "id": "28c8336286aa",
         "timestamp": "2026-08-21T22:08:10.914312",
         "log_source": "docker",
         "host": "local",
@@ -1209,7 +1209,7 @@
         }
     },
     {
-        "id": "ce2c7cc8a6a6",
+        "id": "60b556c12028",
         "timestamp": "2026-08-21T22:08:10.914354",
         "log_source": "docker",
         "host": "local",
@@ -1224,7 +1224,7 @@
         }
     },
     {
-        "id": "e78b22f90401",
+        "id": "2f807ef6ef42",
         "timestamp": "2026-08-21T22:08:10.953040",
         "log_source": "docker",
         "host": "local",
@@ -1240,7 +1240,7 @@
         }
     },
     {
-        "id": "71af5ed69f94",
+        "id": "6c6933cc5a86",
         "timestamp": "2026-08-21T22:08:11.075037",
         "log_source": "docker",
         "host": "local",
@@ -1254,7 +1254,7 @@
         }
     },
     {
-        "id": "5b1ca456eee2",
+        "id": "f7069fa01498",
         "timestamp": "2026-08-21T22:08:11.091367",
         "log_source": "docker",
         "host": "local",
@@ -1269,7 +1269,7 @@
         }
     },
     {
-        "id": "bbbcec43dd6f",
+        "id": "ab6a7a21435f",
         "timestamp": "2026-08-21T22:08:11.093980",
         "log_source": "docker",
         "host": "local",
@@ -1286,7 +1286,7 @@
         }
     },
     {
-        "id": "a6f3742b9b8e",
+        "id": "38c3263ebec9",
         "timestamp": "2026-08-21T22:08:11.255802",
         "log_source": "docker",
         "host": "local",
@@ -1300,7 +1300,7 @@
         }
     },
     {
-        "id": "aa72d71735db",
+        "id": "74ce26948197",
         "timestamp": "2026-08-21T22:08:11.272547",
         "log_source": "docker",
         "host": "local",
@@ -1315,7 +1315,7 @@
         }
     },
     {
-        "id": "d128eac33432",
+        "id": "757a07dbdc42",
         "timestamp": "2026-08-21T22:08:11.337929",
         "log_source": "docker",
         "host": "local",
@@ -1330,7 +1330,7 @@
         }
     },
     {
-        "id": "8b5e1ed65717",
+        "id": "59fe4a52ba48",
         "timestamp": "2026-08-21T22:08:11.342080",
         "log_source": "docker",
         "host": "local",
@@ -1345,7 +1345,7 @@
         }
     },
     {
-        "id": "f7635f2e5750",
+        "id": "7662a7d68683",
         "timestamp": "2026-08-21T22:08:11.498518",
         "log_source": "docker",
         "host": "local",
@@ -1359,7 +1359,7 @@
         }
     },
     {
-        "id": "f1f3ce58e969",
+        "id": "5830c5bbab51",
         "timestamp": "2026-08-21T22:08:11.514642",
         "log_source": "docker",
         "host": "local",
@@ -1374,7 +1374,7 @@
         }
     },
     {
-        "id": "3626a9e5ec67",
+        "id": "503419cc9ab7",
         "timestamp": "2026-08-21T22:08:11.631787",
         "log_source": "docker",
         "host": "local",
@@ -1388,7 +1388,7 @@
         }
     },
     {
-        "id": "e2a608ac5ed0",
+        "id": "a07093afa01f",
         "timestamp": "2026-08-21T22:08:11.644480",
         "log_source": "docker",
         "host": "local",
@@ -1405,7 +1405,7 @@
         }
     },
     {
-        "id": "01e40ad0e1c8",
+        "id": "3220cb4041cf",
         "timestamp": "2026-08-21T22:08:11.651930",
         "log_source": "docker",
         "host": "local",
@@ -1420,7 +1420,7 @@
         }
     },
     {
-        "id": "683cbeb05b54",
+        "id": "6854cc46a1fe",
         "timestamp": "2026-08-21T22:08:11.697806",
         "log_source": "docker",
         "host": "local",
@@ -1435,7 +1435,7 @@
         }
     },
     {
-        "id": "2092695928cb",
+        "id": "6dd1a61101ed",
         "timestamp": "2026-08-21T22:08:11.699759",
         "log_source": "docker",
         "host": "local",
@@ -1450,7 +1450,7 @@
         }
     },
     {
-        "id": "11f705bad6a2",
+        "id": "6ffc14b0677f",
         "timestamp": "2026-08-21T22:08:11.830827",
         "log_source": "docker",
         "host": "local",
@@ -1464,7 +1464,7 @@
         }
     },
     {
-        "id": "cd89e8f67cdf",
+        "id": "40af3bf6808a",
         "timestamp": "2026-08-21T22:08:11.854120",
         "log_source": "docker",
         "host": "local",
@@ -1479,7 +1479,7 @@
         }
     },
     {
-        "id": "72f95d7e8733",
+        "id": "6549eb505fcf",
         "timestamp": "2026-08-21T22:08:11.962300",
         "log_source": "docker",
         "host": "local",
@@ -1493,7 +1493,7 @@
         }
     },
     {
-        "id": "93e2ac0706e9",
+        "id": "41d9bcea2e0d",
         "timestamp": "2026-08-21T22:08:11.983408",
         "log_source": "docker",
         "host": "local",
@@ -1510,7 +1510,7 @@
         }
     },
     {
-        "id": "2a11bc63ceff",
+        "id": "769883184d16",
         "timestamp": "2026-08-21T22:08:11.988809",
         "log_source": "docker",
         "host": "local",
@@ -1525,7 +1525,7 @@
         }
     },
     {
-        "id": "7bfc4b9eed45",
+        "id": "adee55e83b40",
         "timestamp": "2026-08-21T22:08:12.035754",
         "log_source": "docker",
         "host": "local",
@@ -1540,7 +1540,7 @@
         }
     },
     {
-        "id": "d97c9b11f9a6",
+        "id": "e9f455e52528",
         "timestamp": "2026-08-21T22:08:12.037545",
         "log_source": "docker",
         "host": "local",
@@ -1555,7 +1555,7 @@
         }
     },
     {
-        "id": "91dfbbf6bf96",
+        "id": "c7c0256ed606",
         "timestamp": "2026-08-21T22:08:12.178780",
         "log_source": "docker",
         "host": "local",
@@ -1569,7 +1569,7 @@
         }
     },
     {
-        "id": "a01f564f546e",
+        "id": "dcc26ab16e33",
         "timestamp": "2026-08-21T22:08:12.197527",
         "log_source": "docker",
         "host": "local",
@@ -1584,7 +1584,7 @@
         }
     },
     {
-        "id": "b06bf2a549d3",
+        "id": "b298b9788169",
         "timestamp": "2026-08-21T22:08:12.281337",
         "log_source": "docker",
         "host": "local",
@@ -1598,7 +1598,7 @@
         }
     },
     {
-        "id": "c468bcc24780",
+        "id": "f229f0ce2fba",
         "timestamp": "2026-08-21T22:08:12.295815",
         "log_source": "docker",
         "host": "local",
@@ -1615,7 +1615,7 @@
         }
     },
     {
-        "id": "a0aa6440fcca",
+        "id": "8b6de54456d5",
         "timestamp": "2026-08-21T22:08:12.301094",
         "log_source": "docker",
         "host": "local",
@@ -1630,7 +1630,7 @@
         }
     },
     {
-        "id": "7fc9b93b6367",
+        "id": "0690c638b993",
         "timestamp": "2026-08-21T22:08:12.355676",
         "log_source": "docker",
         "host": "local",
@@ -1645,7 +1645,7 @@
         }
     },
     {
-        "id": "3cf34a648a31",
+        "id": "6fc62cae67d8",
         "timestamp": "2026-08-21T22:08:12.357994",
         "log_source": "docker",
         "host": "local",
@@ -1660,7 +1660,7 @@
         }
     },
     {
-        "id": "e7f98348f3ff",
+        "id": "10483b416f69",
         "timestamp": "2026-08-21T22:08:12.504066",
         "log_source": "docker",
         "host": "local",
@@ -1674,7 +1674,7 @@
         }
     },
     {
-        "id": "8f7305042ac8",
+        "id": "32f937d848c1",
         "timestamp": "2026-08-21T22:08:12.520751",
         "log_source": "docker",
         "host": "local",
@@ -1689,7 +1689,7 @@
         }
     },
     {
-        "id": "089d5b576f00",
+        "id": "b29bed445fc2",
         "timestamp": "2026-08-21T22:08:12.607723",
         "log_source": "docker",
         "host": "local",
@@ -1703,7 +1703,7 @@
         }
     },
     {
-        "id": "997c59943db3",
+        "id": "3d60d5cc2d00",
         "timestamp": "2026-08-21T22:08:12.621379",
         "log_source": "docker",
         "host": "local",
@@ -1720,7 +1720,7 @@
         }
     },
     {
-        "id": "4187ec6de512",
+        "id": "7e55f5a3edb8",
         "timestamp": "2026-08-21T22:08:12.626573",
         "log_source": "docker",
         "host": "local",
@@ -1735,7 +1735,7 @@
         }
     },
     {
-        "id": "89b5bd051a15",
+        "id": "6dd2e4f886c1",
         "timestamp": "2026-08-21T22:08:12.675290",
         "log_source": "docker",
         "host": "local",
@@ -1750,7 +1750,7 @@
         }
     },
     {
-        "id": "ae9ce67b317a",
+        "id": "4953c40fb317",
         "timestamp": "2026-08-21T22:08:12.677136",
         "log_source": "docker",
         "host": "local",
@@ -1765,7 +1765,7 @@
         }
     },
     {
-        "id": "b477900f73c7",
+        "id": "89b59f6092df",
         "timestamp": "2026-08-21T22:08:12.811532",
         "log_source": "docker",
         "host": "local",
@@ -1779,7 +1779,7 @@
         }
     },
     {
-        "id": "ce4faaf9fe7d",
+        "id": "b48d58cbce0f",
         "timestamp": "2026-08-21T22:08:12.827191",
         "log_source": "docker",
         "host": "local",
@@ -1794,7 +1794,7 @@
         }
     },
     {
-        "id": "c0039460d694",
+        "id": "b6e874022753",
         "timestamp": "2026-08-21T22:08:12.917019",
         "log_source": "docker",
         "host": "local",
@@ -1808,7 +1808,7 @@
         }
     },
     {
-        "id": "6acbc9e63334",
+        "id": "2fa60a3bf9b8",
         "timestamp": "2026-08-21T22:08:12.924949",
         "log_source": "docker",
         "host": "local",
@@ -1825,7 +1825,7 @@
         }
     },
     {
-        "id": "8bf542b2316e",
+        "id": "a066850f4c5e",
         "timestamp": "2026-08-21T22:08:12.930630",
         "log_source": "docker",
         "host": "local",
@@ -1840,7 +1840,7 @@
         }
     },
     {
-        "id": "81d274f026dd",
+        "id": "8002c114f3c0",
         "timestamp": "2026-08-21T22:08:12.979762",
         "log_source": "docker",
         "host": "local",
@@ -1855,7 +1855,7 @@
         }
     },
     {
-        "id": "73344f361d81",
+        "id": "905e3397faa9",
         "timestamp": "2026-08-21T22:08:13.004732",
         "log_source": "docker",
         "host": "local",
@@ -1870,7 +1870,7 @@
         }
     },
     {
-        "id": "e9d5b732d79e",
+        "id": "63da3e99f545",
         "timestamp": "2026-08-21T22:08:13.039682",
         "log_source": "docker",
         "host": "local",
@@ -1886,7 +1886,7 @@
         }
     },
     {
-        "id": "3fa1549ce2bc",
+        "id": "daf3e48f3b94",
         "timestamp": "2026-08-21T22:08:13.157061",
         "log_source": "docker",
         "host": "local",
@@ -1900,7 +1900,7 @@
         }
     },
     {
-        "id": "a6164a284060",
+        "id": "546814df8410",
         "timestamp": "2026-08-21T22:08:13.167424",
         "log_source": "docker",
         "host": "local",
@@ -1915,7 +1915,7 @@
         }
     },
     {
-        "id": "a070f362b4c6",
+        "id": "8b9e6ae56e53",
         "timestamp": "2026-08-21T22:08:13.170750",
         "log_source": "docker",
         "host": "local",
@@ -1932,7 +1932,7 @@
         }
     },
     {
-        "id": "a3f46174a073",
+        "id": "f86229375c9f",
         "timestamp": "2026-08-21T22:08:13.197562",
         "log_source": "docker",
         "host": "local",
@@ -1947,7 +1947,7 @@
         }
     },
     {
-        "id": "ce9ec5a504ec",
+        "id": "8f0843a642e1",
         "timestamp": "2026-08-21T22:08:15.329116",
         "log_source": "docker",
         "host": "local",
@@ -1964,7 +1964,7 @@
         }
     },
     {
-        "id": "bb1b8f046cd3",
+        "id": "a903e26b3420",
         "timestamp": "2026-08-21T22:08:15.329243",
         "log_source": "docker",
         "host": "local",
@@ -1981,7 +1981,7 @@
         }
     },
     {
-        "id": "11472d671bb1",
+        "id": "0fca77babfe7",
         "timestamp": "2026-08-21T22:08:15.866543",
         "log_source": "docker",
         "host": "local",
@@ -1998,7 +1998,7 @@
         }
     },
     {
-        "id": "9bd2634385d3",
+        "id": "fbfaf955c7b1",
         "timestamp": "2026-08-21T22:08:15.866611",
         "log_source": "docker",
         "host": "local",
@@ -2015,7 +2015,7 @@
         }
     },
     {
-        "id": "3cb222896fe3",
+        "id": "6801d16c7540",
         "timestamp": "2026-08-21T22:08:15.929948",
         "log_source": "docker",
         "host": "local",
@@ -2032,7 +2032,7 @@
         }
     },
     {
-        "id": "3f78ba91595d",
+        "id": "ed568cd78665",
         "timestamp": "2026-08-21T22:08:16.007272",
         "log_source": "docker",
         "host": "local",
@@ -2049,7 +2049,7 @@
         }
     },
     {
-        "id": "f8f588d59b80",
+        "id": "afe7762ae64c",
         "timestamp": "2026-08-31T12:10:44+00:00",
         "log_source": "web",
         "host": null,
@@ -2067,7 +2067,7 @@
         }
     },
     {
-        "id": "29052e66072c",
+        "id": "e2d40a1d1a01",
         "timestamp": "2026-08-31T12:10:44+00:00",
         "log_source": "web",
         "host": null,
@@ -2085,7 +2085,7 @@
         }
     },
     {
-        "id": "945d28cf2c68",
+        "id": "1e68746dfc64",
         "timestamp": "2026-08-31T12:10:44+00:00",
         "log_source": "web",
         "host": null,
@@ -2103,7 +2103,7 @@
         }
     },
     {
-        "id": "ab0ba14be72b",
+        "id": "88784cb07399",
         "timestamp": "2026-08-31T12:10:44+00:00",
         "log_source": "web",
         "host": null,
@@ -2121,7 +2121,7 @@
         }
     },
     {
-        "id": "b7d1e964f46e",
+        "id": "c2ea4dd96dc9",
         "timestamp": "2026-08-31T12:10:44+00:00",
         "log_source": "web",
         "host": null,
@@ -2140,7 +2140,7 @@
         }
     },
     {
-        "id": "7cffa7bb15cd",
+        "id": "d1bf36a78a6f",
         "timestamp": "2026-08-31T12:10:44+00:00",
         "log_source": "web",
         "host": null,
@@ -2159,7 +2159,7 @@
         }
     },
     {
-        "id": "d6d6943aa8cf",
+        "id": "9294fb46ed7e",
         "timestamp": "2026-08-31T12:10:44+00:00",
         "log_source": "web",
         "host": null,
@@ -2178,7 +2178,7 @@
         }
     },
     {
-        "id": "074e0474cafa",
+        "id": "a915e75fdd20",
         "timestamp": "2026-08-31T12:10:44+00:00",
         "log_source": "web",
         "host": null,
@@ -2197,7 +2197,7 @@
         }
     },
     {
-        "id": "83ab8c89b238",
+        "id": "fa4f0a7c4857",
         "timestamp": "2026-08-31T12:10:44+00:00",
         "log_source": "web",
         "host": null,
@@ -2216,7 +2216,7 @@
         }
     },
     {
-        "id": "430535a832e4",
+        "id": "73f3ebccd162",
         "timestamp": "2026-08-31T12:10:44+00:00",
         "log_source": "web",
         "host": null,
@@ -2235,7 +2235,7 @@
         }
     },
     {
-        "id": "594d177811da",
+        "id": "47f97bd6c139",
         "timestamp": "2026-08-31T12:10:44+00:00",
         "log_source": "web",
         "host": null,
@@ -2254,7 +2254,7 @@
         }
     },
     {
-        "id": "ca52caa83a7f",
+        "id": "94fd29966f62",
         "timestamp": "2026-08-31T12:10:44+00:00",
         "log_source": "web",
         "host": null,
@@ -2273,7 +2273,7 @@
         }
     },
     {
-        "id": "8c58f5823c03",
+        "id": "7749fcd98cdd",
         "timestamp": "2026-08-31T12:10:44+00:00",
         "log_source": "web",
         "host": null,
@@ -2292,7 +2292,7 @@
         }
     },
     {
-        "id": "18b929ee93b5",
+        "id": "ffe04f0689fa",
         "timestamp": "2026-08-31T12:10:44+00:00",
         "log_source": "web",
         "host": null,
@@ -2311,7 +2311,7 @@
         }
     },
     {
-        "id": "ad961e5a917f",
+        "id": "646d2049cb73",
         "timestamp": "2026-08-31T12:10:44+00:00",
         "log_source": "web",
         "host": null,
@@ -2329,7 +2329,7 @@
         }
     },
     {
-        "id": "22e7f409c607",
+        "id": "af750212ec0d",
         "timestamp": "2026-08-31T12:10:44+00:00",
         "log_source": "web",
         "host": null,
@@ -2348,7 +2348,7 @@
         }
     },
     {
-        "id": "6bcafeda4a5e",
+        "id": "828b12c26459",
         "timestamp": "2026-08-31T12:10:44+00:00",
         "log_source": "web",
         "host": null,
@@ -2366,7 +2366,7 @@
         }
     },
     {
-        "id": "6118c76eb398",
+        "id": "482ef8d19a91",
         "timestamp": "2026-08-31T12:11:02+00:00",
         "log_source": "web",
         "host": null,
@@ -2384,7 +2384,7 @@
         }
     },
     {
-        "id": "01ef9ed07a5c",
+        "id": "ac819d2e4782",
         "timestamp": "2026-08-31T12:11:04+00:00",
         "log_source": "web",
         "host": null,
@@ -2402,7 +2402,7 @@
         }
     },
     {
-        "id": "90e5fffaf316",
+        "id": "628a1208c9b2",
         "timestamp": "2026-08-31T12:11:06+00:00",
         "log_source": "web",
         "host": null,
@@ -2420,7 +2420,7 @@
         }
     },
     {
-        "id": "cc21f4a7d540",
+        "id": "8dde977c81be",
         "timestamp": "2026-08-31T12:12:01+00:00",
         "log_source": "web",
         "host": null,
@@ -2438,7 +2438,7 @@
         }
     },
     {
-        "id": "5a58b1fb3d8d",
+        "id": "357e5d9788d8",
         "timestamp": "2026-08-31T12:12:03+00:00",
         "log_source": "web",
         "host": null,
@@ -2456,7 +2456,7 @@
         }
     },
     {
-        "id": "f945fe7eae29",
+        "id": "df3e9fae11ee",
         "timestamp": "2026-08-31T12:12:05+00:00",
         "log_source": "web",
         "host": null,
@@ -2474,7 +2474,7 @@
         }
     },
     {
-        "id": "dd3a1e03ddd9",
+        "id": "491832237eda",
         "timestamp": "2026-08-31T12:13:00+00:00",
         "log_source": "web",
         "host": null,
@@ -2491,7 +2491,7 @@
         }
     },
     {
-        "id": "541e0bdd8402",
+        "id": "691c53a71256",
         "timestamp": "2026-08-31T12:14:07.918273",
         "log_source": "web",
         "host": null,
@@ -2505,7 +2505,7 @@
         }
     },
     {
-        "id": "8ecd2cc34e82",
+        "id": "55100e9d510b",
         "timestamp": "2026-08-31T12:14:09.114509",
         "log_source": "web",
         "host": null,
@@ -2516,6 +2516,623 @@
         "details": {
             "module": "php:error",
             "message": "PHP Fatal error:  Uncaught Error: Call to undefined function in /var/www/html/api/export.php:88"
+        }
+    },
+    {
+        "id": "2df21186c047",
+        "timestamp": "2025-10-12T03:45:01",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "cron_session_opened",
+        "severity": null,
+        "username": "root",
+        "source_ip": null,
+        "details": {
+            "process": "CRON"
+        }
+    },
+    {
+        "id": "cae650909002",
+        "timestamp": "2025-10-12T03:45:01",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "cron_session_closed",
+        "severity": null,
+        "username": "root",
+        "source_ip": null,
+        "details": {
+            "process": "CRON"
+        }
+    },
+    {
+        "id": "a1f4dc0b5f96",
+        "timestamp": "2025-10-12T03:46:12",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "sudo_command",
+        "severity": null,
+        "username": "analyst",
+        "source_ip": null,
+        "details": {
+            "tty": "pts/1",
+            "pwd": "/home/analyst",
+            "target_user": "root",
+            "command": "/usr/bin/apt update",
+            "process": "sudo"
+        }
+    },
+    {
+        "id": "01f60c0ee88d",
+        "timestamp": "2025-10-12T03:46:12",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "privilege_session_opened",
+        "severity": null,
+        "username": "analyst",
+        "source_ip": null,
+        "details": {
+            "pam_service": "sudo",
+            "target_user": "root",
+            "target_uid": 0,
+            "uid": 1000,
+            "process": "sudo"
+        }
+    },
+    {
+        "id": "dce5b46544a6",
+        "timestamp": "2025-10-12T03:46:19",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "privilege_session_closed",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "target_user": "root",
+            "process": "sudo"
+        }
+    },
+    {
+        "id": "304f71c467ff",
+        "timestamp": "2025-10-12T04:10:03",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "service_auth_failure",
+        "severity": null,
+        "username": "sunni",
+        "source_ip": "203.0.113.40",
+        "details": {
+            "pam_service": "dovecot",
+            "logname": null,
+            "uid": 0,
+            "euid": "0",
+            "tty": "dovecot",
+            "ruser": "sunni",
+            "process": "auth"
+        }
+    },
+    {
+        "id": "29a883732347",
+        "timestamp": "2025-10-12T04:10:03",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "service_auth_failure",
+        "severity": null,
+        "username": "maile",
+        "source_ip": "203.0.113.40",
+        "details": {
+            "pam_service": "dovecot",
+            "logname": null,
+            "uid": 0,
+            "euid": "0",
+            "tty": "dovecot",
+            "ruser": "maile",
+            "process": "auth"
+        }
+    },
+    {
+        "id": "aef6ccffaacc",
+        "timestamp": "2025-10-12T04:10:04",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "service_auth_failure",
+        "severity": null,
+        "username": "danette",
+        "source_ip": "203.0.113.40",
+        "details": {
+            "pam_service": "dovecot",
+            "logname": null,
+            "uid": 0,
+            "euid": "0",
+            "tty": "dovecot",
+            "ruser": "danette",
+            "process": "auth"
+        }
+    },
+    {
+        "id": "9a9219e2a4d8",
+        "timestamp": "2025-10-12T04:10:04",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "service_auth_failure",
+        "severity": null,
+        "username": "daryl",
+        "source_ip": "203.0.113.40",
+        "details": {
+            "pam_service": "dovecot",
+            "logname": null,
+            "uid": 0,
+            "euid": "0",
+            "tty": "dovecot",
+            "ruser": "daryl",
+            "process": "auth"
+        }
+    },
+    {
+        "id": "1f03f32951da",
+        "timestamp": "2025-10-12T04:10:05",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "service_auth_failure",
+        "severity": null,
+        "username": "della",
+        "source_ip": "203.0.113.40",
+        "details": {
+            "pam_service": "dovecot",
+            "logname": null,
+            "uid": 0,
+            "euid": "0",
+            "tty": "dovecot",
+            "ruser": "della",
+            "process": "auth"
+        }
+    },
+    {
+        "id": "75283d36325b",
+        "timestamp": "2025-10-12T04:10:05",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "service_auth_failure",
+        "severity": null,
+        "username": "kelsey",
+        "source_ip": "203.0.113.40",
+        "details": {
+            "pam_service": "dovecot",
+            "logname": null,
+            "uid": 0,
+            "euid": "0",
+            "tty": "dovecot",
+            "ruser": "kelsey",
+            "process": "auth"
+        }
+    },
+    {
+        "id": "6e82d4e5601a",
+        "timestamp": "2025-10-12T04:10:06",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "service_auth_failure",
+        "severity": null,
+        "username": "irwin",
+        "source_ip": "203.0.113.40",
+        "details": {
+            "pam_service": "dovecot",
+            "logname": null,
+            "uid": 0,
+            "euid": "0",
+            "tty": "dovecot",
+            "ruser": "irwin",
+            "process": "auth"
+        }
+    },
+    {
+        "id": "100d282e0837",
+        "timestamp": "2025-10-12T04:10:06",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "service_auth_failure",
+        "severity": null,
+        "username": "trula",
+        "source_ip": "203.0.113.40",
+        "details": {
+            "pam_service": "dovecot",
+            "logname": null,
+            "uid": 0,
+            "euid": "0",
+            "tty": "dovecot",
+            "ruser": "trula",
+            "process": "auth"
+        }
+    },
+    {
+        "id": "3def8d5a1fb4",
+        "timestamp": "2025-10-12T04:10:07",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "service_auth_failure",
+        "severity": null,
+        "username": "karri",
+        "source_ip": "203.0.113.40",
+        "details": {
+            "pam_service": "dovecot",
+            "logname": null,
+            "uid": 0,
+            "euid": "0",
+            "tty": "dovecot",
+            "ruser": "karri",
+            "process": "auth"
+        }
+    },
+    {
+        "id": "8b5e969ed903",
+        "timestamp": "2025-10-12T04:10:07",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "service_auth_failure",
+        "severity": null,
+        "username": "page",
+        "source_ip": "203.0.113.40",
+        "details": {
+            "pam_service": "dovecot",
+            "logname": null,
+            "uid": 0,
+            "euid": "0",
+            "tty": "dovecot",
+            "ruser": "page",
+            "process": "auth"
+        }
+    },
+    {
+        "id": "457f9a9d8b20",
+        "timestamp": "2025-10-12T04:10:08",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "service_auth_failure",
+        "severity": null,
+        "username": "violet",
+        "source_ip": "203.0.113.40",
+        "details": {
+            "pam_service": "dovecot",
+            "logname": null,
+            "uid": 0,
+            "euid": "0",
+            "tty": "dovecot",
+            "ruser": "violet",
+            "process": "auth"
+        }
+    },
+    {
+        "id": "249a7c50e1dc",
+        "timestamp": "2025-10-12T04:10:08",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "service_auth_failure",
+        "severity": null,
+        "username": "long",
+        "source_ip": "203.0.113.40",
+        "details": {
+            "pam_service": "dovecot",
+            "logname": null,
+            "uid": 0,
+            "euid": "0",
+            "tty": "dovecot",
+            "ruser": "long",
+            "process": "auth"
+        }
+    },
+    {
+        "id": "8fe9aa5204b9",
+        "timestamp": "2025-10-12T04:22:40",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "su_attempt",
+        "severity": null,
+        "username": "root",
+        "source_ip": null,
+        "details": {
+            "target_user": "analyst",
+            "tty": "none",
+            "process": "su"
+        }
+    },
+    {
+        "id": "51eca9016a8a",
+        "timestamp": "2025-10-12T04:22:40",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "privilege_session_opened",
+        "severity": null,
+        "username": "",
+        "source_ip": null,
+        "details": {
+            "pam_service": "su-l",
+            "target_user": "analyst",
+            "target_uid": 1000,
+            "uid": 0,
+            "process": "su"
+        }
+    },
+    {
+        "id": "9aef5dc7c12f",
+        "timestamp": "2025-10-12T04:22:44",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "privilege_session_closed",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "target_user": "analyst",
+            "process": "su"
+        }
+    },
+    {
+        "id": "0de96c722b59",
+        "timestamp": "2025-10-12T04:31:02",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "sudo_pam_failure",
+        "severity": null,
+        "username": "intern",
+        "source_ip": null,
+        "details": {
+            "logname": null,
+            "uid": 1001,
+            "euid": "0",
+            "tty": "/dev/pts/2",
+            "ruser": "intern",
+            "process": "sudo"
+        }
+    },
+    {
+        "id": "adc65e6e8745",
+        "timestamp": "2025-10-12T04:31:02",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "sudo_auth_failure",
+        "severity": null,
+        "username": "intern",
+        "source_ip": null,
+        "details": {
+            "attempts": 1,
+            "pwd": "/home/intern",
+            "target_user": "root",
+            "command": "/usr/bin/id",
+            "process": "sudo"
+        }
+    },
+    {
+        "id": "e8b252fbb0d5",
+        "timestamp": "2025-10-12T04:31:09",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "sudo_pam_failure",
+        "severity": null,
+        "username": "intern",
+        "source_ip": null,
+        "details": {
+            "logname": null,
+            "uid": 1001,
+            "euid": "0",
+            "tty": "/dev/pts/2",
+            "ruser": "intern",
+            "process": "sudo"
+        }
+    },
+    {
+        "id": "a561a015ba68",
+        "timestamp": "2025-10-12T04:31:09",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "sudo_auth_failure",
+        "severity": null,
+        "username": "intern",
+        "source_ip": null,
+        "details": {
+            "attempts": 2,
+            "pwd": "/home/intern",
+            "target_user": "root",
+            "command": "/usr/bin/id",
+            "process": "sudo"
+        }
+    },
+    {
+        "id": "09923bfcd983",
+        "timestamp": "2025-10-12T04:31:18",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "sudo_denied",
+        "severity": null,
+        "username": "intern",
+        "source_ip": null,
+        "details": {
+            "pwd": "/home/intern",
+            "target_user": "root",
+            "command": "/bin/cat /etc/shadow",
+            "process": "sudo"
+        }
+    },
+    {
+        "id": "9c10218d52a1",
+        "timestamp": "2025-10-12T04:38:55",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "polkit_denied",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "session": "unix-session:4",
+            "action": "org.freedesktop.systemd1.manage-units",
+            "process": "polkitd"
+        }
+    },
+    {
+        "id": "f40f9333ed12",
+        "timestamp": "2025-10-12T05:02:11",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "group_created",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "group": "svc-backup",
+            "gid": 1002,
+            "process": "useradd"
+        }
+    },
+    {
+        "id": "edd4526226e1",
+        "timestamp": "2025-10-12T05:02:11",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "account_created",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "target_user": "svc-backup",
+            "target_uid": 1002,
+            "gid": 1002,
+            "home": "/home/svc-backup",
+            "shell": "/bin/bash",
+            "process": "useradd"
+        }
+    },
+    {
+        "id": "28ee13dd62a2",
+        "timestamp": "2025-10-12T05:02:14",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "password_changed",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "target_user": "svc-backup",
+            "process": "chpasswd"
+        }
+    },
+    {
+        "id": "b5ddda799b98",
+        "timestamp": "2025-10-12T05:02:19",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "group_membership_added",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "target_user": "svc-backup",
+            "group": "sudo",
+            "process": "usermod"
+        }
+    },
+    {
+        "id": "554fd1b5d89d",
+        "timestamp": "2025-10-12T05:02:19",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "group_shadow_synced",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "added": "svc-backup",
+            "group": "sudo",
+            "process": "usermod"
+        }
+    },
+    {
+        "id": "5b31ecd61c8f",
+        "timestamp": "2025-10-12T05:03:40",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "sudo_command",
+        "severity": null,
+        "username": "svc-backup",
+        "source_ip": null,
+        "details": {
+            "tty": "pts/2",
+            "pwd": "/",
+            "target_user": "root",
+            "command": "/bin/cat /etc/shadow",
+            "process": "sudo"
+        }
+    },
+    {
+        "id": "f9fe06425a04",
+        "timestamp": "2025-10-12T05:03:40",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "privilege_session_opened",
+        "severity": null,
+        "username": "svc-backup",
+        "source_ip": null,
+        "details": {
+            "pam_service": "sudo",
+            "target_user": "root",
+            "target_uid": 0,
+            "uid": 1002,
+            "process": "sudo"
+        }
+    },
+    {
+        "id": "49e3fc8ca2f7",
+        "timestamp": "2025-10-12T05:04:02",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "privilege_session_closed",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "target_user": "root",
+            "process": "sudo"
+        }
+    },
+    {
+        "id": "bf22c4486278",
+        "timestamp": "2025-10-12T05:11:55",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "account_deleted",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "target_user": "svc-backup",
+            "process": "userdel"
+        }
+    },
+    {
+        "id": "5f48cde735f2",
+        "timestamp": "2025-10-12T05:11:55",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "group_membership_removed",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "target_user": "svc-backup",
+            "group": "sudo",
+            "process": "userdel"
+        }
+    },
+    {
+        "id": "1ca8426b737d",
+        "timestamp": "2025-10-12T05:11:55",
+        "log_source": "auth",
+        "host": "mail",
+        "event_type": "group_deleted",
+        "severity": null,
+        "username": null,
+        "source_ip": null,
+        "details": {
+            "group": "svc-backup",
+            "process": "userdel"
         }
     }
 ]

@@ -5,7 +5,7 @@
         "source_ip": "198.51.100.10",
         "timestamp": "2026-06-11T15:01:11",
         "event_ids": [
-            "6e57a1310f98"
+            "066c1d412f44"
         ],
         "recommended_action": "monitor"
     },
@@ -15,7 +15,7 @@
         "source_ip": "198.51.100.11",
         "timestamp": "2026-06-11T15:02:12",
         "event_ids": [
-            "7bc52fd1457f"
+            "9661eadeef35"
         ],
         "recommended_action": "monitor"
     },
@@ -25,7 +25,7 @@
         "source_ip": "203.0.113.40",
         "timestamp": "2026-06-11T15:03:18",
         "event_ids": [
-            "dbb55668be10"
+            "3e3816044dad"
         ],
         "recommended_action": "monitor"
     },
@@ -35,7 +35,7 @@
         "source_ip": "203.0.113.90",
         "timestamp": "2026-06-11T15:55:12",
         "event_ids": [
-            "4193a9a5818e"
+            "479d71be46a5"
         ],
         "recommended_action": "monitor"
     },
@@ -45,11 +45,11 @@
         "source_ip": "203.0.113.40",
         "timestamp": "2026-06-11T15:03:18",
         "event_ids": [
-            "bf6abd35378a",
-            "f40553edf02a",
-            "e00f5fea3e91",
-            "583fbf691e8c",
-            "dbb55668be10"
+            "c596ce9bcacb",
+            "e9c847c4ef2f",
+            "1b485b984567",
+            "8b6406589d81",
+            "3e3816044dad"
         ],
         "recommended_action": "block_ip and report",
         "attempts": 4
@@ -60,11 +60,11 @@
         "source_ip": "192.0.2.20",
         "timestamp": "2026-06-11T15:07:40",
         "event_ids": [
-            "b16bfc6d501e",
-            "6bcfe0e9caf1",
-            "349785e0bce9",
-            "709a68436fdd",
-            "805cdb2d0c91"
+            "f58fb12398ec",
+            "b5f453f51924",
+            "5dde57b59a9a",
+            "962430ef4025",
+            "1e81ebdb44ad"
         ],
         "recommended_action": "monitor",
         "attempts": 5
@@ -74,14 +74,14 @@
         "alert_type": "service_instability",
         "service": "ssh",
         "events": 6,
-        "timestamp": "2026-06-11T15:50:25",
+        "timestamp": "2026-06-11T15:13:45",
         "event_ids": [
-            "d9f37f8e4182",
-            "767cf2b72b1f",
-            "756ec74fd3de",
-            "b15528ffbf24",
-            "b39f6695014c",
-            "1ea56228ad94"
+            "45ed0c681f00",
+            "e5dd01072dcc",
+            "9556dc66b1c0",
+            "e05a6b709af5",
+            "31802838a58d",
+            "56868d4ef3f2"
         ],
         "recommended_action": "investigate service immediately"
     },
@@ -94,12 +94,12 @@
         "failed_attempts": 5,
         "timestamp": "2026-06-11T15:08:20",
         "event_ids": [
-            "b16bfc6d501e",
-            "6bcfe0e9caf1",
-            "349785e0bce9",
-            "709a68436fdd",
-            "805cdb2d0c91",
-            "3c314df6a8be"
+            "f58fb12398ec",
+            "b5f453f51924",
+            "5dde57b59a9a",
+            "962430ef4025",
+            "1e81ebdb44ad",
+            "fbdaab40a266"
         ],
         "recommended_action": "verify login"
     },
@@ -111,10 +111,10 @@
         "windows": 2,
         "timestamp": "2026-06-11T15:03:14",
         "event_ids": [
-            "bf6abd35378a",
-            "f40553edf02a",
-            "e00f5fea3e91",
-            "583fbf691e8c"
+            "c596ce9bcacb",
+            "e9c847c4ef2f",
+            "1b485b984567",
+            "8b6406589d81"
         ],
         "recommended_action": "monitor activity"
     },
@@ -126,11 +126,11 @@
         "windows": 3,
         "timestamp": "2026-06-11T15:07:40",
         "event_ids": [
-            "b16bfc6d501e",
-            "6bcfe0e9caf1",
-            "349785e0bce9",
-            "709a68436fdd",
-            "805cdb2d0c91"
+            "f58fb12398ec",
+            "b5f453f51924",
+            "5dde57b59a9a",
+            "962430ef4025",
+            "1e81ebdb44ad"
         ],
         "recommended_action": "monitor activity"
     },
@@ -142,14 +142,14 @@
         "windows": 6,
         "timestamp": "2026-06-11T15:36:00",
         "event_ids": [
-            "76e6454d46bc",
-            "dc4954e5a5da",
-            "106f45479ebb",
-            "ec8d4abccd70",
-            "0689a663422d",
-            "d146ae37e4b8",
-            "f96080f9773c",
-            "d86a76b21035"
+            "a04a2884f386",
+            "0c734e84a331",
+            "b97b8dd0ef94",
+            "905c6b5f344f",
+            "10ce3f76cdee",
+            "742302781bd7",
+            "a18230ab87b6",
+            "f38ee444c402"
         ],
         "recommended_action": "investigate immediately"
     },
@@ -161,8 +161,8 @@
         "duration": 12.0,
         "timestamp": "2026-06-11T15:10:12",
         "event_ids": [
-            "a6b9856f38ee",
-            "4769b51d09c0"
+            "c9dcde2d463a",
+            "1aace9e9a546"
         ],
         "recommended_action": "monitor"
     },
@@ -174,8 +174,8 @@
         "duration": 10.0,
         "timestamp": "2026-06-11T15:11:10",
         "event_ids": [
-            "9597d0375235",
-            "b60012587392"
+            "4ad8d7e99a96",
+            "fae47da47e8b"
         ],
         "recommended_action": "monitor"
     },
@@ -187,8 +187,8 @@
         "duration": 8.0,
         "timestamp": "2026-06-11T15:12:08",
         "event_ids": [
-            "dbf580a0d83f",
-            "add56ab74ed4"
+            "a86e6f176124",
+            "b169f4a30ecc"
         ],
         "recommended_action": "monitor"
     },
@@ -200,8 +200,8 @@
         "duration": 6.0,
         "timestamp": "2026-06-11T15:40:06",
         "event_ids": [
-            "1fa20f99b903",
-            "4a89037e3896"
+            "01f60a91e05d",
+            "5001fd2e30b1"
         ],
         "recommended_action": "monitor"
     },
@@ -214,7 +214,7 @@
         "auth_method": "publickey",
         "timestamp": "2026-06-11T15:09:00",
         "event_ids": [
-            "0ffff6595309"
+            "861013851800"
         ],
         "recommended_action": "inspect authorized_keys for this user and revoke unknown keys"
     },
@@ -227,7 +227,7 @@
         "auth_method": "publickey",
         "timestamp": "2026-06-11T15:42:00",
         "event_ids": [
-            "72910581657b"
+            "43e27a12d59e"
         ],
         "recommended_action": "inspect authorized_keys for this user and revoke unknown keys"
     },
@@ -240,7 +240,7 @@
         "command": "ls /",
         "timestamp": "2026-08-21T22:08:09.799866",
         "event_ids": [
-            "d4de12d36465"
+            "e1b309cb1bcc"
         ],
         "recommended_action": "confirm this exec was expected"
     },
@@ -253,7 +253,7 @@
         "command": "sh -c cat /etc/passwd",
         "timestamp": "2026-08-21T22:08:09.877100",
         "event_ids": [
-            "700f7643d00d"
+            "5aaee2e0e5c9"
         ],
         "recommended_action": "interactive shell in a container \u2014 confirm who ran it"
     },
@@ -266,18 +266,18 @@
         "scanner": "nikto",
         "timestamp": "2026-08-31T12:10:44+00:00",
         "event_ids": [
-            "074e0474cafa",
-            "22e7f409c607",
-            "430535a832e4",
-            "594d177811da",
-            "6bcafeda4a5e",
-            "7cffa7bb15cd",
-            "83ab8c89b238",
-            "8c58f5823c03",
-            "ad961e5a917f",
-            "b7d1e964f46e",
-            "ca52caa83a7f",
-            "d6d6943aa8cf"
+            "47f97bd6c139",
+            "646d2049cb73",
+            "73f3ebccd162",
+            "7749fcd98cdd",
+            "828b12c26459",
+            "9294fb46ed7e",
+            "94fd29966f62",
+            "a915e75fdd20",
+            "af750212ec0d",
+            "c2ea4dd96dc9",
+            "d1bf36a78a6f",
+            "fa4f0a7c4857"
         ],
         "recommended_action": "block_ip \u2014 nikto identified itself in the user agent"
     },
@@ -290,9 +290,9 @@
         "failures": 2,
         "timestamp": "2026-08-31T12:11:06+00:00",
         "event_ids": [
-            "6118c76eb398",
-            "01ef9ed07a5c",
-            "90e5fffaf316"
+            "482ef8d19a91",
+            "ac819d2e4782",
+            "628a1208c9b2"
         ],
         "recommended_action": "verify this session and reset the credential"
     },
@@ -304,10 +304,76 @@
         "errors": 3,
         "timestamp": "2026-08-31T12:12:05+00:00",
         "event_ids": [
-            "cc21f4a7d540",
-            "5a58b1fb3d8d",
-            "f945fe7eae29"
+            "8dde977c81be",
+            "357e5d9788d8",
+            "df3e9fae11ee"
         ],
         "recommended_action": "repeated 5xx from one address \u2014 check whether input is breaking the app"
+    },
+    {
+        "severity": "high",
+        "alert_type": "sensitive_command",
+        "service": "auth",
+        "username": "svc-backup",
+        "target": "root",
+        "path": "/etc/shadow",
+        "command": "/bin/cat /etc/shadow",
+        "timestamp": "2025-10-12T05:03:40",
+        "event_ids": [
+            "5b31ecd61c8f"
+        ],
+        "recommended_action": "confirm this read was authorised; treat the credentials as exposed"
+    },
+    {
+        "severity": "high",
+        "alert_type": "credential_spray",
+        "service": "auth",
+        "source_ip": "203.0.113.40",
+        "accounts_tried": 12,
+        "attempts": 12,
+        "timestamp": "2025-10-12T04:10:08",
+        "event_ids": [
+            "29a883732347",
+            "304f71c467ff",
+            "9a9219e2a4d8",
+            "aef6ccffaacc",
+            "1f03f32951da",
+            "75283d36325b",
+            "100d282e0837",
+            "6e82d4e5601a",
+            "3def8d5a1fb4",
+            "8b5e969ed903",
+            "249a7c50e1dc",
+            "457f9a9d8b20"
+        ],
+        "recommended_action": "block_ip \u2014 one source guessing many accounts is enumeration, not a user mistyping"
+    },
+    {
+        "severity": "high",
+        "alert_type": "backdoor_account",
+        "service": "auth",
+        "username": "svc-backup",
+        "group": "sudo",
+        "seconds_after_creation": 8,
+        "timestamp": "2025-10-12T05:02:19",
+        "event_ids": [
+            "edd4526226e1",
+            "b5ddda799b98"
+        ],
+        "recommended_action": "disable the account and audit what it did before removing it"
+    },
+    {
+        "severity": "medium",
+        "alert_type": "privilege_recon",
+        "service": "auth",
+        "username": "intern",
+        "attempts": 3,
+        "timestamp": "2025-10-12T04:31:18",
+        "event_ids": [
+            "adc65e6e8745",
+            "a561a015ba68",
+            "09923bfcd983"
+        ],
+        "recommended_action": "confirm who was testing their privileges"
     }
 ]

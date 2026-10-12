@@ -1,0 +1,37 @@
+Oct 12 03:45:01 mail CRON[3901]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct 12 03:45:01 mail CRON[3901]: pam_unix(cron:session): session closed for user root
+Oct 12 03:46:12 mail sudo[3920]: analyst : TTY=pts/1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/apt update
+Oct 12 03:46:12 mail sudo[3920]: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+Oct 12 03:46:19 mail sudo[3920]: pam_unix(sudo:session): session closed for user root
+Oct 12 04:10:03 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=sunni rhost=203.0.113.40  user=sunni
+Oct 12 04:10:03 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=maile rhost=203.0.113.40  user=maile
+Oct 12 04:10:04 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=danette rhost=203.0.113.40  user=danette
+Oct 12 04:10:04 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=daryl rhost=203.0.113.40  user=daryl
+Oct 12 04:10:05 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=della rhost=203.0.113.40  user=della
+Oct 12 04:10:05 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=kelsey rhost=203.0.113.40  user=kelsey
+Oct 12 04:10:06 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=irwin rhost=203.0.113.40  user=irwin
+Oct 12 04:10:06 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=trula rhost=203.0.113.40  user=trula
+Oct 12 04:10:07 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=karri rhost=203.0.113.40  user=karri
+Oct 12 04:10:07 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=page rhost=203.0.113.40  user=page
+Oct 12 04:10:08 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=violet rhost=203.0.113.40  user=violet
+Oct 12 04:10:08 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=long rhost=203.0.113.40  user=long
+Oct 12 04:22:40 mail su[4048]: (to analyst) root on none
+Oct 12 04:22:40 mail su[4048]: pam_unix(su-l:session): session opened for user analyst(uid=1000) by (uid=0)
+Oct 12 04:22:44 mail su[4048]: pam_unix(su-l:session): session closed for user analyst
+Oct 12 04:31:02 mail sudo[4101]: pam_unix(sudo:auth): authentication failure; logname= uid=1001 euid=0 tty=/dev/pts/2 ruser=intern rhost=  user=intern
+Oct 12 04:31:02 mail sudo[4101]:   intern : 1 incorrect password attempt ; PWD=/home/intern ; USER=root ; COMMAND=/usr/bin/id
+Oct 12 04:31:09 mail sudo[4107]: pam_unix(sudo:auth): authentication failure; logname= uid=1001 euid=0 tty=/dev/pts/2 ruser=intern rhost=  user=intern
+Oct 12 04:31:09 mail sudo[4107]:   intern : 2 incorrect password attempts ; PWD=/home/intern ; USER=root ; COMMAND=/usr/bin/id
+Oct 12 04:31:18 mail sudo[4112]:   intern : user NOT in sudoers ; PWD=/home/intern ; USER=root ; COMMAND=/bin/cat /etc/shadow
+Oct 12 04:38:55 mail polkitd[1207]: Operator of unix-session:4 FAILED to authenticate to gain authorization for action org.freedesktop.systemd1.manage-units
+Oct 12 05:02:11 mail useradd[4201]: new group: name=svc-backup, GID=1002
+Oct 12 05:02:11 mail useradd[4201]: new user: name=svc-backup, UID=1002, GID=1002, home=/home/svc-backup, shell=/bin/bash, from=/dev/pts/2
+Oct 12 05:02:14 mail chpasswd[4208]: pam_unix(chpasswd:chauthtok): password changed for svc-backup
+Oct 12 05:02:19 mail usermod[4215]: add 'svc-backup' to group 'sudo'
+Oct 12 05:02:19 mail usermod[4215]: add 'svc-backup' to shadow group 'sudo'
+Oct 12 05:03:40 mail sudo[4230]: svc-backup : TTY=pts/2 ; PWD=/ ; USER=root ; COMMAND=/bin/cat /etc/shadow
+Oct 12 05:03:40 mail sudo[4230]: pam_unix(sudo:session): session opened for user root(uid=0) by svc-backup(uid=1002)
+Oct 12 05:04:02 mail sudo[4230]: pam_unix(sudo:session): session closed for user root
+Oct 12 05:11:55 mail userdel[4299]: delete user 'svc-backup'
+Oct 12 05:11:55 mail userdel[4299]: delete 'svc-backup' from group 'sudo'
+Oct 12 05:11:55 mail userdel[4299]: removed group 'svc-backup' owned by 'svc-backup'

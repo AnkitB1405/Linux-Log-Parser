@@ -1,13 +1,14 @@
 {
-    "total_events": 174,
-    "total_alerts": 22,
-    "high_alerts": 8,
-    "medium_alerts": 14,
+    "total_events": 211,
+    "total_alerts": 26,
+    "high_alerts": 11,
+    "medium_alerts": 15,
     "monitor_alerts": 0,
     "services": {
         "ssh": 64,
         "docker": 84,
-        "web": 26
+        "web": 26,
+        "auth": 37
     },
     "event_types": {
         "service_started": 7,
@@ -36,6 +37,25 @@
         "http_auth_failure": 2,
         "http_server_error": 3,
         "http_client_error": 1,
-        "http_error_log": 2
+        "http_error_log": 2,
+        "cron_session_opened": 1,
+        "cron_session_closed": 1,
+        "sudo_command": 2,
+        "privilege_session_opened": 3,
+        "privilege_session_closed": 3,
+        "service_auth_failure": 12,
+        "su_attempt": 1,
+        "sudo_pam_failure": 2,
+        "sudo_auth_failure": 2,
+        "sudo_denied": 1,
+        "polkit_denied": 1,
+        "group_created": 1,
+        "account_created": 1,
+        "password_changed": 1,
+        "group_membership_added": 1,
+        "group_shadow_synced": 1,
+        "account_deleted": 1,
+        "group_membership_removed": 1,
+        "group_deleted": 1
     }
 }
