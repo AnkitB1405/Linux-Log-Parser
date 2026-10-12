@@ -12,9 +12,11 @@ Run from the repo root:  python3 test_detectors.py
 import os
 from datetime import datetime
 
-from parser.ssh_parser import identify_event, set_reference_time, _parse_bsd
+from parser.envelope import _parse_bsd, set_reference_time
+from parser.ssh_parser import identify_event
 from parser.docker_parser import identify_event as identify_docker_event
 from parser.web_parser import identify_event as identify_web_event
+from parser.auth_parser import identify_event as identify_auth_event
 from detectors.container_anomaly import detect_container_anomaly
 from detectors.container_escape import detect_container_escape, assess
 from detectors.registry import run_detectors
@@ -22,6 +24,7 @@ from detectors.registry import run_detectors
 DATASET = "sample_logs/ssh_dataset_v1.txt"
 DOCKER_DATASET = "sample_logs/docker_events_v1.jsonl"
 WEB_DATASET = "sample_logs/web_access_v1.log"
+AUTH_DATASET = "sample_logs/auth_v1.log"
 
 # Captured from a real homelab `docker events` run. Service names and build
 # labels are redacted; every event shape, sequence and command is untouched.
@@ -58,6 +61,10 @@ EXPECTED_ALERTS = [
     ("web_scanning", "172.17.0.1", "high"),
     ("web_credential_compromise", "203.0.113.77", "high"),
     ("web_server_errors", "198.51.100.9", "medium"),
+    ("credential_spray", "203.0.113.40", "high"),
+    ("backdoor_account", "svc-backup", "high"),
+    ("sensitive_command", "svc-backup", "high"),
+    ("privilege_recon", "intern", "medium"),
 ]
 
 EXPECTED_EVENT_TYPES = {
@@ -88,6 +95,25 @@ EXPECTED_EVENT_TYPES = {
     "http_client_error": 1,
     "http_server_error": 3,
     "http_error_log": 2,
+    "cron_session_opened": 1,
+    "cron_session_closed": 1,
+    "sudo_command": 2,
+    "sudo_auth_failure": 2,
+    "sudo_pam_failure": 2,
+    "sudo_denied": 1,
+    "su_attempt": 1,
+    "privilege_session_opened": 3,
+    "privilege_session_closed": 3,
+    "service_auth_failure": 12,
+    "polkit_denied": 1,
+    "account_created": 1,
+    "account_deleted": 1,
+    "password_changed": 1,
+    "group_created": 1,
+    "group_deleted": 1,
+    "group_membership_added": 1,
+    "group_membership_removed": 1,
+    "group_shadow_synced": 1,
 }
 
 
@@ -103,7 +129,8 @@ def build_events():
 
     for path, parse in ((DATASET, identify_event),
                         (DOCKER_DATASET, identify_docker_event),
-                        (WEB_DATASET, identify_web_event)):
+                        (WEB_DATASET, identify_web_event),
+                        (AUTH_DATASET, identify_auth_event)):
         with open(path) as file:
             for line in file:
                 try:
@@ -274,7 +301,7 @@ def main():
     for event in events:
         missing = required - set(event)
         assert not missing, f"{event['event_type']} missing {missing}"
-        assert event["log_source"] in ("ssh", "docker", "web"), event
+        assert event["log_source"] in ("ssh", "docker", "web", "auth"), event
 
     ids = [e["id"] for e in events]
     assert len(set(ids)) == len(ids), "event ids are not unique"

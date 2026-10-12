@@ -1,83 +1,9 @@
 import re
-from datetime import datetime
 
+from parser.envelope import key_values, parse_line, set_reference_time  # noqa: F401
 from parser.event_schema import create_event
 
 LOG_SOURCE = "ssh"
-
-
-# --- Envelopes -------------------------------------------------------------
-#
-# The envelope is the syslog wrapper the operating system puts around a
-# message; the message itself is written by OpenSSH and reads the same
-# everywhere. Only the envelope varies by machine, so it is the only thing
-# that needs a per-machine variant.
-#
-# Envelopes are tried in order and the first to match wins, which is how the
-# parser auto-detects the log format. No caller declares which distro produced
-# a line — a mixed input file is parsed correctly line by line.
-#
-#   Mint  2026-08-19T10:09:15.247212+05:30 shadow sshd[3344602]: Failed ...
-#   Kali  Aug 19 10:09:15 shadow sshd-session[3344602]: Failed ...
-
-_TAIL = (
-    r"\s+(?P<host>\S+)"
-    r"\s+(?P<process>[\w./-]+)(?:\[\d+\])?:\s+"
-    r"(?P<message>.*)$"
-)
-
-
-def _parse_rfc3339(stamp):
-    """Linux Mint / rsyslog. Carries a real year and offset, so this is exact."""
-
-    return datetime.fromisoformat(stamp)
-
-
-# BSD syslog lines carry no year, so one has to be supplied. The reference
-# point is the log file's mtime where the caller knows it (see
-# set_reference_time), otherwise now — which is right for a live tail and for
-# a file being written today.
-REFERENCE = datetime.now()
-
-
-def set_reference_time(when):
-    """Anchor year-less BSD timestamps to a known point, e.g. a file's mtime."""
-
-    global REFERENCE
-    REFERENCE = when
-
-
-def _parse_bsd(stamp):
-    """
-    A year-less `Aug 19 10:09:15`, resolved against REFERENCE.
-
-    Rollover matters: a file written in January still holds December lines
-    from the year before. A month later than the reference is therefore last
-    year's, not next year's — without this, a Dec->Jan span produces a delta
-    of roughly minus 365 days and every time-window detector silently stops
-    firing.
-    """
-
-    parsed = datetime.strptime(f"{REFERENCE.year} {stamp}", "%Y %b %d %H:%M:%S")
-
-    if parsed.month > REFERENCE.month:
-        parsed = parsed.replace(year=REFERENCE.year - 1)
-
-    return parsed
-
-
-ENVELOPES = [
-    # Linux Mint (rsyslog -> /var/log/auth.log). The primary target.
-    ("rfc3339", _parse_rfc3339, re.compile(
-        r"^(?P<timestamp>\d{4}-\d{2}-\d{2}T[\d:.]+(?:[+-]\d{2}:\d{2}|Z))" + _TAIL)),
-
-    # journald short output (Kali) and classic BSD syslog (Metasploitable).
-    # The same pattern serves both: the optional [pid] group matches
-    # `sshd-session[123]` on OpenSSH >= 9.8 and `sshd[123]` on older builds.
-    ("bsd", _parse_bsd, re.compile(
-        r"^(?P<timestamp>\w{3}\s+\d{1,2}\s+\d{2}:\d{2}:\d{2})" + _TAIL)),
-]
-
 
 # --- Message patterns ------------------------------------------------------
 #
@@ -174,16 +100,6 @@ SSH_PATTERNS = [
     ("service_stopped", re.compile(r"Stopped ssh\.service")),
 ]
 
-# Several daemons write context as `key=value` tokens rather than prose:
-#
-#   PAM      logname= uid=0 tty=ssh ruser= rhost=45.155.205.211  user=root
-#   dockerd  time="2026-08-21T13:24:48+05:30" level=info msg="Daemon started"
-#
-# Order is not guaranteed, so scan for pairs instead of describing a layout.
-# The value is either a quoted run — which may contain spaces — or a bare
-# token. Quoted is tried first: with a plain `\S*` the dockerd line above
-# truncates msg to `"Daemon`, silently dropping the rest of the message.
-KEY_VALUE = re.compile(r'(\w+)=("[^"]*"|\S*)')
 
 PAM_EVENTS = {
     "authentication_failure",
@@ -192,33 +108,6 @@ PAM_EVENTS = {
 }
 
 SCHEMA_FIELDS = ("username", "source_ip")
-
-
-def key_values(message):
-    """`key=value` pairs from a message, quotes stripped, empties as None."""
-
-    return {
-        key: value.strip('"') or None
-        for key, value in KEY_VALUE.findall(message)
-    }
-
-
-def parse_line(line):
-    """Split a raw line into (timestamp, host, process, message), or None."""
-
-    for _name, parse_timestamp, pattern in ENVELOPES:
-
-        match = pattern.match(line)
-
-        if match:
-            return (
-                parse_timestamp(match["timestamp"]),
-                match["host"],
-                match["process"],
-                match["message"],
-            )
-
-    return None
 
 
 def identify_event(line):
