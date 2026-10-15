@@ -62,6 +62,7 @@ EXPECTED_ALERTS = [
     ("web_credential_compromise", "203.0.113.77", "high"),
     ("web_server_errors", "198.51.100.9", "medium"),
     ("credential_spray", "203.0.113.40", "high"),
+    ("slow_bruteforce", "203.0.113.40", "high"),
     ("backdoor_account", "svc-backup", "high"),
     ("sensitive_command", "svc-backup", "high"),
     ("privilege_recon", "intern", "medium"),

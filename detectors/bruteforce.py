@@ -16,6 +16,21 @@ SLOW_WINDOW = 600
 # alert.
 ROOT_MIN = 3
 
+# Any credential rejection, whatever service rejected it. A dovecot, exim or
+# vsftpd failure is the same signal as an sshd one, and this detector is
+# source-agnostic by design — keying only on the SSH event type made it blind
+# to every other service in auth.log.
+#
+# Found by the AIT run: 286 labelled brute-force attempts against one account,
+# all parsed correctly into events, produced no alert at all, because the
+# parser emits `service_auth_failure` and this detector only knew
+# `authentication_failure`.
+FAILURE_EVENTS = {
+    "failed_login",
+    "authentication_failure",
+    "service_auth_failure",
+}
+
 SLOW_BANDS = [
     (8, "high", "block_ip and report"),
     (5, "medium", "monitor"),
@@ -41,16 +56,12 @@ def detect_bruteforce(events):
         entry = (event["timestamp"], event["id"])
         event_type = event["event_type"]
 
-        if event_type == "failed_login":
+        if event_type in FAILURE_EVENTS:
 
             failed_attempts.setdefault(ip, []).append(entry)
 
             if event["username"] == "root":
                 root_attempts.setdefault(ip, []).append(entry)
-
-        elif event_type == "authentication_failure":
-
-            failed_attempts.setdefault(ip, []).append(entry)
 
         elif event_type == "multiple_auth_failures":
 
