@@ -22,6 +22,16 @@ was parsed but no alert cited is a *detection* miss, and the fix is a detector.
 Conflating them produces one bad number that tells you nothing about what to
 do next.
 
+Recall is likewise reported at two granularities, and the coarser one is the
+headline. STEP recall asks: did any alert cite at least one line of this attack
+step — i.e. did we notice it happened? EVENT recall asks what fraction of its
+lines were cited as evidence.
+
+Event recall is misleading on its own. A single correct alert saying "this
+address is scanning you" is a complete detection of a 26,000-line nikto sweep,
+but it only cites the events inside its densest window, so event recall reads
+0.011 for an attack that was unambiguously caught. Step recall reads 1.
+
 Precision is likewise reported at two levels. Event-level precision (what
 fraction of cited events were attack lines) flatters a detector that cites
 a thousand events in one alert. Alert-level precision — what fraction of alerts
@@ -271,11 +281,19 @@ def report(events, truth, coverage, alerts, scored):
     print("  evt prec   = labelled fraction of all cited events")
     print("               (flattered by one alert citing many events)")
 
+    steps = list(coverage["labelled"])
+    detected = [s for s in steps if scored["cited_by_step"][s]]
     total_attack = scored["attack_events"]
+
     print(f"\n{bar}")
-    print(f"  overall   attack events parsed: {total_attack:,}   "
-          f"cited by an alert: {scored['cited_attack_events']:,}   "
-          f"recall {ratio(scored['cited_attack_events'], total_attack)}")
+    print(f"  STEP RECALL   {len(detected)} of {len(steps)} attack steps raised an alert"
+          f"   = {ratio(len(detected), len(steps))}")
+    print(f"                detected: {', '.join(detected) or 'none'}")
+    print(f"  EVENT RECALL  {scored['cited_attack_events']:,} of {total_attack:,} "
+          f"attack lines cited as evidence = "
+          f"{ratio(scored['cited_attack_events'], total_attack)}")
+    print(f"                low by construction — one alert cites one window, "
+          f"not every line")
     print(bar)
 
 
@@ -314,7 +332,13 @@ def main(directory):
             for step, total in coverage["labelled"].items()
         },
         "per_alert_type": scored["alert_types"],
-        "overall_recall": ratio(scored["cited_attack_events"], scored["attack_events"]),
+        "steps_total": len(coverage["labelled"]),
+        "steps_detected": sorted(s for s in coverage["labelled"]
+                                 if scored["cited_by_step"][s]),
+        "step_recall": ratio(
+            sum(1 for s in coverage["labelled"] if scored["cited_by_step"][s]),
+            len(coverage["labelled"])),
+        "event_recall": ratio(scored["cited_attack_events"], scored["attack_events"]),
     })
     print("\n  written to outputs/evaluation.json")
 
