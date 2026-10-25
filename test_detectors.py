@@ -17,6 +17,7 @@ from parser.ssh_parser import identify_event
 from parser.docker_parser import identify_event as identify_docker_event
 from parser.web_parser import identify_event as identify_web_event
 from parser.auth_parser import identify_event as identify_auth_event
+from parser import audit_parser
 from detectors.container_anomaly import detect_container_anomaly
 from detectors.container_escape import detect_container_escape, assess
 from detectors.registry import run_detectors
@@ -25,6 +26,7 @@ DATASET = "sample_logs/ssh_dataset_v1.txt"
 DOCKER_DATASET = "sample_logs/docker_events_v1.jsonl"
 WEB_DATASET = "sample_logs/web_access_v1.log"
 AUTH_DATASET = "sample_logs/auth_v1.log"
+AUDIT_DATASET = "sample_logs/audit_v1.log"
 
 # Captured from a real homelab `docker events` run. Service names and build
 # labels are redacted; every event shape, sequence and command is untouched.
@@ -66,6 +68,11 @@ EXPECTED_ALERTS = [
     ("backdoor_account", "svc-backup", "high"),
     ("sensitive_command", "svc-backup", "high"),
     ("privilege_recon", "intern", "medium"),
+    ("webshell_command", "www-data", "high"),
+    ("webshell_command", "www-data", "high"),
+    ("webshell_command", "www-data", "high"),
+    ("webshell_command", "www-data", "high"),
+    ("unexpected_shadow_read", "www-data", "high"),
 ]
 
 EXPECTED_EVENT_TYPES = {
@@ -115,6 +122,8 @@ EXPECTED_EVENT_TYPES = {
     "group_membership_added": 1,
     "group_membership_removed": 1,
     "group_shadow_synced": 1,
+    "process_executed": 8,
+    "audit_sensitive_file": 1,
 }
 
 
@@ -140,6 +149,16 @@ def build_events():
                         events.append(event)
                 except Exception as e:
                     errors.append((line.strip(), str(e)))
+
+    # auditd events span several lines; assemble them before parsing.
+    with open(AUDIT_DATASET) as file:
+        for _indices, group in audit_parser.group_records(file.readlines()):
+            try:
+                event = audit_parser.identify_event(group)
+                if event:
+                    events.append(event)
+            except Exception as e:
+                errors.append((group.splitlines()[0][:80], str(e)))
 
     return events, errors
 
@@ -302,7 +321,7 @@ def main():
     for event in events:
         missing = required - set(event)
         assert not missing, f"{event['event_type']} missing {missing}"
-        assert event["log_source"] in ("ssh", "docker", "web", "auth"), event
+        assert event["log_source"] in ("ssh", "docker", "web", "auth", "audit"), event
 
     ids = [e["id"] for e in events]
     assert len(set(ids)) == len(ids), "event ids are not unique"

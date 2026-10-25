@@ -17,6 +17,7 @@ from detectors.container_anomaly import detect_container_anomaly
 from detectors.container_escape import detect_container_escape
 from detectors.web_anomaly import detect_web_anomaly
 from detectors.privilege_anomaly import detect_privilege_anomaly
+from detectors.post_exploitation import detect_post_exploitation
 
 DETECTORS = [
     detect_bruteforce,
@@ -29,6 +30,7 @@ DETECTORS = [
     detect_container_escape,
     detect_web_anomaly,
     detect_privilege_anomaly,
+    detect_post_exploitation,
 ]
 
 

@@ -54,7 +54,7 @@ from datetime import datetime
 
 from detectors.registry import run_detectors
 from outputs.persistence import save
-from parser import auth_parser, envelope, ssh_parser, web_parser
+from parser import audit_parser, auth_parser, envelope, ssh_parser, web_parser
 
 # Which parsers are offered each file. A file may be offered to several: this
 # is how the claim that ssh_parser and auth_parser are disjoint gets tested —
@@ -67,6 +67,15 @@ ROUTES = [
     ("access.log", [web_parser.identify_event]),
     ("error.log", [web_parser.identify_event]),
 ]
+
+# auditd spreads one event across several lines joined by msg=audit(epoch:serial),
+# so these files are grouped before parsing and an event's truth is the UNION of
+# its lines' labels. Getting AIT's audit data also needs the nested-zip path in
+# fetch_ait.py — each host keeps it as a 542 MB to 1.1 GB audit.zip holding a
+# single 4.3 GB deflate stream, which cannot be seeked into.
+GROUPED = {
+    "audit.log": (audit_parser.group_records, audit_parser.identify_event),
+}
 
 # AIT v1.1 was captured in March 2020. Year-less BSD timestamps have to be
 # anchored there, not to today, or every delta spans six years.
@@ -145,6 +154,35 @@ def build(directory):
 
         parsers = parsers_for(name)
         labels = read_labels(label_path) if label_path else None
+
+        grouped = next((v for k, v in GROUPED.items() if name.endswith(k)), None)
+
+        if grouped:
+            group_records, parse = grouped
+
+            with open(data_path, errors="replace") as handle:
+                raw = handle.readlines()
+
+            for indices, text in group_records(raw):
+                names = set()
+
+                for index in indices:
+                    if labels and index < len(labels):
+                        names |= labels[index]
+
+                for step in names:
+                    labelled[step] += 1
+
+                event = parse(text)
+
+                if event:
+                    events.append(event)
+                    truth[event["id"]] = names
+
+                    for step in names:
+                        parsed[step] += 1
+
+            continue
 
         with open(data_path, errors="replace") as handle:
             for index, line in enumerate(handle):

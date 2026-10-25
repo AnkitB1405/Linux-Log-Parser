@@ -79,6 +79,83 @@ def extract(name, entry, outdir):
     return out, compressed, uncompressed
 
 
+def data_offset(entry):
+    """Absolute offset of a member's payload, past its local header."""
+
+    _method, _compressed, _uncompressed, local_offset = entry
+    header = fetch(local_offset, local_offset + 29)
+    name_len, extra_len = struct.unpack("<HH", header[26:30])
+
+    return local_offset + 30 + name_len + extra_len
+
+
+def nested_index(entry):
+    """
+    Index a zip that is STORED inside the archive, without downloading it.
+
+    AIT keeps each host's auditd logs in an audit.zip of 542 MB to 1.1 GB. The
+    outer archive stores those uncompressed (method 0), so their bytes sit
+    contiguously at a known offset and the same end-of-central-directory walk
+    works one level down. Inner member offsets are relative to the inner zip's
+    first byte, so adding that base makes them absolute in the outer file — and
+    a single member can then be range-requested like any other.
+    """
+
+    method, compressed, _uncompressed, _local = entry
+
+    if method != 0:
+        raise ValueError("nested zip is deflated, not stored - cannot seek into it")
+
+    base = data_offset(entry)
+    tail = fetch(base + compressed - 200_000, base + compressed - 1)
+    marker = tail.rfind(b"PK\x05\x06")
+    directory_size, directory_offset = struct.unpack("<II", tail[marker + 12:marker + 20])
+    blob = fetch(base + directory_offset,
+                 base + directory_offset + directory_size - 1)
+
+    entries, position = {}, 0
+
+    while position < len(blob) - 46:
+        if blob[position:position + 4] != b"PK\x01\x02":
+            break
+        compression, = struct.unpack("<H", blob[position + 10:position + 12])
+        csize, usize = struct.unpack("<II", blob[position + 20:position + 28])
+        name_len, extra_len, comment_len = struct.unpack(
+            "<HHH", blob[position + 28:position + 34])
+        local, = struct.unpack("<I", blob[position + 42:position + 46])
+        name = blob[position + 46:position + 46 + name_len].decode("utf-8", "replace")
+        entries[name] = (compression, csize, usize, base + local)
+        position += 46 + name_len + extra_len + comment_len
+
+    return entries
+
+
+def head(entry, megabytes=8):
+    """
+    Inflate the first few MB of a deflated member without fetching all of it.
+
+    AIT's audit.log is a single 4.3 GB deflate stream compressed to 542 MB.
+    Nothing can seek into it — but a prefix of the stream inflates fine, which
+    is enough to learn the record format and sample real lines. Reaching a
+    specific point in time means streaming the whole thing; that is a separate,
+    much heavier operation.
+    """
+
+    method, compressed, _uncompressed, _local = entry
+
+    if method != 8:
+        raise ValueError("member is not deflated")
+
+    base = data_offset(entry)
+    want = min(int(megabytes * 1e6), compressed)
+    raw = fetch(base, base + want - 1)
+
+    stream = zlib.decompressobj(-15)
+    out = stream.decompress(raw)
+
+    return out.decode("utf-8", "replace"), want
+
+
 if __name__ == "__main__":
     command = sys.argv[1] if len(sys.argv) > 1 else "list"
     entries = index()

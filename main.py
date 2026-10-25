@@ -6,6 +6,7 @@ from parser.ssh_parser import identify_event as parse_ssh, set_reference_time
 from parser.docker_parser import identify_event as parse_docker
 from parser.web_parser import identify_event as parse_web
 from parser.auth_parser import identify_event as parse_auth
+from parser import audit_parser
 from parser.log_source import detect_platform, detect_ssh_log, read_lines
 
 from detectors.registry import DETECTORS
@@ -17,6 +18,7 @@ SSH_DATASET = "sample_logs/ssh_dataset_v1.txt"
 DOCKER_DATASET = "sample_logs/docker_events_v1.jsonl"
 WEB_DATASET = "sample_logs/web_access_v1.log"
 AUTH_DATASET = "sample_logs/auth_v1.log"
+AUDIT_DATASET = "sample_logs/audit_v1.log"
 
 def sources():
     """
@@ -54,6 +56,13 @@ def sources():
 
     with open(AUTH_DATASET) as file:
         yield "auth", file.readlines(), parse_auth
+
+    # auditd spreads one event over several lines, so the groups are assembled
+    # here and handed over as the units to parse. collect_events needs no
+    # special case: it still calls the parser once per item.
+    with open(AUDIT_DATASET) as file:
+        groups = [text for _indices, text in audit_parser.group_records(file.readlines())]
+        yield "audit", groups, audit_parser.identify_event
 
 
 def collect_events():
