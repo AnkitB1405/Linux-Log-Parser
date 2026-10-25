@@ -156,6 +156,35 @@ def head(entry, megabytes=8):
     return out.decode("utf-8", "replace"), want
 
 
+def save_stored(entry, path, chunk_mb=16):
+    """
+    Write a STORED member to disk in chunks, never holding it in memory.
+
+    Used for the nested audit.zip: because the outer archive stores it
+    uncompressed, copying its byte range out produces a valid standalone zip.
+    542 MB to 1.1 GB per host, so this is a deliberate one-time download rather
+    than something to repeat.
+    """
+
+    method, compressed, _uncompressed, _local = entry
+
+    if method != 0:
+        raise ValueError("member is deflated; use head() or extract() instead")
+
+    base = data_offset(entry)
+    step = int(chunk_mb * 1e6)
+    done = 0
+
+    with open(path, "wb") as handle:
+        while done < compressed:
+            size = min(step, compressed - done)
+            handle.write(fetch(base + done, base + done + size - 1))
+            done += size
+            print(f"    {done / 1e6:7.0f} / {compressed / 1e6:.0f} MB", flush=True)
+
+    return path
+
+
 if __name__ == "__main__":
     command = sys.argv[1] if len(sys.argv) > 1 else "list"
     entries = index()
