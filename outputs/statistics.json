@@ -1,14 +1,15 @@
 {
-    "total_events": 211,
-    "total_alerts": 26,
-    "high_alerts": 11,
+    "total_events": 220,
+    "total_alerts": 32,
+    "high_alerts": 17,
     "medium_alerts": 15,
     "monitor_alerts": 0,
     "services": {
         "ssh": 64,
         "docker": 84,
         "web": 26,
-        "auth": 37
+        "auth": 37,
+        "audit": 9
     },
     "event_types": {
         "service_started": 7,
@@ -56,6 +57,8 @@
         "group_shadow_synced": 1,
         "account_deleted": 1,
         "group_membership_removed": 1,
-        "group_deleted": 1
+        "group_deleted": 1,
+        "process_executed": 8,
+        "audit_sensitive_file": 1
     }
 }

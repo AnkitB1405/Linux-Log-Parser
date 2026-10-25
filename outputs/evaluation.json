@@ -1,0 +1,441 @@
+{
+    "dataset": "AIT Log Data Set v1.1 (Landauer et al., 2022)",
+    "generated": "2026-10-25T10:42:41",
+    "events": 505533,
+    "events_by_source": {
+        "web": 500923,
+        "auth": 4610
+    },
+    "alerts": 7,
+    "labelled_lines": {
+        "nikto": 26276,
+        "vrfy": 14,
+        "hydra": 2043,
+        "upload": 38,
+        "mail-curl": 27,
+        "webshell-id": 21,
+        "webshell-netstat-nat": 2,
+        "webshell-whoami": 1,
+        "webshell-ps-aux": 2,
+        "webshell-netstat-natp": 1,
+        "webshell-wget-eximsploitsh": 3,
+        "webshell-w": 2,
+        "webshell-cat-passwd": 3,
+        "webshell-netstat-t": 10,
+        "webshell-date": 4,
+        "webshell-last": 2,
+        "webshell-cd-home": 3,
+        "webshell-netstat-nau": 61,
+        "webshell-ls-www": 21,
+        "webshell-getent-passwd": 3,
+        "webshell-cat-debianversion": 38,
+        "webshell-cat-resolvconf": 1,
+        "webshell-lsbrelease-a": 8,
+        "webshell-dpkg-exim4": 4,
+        "webshell-eximsploitsh-netcat": 1,
+        "webshell-netstat-u": 3,
+        "webshell-cat-release": 1,
+        "webshell-clear": 1,
+        "webshell-who": 1,
+        "webshell-netstat-l": 1,
+        "webshell-history": 1,
+        "webshell-ls-root": 1,
+        "webshell-cd-root": 1,
+        "webshell-cat-group": 2,
+        "webshell-cat-profile": 1,
+        "webshell-ls-home": 3,
+        "webshell-cd": 2,
+        "webshell-cd-etc": 1,
+        "webshell-ps-A": 1,
+        "webshell-chmod-eximsploitsh": 1,
+        "webshell-find-null": 12,
+        "webshell-ifconfig": 60
+    },
+    "parsed_lines": {
+        "nikto": 26276,
+        "vrfy": 14,
+        "hydra": 2043,
+        "upload": 38,
+        "mail-curl": 27,
+        "webshell-id": 21,
+        "webshell-netstat-nat": 2,
+        "webshell-whoami": 1,
+        "webshell-ps-aux": 2,
+        "webshell-netstat-natp": 1,
+        "webshell-wget-eximsploitsh": 3,
+        "webshell-w": 2,
+        "webshell-cat-passwd": 3,
+        "webshell-netstat-t": 10,
+        "webshell-date": 4,
+        "webshell-last": 2,
+        "webshell-cd-home": 3,
+        "webshell-netstat-nau": 61,
+        "webshell-ls-www": 21,
+        "webshell-getent-passwd": 3,
+        "webshell-cat-debianversion": 38,
+        "webshell-cat-resolvconf": 1,
+        "webshell-lsbrelease-a": 8,
+        "webshell-dpkg-exim4": 4,
+        "webshell-eximsploitsh-netcat": 1,
+        "webshell-netstat-u": 3,
+        "webshell-cat-release": 1,
+        "webshell-clear": 1,
+        "webshell-who": 1,
+        "webshell-netstat-l": 1,
+        "webshell-history": 1,
+        "webshell-ls-root": 1,
+        "webshell-cd-root": 1,
+        "webshell-cat-group": 2,
+        "webshell-cat-profile": 1,
+        "webshell-ls-home": 3,
+        "webshell-cd": 2,
+        "webshell-cd-etc": 1,
+        "webshell-ps-A": 1,
+        "webshell-chmod-eximsploitsh": 1,
+        "webshell-find-null": 12,
+        "webshell-ifconfig": 60
+    },
+    "unrouted_lines": {},
+    "parsers_not_disjoint": 0,
+    "per_step": {
+        "nikto": {
+            "labelled": 26276,
+            "parsed": 26276,
+            "cited": 294,
+            "coverage": 1.0,
+            "recall": 0.011
+        },
+        "vrfy": {
+            "labelled": 14,
+            "parsed": 14,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "hydra": {
+            "labelled": 2043,
+            "parsed": 2043,
+            "cited": 286,
+            "coverage": 1.0,
+            "recall": 0.14
+        },
+        "upload": {
+            "labelled": 38,
+            "parsed": 38,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "mail-curl": {
+            "labelled": 27,
+            "parsed": 27,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-id": {
+            "labelled": 21,
+            "parsed": 21,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-netstat-nat": {
+            "labelled": 2,
+            "parsed": 2,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-whoami": {
+            "labelled": 1,
+            "parsed": 1,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-ps-aux": {
+            "labelled": 2,
+            "parsed": 2,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-netstat-natp": {
+            "labelled": 1,
+            "parsed": 1,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-wget-eximsploitsh": {
+            "labelled": 3,
+            "parsed": 3,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-w": {
+            "labelled": 2,
+            "parsed": 2,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-cat-passwd": {
+            "labelled": 3,
+            "parsed": 3,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-netstat-t": {
+            "labelled": 10,
+            "parsed": 10,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-date": {
+            "labelled": 4,
+            "parsed": 4,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-last": {
+            "labelled": 2,
+            "parsed": 2,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-cd-home": {
+            "labelled": 3,
+            "parsed": 3,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-netstat-nau": {
+            "labelled": 61,
+            "parsed": 61,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-ls-www": {
+            "labelled": 21,
+            "parsed": 21,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-getent-passwd": {
+            "labelled": 3,
+            "parsed": 3,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-cat-debianversion": {
+            "labelled": 38,
+            "parsed": 38,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-cat-resolvconf": {
+            "labelled": 1,
+            "parsed": 1,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-lsbrelease-a": {
+            "labelled": 8,
+            "parsed": 8,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-dpkg-exim4": {
+            "labelled": 4,
+            "parsed": 4,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-eximsploitsh-netcat": {
+            "labelled": 1,
+            "parsed": 1,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-netstat-u": {
+            "labelled": 3,
+            "parsed": 3,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-cat-release": {
+            "labelled": 1,
+            "parsed": 1,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-clear": {
+            "labelled": 1,
+            "parsed": 1,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-who": {
+            "labelled": 1,
+            "parsed": 1,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-netstat-l": {
+            "labelled": 1,
+            "parsed": 1,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-history": {
+            "labelled": 1,
+            "parsed": 1,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-ls-root": {
+            "labelled": 1,
+            "parsed": 1,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-cd-root": {
+            "labelled": 1,
+            "parsed": 1,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-cat-group": {
+            "labelled": 2,
+            "parsed": 2,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-cat-profile": {
+            "labelled": 1,
+            "parsed": 1,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-ls-home": {
+            "labelled": 3,
+            "parsed": 3,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-cd": {
+            "labelled": 2,
+            "parsed": 2,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-cd-etc": {
+            "labelled": 1,
+            "parsed": 1,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-ps-A": {
+            "labelled": 1,
+            "parsed": 1,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-chmod-eximsploitsh": {
+            "labelled": 1,
+            "parsed": 1,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-find-null": {
+            "labelled": 12,
+            "parsed": 12,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "webshell-ifconfig": {
+            "labelled": 60,
+            "parsed": 60,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        }
+    },
+    "per_alert_type": {
+        "slow_bruteforce": {
+            "alerts": 1,
+            "alerts_on_attack": 1,
+            "events_cited": 288,
+            "attack_events_cited": 286,
+            "severity": {
+                "high": 1
+            }
+        },
+        "web_scanning": {
+            "alerts": 2,
+            "alerts_on_attack": 2,
+            "events_cited": 10,
+            "attack_events_cited": 10,
+            "severity": {
+                "high": 2
+            }
+        },
+        "web_auth_bruteforce": {
+            "alerts": 2,
+            "alerts_on_attack": 2,
+            "events_cited": 120,
+            "attack_events_cited": 120,
+            "severity": {
+                "high": 2
+            }
+        },
+        "web_credential_compromise": {
+            "alerts": 2,
+            "alerts_on_attack": 2,
+            "events_cited": 164,
+            "attack_events_cited": 164,
+            "severity": {
+                "high": 2
+            }
+        }
+    },
+    "steps_total": 42,
+    "steps_detected": [
+        "hydra",
+        "nikto"
+    ],
+    "step_recall": 0.048,
+    "event_recall": 0.016
+}
