@@ -23,7 +23,26 @@ import sys
 import urllib.request
 import zlib
 
+# v1.1 by default; set_archive() points the same range-request machinery at
+# another Zenodo zip — v2.1 ships per-host archives, and the *_no-pcaps
+# variants are 688 MB instead of 16 GB because they leave out packet captures.
 URL = "https://zenodo.org/records/4264796/files/AIT-LDS-v1_1.zip"
+
+ARCHIVES = {
+    "v1.1": "https://zenodo.org/records/4264796/files/AIT-LDS-v1_1.zip",
+    "v2.1-fox": "https://zenodo.org/records/19483937/files/fox_no-pcaps.zip",
+    "v2.1-harrison": "https://zenodo.org/records/19483937/files/harrison_no-pcaps.zip",
+    "v2.1-shaw": "https://zenodo.org/records/19483937/files/shaw_no-pcaps.zip",
+}
+
+
+def set_archive(name):
+    """Point every fetch at a different archive, by key or full URL."""
+
+    global URL
+    URL = ARCHIVES.get(name, name)
+
+    return URL
 
 
 def fetch(start, end):

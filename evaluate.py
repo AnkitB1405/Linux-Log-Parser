@@ -48,6 +48,7 @@ dataset. Tune against one or two datasets, hold the rest back, and report both.
 
 import collections
 import json
+import re
 import os
 import sys
 from datetime import datetime
@@ -84,29 +85,75 @@ CAPTURED = datetime(2020, 3, 6)
 BENIGN = {"0", ""}
 
 
+# Rotated logs are the norm in production: access.log.2, auth.log.1,
+# error.log.3.gz. Routing on the bare name missed every one of them — AIT
+# v2.1 keeps its 67 MB Apache log as `...-access.log.2`, so three attack steps
+# worth 1.2 million labelled lines read as coverage 0.0 until this was fixed.
+ROTATION = re.compile(r"(?:\.\d+)?(?:\.gz|\.bz2|\.xz)?$")
+
+
+def unrotated(name):
+    """`...-access.log.2` -> `...-access.log`."""
+
+    return ROTATION.sub("", name)
+
+
 def parsers_for(name):
     """Every parser offered the given file, longest route match first."""
 
+    bare = unrotated(name)
+
     for suffix, parsers in sorted(ROUTES, key=lambda r: -len(r[0])):
-        if name.endswith(suffix):
+        if bare.endswith(suffix):
             return parsers
 
     return []
 
 
-def read_labels(path):
+def read_labels(path, line_count=None):
     """
-    One label row per log line. `0,0` is benign; anything else names the attack
-    step, e.g. `hydra,hydra` or `webshell-netstat-nau,0`.
+    Label sets per log line, in either format AIT has used.
+
+    v1.1 is dense CSV — one row per log line, `0,0` meaning benign:
+
+        0,0
+        hydra,hydra
+
+    v2.1 is sparse JSON Lines, carrying only the labelled lines, each with a
+    1-based line number and the rules that fired:
+
+        {"line": 349, "labels": ["escalate"], "rules": {...}}
+
+    The sparse form is detected from the first non-empty row and returned
+    expanded, so callers index the result identically either way. Splitting
+    those JSON rows on commas — which the dense reader would do — invents one
+    "attack step" per comma: 411,865 of them on first run.
     """
 
-    rows = []
+    with open(path, errors="replace") as handle:
+        raw = [line.rstrip("\n") for line in handle]
 
-    for line in open(path, errors="replace"):
-        names = {v.strip() for v in line.strip().split(",")} - BENIGN
-        rows.append(names)
+    first = next((row for row in raw if row.strip()), "")
 
-    return rows
+    if first.lstrip().startswith("{"):
+        marked = {}
+
+        for row in raw:
+            if not row.strip():
+                continue
+
+            try:
+                entry = json.loads(row)
+            except json.JSONDecodeError:
+                continue
+
+            marked[entry["line"] - 1] = set(entry.get("labels") or [])
+
+        size = line_count if line_count is not None else max(marked, default=-1) + 1
+
+        return [marked.get(index, set()) for index in range(size)]
+
+    return [{v.strip() for v in row.split(",")} - BENIGN for row in raw]
 
 
 def pair_files(directory):
@@ -153,9 +200,16 @@ def build(directory):
     for name, data_path, label_path in pair_files(directory):
 
         parsers = parsers_for(name)
-        labels = read_labels(label_path) if label_path else None
 
-        grouped = next((v for k, v in GROUPED.items() if name.endswith(k)), None)
+        # The sparse label format carries only the labelled lines, so it needs
+        # the data's line count to expand to the same length.
+        with open(data_path, errors="replace") as handle:
+            line_count = sum(1 for _ in handle)
+
+        labels = read_labels(label_path, line_count) if label_path else None
+
+        grouped = next((v for k, v in GROUPED.items()
+                        if unrotated(name).endswith(k)), None)
 
         if grouped:
             group_records, parse = grouped
@@ -349,7 +403,10 @@ def main(directory):
 
     report(events, truth, coverage, alerts, scored)
 
-    save("evaluation", {
+    dataset = os.path.basename(directory.rstrip("/")) or "ait"
+
+    save(f"evaluation-{dataset}", {
+        "dataset_dir": dataset,
         "dataset": "AIT Log Data Set v1.1 (Landauer et al., 2022)",
         "generated": datetime.now().isoformat(timespec="seconds"),
         "events": len(events),
@@ -378,7 +435,7 @@ def main(directory):
             len(coverage["labelled"])),
         "event_recall": ratio(scored["cited_attack_events"], scored["attack_events"]),
     })
-    print("\n  written to outputs/evaluation.json")
+    print(f"\n  written to outputs/evaluation-{dataset}.json")
 
 
 if __name__ == "__main__":
