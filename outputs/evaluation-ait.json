@@ -1,121 +1,124 @@
 {
+    "dataset_dir": "ait",
     "dataset": "AIT Log Data Set v1.1 (Landauer et al., 2022)",
-    "generated": "2026-10-25T11:52:33",
-    "events": 506060,
+    "generated": "2026-10-28T23:55:49",
+    "events": 506582,
     "events_by_source": {
         "web": 500923,
         "auth": 4610,
-        "audit": 527
+        "audit": 1049
     },
-    "alerts": 25,
+    "alerts": 77,
     "labelled_lines": {
         "nikto": 26276,
         "vrfy": 1890,
         "hydra": 2043,
-        "upload": 1889,
-        "mail-curl": 3007,
-        "webshell-id": 1648,
+        "upload": 3501,
+        "mail-curl": 3505,
+        "webshell-id": 1789,
         "webshell-netstat-nat": 80,
-        "webshell-whoami": 1,
+        "webshell-whoami": 81,
         "webshell-ps-aux": 2313,
-        "webshell-netstat-natp": 192,
-        "webshell-wget-eximsploitsh": 504,
+        "webshell-netstat-natp": 383,
+        "webshell-wget-eximsploitsh": 1473,
         "webshell-w": 2,
-        "webshell-cat-passwd": 1038,
-        "webshell-netstat-t": 538,
-        "webshell-date": 4,
-        "webshell-last": 2,
-        "webshell-cd-home": 3,
+        "webshell-cat-passwd": 1169,
+        "webshell-netstat-t": 1487,
+        "webshell-date": 33,
+        "webshell-last": 116,
+        "webshell-cd-home": 12,
         "webshell-netstat-nau": 1205,
         "webshell-ls-www": 707,
         "webshell-getent-passwd": 3,
         "webshell-cat-debianversion": 38,
         "webshell-cat-resolvconf": 51,
-        "webshell-lsbrelease-a": 1244,
-        "webshell-dpkg-exim4": 84,
-        "webshell-eximsploitsh-netcat": 497,
+        "webshell-lsbrelease-a": 2094,
+        "webshell-dpkg-exim4": 137,
+        "webshell-eximsploitsh-netcat": 1101,
         "webshell-netstat-u": 424,
-        "webshell-cat-release": 57,
-        "webshell-clear": 14,
-        "webshell-who": 1,
-        "webshell-netstat-l": 136,
-        "webshell-history": 10,
-        "webshell-ls-root": 1,
-        "webshell-cd-root": 1,
-        "webshell-cat-group": 2,
-        "webshell-cat-profile": 1,
+        "webshell-cat-release": 229,
+        "webshell-clear": 296,
+        "webshell-who": 366,
+        "webshell-netstat-l": 683,
+        "webshell-history": 23,
+        "webshell-ls-root": 345,
+        "webshell-cd-root": 869,
+        "webshell-cat-group": 286,
+        "webshell-cat-profile": 351,
+        "nmap": 279,
+        "webshell-cat-cpuinfo": 242,
+        "webshell-pwd": 47,
+        "webshell-find-null": 2425,
+        "webshell-cd-tmp": 18,
+        "webshell-chmod-eximsploitsh": 1103,
+        "webshell-uname-ar": 25,
+        "webshell-df-h": 53,
+        "webshell-ls": 69,
+        "okay-upload-webshell": 1949,
+        "okay-curl": 124,
         "webshell-ls-home": 1467,
         "webshell-cd": 579,
         "webshell-cd-etc": 75,
         "webshell-ps-A": 1175,
-        "webshell-chmod-eximsploitsh": 834,
-        "webshell-find-null": 2334,
         "webshell-ifconfig": 14403,
-        "okay-upload-webshell": 975,
-        "okay-curl": 62,
-        "nmap": 124,
         "webshell-uname-r": 28,
-        "webshell-df-h": 35,
         "webshell-ls-shadow": 49,
         "webshell-uptime": 69,
-        "webshell-ls": 45,
-        "webshell-mount": 41,
-        "webshell-pwd": 39,
-        "webshell-cd-tmp": 9,
-        "webshell-cat-cpuinfo": 48
+        "webshell-mount": 41
     },
     "parsed_lines": {
         "nikto": 26276,
         "vrfy": 20,
         "hydra": 2043,
-        "upload": 56,
-        "mail-curl": 50,
-        "webshell-id": 33,
+        "upload": 74,
+        "mail-curl": 60,
+        "webshell-id": 37,
         "webshell-netstat-nat": 4,
-        "webshell-whoami": 1,
+        "webshell-whoami": 2,
         "webshell-ps-aux": 7,
-        "webshell-netstat-natp": 2,
-        "webshell-wget-eximsploitsh": 4,
+        "webshell-netstat-natp": 3,
+        "webshell-wget-eximsploitsh": 11,
         "webshell-w": 2,
-        "webshell-cat-passwd": 9,
-        "webshell-netstat-t": 13,
-        "webshell-date": 4,
-        "webshell-last": 2,
+        "webshell-cat-passwd": 14,
+        "webshell-netstat-t": 18,
+        "webshell-date": 6,
+        "webshell-last": 3,
         "webshell-cd-home": 3,
         "webshell-netstat-nau": 75,
         "webshell-ls-www": 22,
         "webshell-getent-passwd": 3,
         "webshell-cat-debianversion": 38,
         "webshell-cat-resolvconf": 2,
-        "webshell-lsbrelease-a": 14,
-        "webshell-dpkg-exim4": 9,
-        "webshell-eximsploitsh-netcat": 4,
+        "webshell-lsbrelease-a": 16,
+        "webshell-dpkg-exim4": 14,
+        "webshell-eximsploitsh-netcat": 10,
         "webshell-netstat-u": 5,
-        "webshell-cat-release": 2,
-        "webshell-clear": 2,
-        "webshell-who": 1,
-        "webshell-netstat-l": 2,
+        "webshell-cat-release": 3,
+        "webshell-clear": 12,
+        "webshell-who": 10,
+        "webshell-netstat-l": 12,
         "webshell-history": 1,
-        "webshell-ls-root": 1,
-        "webshell-cd-root": 1,
-        "webshell-cat-group": 2,
-        "webshell-cat-profile": 1,
+        "webshell-ls-root": 10,
+        "webshell-cd-root": 7,
+        "webshell-cat-group": 4,
+        "webshell-cat-profile": 3,
+        "nmap": 4,
+        "webshell-cat-cpuinfo": 3,
+        "webshell-find-null": 23,
+        "webshell-chmod-eximsploitsh": 15,
+        "webshell-uname-ar": 1,
+        "webshell-df-h": 3,
+        "webshell-ls": 3,
+        "okay-curl": 4,
         "webshell-ls-home": 11,
         "webshell-cd": 2,
         "webshell-cd-etc": 1,
         "webshell-ps-A": 12,
-        "webshell-chmod-eximsploitsh": 8,
-        "webshell-find-null": 22,
         "webshell-ifconfig": 102,
-        "okay-curl": 2,
-        "nmap": 2,
         "webshell-uname-r": 2,
-        "webshell-df-h": 2,
         "webshell-ls-shadow": 1,
         "webshell-uptime": 1,
-        "webshell-ls": 2,
-        "webshell-mount": 1,
-        "webshell-cat-cpuinfo": 1
+        "webshell-mount": 1
     },
     "unrouted_lines": {},
     "parsers_not_disjoint": 0,
@@ -142,25 +145,25 @@
             "recall": 0.14
         },
         "upload": {
-            "labelled": 1889,
-            "parsed": 56,
+            "labelled": 3501,
+            "parsed": 74,
             "cited": 0,
-            "coverage": 0.03,
+            "coverage": 0.021,
             "recall": 0.0
         },
         "mail-curl": {
-            "labelled": 3007,
-            "parsed": 50,
-            "cited": 2,
+            "labelled": 3505,
+            "parsed": 60,
+            "cited": 4,
             "coverage": 0.017,
-            "recall": 0.04
+            "recall": 0.067
         },
         "webshell-id": {
-            "labelled": 1648,
-            "parsed": 33,
-            "cited": 3,
-            "coverage": 0.02,
-            "recall": 0.091
+            "labelled": 1789,
+            "parsed": 37,
+            "cited": 5,
+            "coverage": 0.021,
+            "recall": 0.135
         },
         "webshell-netstat-nat": {
             "labelled": 80,
@@ -170,11 +173,11 @@
             "recall": 0.5
         },
         "webshell-whoami": {
-            "labelled": 1,
-            "parsed": 1,
-            "cited": 0,
-            "coverage": 1.0,
-            "recall": 0.0
+            "labelled": 81,
+            "parsed": 2,
+            "cited": 1,
+            "coverage": 0.025,
+            "recall": 0.5
         },
         "webshell-ps-aux": {
             "labelled": 2313,
@@ -184,18 +187,18 @@
             "recall": 0.286
         },
         "webshell-netstat-natp": {
-            "labelled": 192,
-            "parsed": 2,
-            "cited": 1,
-            "coverage": 0.01,
-            "recall": 0.5
+            "labelled": 383,
+            "parsed": 3,
+            "cited": 2,
+            "coverage": 0.008,
+            "recall": 0.667
         },
         "webshell-wget-eximsploitsh": {
-            "labelled": 504,
-            "parsed": 4,
-            "cited": 1,
-            "coverage": 0.008,
-            "recall": 0.25
+            "labelled": 1473,
+            "parsed": 11,
+            "cited": 2,
+            "coverage": 0.007,
+            "recall": 0.182
         },
         "webshell-w": {
             "labelled": 2,
@@ -205,38 +208,38 @@
             "recall": 0.0
         },
         "webshell-cat-passwd": {
-            "labelled": 1038,
-            "parsed": 9,
-            "cited": 0,
-            "coverage": 0.009,
-            "recall": 0.0
+            "labelled": 1169,
+            "parsed": 14,
+            "cited": 2,
+            "coverage": 0.012,
+            "recall": 0.143
         },
         "webshell-netstat-t": {
-            "labelled": 538,
-            "parsed": 13,
-            "cited": 1,
-            "coverage": 0.024,
-            "recall": 0.077
+            "labelled": 1487,
+            "parsed": 18,
+            "cited": 4,
+            "coverage": 0.012,
+            "recall": 0.222
         },
         "webshell-date": {
-            "labelled": 4,
-            "parsed": 4,
-            "cited": 0,
-            "coverage": 1.0,
-            "recall": 0.0
+            "labelled": 33,
+            "parsed": 6,
+            "cited": 2,
+            "coverage": 0.182,
+            "recall": 0.333
         },
         "webshell-last": {
-            "labelled": 2,
-            "parsed": 2,
-            "cited": 0,
-            "coverage": 1.0,
-            "recall": 0.0
+            "labelled": 116,
+            "parsed": 3,
+            "cited": 1,
+            "coverage": 0.026,
+            "recall": 0.333
         },
         "webshell-cd-home": {
-            "labelled": 3,
+            "labelled": 12,
             "parsed": 3,
             "cited": 0,
-            "coverage": 1.0,
+            "coverage": 0.25,
             "recall": 0.0
         },
         "webshell-netstat-nau": {
@@ -275,25 +278,25 @@
             "recall": 0.0
         },
         "webshell-lsbrelease-a": {
-            "labelled": 1244,
-            "parsed": 14,
-            "cited": 0,
-            "coverage": 0.011,
-            "recall": 0.0
+            "labelled": 2094,
+            "parsed": 16,
+            "cited": 5,
+            "coverage": 0.008,
+            "recall": 0.312
         },
         "webshell-dpkg-exim4": {
-            "labelled": 84,
-            "parsed": 9,
-            "cited": 0,
-            "coverage": 0.107,
-            "recall": 0.0
+            "labelled": 137,
+            "parsed": 14,
+            "cited": 10,
+            "coverage": 0.102,
+            "recall": 0.714
         },
         "webshell-eximsploitsh-netcat": {
-            "labelled": 497,
-            "parsed": 4,
-            "cited": 0,
-            "coverage": 0.008,
-            "recall": 0.0
+            "labelled": 1101,
+            "parsed": 10,
+            "cited": 1,
+            "coverage": 0.009,
+            "recall": 0.1
         },
         "webshell-netstat-u": {
             "labelled": 424,
@@ -303,74 +306,151 @@
             "recall": 0.2
         },
         "webshell-cat-release": {
-            "labelled": 57,
-            "parsed": 2,
-            "cited": 0,
-            "coverage": 0.035,
-            "recall": 0.0
+            "labelled": 229,
+            "parsed": 3,
+            "cited": 1,
+            "coverage": 0.013,
+            "recall": 0.333
         },
         "webshell-clear": {
-            "labelled": 14,
-            "parsed": 2,
+            "labelled": 296,
+            "parsed": 12,
             "cited": 0,
-            "coverage": 0.143,
+            "coverage": 0.041,
             "recall": 0.0
         },
         "webshell-who": {
-            "labelled": 1,
-            "parsed": 1,
-            "cited": 0,
-            "coverage": 1.0,
-            "recall": 0.0
+            "labelled": 366,
+            "parsed": 10,
+            "cited": 3,
+            "coverage": 0.027,
+            "recall": 0.3
         },
         "webshell-netstat-l": {
-            "labelled": 136,
-            "parsed": 2,
-            "cited": 1,
-            "coverage": 0.015,
-            "recall": 0.5
+            "labelled": 683,
+            "parsed": 12,
+            "cited": 2,
+            "coverage": 0.018,
+            "recall": 0.167
         },
         "webshell-history": {
-            "labelled": 10,
+            "labelled": 23,
             "parsed": 1,
             "cited": 0,
-            "coverage": 0.1,
+            "coverage": 0.043,
             "recall": 0.0
         },
         "webshell-ls-root": {
-            "labelled": 1,
-            "parsed": 1,
-            "cited": 0,
-            "coverage": 1.0,
-            "recall": 0.0
+            "labelled": 345,
+            "parsed": 10,
+            "cited": 3,
+            "coverage": 0.029,
+            "recall": 0.3
         },
         "webshell-cd-root": {
-            "labelled": 1,
-            "parsed": 1,
+            "labelled": 869,
+            "parsed": 7,
             "cited": 0,
-            "coverage": 1.0,
+            "coverage": 0.008,
             "recall": 0.0
         },
         "webshell-cat-group": {
-            "labelled": 2,
-            "parsed": 2,
+            "labelled": 286,
+            "parsed": 4,
             "cited": 0,
-            "coverage": 1.0,
+            "coverage": 0.014,
             "recall": 0.0
         },
         "webshell-cat-profile": {
-            "labelled": 1,
+            "labelled": 351,
+            "parsed": 3,
+            "cited": 0,
+            "coverage": 0.009,
+            "recall": 0.0
+        },
+        "nmap": {
+            "labelled": 279,
+            "parsed": 4,
+            "cited": 0,
+            "coverage": 0.014,
+            "recall": 0.0
+        },
+        "webshell-cat-cpuinfo": {
+            "labelled": 242,
+            "parsed": 3,
+            "cited": 2,
+            "coverage": 0.012,
+            "recall": 0.667
+        },
+        "webshell-pwd": {
+            "labelled": 47,
+            "parsed": 0,
+            "cited": 0,
+            "coverage": 0.0,
+            "recall": null
+        },
+        "webshell-find-null": {
+            "labelled": 2425,
+            "parsed": 23,
+            "cited": 1,
+            "coverage": 0.009,
+            "recall": 0.043
+        },
+        "webshell-cd-tmp": {
+            "labelled": 18,
+            "parsed": 0,
+            "cited": 0,
+            "coverage": 0.0,
+            "recall": null
+        },
+        "webshell-chmod-eximsploitsh": {
+            "labelled": 1103,
+            "parsed": 15,
+            "cited": 0,
+            "coverage": 0.014,
+            "recall": 0.0
+        },
+        "webshell-uname-ar": {
+            "labelled": 25,
             "parsed": 1,
             "cited": 0,
-            "coverage": 1.0,
+            "coverage": 0.04,
             "recall": 0.0
+        },
+        "webshell-df-h": {
+            "labelled": 53,
+            "parsed": 3,
+            "cited": 2,
+            "coverage": 0.057,
+            "recall": 0.667
+        },
+        "webshell-ls": {
+            "labelled": 69,
+            "parsed": 3,
+            "cited": 1,
+            "coverage": 0.043,
+            "recall": 0.333
+        },
+        "okay-upload-webshell": {
+            "labelled": 1949,
+            "parsed": 0,
+            "cited": 0,
+            "coverage": 0.0,
+            "recall": null
+        },
+        "okay-curl": {
+            "labelled": 124,
+            "parsed": 4,
+            "cited": 4,
+            "coverage": 0.032,
+            "recall": 1.0
         },
         "webshell-ls-home": {
             "labelled": 1467,
             "parsed": 11,
-            "cited": 0,
+            "cited": 2,
             "coverage": 0.007,
-            "recall": 0.0
+            "recall": 0.182
         },
         "webshell-cd": {
             "labelled": 579,
@@ -393,46 +473,11 @@
             "coverage": 0.01,
             "recall": 0.083
         },
-        "webshell-chmod-eximsploitsh": {
-            "labelled": 834,
-            "parsed": 8,
-            "cited": 0,
-            "coverage": 0.01,
-            "recall": 0.0
-        },
-        "webshell-find-null": {
-            "labelled": 2334,
-            "parsed": 22,
-            "cited": 0,
-            "coverage": 0.009,
-            "recall": 0.0
-        },
         "webshell-ifconfig": {
             "labelled": 14403,
             "parsed": 102,
             "cited": 0,
             "coverage": 0.007,
-            "recall": 0.0
-        },
-        "okay-upload-webshell": {
-            "labelled": 975,
-            "parsed": 0,
-            "cited": 0,
-            "coverage": 0.0,
-            "recall": null
-        },
-        "okay-curl": {
-            "labelled": 62,
-            "parsed": 2,
-            "cited": 1,
-            "coverage": 0.032,
-            "recall": 0.5
-        },
-        "nmap": {
-            "labelled": 124,
-            "parsed": 2,
-            "cited": 0,
-            "coverage": 0.016,
             "recall": 0.0
         },
         "webshell-uname-r": {
@@ -442,61 +487,26 @@
             "coverage": 0.071,
             "recall": 1.0
         },
-        "webshell-df-h": {
-            "labelled": 35,
-            "parsed": 2,
-            "cited": 0,
-            "coverage": 0.057,
-            "recall": 0.0
-        },
         "webshell-ls-shadow": {
             "labelled": 49,
             "parsed": 1,
-            "cited": 0,
+            "cited": 1,
             "coverage": 0.02,
-            "recall": 0.0
+            "recall": 1.0
         },
         "webshell-uptime": {
             "labelled": 69,
             "parsed": 1,
-            "cited": 0,
+            "cited": 1,
             "coverage": 0.014,
-            "recall": 0.0
-        },
-        "webshell-ls": {
-            "labelled": 45,
-            "parsed": 2,
-            "cited": 0,
-            "coverage": 0.044,
-            "recall": 0.0
+            "recall": 1.0
         },
         "webshell-mount": {
             "labelled": 41,
             "parsed": 1,
-            "cited": 0,
+            "cited": 1,
             "coverage": 0.024,
-            "recall": 0.0
-        },
-        "webshell-pwd": {
-            "labelled": 39,
-            "parsed": 0,
-            "cited": 0,
-            "coverage": 0.0,
-            "recall": null
-        },
-        "webshell-cd-tmp": {
-            "labelled": 9,
-            "parsed": 0,
-            "cited": 0,
-            "coverage": 0.0,
-            "recall": null
-        },
-        "webshell-cat-cpuinfo": {
-            "labelled": 48,
-            "parsed": 1,
-            "cited": 0,
-            "coverage": 0.021,
-            "recall": 0.0
+            "recall": 1.0
         }
     },
     "per_alert_type": {
@@ -537,22 +547,37 @@
             }
         },
         "webshell_command": {
-            "alerts": 18,
-            "alerts_on_attack": 18,
-            "events_cited": 18,
-            "attack_events_cited": 18,
+            "alerts": 70,
+            "alerts_on_attack": 70,
+            "events_cited": 70,
+            "attack_events_cited": 70,
             "severity": {
-                "high": 18
+                "high": 70
             }
         }
     },
-    "steps_total": 54,
+    "steps_total": 55,
     "steps_detected": [
         "hydra",
         "mail-curl",
         "nikto",
         "okay-curl",
+        "webshell-cat-cpuinfo",
+        "webshell-cat-passwd",
+        "webshell-cat-release",
+        "webshell-date",
+        "webshell-df-h",
+        "webshell-dpkg-exim4",
+        "webshell-eximsploitsh-netcat",
+        "webshell-find-null",
         "webshell-id",
+        "webshell-last",
+        "webshell-ls",
+        "webshell-ls-home",
+        "webshell-ls-root",
+        "webshell-ls-shadow",
+        "webshell-lsbrelease-a",
+        "webshell-mount",
         "webshell-netstat-l",
         "webshell-netstat-nat",
         "webshell-netstat-natp",
@@ -562,8 +587,11 @@
         "webshell-ps-A",
         "webshell-ps-aux",
         "webshell-uname-r",
-        "webshell-wget-eximsploitsh"
+        "webshell-uptime",
+        "webshell-wget-eximsploitsh",
+        "webshell-who",
+        "webshell-whoami"
     ],
-    "step_recall": 0.278,
-    "event_recall": 0.017
+    "step_recall": 0.6,
+    "event_recall": 0.018
 }

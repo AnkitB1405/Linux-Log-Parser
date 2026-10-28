@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parser Dashboard</title>
+<style>
+:root {
+  --bg:#fbfaf8; --surface:#fff; --line:#e4e0d8; --ink:#1c1a17;
+  --muted:#6b655c; --faint:#9a938a; --high:#b5563a; --medium:#a8792b;
+  --good:#2f6f5e; --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --bg:#15140f; --surface:#1e1c17; --line:#322e26; --ink:#ece7dd;
+  --muted:#a39b8f; --faint:#756d61; --high:#e08063; --medium:#d8a94f;
+  --good:#5fab94;}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:44px 16px 72px}
+h1{font-size:clamp(26px,5vw,38px);margin:0 0 8px;letter-spacing:-.02em}
+h2{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--faint);
+  margin:52px 0 14px;font-weight:600}
+h3{font-size:14px;margin:22px 0 8px;font-family:var(--mono);color:var(--muted)}
+.sub{color:var(--muted);max-width:74ch;margin:0 0 6px}
+.stamp{color:var(--faint);font-size:12px;font-family:var(--mono);margin:12px 0 0}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));
+  gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;
+  overflow:hidden;margin-top:26px}
+.tile{background:var(--surface);padding:15px 17px}
+.tile b{display:block;font-size:25px;font-weight:600;letter-spacing:-.02em}
+.tile span{font-size:12px;color:var(--muted)}
+.tile.high b{color:var(--high)} .tile.medium b{color:var(--medium)}
+.table-wrap{background:var(--surface);border:1px solid var(--line);
+  border-radius:10px;overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.07em;
+  color:var(--faint);font-weight:600;padding:11px 14px;
+  border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:9px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+.n{text-align:right;font-family:var(--mono);white-space:nowrap}
+.mono{font-family:var(--mono);font-size:12.5px}
+.muted{color:var(--muted);font-size:12.5px}
+.good{color:var(--good);font-weight:600}
+tr.miss td{opacity:.62}
+tr.hit td:first-child{box-shadow:inset 2px 0 0 var(--good)}
+.pill{display:inline-block;font-size:11px;font-family:var(--mono);
+  padding:2px 7px;border-radius:4px;border:1px solid currentColor}
+.pill.high{color:var(--high)} .pill.medium{color:var(--medium)}
+.pill.monitor{color:var(--muted)}
+footer{margin-top:60px;padding-top:18px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--faint);display:flex;flex-wrap:wrap;
+  gap:8px 22px;justify-content:space-between}
+footer a{color:var(--muted)}
+</style></head><body><div class="wrap">
+
+  <header>
+    <h1>Log Parser</h1>
+    <p class="sub">Detection engine for a Linux homelab &mdash; five log sources
+    normalised into one event stream that eleven detectors read. Pure standard
+    library, no dependencies.</p>
+    <p class="stamp">generated 2026-10-28 23:56</p>
+  </header>
+
+  <section class="tiles">
+    <div class='tile '><b>220</b><span>events parsed</span></div>
+    <div class='tile '><b>5</b><span>log sources</span></div>
+    <div class='tile '><b>48</b><span>event types</span></div>
+    <div class='tile '><b>32</b><span>alerts</span></div>
+    <div class='tile high'><b>17</b><span>high severity</span></div>
+    <div class='tile medium'><b>15</b><span>medium severity</span></div>
+  </section>
+<h2>Evaluated against labelled datasets</h2>
+<p class="sub">Precision is the honest headline: of the
+        alerts raised, how many were about a real labelled attack. Recall is
+        split so you can see <em>where</em> it is lost &mdash; a labelled line no
+        parser consumed is a coverage ceiling needing a parser, a line parsed
+        but never cited is a detection miss needing a detector.</p>
+<div class="table-wrap"><table><thead><tr><th>dataset</th><th class="n">events</th><th class="n">labelled lines</th><th class="n">steps</th><th class="n">step recall</th><th class="n">alerts</th><th class="n">alert precision</th></tr></thead><tbody>
+<tr><td><b>ait</b></td><td class='n'>506,582</td><td class='n'>79,581</td><td class='n'>33/55</td><td class='n'>0.600</td><td class='n'>77</td><td class='n good'>1.000</td></tr>
+<tr><td><b>ait2</b></td><td class='n'>416,365</td><td class='n'>1,369,978</td><td class='n'>8/21</td><td class='n'>0.381</td><td class='n'>6</td><td class='n good'>0.667</td></tr>
+<tr><td><b>webx</b></td><td class='n'>4,171</td><td class='n'>604</td><td class='n'>0/2</td><td class='n'>0.000</td><td class='n'>1</td><td class='n good'>0.000</td></tr>
+</tbody></table></div>
+<h2>Per detector</h2>
+<h3>ait</h3><div class="table-wrap"><table><thead><tr><th>detector</th><th class="n">alerts</th><th class="n">on attack</th><th class="n">alert precision</th><th class="n">event precision</th></tr></thead><tbody>
+<tr><td class='mono'>webshell_command</td><td class='n'>70</td><td class='n'>70</td><td class='n good'>1.000</td><td class='n'>1.000</td></tr>
+<tr><td class='mono'>web_scanning</td><td class='n'>2</td><td class='n'>2</td><td class='n good'>1.000</td><td class='n'>1.000</td></tr>
+<tr><td class='mono'>web_auth_bruteforce</td><td class='n'>2</td><td class='n'>2</td><td class='n good'>1.000</td><td class='n'>1.000</td></tr>
+<tr><td class='mono'>web_credential_compromise</td><td class='n'>2</td><td class='n'>2</td><td class='n good'>1.000</td><td class='n'>1.000</td></tr>
+<tr><td class='mono'>slow_bruteforce</td><td class='n'>1</td><td class='n'>1</td><td class='n good'>1.000</td><td class='n'>0.993</td></tr>
+</tbody></table></div>
+<h3>ait2</h3><div class="table-wrap"><table><thead><tr><th>detector</th><th class="n">alerts</th><th class="n">on attack</th><th class="n">alert precision</th><th class="n">event precision</th></tr></thead><tbody>
+<tr><td class='mono'>unauthorized_auth_method</td><td class='n'>1</td><td class='n'>0</td><td class='n '>0.000</td><td class='n'>0.000</td></tr>
+<tr><td class='mono'>web_scanning</td><td class='n'>1</td><td class='n'>0</td><td class='n '>0.000</td><td class='n'>0.000</td></tr>
+<tr><td class='mono'>web_auth_bruteforce</td><td class='n'>1</td><td class='n'>1</td><td class='n good'>1.000</td><td class='n'>1.000</td></tr>
+<tr><td class='mono'>web_credential_compromise</td><td class='n'>1</td><td class='n'>1</td><td class='n good'>1.000</td><td class='n'>1.000</td></tr>
+<tr><td class='mono'>web_server_errors</td><td class='n'>1</td><td class='n'>1</td><td class='n good'>1.000</td><td class='n'>1.000</td></tr>
+<tr><td class='mono'>sensitive_command</td><td class='n'>1</td><td class='n'>1</td><td class='n good'>1.000</td><td class='n'>1.000</td></tr>
+</tbody></table></div>
+<h3>webx</h3><div class="table-wrap"><table><thead><tr><th>detector</th><th class="n">alerts</th><th class="n">on attack</th><th class="n">alert precision</th><th class="n">event precision</th></tr></thead><tbody>
+<tr><td class='mono'>unauthorized_auth_method</td><td class='n'>1</td><td class='n'>0</td><td class='n '>0.000</td><td class='n'>0.000</td></tr>
+</tbody></table></div>
+<h2>Where recall is lost</h2>
+<p class="sub">Attack steps with the most labelled lines.
+        <strong>coverage</strong> is the fraction a parser consumed;
+        <strong>recall</strong> is the fraction of those a detector then cited.
+        A coverage of 1.0 with recall 0.0 means the lines were read and nothing
+        fired &mdash; that is a detector gap, not a parser one.</p>
+<h3>ait</h3><div class="table-wrap"><table><thead><tr><th>attack step</th><th class="n">labelled</th><th class="n">parsed</th><th class="n">cited</th><th class="n">coverage</th><th class="n">recall</th></tr></thead><tbody>
+<tr class='hit'><td class='mono'>nikto</td><td class='n'>26,276</td><td class='n'>26,276</td><td class='n'>294</td><td class='n'>1.000</td><td class='n'>0.011</td></tr>
+<tr class='miss'><td class='mono'>webshell-ifconfig</td><td class='n'>14,403</td><td class='n'>102</td><td class='n'>0</td><td class='n'>0.007</td><td class='n'>0.000</td></tr>
+<tr class='hit'><td class='mono'>mail-curl</td><td class='n'>3,505</td><td class='n'>60</td><td class='n'>4</td><td class='n'>0.017</td><td class='n'>0.067</td></tr>
+<tr class='miss'><td class='mono'>upload</td><td class='n'>3,501</td><td class='n'>74</td><td class='n'>0</td><td class='n'>0.021</td><td class='n'>0.000</td></tr>
+<tr class='hit'><td class='mono'>webshell-find-null</td><td class='n'>2,425</td><td class='n'>23</td><td class='n'>1</td><td class='n'>0.009</td><td class='n'>0.043</td></tr>
+<tr class='hit'><td class='mono'>webshell-ps-aux</td><td class='n'>2,313</td><td class='n'>7</td><td class='n'>2</td><td class='n'>0.003</td><td class='n'>0.286</td></tr>
+<tr class='hit'><td class='mono'>webshell-lsbrelease-a</td><td class='n'>2,094</td><td class='n'>16</td><td class='n'>5</td><td class='n'>0.008</td><td class='n'>0.312</td></tr>
+<tr class='hit'><td class='mono'>hydra</td><td class='n'>2,043</td><td class='n'>2,043</td><td class='n'>286</td><td class='n'>1.000</td><td class='n'>0.140</td></tr>
+<tr class='miss'><td class='mono'>okay-upload-webshell</td><td class='n'>1,949</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0.000</td><td class='n'>—</td></tr>
+<tr class='miss'><td class='mono'>vrfy</td><td class='n'>1,890</td><td class='n'>20</td><td class='n'>0</td><td class='n'>0.011</td><td class='n'>0.000</td></tr>
+<tr class='hit'><td class='mono'>webshell-id</td><td class='n'>1,789</td><td class='n'>37</td><td class='n'>5</td><td class='n'>0.021</td><td class='n'>0.135</td></tr>
+<tr class='hit'><td class='mono'>webshell-netstat-t</td><td class='n'>1,487</td><td class='n'>18</td><td class='n'>4</td><td class='n'>0.012</td><td class='n'>0.222</td></tr>
+<tr class='hit'><td class='mono'>webshell-wget-eximsploitsh</td><td class='n'>1,473</td><td class='n'>11</td><td class='n'>2</td><td class='n'>0.007</td><td class='n'>0.182</td></tr>
+<tr class='hit'><td class='mono'>webshell-ls-home</td><td class='n'>1,467</td><td class='n'>11</td><td class='n'>2</td><td class='n'>0.007</td><td class='n'>0.182</td></tr>
+</tbody></table></div>
+<h3>ait2</h3><div class="table-wrap"><table><thead><tr><th>attack step</th><th class="n">labelled</th><th class="n">parsed</th><th class="n">cited</th><th class="n">coverage</th><th class="n">recall</th></tr></thead><tbody>
+<tr class='hit'><td class='mono'>foothold</td><td class='n'>412,779</td><td class='n'>412,173</td><td class='n'>815</td><td class='n'>0.999</td><td class='n'>0.002</td></tr>
+<tr class='hit'><td class='mono'>attacker_http</td><td class='n'>412,167</td><td class='n'>412,167</td><td class='n'>815</td><td class='n'>1.000</td><td class='n'>0.002</td></tr>
+<tr class='hit'><td class='mono'>dirb</td><td class='n'>407,351</td><td class='n'>407,351</td><td class='n'>810</td><td class='n'>1.000</td><td class='n'>0.002</td></tr>
+<tr class='miss'><td class='mono'>dnsteal</td><td class='n'>44,018</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0.000</td><td class='n'>—</td></tr>
+<tr class='miss'><td class='mono'>attacker</td><td class='n'>44,018</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0.000</td><td class='n'>—</td></tr>
+<tr class='miss'><td class='mono'>dnsteal-received</td><td class='n'>44,016</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0.000</td><td class='n'>—</td></tr>
+<tr class='hit'><td class='mono'>wpscan</td><td class='n'>4,802</td><td class='n'>4,794</td><td class='n'>5</td><td class='n'>0.998</td><td class='n'>0.001</td></tr>
+<tr class='miss'><td class='mono'>dns_scan</td><td class='n'>414</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0.000</td><td class='n'>—</td></tr>
+<tr class='miss'><td class='mono'>service_scan</td><td class='n'>102</td><td class='n'>12</td><td class='n'>0</td><td class='n'>0.118</td><td class='n'>0.000</td></tr>
+<tr class='hit'><td class='mono'>escalate</td><td class='n'>87</td><td class='n'>19</td><td class='n'>1</td><td class='n'>0.218</td><td class='n'>0.053</td></tr>
+<tr class='miss'><td class='mono'>network_scan</td><td class='n'>62</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0.000</td><td class='n'>—</td></tr>
+<tr class='miss'><td class='mono'>crack_passwords</td><td class='n'>46</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0.000</td><td class='n'>—</td></tr>
+<tr class='miss'><td class='mono'>attacker_vpn</td><td class='n'>28</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0.000</td><td class='n'>—</td></tr>
+<tr class='miss'><td class='mono'>webshell_cmd</td><td class='n'>23</td><td class='n'>17</td><td class='n'>0</td><td class='n'>0.739</td><td class='n'>0.000</td></tr>
+</tbody></table></div>
+<h3>webx</h3><div class="table-wrap"><table><thead><tr><th>attack step</th><th class="n">labelled</th><th class="n">parsed</th><th class="n">cited</th><th class="n">coverage</th><th class="n">recall</th></tr></thead><tbody>
+<tr class='miss'><td class='mono'>rce_shell</td><td class='n'>385</td><td class='n'>385</td><td class='n'>0</td><td class='n'>1.000</td><td class='n'>0.000</td></tr>
+<tr class='miss'><td class='mono'>dir_scan</td><td class='n'>219</td><td class='n'>219</td><td class='n'>0</td><td class='n'>1.000</td><td class='n'>0.000</td></tr>
+</tbody></table></div>
+<h2>Sources in the last run</h2><div class="table-wrap"><table><thead><tr><th>source</th><th class="n">events</th><th class="n">event types</th></tr></thead><tbody>
+<tr><td class='mono'>docker</td><td class='n'>84</td><td class='n'>13</td></tr>
+<tr><td class='mono'>ssh</td><td class='n'>64</td><td class='n'>8</td></tr>
+<tr><td class='mono'>auth</td><td class='n'>37</td><td class='n'>19</td></tr>
+<tr><td class='mono'>web</td><td class='n'>26</td><td class='n'>6</td></tr>
+<tr><td class='mono'>audit</td><td class='n'>9</td><td class='n'>2</td></tr>
+</tbody></table></div>
+<h2>Alerts</h2><div class="table-wrap"><table><thead><tr><th>severity</th><th>type</th><th>subject</th><th>recommended action</th></tr></thead><tbody>
+<tr><td><span class='pill high'>high</span></td><td class='mono'>backdoor_account</td><td class='mono'>svc-backup</td><td class='muted'>disable the account and audit what it did before removing it</td></tr>
+<tr><td><span class='pill high'>high</span></td><td class='mono'>behavior_anomaly</td><td class='mono'>198.51.100.55</td><td class='muted'>investigate immediately</td></tr>
+<tr><td><span class='pill high'>high</span></td><td class='mono'>container_exec</td><td class='mono'>lp-web</td><td class='muted'>interactive shell in a container — confirm who ran it</td></tr>
+<tr><td><span class='pill high'>high</span></td><td class='mono'>credential_spray</td><td class='mono'>203.0.113.40</td><td class='muted'>block_ip — one source guessing many accounts is enumeration, not a user mistyping</td></tr>
+<tr><td><span class='pill high'>high</span></td><td class='mono'>root_bruteforce</td><td class='mono'>203.0.113.40</td><td class='muted'>block_ip and report</td></tr>
+<tr><td><span class='pill high'>high</span></td><td class='mono'>sensitive_command</td><td class='mono'>svc-backup</td><td class='muted'>confirm this read was authorised; treat the credentials as exposed</td></tr>
+<tr><td><span class='pill high'>high</span></td><td class='mono'>service_instability</td><td class='mono'>ssh</td><td class='muted'>investigate service immediately</td></tr>
+<tr><td><span class='pill high'>high</span></td><td class='mono'>slow_bruteforce</td><td class='mono'>203.0.113.40</td><td class='muted'>block_ip and report</td></tr>
+<tr><td><span class='pill high'>high</span></td><td class='mono'>unauthorized_auth_method</td><td class='mono'>192.0.2.25</td><td class='muted'>inspect authorized_keys for this user and revoke unknown keys</td></tr>
+<tr><td><span class='pill high'>high</span></td><td class='mono'>unauthorized_auth_method</td><td class='mono'>192.0.2.91</td><td class='muted'>inspect authorized_keys for this user and revoke unknown keys</td></tr>
+<tr><td><span class='pill high'>high</span></td><td class='mono'>unexpected_shadow_read</td><td class='mono'>www-data</td><td class='muted'>treat every credential in that file as exposed</td></tr>
+<tr><td><span class='pill high'>high</span></td><td class='mono'>web_credential_compromise</td><td class='mono'>203.0.113.77</td><td class='muted'>verify this session and reset the credential</td></tr>
+<tr><td><span class='pill high'>high</span></td><td class='mono'>web_scanning</td><td class='mono'>172.17.0.1</td><td class='muted'>block_ip — nikto identified itself in the user agent</td></tr>
+<tr><td><span class='pill high'>high</span></td><td class='mono'>webshell_command</td><td class='mono'>www-data</td><td class='muted'>www-data ran an interactive command — treat the service as compromised and find how the command was delivered</td></tr>
+<tr><td><span class='pill high'>high</span></td><td class='mono'>webshell_command</td><td class='mono'>www-data</td><td class='muted'>www-data ran an interactive command — treat the service as compromised and find how the command was delivered</td></tr>
+<tr><td><span class='pill high'>high</span></td><td class='mono'>webshell_command</td><td class='mono'>www-data</td><td class='muted'>www-data ran an interactive command — treat the service as compromised and find how the command was delivered</td></tr>
+<tr><td><span class='pill high'>high</span></td><td class='mono'>webshell_command</td><td class='mono'>www-data</td><td class='muted'>www-data ran an interactive command — treat the service as compromised and find how the command was delivered</td></tr>
+<tr><td><span class='pill medium'>medium</span></td><td class='mono'>behavior_anomaly</td><td class='mono'>203.0.113.40</td><td class='muted'>monitor activity</td></tr>
+<tr><td><span class='pill medium'>medium</span></td><td class='mono'>behavior_anomaly</td><td class='mono'>192.0.2.20</td><td class='muted'>monitor activity</td></tr>
+<tr><td><span class='pill medium'>medium</span></td><td class='mono'>bruteforce</td><td class='mono'>198.51.100.10</td><td class='muted'>monitor</td></tr>
+<tr><td><span class='pill medium'>medium</span></td><td class='mono'>bruteforce</td><td class='mono'>198.51.100.11</td><td class='muted'>monitor</td></tr>
+<tr><td><span class='pill medium'>medium</span></td><td class='mono'>bruteforce</td><td class='mono'>203.0.113.40</td><td class='muted'>monitor</td></tr>
+<tr><td><span class='pill medium'>medium</span></td><td class='mono'>bruteforce</td><td class='mono'>203.0.113.90</td><td class='muted'>monitor</td></tr>
+<tr><td><span class='pill medium'>medium</span></td><td class='mono'>container_exec</td><td class='mono'>lp-web</td><td class='muted'>confirm this exec was expected</td></tr>
+<tr><td><span class='pill medium'>medium</span></td><td class='mono'>credential_compromise</td><td class='mono'>192.0.2.20</td><td class='muted'>verify login</td></tr>
+<tr><td><span class='pill medium'>medium</span></td><td class='mono'>privilege_recon</td><td class='mono'>intern</td><td class='muted'>confirm who was testing their privileges</td></tr>
+<tr><td><span class='pill medium'>medium</span></td><td class='mono'>short_session</td><td class='mono'>user01</td><td class='muted'>monitor</td></tr>
+<tr><td><span class='pill medium'>medium</span></td><td class='mono'>short_session</td><td class='mono'>user02</td><td class='muted'>monitor</td></tr>
+<tr><td><span class='pill medium'>medium</span></td><td class='mono'>short_session</td><td class='mono'>user03</td><td class='muted'>monitor</td></tr>
+<tr><td><span class='pill medium'>medium</span></td><td class='mono'>short_session</td><td class='mono'>engineer</td><td class='muted'>monitor</td></tr>
+<tr><td><span class='pill medium'>medium</span></td><td class='mono'>slow_bruteforce</td><td class='mono'>192.0.2.20</td><td class='muted'>monitor</td></tr>
+<tr><td><span class='pill medium'>medium</span></td><td class='mono'>web_server_errors</td><td class='mono'>198.51.100.9</td><td class='muted'>repeated 5xx from one address — check whether input is breaking the app</td></tr>
+</tbody></table></div>
+
+  <footer>
+    <span>Ankit Bembalgi &middot;
+      <a href="https://github.com/AnkitB1405/Linux-Log-Parser">github.com/AnkitB1405/Linux-Log-Parser</a>
+    </span>
+    <span>18 alert types &middot; 3 evaluation
+      runs</span>
+  </footer>
+</div></body></html>

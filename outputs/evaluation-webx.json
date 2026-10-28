@@ -1,0 +1,53 @@
+{
+    "dataset_dir": "webx",
+    "dataset": "AIT Log Data Set v1.1 (Landauer et al., 2022)",
+    "generated": "2026-10-28T23:56:05",
+    "events": 4171,
+    "events_by_source": {
+        "web": 3991,
+        "auth": 178,
+        "ssh": 2
+    },
+    "alerts": 1,
+    "labelled_lines": {
+        "dir_scan": 219,
+        "rce_shell": 385
+    },
+    "parsed_lines": {
+        "dir_scan": 219,
+        "rce_shell": 385
+    },
+    "unrouted_lines": {},
+    "parsers_not_disjoint": 0,
+    "per_step": {
+        "dir_scan": {
+            "labelled": 219,
+            "parsed": 219,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "rce_shell": {
+            "labelled": 385,
+            "parsed": 385,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        }
+    },
+    "per_alert_type": {
+        "unauthorized_auth_method": {
+            "alerts": 1,
+            "alerts_on_attack": 0,
+            "events_cited": 1,
+            "attack_events_cited": 0,
+            "severity": {
+                "high": 1
+            }
+        }
+    },
+    "steps_total": 2,
+    "steps_detected": [],
+    "step_recall": 0.0,
+    "event_recall": 0.0
+}

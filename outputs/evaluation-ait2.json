@@ -1,0 +1,274 @@
+{
+    "dataset_dir": "ait2",
+    "dataset": "AIT Log Data Set v1.1 (Landauer et al., 2022)",
+    "generated": "2026-10-28T23:56:05",
+    "events": 416365,
+    "events_by_source": {
+        "audit": 1539,
+        "web": 414260,
+        "auth": 561,
+        "ssh": 5
+    },
+    "alerts": 6,
+    "labelled_lines": {
+        "dnsteal": 44018,
+        "dnsteal-received": 44016,
+        "attacker": 44018,
+        "foothold": 412779,
+        "traceroute": 4,
+        "dns_scan": 414,
+        "network_scan": 62,
+        "service_scan": 102,
+        "wpscan": 4802,
+        "escalate": 87,
+        "webshell_cmd": 23,
+        "exfiltration-service": 2,
+        "attacker_http": 412167,
+        "dirb": 407351,
+        "webshell_upload": 3,
+        "attacker_change_user": 14,
+        "escalated_sudo_command": 18,
+        "escalated_command": 18,
+        "escalated_sudo_session": 6,
+        "crack_passwords": 46,
+        "attacker_vpn": 28
+    },
+    "parsed_lines": {
+        "foothold": 412173,
+        "service_scan": 12,
+        "attacker_http": 412167,
+        "wpscan": 4794,
+        "dirb": 407351,
+        "webshell_upload": 3,
+        "webshell_cmd": 17,
+        "escalate": 19,
+        "attacker_change_user": 8,
+        "escalated_sudo_command": 7,
+        "escalated_command": 7,
+        "escalated_sudo_session": 6
+    },
+    "unrouted_lines": {
+        "data-inet-firewall-logs-dnsmasq.log": 133216,
+        "data-monitoring-logs-logstash-intranet-server-2022-01-18-system.cpu.log": 92,
+        "data-vpn-logs-openvpn.log": 56
+    },
+    "parsers_not_disjoint": 0,
+    "per_step": {
+        "dnsteal": {
+            "labelled": 44018,
+            "parsed": 0,
+            "cited": 0,
+            "coverage": 0.0,
+            "recall": null
+        },
+        "dnsteal-received": {
+            "labelled": 44016,
+            "parsed": 0,
+            "cited": 0,
+            "coverage": 0.0,
+            "recall": null
+        },
+        "attacker": {
+            "labelled": 44018,
+            "parsed": 0,
+            "cited": 0,
+            "coverage": 0.0,
+            "recall": null
+        },
+        "foothold": {
+            "labelled": 412779,
+            "parsed": 412173,
+            "cited": 815,
+            "coverage": 0.999,
+            "recall": 0.002
+        },
+        "traceroute": {
+            "labelled": 4,
+            "parsed": 0,
+            "cited": 0,
+            "coverage": 0.0,
+            "recall": null
+        },
+        "dns_scan": {
+            "labelled": 414,
+            "parsed": 0,
+            "cited": 0,
+            "coverage": 0.0,
+            "recall": null
+        },
+        "network_scan": {
+            "labelled": 62,
+            "parsed": 0,
+            "cited": 0,
+            "coverage": 0.0,
+            "recall": null
+        },
+        "service_scan": {
+            "labelled": 102,
+            "parsed": 12,
+            "cited": 0,
+            "coverage": 0.118,
+            "recall": 0.0
+        },
+        "wpscan": {
+            "labelled": 4802,
+            "parsed": 4794,
+            "cited": 5,
+            "coverage": 0.998,
+            "recall": 0.001
+        },
+        "escalate": {
+            "labelled": 87,
+            "parsed": 19,
+            "cited": 1,
+            "coverage": 0.218,
+            "recall": 0.053
+        },
+        "webshell_cmd": {
+            "labelled": 23,
+            "parsed": 17,
+            "cited": 0,
+            "coverage": 0.739,
+            "recall": 0.0
+        },
+        "exfiltration-service": {
+            "labelled": 2,
+            "parsed": 0,
+            "cited": 0,
+            "coverage": 0.0,
+            "recall": null
+        },
+        "attacker_http": {
+            "labelled": 412167,
+            "parsed": 412167,
+            "cited": 815,
+            "coverage": 1.0,
+            "recall": 0.002
+        },
+        "dirb": {
+            "labelled": 407351,
+            "parsed": 407351,
+            "cited": 810,
+            "coverage": 1.0,
+            "recall": 0.002
+        },
+        "webshell_upload": {
+            "labelled": 3,
+            "parsed": 3,
+            "cited": 0,
+            "coverage": 1.0,
+            "recall": 0.0
+        },
+        "attacker_change_user": {
+            "labelled": 14,
+            "parsed": 8,
+            "cited": 0,
+            "coverage": 0.571,
+            "recall": 0.0
+        },
+        "escalated_sudo_command": {
+            "labelled": 18,
+            "parsed": 7,
+            "cited": 1,
+            "coverage": 0.389,
+            "recall": 0.143
+        },
+        "escalated_command": {
+            "labelled": 18,
+            "parsed": 7,
+            "cited": 1,
+            "coverage": 0.389,
+            "recall": 0.143
+        },
+        "escalated_sudo_session": {
+            "labelled": 6,
+            "parsed": 6,
+            "cited": 1,
+            "coverage": 1.0,
+            "recall": 0.167
+        },
+        "crack_passwords": {
+            "labelled": 46,
+            "parsed": 0,
+            "cited": 0,
+            "coverage": 0.0,
+            "recall": null
+        },
+        "attacker_vpn": {
+            "labelled": 28,
+            "parsed": 0,
+            "cited": 0,
+            "coverage": 0.0,
+            "recall": null
+        }
+    },
+    "per_alert_type": {
+        "unauthorized_auth_method": {
+            "alerts": 1,
+            "alerts_on_attack": 0,
+            "events_cited": 1,
+            "attack_events_cited": 0,
+            "severity": {
+                "high": 1
+            }
+        },
+        "web_scanning": {
+            "alerts": 1,
+            "alerts_on_attack": 0,
+            "events_cited": 1,
+            "attack_events_cited": 0,
+            "severity": {
+                "high": 1
+            }
+        },
+        "web_auth_bruteforce": {
+            "alerts": 1,
+            "alerts_on_attack": 1,
+            "events_cited": 175,
+            "attack_events_cited": 175,
+            "severity": {
+                "high": 1
+            }
+        },
+        "web_credential_compromise": {
+            "alerts": 1,
+            "alerts_on_attack": 1,
+            "events_cited": 635,
+            "attack_events_cited": 635,
+            "severity": {
+                "high": 1
+            }
+        },
+        "web_server_errors": {
+            "alerts": 1,
+            "alerts_on_attack": 1,
+            "events_cited": 5,
+            "attack_events_cited": 5,
+            "severity": {
+                "medium": 1
+            }
+        },
+        "sensitive_command": {
+            "alerts": 1,
+            "alerts_on_attack": 1,
+            "events_cited": 1,
+            "attack_events_cited": 1,
+            "severity": {
+                "high": 1
+            }
+        }
+    },
+    "steps_total": 21,
+    "steps_detected": [
+        "attacker_http",
+        "dirb",
+        "escalate",
+        "escalated_command",
+        "escalated_sudo_command",
+        "escalated_sudo_session",
+        "foothold",
+        "wpscan"
+    ],
+    "step_recall": 0.381,
+    "event_recall": 0.002
+}
