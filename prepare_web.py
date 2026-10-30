@@ -25,6 +25,7 @@ traffic** — does the parser read logs from actual government web servers — a
 not the precision figure. Reported accordingly.
 """
 
+import gzip
 import os
 import re
 import sys
@@ -71,15 +72,29 @@ def label_for(line, rules):
             if all(pattern in lowered for pattern in patterns)}
 
 
-# Which parser each log file should reach, by the name evaluate.py routes on.
-TARGETS = {
-    "access.log": "access.log",
-    "web-access.log": "access.log",
-    "other_vhosts_access.log": "access.log",
-    "error.log": "error.log",
-    "web-error.log": "error.log",
-    "auth.log": "auth.log",
-}
+# Which parser each log file should reach, as the suffix evaluate.py routes on.
+#
+# Matched by pattern rather than exact name, because real deployments name
+# these things however they like. Organization X uses `access.log` and
+# `web-access.log`; organization Y uses
+# `sub17.domain1.com.access_log.2025_04_27` — an UNDERSCORE, a per-vhost
+# prefix and a date suffix. An exact-name table missed all 180 of those files.
+TARGETS = [
+    (re.compile(r"access[._]log"), "access.log"),
+    (re.compile(r"error[._]log"), "error.log"),
+    (re.compile(r"^auth\.log"), "auth.log"),
+    (re.compile(r"^syslog"), "syslog"),
+]
+
+
+def target_for(filename):
+    """The route suffix this file should carry, or None to skip it."""
+
+    for pattern, suffix in TARGETS:
+        if pattern.search(filename):
+            return suffix
+
+    return None
 
 
 def prepare(root, outdir):
@@ -95,15 +110,31 @@ def prepare(root, outdir):
 
     for directory, _dirs, files in os.walk(os.path.join(root, "log")):
         for filename in sorted(files):
-            target = TARGETS.get(filename)
+            target = target_for(filename)
 
             if not target:
                 continue
 
             source = os.path.join(directory, filename)
-            flat = f"{name}-{os.path.basename(directory)}-{target}"
 
-            lines = open(source, errors="replace").read().splitlines()
+            # The original filename has to be in the flat name. Using only the
+            # route target collapsed every rotation and every vhost onto one
+            # name — organization X's 58 Apache files became 4, each silently
+            # overwriting the last, so only the final file of each type was
+            # ever measured.
+            flat = f"{name}-{os.path.basename(directory)}-{filename}"
+
+            if not flat.endswith(target):
+                flat = f"{flat}.{target}"
+
+            # Rotations are routinely gzipped, and reading one as text yields
+            # bytes that match no pattern and inflate the line count with
+            # nonsense.
+            if filename.endswith(".gz"):
+                with gzip.open(source, "rt", errors="replace") as handle:
+                    lines = handle.read().splitlines()
+            else:
+                lines = open(source, errors="replace").read().splitlines()
 
             if not lines:
                 continue

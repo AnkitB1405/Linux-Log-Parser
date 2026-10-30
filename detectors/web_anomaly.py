@@ -56,7 +56,10 @@ def detect_web_anomaly(events):
         event_type = event["event_type"]
 
         if details.get("scanner_agent"):
-            scanners.setdefault(ip, details["scanner_agent"])
+            # Carries its own timestamp and event id, not just the tool name.
+            # A scanner whose requests all return 200 appears here with no 404s
+            # at all, and the alert still needs a time and evidence to cite.
+            scanners.setdefault(ip, (details["scanner_agent"],) + entry)
 
         if event_type == "http_not_found":
             not_found.setdefault(ip, []).append(entry)
@@ -79,7 +82,8 @@ def detect_web_anomaly(events):
     for ip in set(not_found) | set(scanners):
         entries = sorted(not_found.get(ip, []))
         recent = within(entries, SCAN_WINDOW) if entries else []
-        tool = scanners.get(ip)
+        found = scanners.get(ip)
+        tool = found[0] if found else None
         severity, action = band(SCAN_BANDS, len(recent))
 
         if tool:
@@ -89,6 +93,12 @@ def detect_web_anomaly(events):
         if not severity:
             continue
 
+        # Evidence is the 404 burst where there is one, otherwise the single
+        # request that named the tool. Reading entries[-1] when a scanner had
+        # produced no 404s at all crashed on real production logs — every one
+        # of that IP's requests returned 200.
+        evidence = recent or ([found[1:]] if found else [])
+
         alerts.append({
             "severity": severity,
             "alert_type": "web_scanning",
@@ -96,8 +106,8 @@ def detect_web_anomaly(events):
             "source_ip": ip,
             "not_found": len(recent),
             "scanner": tool,
-            "timestamp": max(e[0] for e in recent) if recent else entries[-1][0],
-            "event_ids": [e[1] for e in recent],
+            "timestamp": max(e[0] for e in evidence),
+            "event_ids": [e[1] for e in evidence],
             "recommended_action": action,
         })
 
